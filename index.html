@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>open-housing – správa bytového spoločenstva</title>
+  <title>OpenResiApp – správa bytového spoločenstva</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
   <style>
@@ -483,7 +483,7 @@
 <nav>
   <div class="nav-inner">
     <a href="#" class="logo">
-      <span class="logo-dot">&blacksquare;</span> open-housing
+      <span class="logo-dot">&blacksquare;</span> OpenResiApp
     </a>
     <div class="nav-right">
       <ul class="nav-links">
@@ -491,7 +491,7 @@
         <li><a href="#roly" data-i18n="nav.roles">Roly</a></li>
         <li><a href="#tech" data-i18n="nav.tech">Tech stack</a></li>
         <li><a href="#docs" data-i18n="nav.docs">Docs</a></li>
-        <li><a href="https://github.com/resi-app/resi-app" class="nav-cta">GitHub &rarr;</a></li>
+        <li><a href="https://github.com/open-resiapp/open-resiapp" class="nav-cta">GitHub &rarr;</a></li>
       </ul>
       <div class="lang-switch">
         <button onclick="setLang('sk')" id="lang-sk" class="active">SK</button>
@@ -518,7 +518,7 @@
       <a href="#docs" class="btn btn-primary" data-i18n="hero.cta">
         &#9654; R&yacute;chly &scaron;tart
       </a>
-      <a href="https://github.com/resi-app/resi-app" class="btn btn-ghost">
+      <a href="https://github.com/open-resiapp/open-resiapp" class="btn btn-ghost">
         &starf; GitHub
       </a>
     </div>
@@ -534,8 +534,8 @@
     </div>
     <div class="terminal-body">
       <div class="t-comment" data-i18n="terminal.comment1"># Stiahni a spusti</div>
-      <div class="t-cmd">git clone https://github.com/<br>&nbsp;&nbsp;resi-app/resi-app</div>
-      <div class="t-cmd">cd resi-app</div>
+      <div class="t-cmd">git clone https://github.com/<br>&nbsp;&nbsp;open-resiapp/open-resiapp</div>
+      <div class="t-cmd">cd open-resiapp</div>
       <div class="t-cmd">cp .env.example .env</div>
       <div class="t-comment" data-i18n="terminal.comment2"># Uprav .env &ndash; n&aacute;zov bytovky,<br># heslo k DB, email</div>
       <div class="t-cmd">docker compose up -d</div>
@@ -663,7 +663,7 @@
       <div class="tech-item">NextAuth v5 <span>Auth</span></div>
       <div class="tech-item">Docker <span>Deploy</span></div>
       <div class="tech-item">Caddy <span>HTTPS</span></div>
-      <div class="tech-item">Resend <span>Email</span></div>
+      <div class="tech-item">Nodemailer <span>Email</span></div>
       <div class="tech-item">next-intl <span>i18n</span></div>
       <div class="tech-item">react-pdf <span>PDF export</span></div>
     </div>
@@ -711,12 +711,12 @@
       <div class="docs-content">
 
         <h3 id="doc-requirements" data-i18n="doc.req.title">Po&zcaron;iadavky</h3>
-        <p data-i18n="doc.req.intro">Na spustenie resi-app potrebuje&scaron;:</p>
+        <p data-i18n="doc.req.intro">Na spustenie OpenResiApp potrebuje&scaron;:</p>
         <ul>
           <li data-i18n="doc.req.1"><strong>Docker</strong> 24+ a <strong>Docker Compose</strong> plugin</li>
           <li data-i18n="doc.req.2">Server alebo VPS s min. <strong>1 GB RAM</strong> a <strong>10 GB disku</strong></li>
           <li data-i18n="doc.req.3">Dom&eacute;nu alebo subdom&eacute;nu (pre HTTPS)</li>
-          <li data-i18n="doc.req.4">SMTP pr&iacute;stup alebo Resend API k&#318;&uacute;&ccaron; (pre emaily)</li>
+          <li data-i18n="doc.req.4">SMTP pr&iacute;stup (pre emaily)</li>
         </ul>
         <div class="callout callout-tip">
           <span data-i18n="doc.req.tip">&#x1F4A1; Na lok&aacute;lne testovanie sta&ccaron;&iacute; aj tvoj laptop &ndash; Docker Desktop na Windows alebo macOS.</span>
@@ -724,8 +724,8 @@
 
         <h3 id="doc-install" data-i18n="doc.install.title">In&scaron;tal&aacute;cia</h3>
         <h4 data-i18n="doc.install.step1">1. Stiahni repozit&aacute;r</h4>
-        <pre><code>git clone https://github.com/resi-app/resi-app.git
-cd resi-app</code></pre>
+        <pre><code>git clone https://github.com/open-resiapp/open-resiapp.git
+cd open-resiapp</code></pre>
 
         <h4 data-i18n="doc.install.step2">2. Vytvor konfigura&ccaron;n&yacute; s&uacute;bor</h4>
         <pre><code>cp .env.example .env</code></pre>
@@ -750,9 +750,7 @@ POSTGRES_PASSWORD=zmenMaPlease_veľmiDlh&eacute;Heslo
 # Generuj: openssl rand -base64 32
 NEXTAUTH_SECRET=tu_vloz_nahodny_retazec
 
-# Email (vyber jedno)
-RESEND_API_KEY=re_xxxxx          # odpor&uacute;&ccaron;ame
-# alebo SMTP:
+# Email (SMTP)
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=tvoj@email.sk
@@ -789,7 +787,7 @@ APP_DOMAIN=bytovka.mojadomena.sk</code></pre>
         <p data-i18n="doc.domain.wait">DNS zmeny sa m&ocirc;&zcaron;u &scaron;&iacute;ri&#357; 5&ndash;60 min&uacute;t.</p>
 
         <h3 id="doc-https" data-i18n="doc.https.title">HTTPS (automaticky)</h3>
-        <p data-i18n="doc.https.desc">resi-app pou&zcaron;&iacute;va <strong>Caddy</strong> ako reverse proxy, ktor&yacute; automaticky zaobstar&aacute; a obnovuje SSL certifik&aacute;t cez Let's Encrypt. Nemus&iacute;&scaron; ni&ccaron; ru&ccaron;ne nastavova&#357;.</p>
+        <p data-i18n="doc.https.desc">OpenResiApp pou&zcaron;&iacute;va <strong>Caddy</strong> ako reverse proxy, ktor&yacute; automaticky zaobstar&aacute; a obnovuje SSL certifik&aacute;t cez Let's Encrypt. Nemus&iacute;&scaron; ni&ccaron; ru&ccaron;ne nastavova&#357;.</p>
 
         <div class="callout callout-info">
           <span data-i18n="doc.https.note">&x2139;&#xFE0F; HTTPS funguje len ak je dom&eacute;na verejne dostupn&aacute;. Na lok&aacute;lnom testovania (localhost) je HTTP v poriadku.</span>
@@ -803,13 +801,13 @@ docker compose up -d</code></pre>
         <p data-i18n="doc.backup.intro">V&scaron;etky d&aacute;ta s&uacute; v PostgreSQL datab&aacute;ze a v prie&ccaron;inku <code>uploads/</code>. Odpor&uacute;&ccaron;ame z&aacute;lohova&#357; denne.</p>
 
         <h4 data-i18n="doc.backup.manual">Manu&aacute;lna z&aacute;loha datab&aacute;zy</h4>
-        <pre><code>docker compose exec db pg_dump -U postgres bytovaapp \
+        <pre><code>docker compose exec db pg_dump -U postgres resiapp \
   > backup_$(date +%Y%m%d).sql</code></pre>
 
         <h4 data-i18n="doc.backup.cron">Automatick&aacute; z&aacute;loha (cron)</h4>
         <pre><code># Pridaj do crontab (crontab -e):
-0 3 * * * cd /opt/resi-app && \
-  docker compose exec -T db pg_dump -U postgres bytovaapp \
+0 3 * * * cd /opt/open-resiapp && \
+  docker compose exec -T db pg_dump -U postgres resiapp \
   > backups/backup_$(date +\%Y\%m\%d).sql</code></pre>
 
         <div class="callout callout-tip">
@@ -868,8 +866,8 @@ docker compose up -d</code></pre>
 <!-- FOOTER -->
 <footer>
   <p>
-    <strong>resi-app</strong> &ndash; open source <span data-i18n="footer.license">pod licenciou</span> MIT &middot;
-    <a href="https://github.com/resi-app/resi-app">GitHub</a> &middot;
+    <strong>OpenResiApp</strong> &ndash; open source <span data-i18n="footer.license">pod licenciou</span> MIT &middot;
+    <a href="https://github.com/open-resiapp/open-resiapp">GitHub</a> &middot;
     <span data-i18n="footer.made">Vytvoren&eacute; pre slovensk&eacute; bytov&eacute; spolo&ccaron;enstv&aacute;</span>
   </p>
   <p style="margin-top: 0.5rem;" data-i18n="footer.contrib">Pr&iacute;spevky v&iacute;tan&eacute; &ndash; otvor issue alebo pull request</p>
@@ -951,11 +949,11 @@ const translations = {
     "docs.nav.owners": "Pridanie vlastníkov",
     "docs.nav.voting": "Prvé hlasovanie",
     "doc.req.title": "Požiadavky",
-    "doc.req.intro": "Na spustenie resi-app potrebuješ:",
+    "doc.req.intro": "Na spustenie OpenResiApp potrebuješ:",
     "doc.req.1": "<strong>Docker</strong> 24+ a <strong>Docker Compose</strong> plugin",
     "doc.req.2": "Server alebo VPS s min. <strong>1 GB RAM</strong> a <strong>10 GB disku</strong>",
     "doc.req.3": "Doménu alebo subdoménu (pre HTTPS)",
-    "doc.req.4": "SMTP prístup alebo Resend API kľúč (pre emaily)",
+    "doc.req.4": "SMTP prístup (pre emaily)",
     "doc.req.tip": "💡 Na lokálne testovanie stačí aj tvoj laptop – Docker Desktop na Windows alebo macOS.",
     "doc.install.title": "Inštalácia",
     "doc.install.step1": "1. Stiahni repozitár",
@@ -977,9 +975,7 @@ POSTGRES_PASSWORD=zmenMaPlease_veľmiDlhéHeslo
 # Generuj: openssl rand -base64 32
 NEXTAUTH_SECRET=tu_vloz_nahodny_retazec
 
-# Email (vyber jedno)
-RESEND_API_KEY=re_xxxxx          # odporúčame
-# alebo SMTP:
+# Email (SMTP)
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=tvoj@email.sk
@@ -999,7 +995,7 @@ EMAIL_FROM=noreply@mojabytovka.sk`,
     "doc.domain.dns": "Nastav DNS A záznam tvojej domény na IP adresu servera:",
     "doc.domain.wait": "DNS zmeny sa môžu šíriť 5–60 minút.",
     "doc.https.title": "HTTPS (automaticky)",
-    "doc.https.desc": "resi-app používa <strong>Caddy</strong> ako reverse proxy, ktorý automaticky zaobstará a obnovuje SSL certifikát cez Let's Encrypt. Nemusíš nič ručne nastavovať.",
+    "doc.https.desc": "OpenResiApp používa <strong>Caddy</strong> ako reverse proxy, ktorý automaticky zaobstará a obnovuje SSL certifikát cez Let's Encrypt. Nemusíš nič ručne nastavovať.",
     "doc.https.note": "ℹ️ HTTPS funguje len ak je doména verejne dostupná. Na lokálnom testovaní (localhost) je HTTP v poriadku.",
     "doc.https.restart": "Po nastavení domény reštartuj stack:",
     "doc.backup.title": "Zálohovanie",
@@ -1104,11 +1100,11 @@ EMAIL_FROM=noreply@mojabytovka.sk`,
     "docs.nav.owners": "Adding owners",
     "docs.nav.voting": "First vote",
     "doc.req.title": "Requirements",
-    "doc.req.intro": "To run resi-app you need:",
+    "doc.req.intro": "To run OpenResiApp you need:",
     "doc.req.1": "<strong>Docker</strong> 24+ and <strong>Docker Compose</strong> plugin",
     "doc.req.2": "A server or VPS with at least <strong>1 GB RAM</strong> and <strong>10 GB disk</strong>",
     "doc.req.3": "A domain or subdomain (for HTTPS)",
-    "doc.req.4": "SMTP access or a Resend API key (for emails)",
+    "doc.req.4": "SMTP access (for emails)",
     "doc.req.tip": "💡 For local testing, your laptop is enough – Docker Desktop on Windows or macOS.",
     "doc.install.title": "Installation",
     "doc.install.step1": "1. Clone the repository",
@@ -1130,9 +1126,7 @@ POSTGRES_PASSWORD=changeMePlease_veryLongPassword
 # Generate: openssl rand -base64 32
 NEXTAUTH_SECRET=paste_random_string_here
 
-# Email (choose one)
-RESEND_API_KEY=re_xxxxx          # recommended
-# or SMTP:
+# Email (SMTP)
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=your@email.com
@@ -1152,7 +1146,7 @@ EMAIL_FROM=noreply@mybuilding.com`,
     "doc.domain.dns": "Set a DNS A record pointing your domain to the server IP:",
     "doc.domain.wait": "DNS changes may take 5–60 minutes to propagate.",
     "doc.https.title": "HTTPS (automatic)",
-    "doc.https.desc": "resi-app uses <strong>Caddy</strong> as a reverse proxy that automatically provisions and renews SSL certificates via Let's Encrypt. No manual setup needed.",
+    "doc.https.desc": "OpenResiApp uses <strong>Caddy</strong> as a reverse proxy that automatically provisions and renews SSL certificates via Let's Encrypt. No manual setup needed.",
     "doc.https.note": "ℹ️ HTTPS only works when the domain is publicly accessible. On localhost, HTTP is fine.",
     "doc.https.restart": "After setting up the domain, restart the stack:",
     "doc.backup.title": "Backups",
@@ -1194,8 +1188,8 @@ function setLang(lang) {
 
   // Update page title
   document.title = lang === 'sk'
-    ? 'resi-app – správa bytového spoločenstva'
-    : 'resi-app – housing association management';
+    ? 'OpenResiApp – správa bytového spoločenstva'
+    : 'OpenResiApp – housing association management';
 
   // Update active button
   document.getElementById('lang-sk').classList.toggle('active', lang === 'sk');
