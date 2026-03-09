@@ -489,6 +489,7 @@
       <ul class="nav-links">
         <li><a href="#features" data-i18n="nav.features">Funkcie</a></li>
         <li><a href="#roly" data-i18n="nav.roles">Roly</a></li>
+        <li><a href="#law" data-i18n="nav.law">&sect; Z&aacute;kon</a></li>
         <li><a href="#tech" data-i18n="nav.tech">Tech stack</a></li>
         <li><a href="#docs" data-i18n="nav.docs">Docs</a></li>
         <li><a href="https://github.com/open-resiapp/open-resiapp" class="nav-cta">GitHub &rarr;</a></li>
@@ -507,12 +508,12 @@
   <div>
     <div class="badge">
       <span class="badge-dot"></span>
-      Open Source &middot; Self-hosted
+      Open Source &middot; Self-hosted &middot; <span data-i18n="badge.law">&sect; 182/1993 Z.z.</span>
     </div>
     <h1 data-i18n="hero.title">Spr&aacute;va bytovky<br /><em>pre &#318;ud&iacute;,</em><br />nie pre pr&aacute;vnikov</h1>
     <p class="hero-desc" data-i18n="hero.desc">
       Elektronick&eacute; hlasovanie, n&aacute;stenka a spr&aacute;va vlastn&iacute;kov pre slovensk&eacute; bytov&eacute; spolo&ccaron;enstv&aacute;.
-      Zadarmo, bez predplatn&eacute;ho, plne pod va&scaron;ou kontrolou.
+      V s&uacute;lade so z&aacute;konom &ccaron;. 182/1993 Z.z. Zadarmo, bez predplatn&eacute;ho, plne pod va&scaron;ou kontrolou.
     </p>
     <div class="hero-actions">
       <a href="#docs" class="btn btn-primary" data-i18n="hero.cta">
@@ -559,7 +560,7 @@
       <div class="feature">
         <div class="feature-icon" style="background: rgba(91,143,255,0.15);">&#x1F5F3;&#xFE0F;</div>
         <h3 data-i18n="f1.title">V&aacute;hovan&eacute; hlasovanie</h3>
-        <p data-i18n="f1.desc">Tri met&oacute;dy hlasovania: pod&#318;a podielu, pod&#318;a bytov, pod&#318;a plochy. Ka&zcaron;d&yacute; hlas je auditovan&yacute; SHA-256 hashom.</p>
+        <p data-i18n="f1.desc">Tri met&oacute;dy hlasovania pod&#318;a &sect;&nbsp;14 z&aacute;kona 182/1993 Z.z.: pod&#318;a podielu, pod&#318;a bytov, pod&#318;a plochy. Tri typy kv&oacute;ra (nadpolovi&ccaron;n&aacute; v&auml;&ccaron;&scaron;ina pr&iacute;tomn&yacute;ch, v&scaron;etk&yacute;ch, 2/3 v&scaron;etk&yacute;ch). Ka&zcaron;d&yacute; hlas je auditovan&yacute; SHA-256 hashom.</p>
       </div>
       <div class="feature">
         <div class="feature-icon" style="background: rgba(62,207,142,0.15);">&#x1F4C4;</div>
@@ -569,7 +570,7 @@
       <div class="feature">
         <div class="feature-icon" style="background: rgba(245,197,66,0.15);">&#x270D;&#xFE0F;</div>
         <h3 data-i18n="f3.title">Mand&aacute;ty</h3>
-        <p data-i18n="f3.desc">Vlastn&iacute;k udel&iacute; splnomocnenie susedovi pre konkr&eacute;tne hlasovanie. Re&#357;azov&eacute; mand&aacute;ty nie s&uacute; povolen&eacute;.</p>
+        <p data-i18n="f3.desc">Splnomocnenie s &uacute;radne overen&yacute;m podpisom pod&#318;a &sect;&nbsp;14 ods.&nbsp;5. Vlastn&iacute;k deleguje hlas susedovi pre konkr&eacute;tne hlasovanie. Re&#357;azov&eacute; mand&aacute;ty nie s&uacute; povolen&eacute;.</p>
       </div>
       <div class="feature">
         <div class="feature-icon" style="background: rgba(255,107,107,0.15);">&#x1F4CB;</div>
@@ -585,6 +586,33 @@
         <div class="feature-icon" style="background: rgba(62,207,142,0.15);">&#x1F4CA;</div>
         <h3 data-i18n="f6.title">Z&aacute;pisnice PDF</h3>
         <p data-i18n="f6.desc">Po hlasovan&iacute; automaticky vygenerovan&aacute; z&aacute;pisnica s audit logom a QR k&oacute;dom. Predseda ju podp&iacute;&scaron;e fyzicky.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAW -->
+<section id="law" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="section-inner" style="max-width: 800px;">
+    <div class="section-label" data-i18n="law.label">// pr&aacute;vny z&aacute;klad</div>
+    <h2 data-i18n="law.title">V s&uacute;lade so z&aacute;konom &ccaron;. 182/1993 Z.z.</h2>
+    <p class="section-desc" data-i18n="law.desc">Hlasovac&iacute; modul je navrhnut&yacute; pod&#318;a z&aacute;kona o vlastn&iacute;ctve bytov a nebytov&yacute;ch priestorov v znen&iacute; neskor&scaron;&iacute;ch predpisov.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 2rem;">
+      <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem;">
+        <div style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.85rem; margin-bottom: 0.5rem;">&sect; 14 ods. 1&ndash;4</div>
+        <div style="font-size: 0.95rem;" data-i18n="law.quorum">Tri typy kv&oacute;ra &ndash; nadpolovi&ccaron;n&aacute; v&auml;&ccaron;&scaron;ina pr&iacute;tomn&yacute;ch, v&scaron;etk&yacute;ch vlastn&iacute;kov, alebo 2/3 v&scaron;etk&yacute;ch vlastn&iacute;kov</div>
+      </div>
+      <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem;">
+        <div style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.85rem; margin-bottom: 0.5rem;">&sect; 14 ods. 5</div>
+        <div style="font-size: 0.95rem;" data-i18n="law.mandate">Splnomocnenie s &uacute;radne overen&yacute;m podpisom, bez re&#357;azov&eacute;ho delegovania</div>
+      </div>
+      <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem;">
+        <div style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.85rem; margin-bottom: 0.5rem;">&sect; 14 ods. 7&ndash;8</div>
+        <div style="font-size: 0.95rem;" data-i18n="law.types">P&iacute;somn&eacute; hlasovanie (per rollam) aj hlasovanie na sch&ocirc;dzi</div>
+      </div>
+      <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem;">
+        <div style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.85rem; margin-bottom: 0.5rem;">&sect; 14</div>
+        <div style="font-size: 0.95rem;" data-i18n="law.methods">Tri met&oacute;dy: pod&#318;a spoluvlastn&iacute;ckeho podielu, pod&#318;a bytov, pod&#318;a plochy</div>
       </div>
     </div>
   </div>
@@ -877,11 +905,13 @@ docker compose up -d</code></pre>
 const translations = {
   sk: {
     "nav.features": "Funkcie",
+    "nav.law": "§ Zákon",
     "nav.roles": "Roly",
     "nav.tech": "Tech stack",
     "nav.docs": "Dokumentácia",
+    "badge.law": "§ 182/1993 Z.z.",
     "hero.title": 'Správa bytovky<br /><em>pre ľudí,</em><br />nie pre právnikov',
-    "hero.desc": "Elektronické hlasovanie, nástenka a správa vlastníkov pre slovenské bytové spoločenstvá. Zadarmo, bez predplatného, plne pod vašou kontrolou.",
+    "hero.desc": "Elektronické hlasovanie, nástenka a správa vlastníkov pre slovenské bytové spoločenstvá. V súlade so zákonom č. 182/1993 Z.z. Zadarmo, bez predplatného, plne pod vašou kontrolou.",
     "hero.cta": "▶ Rýchly štart",
     "terminal.comment1": "# Stiahni a spusti",
     "terminal.comment2": "# Uprav .env – názov bytovky,<br># heslo k DB, email",
@@ -892,17 +922,24 @@ const translations = {
     "features.title": "Všetko čo bytovka potrebuje",
     "features.desc": "Navrhnuté pre slovenské právne prostredie, prístupné pre každého – aj pre dôchodcov.",
     "f1.title": "Váhované hlasovanie",
-    "f1.desc": "Tri metódy hlasovania: podľa podielu, podľa bytov, podľa plochy. Každý hlas je auditovaný SHA-256 hashom.",
+    "f1.desc": "Tri metódy hlasovania podľa § 14 zákona 182/1993 Z.z.: podľa podielu, podľa bytov, podľa plochy. Tri typy kvóra (nadpolovičná väčšina prítomných, všetkých, 2/3 všetkých). Každý hlas je auditovaný SHA-256 hashom.",
     "f2.title": "Papierové hlasy",
     "f2.desc": "Sčítač zadá hlas za dôchodcu, priloží foto lístka. Vlastník dostane email s potvrdením.",
     "f3.title": "Mandáty",
-    "f3.desc": "Vlastník udelí splnomocnenie susedovi pre konkrétne hlasovanie. Reťazové mandáty nie sú povolené.",
+    "f3.desc": "Splnomocnenie s úradne overeným podpisom podľa § 14 ods. 5. Vlastník deleguje hlas susedovi pre konkrétne hlasovanie. Reťazové mandáty nie sú povolené.",
     "f4.title": "Nástenka",
     "f4.desc": "Oznamy, udalosti, opravy. Možnosť cieliť na konkrétny vchod. 4 kategórie: info, naliehavé, udalosť, údržba.",
     "f5.title": "Viac vchodov",
     "f5.desc": "Jedno spoločenstvo, viacero vchodov. Každý byt má definovaný spoluvlastnícky podiel a plochu.",
     "f6.title": "Zápisnice PDF",
     "f6.desc": "Po hlasovaní automaticky vygenerovaná zápisnica s audit logom a QR kódom. Predseda ju podpíše fyzicky.",
+    "law.label": "// právny základ",
+    "law.title": "V súlade so zákonom č. 182/1993 Z.z.",
+    "law.desc": "Hlasovací modul je navrhnutý podľa zákona o vlastníctve bytov a nebytových priestorov v znení neskorších predpisov.",
+    "law.quorum": "Tri typy kvóra – nadpolovičná väčšina prítomných, všetkých vlastníkov, alebo 2/3 všetkých vlastníkov",
+    "law.mandate": "Splnomocnenie s úradne overeným podpisom, bez reťazového delegovania",
+    "law.types": "Písomné hlasovanie (per rollam) aj hlasovanie na schôdzi",
+    "law.methods": "Tri metódy: podľa spoluvlastníckeho podielu, podľa bytov, podľa plochy",
     "roles.label": "// prístupové práva",
     "roles.title": "Päť rolí, jasné hranice",
     "roles.desc": "Každý vidí len to, čo mu patrí. Roly sú pridelené správcom bytovky.",
@@ -1028,11 +1065,13 @@ EMAIL_FROM=noreply@mojabytovka.sk`,
   },
   en: {
     "nav.features": "Features",
+    "nav.law": "§ Law",
     "nav.roles": "Roles",
     "nav.tech": "Tech stack",
     "nav.docs": "Docs",
+    "badge.law": "§ 182/1993 Z.z.",
     "hero.title": 'Apartment<br />management<br /><em>for people,</em> not lawyers',
-    "hero.desc": "Electronic voting, bulletin board, and owner management for Slovak housing associations. Free, no subscription, fully self-hosted.",
+    "hero.desc": "Electronic voting, bulletin board, and owner management for Slovak housing associations. Compliant with Slovak Act No. 182/1993. Free, no subscription, fully self-hosted.",
     "hero.cta": "▶ Quick start",
     "terminal.comment1": "# Clone and run",
     "terminal.comment2": "# Edit .env – building name,<br># DB password, email",
@@ -1043,17 +1082,24 @@ EMAIL_FROM=noreply@mojabytovka.sk`,
     "features.title": "Everything your building needs",
     "features.desc": "Designed for Slovak legal requirements, accessible for everyone – including the elderly.",
     "f1.title": "Weighted voting",
-    "f1.desc": "Three voting methods: by ownership share, by flat, by area. Every vote is audited with a SHA-256 hash.",
+    "f1.desc": "Three voting methods per § 14 of Act 182/1993: by ownership share, by flat, by area. Three quorum types (majority of present, of all, 2/3 of all). Every vote is audited with a SHA-256 hash.",
     "f2.title": "Paper ballots",
     "f2.desc": "Vote counter enters a ballot for elderly residents, attaches a photo. The owner gets an email confirmation.",
     "f3.title": "Mandates",
-    "f3.desc": "An owner can delegate their vote to a neighbor for a specific poll. Chain delegation is not allowed.",
+    "f3.desc": "Power of attorney with certified signature per § 14(5). An owner delegates their vote to a neighbor for a specific poll. Chain delegation is not allowed.",
     "f4.title": "Bulletin board",
     "f4.desc": "Announcements, events, repairs. Can target a specific entrance. 4 categories: info, urgent, event, maintenance.",
     "f5.title": "Multiple entrances",
     "f5.desc": "One association, multiple entrances. Each flat has a defined ownership share and area.",
     "f6.title": "PDF minutes",
     "f6.desc": "After a vote, minutes are auto-generated with audit log and QR code. The chairman signs them physically.",
+    "law.label": "// legal basis",
+    "law.title": "Compliant with Slovak Act No. 182/1993",
+    "law.desc": "The voting module is designed according to the Act on Ownership of Apartments and Non-Residential Premises, as amended.",
+    "law.quorum": "Three quorum types – majority of present, of all owners, or 2/3 of all owners",
+    "law.mandate": "Power of attorney with certified signature, no chain delegation",
+    "law.types": "Written voting (per rollam) and meeting voting",
+    "law.methods": "Three methods: by ownership share, by flat, by area",
     "roles.label": "// access control",
     "roles.title": "Five roles, clear boundaries",
     "roles.desc": "Everyone sees only what they should. Roles are assigned by the building administrator.",
