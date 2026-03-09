@@ -492,6 +492,7 @@
         <li><a href="#law" data-i18n="nav.law">&sect; Z&aacute;kon</a></li>
         <li><a href="#tech" data-i18n="nav.tech">Tech stack</a></li>
         <li><a href="#docs" data-i18n="nav.docs">Docs</a></li>
+        <li><a href="https://hub.docker.com/r/ipk0/open-resiapp">Docker Hub</a></li>
         <li><a href="https://github.com/open-resiapp/open-resiapp" class="nav-cta">GitHub &rarr;</a></li>
       </ul>
       <div class="lang-switch">
@@ -508,7 +509,7 @@
   <div>
     <div class="badge">
       <span class="badge-dot"></span>
-      Open Source &middot; Self-hosted &middot; <span data-i18n="badge.law">&sect; 182/1993 Z.z.</span>
+      Open Source &middot; Self-hosted &middot; <a href="https://hub.docker.com/r/ipk0/open-resiapp" style="color: inherit; text-decoration: underline;">Docker Hub</a> &middot; <span data-i18n="badge.law">&sect; 182/1993 Z.z.</span>
     </div>
     <h1 data-i18n="hero.title">Spr&aacute;va bytovky<br /><em>pre &#318;ud&iacute;,</em><br />nie pre pr&aacute;vnikov</h1>
     <p class="hero-desc" data-i18n="hero.desc">
@@ -534,15 +535,17 @@
       <span class="terminal-label">bash</span>
     </div>
     <div class="terminal-body">
-      <div class="t-comment" data-i18n="terminal.comment1"># Stiahni a spusti</div>
-      <div class="t-cmd">curl -O https://raw.githubusercontent.com/<br>&nbsp;&nbsp;open-resiapp/open-resiapp/main/<br>&nbsp;&nbsp;docker-compose.hub.yml</div>
-      <div class="t-cmd">cp .env.production.example .env</div>
-      <div class="t-comment" data-i18n="terminal.comment2"># Uprav .env &ndash; n&aacute;zov bytovky,<br># heslo k DB, email</div>
-      <div class="t-cmd">docker compose -f docker-compose.hub.yml up -d</div>
+      <div class="t-comment" data-i18n="terminal.comment1"># Vytvor docker-compose.yml a .env</div>
+      <div class="t-cmd">mkdir open-resiapp && cd open-resiapp</div>
+      <div class="t-comment" data-i18n="terminal.comment2"># (obsah v dokument&aacute;cii ni&zcaron;&scaron;ie)</div>
       <br />
+      <div class="t-comment" data-i18n="terminal.comment3"># Spusti &ndash; stiahne z Docker Hub</div>
+      <div class="t-cmd">docker compose up -d</div>
+      <br />
+      <div class="t-out">Pulling ipk0/open-resiapp:latest...</div>
       <div class="t-success" data-i18n="terminal.s1">&check; Datab&aacute;za pripraven&aacute;</div>
       <div class="t-success" data-i18n="terminal.s2">&check; Migr&aacute;cie hotov&eacute;</div>
-      <div class="t-success">&check; App <span data-i18n="terminal.s3">be&zcaron;&iacute; na</span> <span class="t-accent">:3000</span></div>
+      <div class="t-success">&check; App <span data-i18n="terminal.s3">be&zcaron;&iacute; na</span> <span class="t-accent">https://yourdomain.sk</span></div>
     </div>
   </div>
 </div>
@@ -598,20 +601,93 @@
     <p class="section-desc" data-i18n="law.desc">Hlasovac&iacute; modul je navrhnut&yacute; pod&#318;a z&aacute;kona o vlastn&iacute;ctve bytov a nebytov&yacute;ch priestorov v znen&iacute; neskor&scaron;&iacute;ch predpisov.</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 2rem;">
       <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem;">
-        <div style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.85rem; margin-bottom: 0.5rem;">&sect; 14 ods. 1&ndash;4</div>
-        <div style="font-size: 0.95rem;" data-i18n="law.quorum">Tri typy kv&oacute;ra &ndash; nadpolovi&ccaron;n&aacute; v&auml;&ccaron;&scaron;ina pr&iacute;tomn&yacute;ch, v&scaron;etk&yacute;ch vlastn&iacute;kov, alebo 2/3 v&scaron;etk&yacute;ch vlastn&iacute;kov</div>
-      </div>
-      <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem;">
-        <div style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.85rem; margin-bottom: 0.5rem;">&sect; 14 ods. 5</div>
-        <div style="font-size: 0.95rem;" data-i18n="law.mandate">Splnomocnenie s &uacute;radne overen&yacute;m podpisom, bez re&#357;azov&eacute;ho delegovania</div>
-      </div>
-      <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem;">
-        <div style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.85rem; margin-bottom: 0.5rem;">&sect; 14 ods. 7&ndash;8</div>
+        <div style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.85rem; margin-bottom: 0.5rem;">&sect; 14a ods. 1&ndash;2</div>
         <div style="font-size: 0.95rem;" data-i18n="law.types">P&iacute;somn&eacute; hlasovanie (per rollam) aj hlasovanie na sch&ocirc;dzi</div>
       </div>
       <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem;">
-        <div style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.85rem; margin-bottom: 0.5rem;">&sect; 14</div>
+        <div style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.85rem; margin-bottom: 0.5rem;">&sect; 14a ods. 4</div>
+        <div style="font-size: 0.95rem;" data-i18n="law.mandate">Splnomocnenie s &uacute;radne overen&yacute;m podpisom, bez re&#357;azov&eacute;ho delegovania</div>
+      </div>
+      <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem;">
+        <div style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.85rem; margin-bottom: 0.5rem;">&sect; 14b ods. 1&ndash;2</div>
+        <div style="font-size: 0.95rem;" data-i18n="law.quorum">Tri typy kv&oacute;ra &ndash; nadpolovi&ccaron;n&aacute; v&auml;&ccaron;&scaron;ina pr&iacute;tomn&yacute;ch, v&scaron;etk&yacute;ch vlastn&iacute;kov, alebo 2/3 v&scaron;etk&yacute;ch vlastn&iacute;kov</div>
+      </div>
+      <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem;">
+        <div style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.85rem; margin-bottom: 0.5rem;">&sect; 14 ods. 2</div>
         <div style="font-size: 0.95rem;" data-i18n="law.methods">Tri met&oacute;dy: pod&#318;a spoluvlastn&iacute;ckeho podielu, pod&#318;a bytov, pod&#318;a plochy</div>
+      </div>
+      <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem;">
+        <div style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.85rem; margin-bottom: 0.5rem;">&sect; 14b ods. 5</div>
+        <div style="font-size: 0.95rem;" data-i18n="law.quarter">&#352;tvrtina vlastn&iacute;kov m&ocirc;&zcaron;e iniciova&#357; hlasovanie</div>
+      </div>
+      <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem;">
+        <div style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.85rem; margin-bottom: 0.5rem;">SHA-256</div>
+        <div style="font-size: 0.95rem;" data-i18n="law.audit">Ka&zcaron;d&yacute; hlas auditovan&yacute; kryptografick&yacute;m hashom s e-mailov&yacute;m potvrden&iacute;m</div>
+      </div>
+    </div>
+
+    <!-- Compliance table -->
+    <div style="margin-top: 3rem;">
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 1.3rem; margin-bottom: 1.5rem;" data-i18n="law.compliance.title">S&uacute;lad so z&aacute;konom</h3>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--border); text-align: left;">
+              <th style="padding: 0.75rem 1rem; color: var(--muted); font-weight: 500;" data-i18n="law.compliance.req">Po&zcaron;iadavka z&aacute;kona</th>
+              <th style="padding: 0.75rem 1rem; color: var(--muted); font-weight: 500; width: 80px;">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.6rem 1rem;" data-i18n="law.c1">Hlasovanie pod&#318;a spoluvlastn&iacute;ckeho podielu</td>
+              <td style="padding: 0.6rem 1rem; color: var(--green);">&#x2705;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.6rem 1rem;" data-i18n="law.c2">Nadpolovi&ccaron;n&aacute; v&auml;&ccaron;&scaron;ina v&scaron;etk&yacute;ch vlastn&iacute;kov</td>
+              <td style="padding: 0.6rem 1rem; color: var(--green);">&#x2705;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.6rem 1rem;" data-i18n="law.c3">Dvojtretinov&aacute; v&auml;&ccaron;&scaron;ina v&scaron;etk&yacute;ch vlastn&iacute;kov</td>
+              <td style="padding: 0.6rem 1rem; color: var(--green);">&#x2705;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.6rem 1rem;" data-i18n="law.c4">P&iacute;somn&eacute; hlasovanie (per rollam)</td>
+              <td style="padding: 0.6rem 1rem; color: var(--green);">&#x2705;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.6rem 1rem;" data-i18n="law.c5">Hlasovanie na sch&ocirc;dzi (len papierov&eacute; hlasy)</td>
+              <td style="padding: 0.6rem 1rem; color: var(--green);">&#x2705;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.6rem 1rem;" data-i18n="law.c6">Splnomocnenie s &uacute;radne overen&yacute;m podpisom</td>
+              <td style="padding: 0.6rem 1rem; color: var(--green);">&#x2705;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.6rem 1rem;" data-i18n="law.c7">Z&aacute;kaz re&#357;azenia splnomocnen&iacute;</td>
+              <td style="padding: 0.6rem 1rem; color: var(--green);">&#x2705;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.6rem 1rem;" data-i18n="law.c8">Hlasovanie iniciovan&eacute; &#188; vlastn&iacute;kov</td>
+              <td style="padding: 0.6rem 1rem; color: var(--green);">&#x2705;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.6rem 1rem;" data-i18n="law.c9">Overovate&#318; hlasovania</td>
+              <td style="padding: 0.6rem 1rem; color: var(--green);">&#x2705;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.6rem 1rem;" data-i18n="law.c10">Auditn&yacute; z&aacute;znam (SHA-256 + email)</td>
+              <td style="padding: 0.6rem 1rem; color: var(--green);">&#x2705;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.6rem 1rem;" data-i18n="law.c11">N&aacute;jomn&iacute;ci nemaj&uacute; hlasovacie pr&aacute;vo</td>
+              <td style="padding: 0.6rem 1rem; color: var(--green);">&#x2705;</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.6rem 1rem;" data-i18n="law.c12">Z&aacute;pisnica z hlasovania (PDF)</td>
+              <td style="padding: 0.6rem 1rem; color: var(--green);">&#x2705;</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
@@ -750,41 +826,84 @@
         </div>
 
         <h3 id="doc-install" data-i18n="doc.install.title">In&scaron;tal&aacute;cia</h3>
-        <h4 data-i18n="doc.install.step1">1. Stiahni s&uacute;bory</h4>
-        <pre><code>mkdir open-resiapp && cd open-resiapp
-curl -O https://raw.githubusercontent.com/open-resiapp/open-resiapp/main/docker-compose.hub.yml
-curl -O https://raw.githubusercontent.com/open-resiapp/open-resiapp/main/.env.production.example</code></pre>
+        <div class="callout callout-info">
+          <span data-i18n="doc.install.hub">&x2139;&#xFE0F; Docker obraz <code>ipk0/open-resiapp</code> je dostupn&yacute; na <a href="https://hub.docker.com/r/ipk0/open-resiapp" style="color: inherit; text-decoration: underline;">Docker Hub</a>. Podporuje <code>linux/amd64</code> a <code>linux/arm64</code>.</span>
+        </div>
 
-        <h4 data-i18n="doc.install.step2">2. Vytvor konfigura&ccaron;n&yacute; s&uacute;bor</h4>
-        <pre><code>cp .env.production.example .env
-nano .env</code></pre>
+        <h4 data-i18n="doc.install.step1">1. Vytvor docker-compose.yml</h4>
+        <pre><code>mkdir open-resiapp && cd open-resiapp</code></pre>
+        <p data-i18n="doc.install.step1copy">Ulo&zcaron; nasledovn&yacute; obsah ako <code>docker-compose.yml</code>:</p>
+        <pre><code>services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: resiapp
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
-        <h4 data-i18n="doc.install.step3">3. Spusti Docker stack</h4>
-        <pre><code>docker compose -f docker-compose.hub.yml up -d</code></pre>
-        <p data-i18n="doc.install.note">Toto stiahne Docker images z Docker Hub, vytvor&iacute; datab&aacute;zu a spust&iacute; app. Migr&aacute;cie sa spustia automaticky. Prv&eacute; spustenie trv&aacute; 1&ndash;2 min&uacute;ty.</p>
+  app:
+    image: ipk0/open-resiapp:latest
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD}@db:5432/resiapp
+      NEXTAUTH_SECRET: ${NEXTAUTH_SECRET}
+      NEXTAUTH_URL: ${APP_URL}
+      AUTH_TRUST_HOST: "true"
+      APP_NAME: ${APP_NAME:-Bytove spolocenstvo}
+      LANGUAGE: ${LANGUAGE:-sk}
+    volumes:
+      - uploads:/app/uploads
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy_data:/data
+    depends_on:
+      - app
+    command: caddy reverse-proxy --from ${APP_DOMAIN} --to app:3000
+
+volumes:
+  postgres_data:
+  uploads:
+  caddy_data:</code></pre>
+
+        <h4 data-i18n="doc.install.step2">2. Nastav .env</h4>
+        <p data-i18n="doc.install.step2desc">Vytvor s&uacute;bor <code>.env</code> s t&yacute;mito hodnotami:</p>
+        <pre><code>APP_NAME="Bytove spolocenstvo Hlavna 12"
+APP_URL=https://yourdomain.sk
+APP_DOMAIN=yourdomain.sk
+POSTGRES_PASSWORD=changeMe_veryLongPassword123
+NEXTAUTH_SECRET=changeMe_anotherRandomString456
+# Generate secrets: openssl rand -base64 32</code></pre>
+
+        <h4 data-i18n="doc.install.step3">3. Spusti</h4>
+        <pre><code>docker compose up -d</code></pre>
+        <p data-i18n="doc.install.note">Docker automaticky stiahne obrazy z <a href="https://hub.docker.com/r/ipk0/open-resiapp" style="color: var(--accent);">Docker Hub</a>, vytvor&iacute; datab&aacute;zu a spust&iacute; app. Migr&aacute;cie sa spustia automaticky.</p>
 
         <h3 id="doc-env" data-i18n="doc.env.title">Konfigur&aacute;cia .env</h3>
         <p data-i18n="doc.env.intro">Otvor s&uacute;bor <code>.env</code> a uprav nasledovn&eacute; hodnoty:</p>
 
-        <pre><code><span data-i18n="doc.env.code"># N&aacute;zov tvojej bytovky (zobraz&iacute; sa v UI a emailoch)
-APP_NAME="Bytov&eacute; spolo&ccaron;enstvo Hlavn&aacute; 12"
-
-# URL kde bude app dostupn&aacute;
-APP_URL=http://localhost:3000
-
-# Siln&eacute; heslo pre datab&aacute;zu (aspo&ncaron; 20 znakov)
-POSTGRES_PASSWORD=zmenMaPlease_veľmiDlh&eacute;Heslo
-
-# Tajn&yacute; k&#318;&uacute;&ccaron; pre session (aspo&ncaron; 32 n&aacute;hodn&yacute;ch znakov)
-# Generuj: openssl rand -base64 32
-NEXTAUTH_SECRET=tu_vloz_nahodny_retazec
-
-# Email (SMTP)
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=tvoj@email.sk
-SMTP_PASS=heslo
-EMAIL_FROM=noreply@mojabytovka.sk</span></code></pre>
+        <pre><code><span data-i18n="doc.env.code">APP_NAME="Bytove spolocenstvo Hlavna 12"
+APP_URL=https://yourdomain.sk
+APP_DOMAIN=yourdomain.sk
+POSTGRES_PASSWORD=changeMe_veryLongPassword123
+NEXTAUTH_SECRET=changeMe_anotherRandomString456
+# Generate secrets: openssl rand -base64 32</span></code></pre>
 
         <div class="callout callout-warn">
           <span data-i18n="doc.env.warn">&x26A0;&#xFE0F; Nikdy nezdieľaj s&uacute;bor <code>.env</code> a ned&aacute;vaj ho do Gitu. S&uacute;bor <code>.gitignore</code> ho automaticky vylu&ccaron;uje.</span>
@@ -792,13 +911,13 @@ EMAIL_FROM=noreply@mojabytovka.sk</span></code></pre>
 
         <h3 id="doc-first-run" data-i18n="doc.first.title">Prv&eacute; spustenie</h3>
         <p data-i18n="doc.first.intro">Po spusten&iacute; overte, &zcaron;e v&scaron;etko be&zcaron;&iacute;:</p>
-        <pre><code>docker compose -f docker-compose.hub.yml ps</code></pre>
+        <pre><code>docker compose ps</code></pre>
         <p data-i18n="doc.first.check">V&scaron;etky tri slu&zcaron;by (<code>app</code>, <code>db</code>, <code>caddy</code>) musia ma&#357; status <code>Up</code>.</p>
         <p data-i18n="doc.first.open">Otvor prehliada&ccaron; na <code>http://localhost:3000</code> &ndash; uvid&iacute;&scaron; prihlasovac&iacute; formul&aacute;r.</p>
 
         <h4 data-i18n="doc.first.seed.title">Seed d&aacute;ta pre testovanie</h4>
         <p data-i18n="doc.first.seed.intro">Pre r&yacute;chle otestovanie m&ocirc;&zcaron;e&scaron; na&ccaron;&iacute;ta&#357; uk&aacute;&zcaron;kov&eacute; d&aacute;ta:</p>
-        <pre><code>docker compose -f docker-compose.hub.yml exec app npm run db:seed</code></pre>
+        <pre><code>docker compose exec app npm run db:seed</code></pre>
         <p data-i18n="doc.first.seed.desc">Toto vytvor&iacute; testovac&iacute;ch vlastn&iacute;kov, byty a jedno akt&iacute;vne hlasovanie. Prihlasovacie &uacute;daje admina:</p>
         <pre><code>Email:  admin@test.sk
 Heslo:  Admin123!</code></pre>
@@ -823,54 +942,24 @@ APP_DOMAIN=bytovka.mojadomena.sk</code></pre>
         </div>
 
         <p data-i18n="doc.https.restart">Po nastaven&iacute; dom&eacute;ny re&scaron;tartuj stack:</p>
-        <pre><code>docker compose -f docker-compose.hub.yml down
-docker compose -f docker-compose.hub.yml up -d</code></pre>
+        <pre><code>docker compose down
+docker compose up -d</code></pre>
 
         <h3 id="doc-backup" data-i18n="doc.backup.title">Z&aacute;lohovanie</h3>
         <p data-i18n="doc.backup.intro">V&scaron;etky d&aacute;ta s&uacute; v PostgreSQL datab&aacute;ze a v prie&ccaron;inku <code>uploads/</code>. Odpor&uacute;&ccaron;ame z&aacute;lohova&#357; denne.</p>
 
         <h4 data-i18n="doc.backup.auto">Automatick&aacute; z&aacute;loha</h4>
-        <pre><code># Stiahni z&aacute;lohovac&iacute; skript
-curl -O https://raw.githubusercontent.com/open-resiapp/open-resiapp/main/scripts/backup.sh
-chmod +x backup.sh
-
-# Otestuj
-./backup.sh
-
-# Pridaj do cronu (denne o 3:00)
-(crontab -l 2>/dev/null; echo "0 3 * * * cd $(pwd) && ./backup.sh >> /var/log/resiapp-backup.log 2>&1") | crontab -</code></pre>
-
-        <h4 data-i18n="doc.backup.remote">Vzdialen&aacute; z&aacute;loha (voliteln&eacute;)</h4>
-        <p data-i18n="doc.backup.remote.desc">Pre z&aacute;lohy mimo servera (ochrana aj pri kompromitovan&iacute; servera):</p>
-        <pre><code># Hetzner Storage Box (BorgBackup)
-curl -O https://raw.githubusercontent.com/open-resiapp/open-resiapp/main/scripts/backup-hetzner-setup.sh
-
-# AWS S3 (Restic)
-curl -O https://raw.githubusercontent.com/open-resiapp/open-resiapp/main/scripts/backup-aws-setup.sh
-
-# Azure Blob Storage (Restic)
-curl -O https://raw.githubusercontent.com/open-resiapp/open-resiapp/main/scripts/backup-azure-setup.sh</code></pre>
+        <pre><code>docker compose exec db pg_dump -U postgres resiapp | gzip > backup_$(date +%Y%m%d).sql.gz</code></pre>
+        <p data-i18n="doc.backup.cron">Pridaj do cronu pre denn&eacute; z&aacute;lohy:</p>
+        <pre><code>(crontab -l 2>/dev/null; echo "0 3 * * * cd /path/to/project && docker compose exec -T db pg_dump -U postgres resiapp | gzip > /backups/resiapp_\$(date +\%Y\%m\%d).sql.gz") | crontab -</code></pre>
 
         <h4 data-i18n="doc.backup.restore">Obnova zo z&aacute;lohy</h4>
-        <pre><code>curl -O https://raw.githubusercontent.com/open-resiapp/open-resiapp/main/scripts/restore.sh
-chmod +x restore.sh
-
-# Z lok&aacute;lnej z&aacute;lohy
-./restore.sh /backups/resiapp/daily/db_2026-03-09.sql.gz
-
-# Zo vzdialenej z&aacute;lohy
-./restore.sh list            # zobraz arch&iacute;vy
-./restore.sh borg latest     # obnov z Hetzner
-./restore.sh restic latest   # obnov z AWS/Azure</code></pre>
-
-        <div class="callout callout-tip">
-          <span data-i18n="doc.backup.tip">&#x1F4A1; Vzdialen&eacute; z&aacute;lohy s append-only m&oacute;dom zaru&ccaron;ia, &zcaron;e &uacute;to&ccaron;n&iacute;k nem&ocirc;&zcaron;e zmaza&#357; z&aacute;lohy ani s root pr&iacute;stupom na server.</span>
-        </div>
+        <pre><code>gunzip < backup_20260309.sql.gz | docker compose exec -T db psql -U postgres resiapp</code></pre>
 
         <h3 id="doc-update" data-i18n="doc.update.title">Aktualiz&aacute;cia na nov&uacute; verziu</h3>
         <p data-i18n="doc.update.desc">Aktualiz&aacute;cia je jednoduch&aacute; &ndash; nov&eacute; migr&aacute;cie sa spustia automaticky pri &scaron;tarte.</p>
-        <pre><code>docker compose -f docker-compose.hub.yml pull
-docker compose -f docker-compose.hub.yml up -d</code></pre>
+        <pre><code>docker compose pull
+docker compose up -d</code></pre>
         <p data-i18n="doc.update.note">Toto stiahne najnov&scaron;&iacute; Docker image a re&scaron;tartuje app. Migr&aacute;cie datab&aacute;zy sa spustia automaticky &ndash; &zcaron;iadne manu&aacute;lne kroky.</p>
 
         <div class="callout callout-warn">
@@ -879,7 +968,7 @@ docker compose -f docker-compose.hub.yml up -d</code></pre>
 
         <h3 id="doc-admin" data-i18n="doc.admin.title">Admin &uacute;&ccaron;et</h3>
         <p data-i18n="doc.admin.desc">Pri prvom spusten&iacute; v produkcii vytvor admin &uacute;&ccaron;et cez pr&iacute;kazov&yacute; riadok:</p>
-        <pre><code>docker compose -f docker-compose.hub.yml exec app \
+        <pre><code>docker compose exec app \
   npx tsx src/scripts/create-admin.ts \
   --email predseda@bytovka.sk \
   --name "J&aacute;n Nov&aacute;k"</code></pre>
@@ -934,8 +1023,9 @@ const translations = {
     "hero.title": 'Správa bytovky<br /><em>pre ľudí,</em><br />nie pre právnikov',
     "hero.desc": "Elektronické hlasovanie, nástenka a správa vlastníkov pre slovenské bytové spoločenstvá. V súlade so zákonom č. 182/1993 Z.z. Zadarmo, bez predplatného, plne pod vašou kontrolou.",
     "hero.cta": "▶ Rýchly štart",
-    "terminal.comment1": "# Stiahni a spusti (bez git clone)",
-    "terminal.comment2": "# Uprav .env – názov bytovky,<br># heslo k DB, email",
+    "terminal.comment1": "# Vytvor docker-compose.yml a .env",
+    "terminal.comment2": "# (obsah v dokumentácii nižšie)",
+    "terminal.comment3": "# Spusti – stiahne z Docker Hub",
     "terminal.s1": "✔ Databáza pripravená",
     "terminal.s2": "✔ Migrácie hotové",
     "terminal.s3": "beží na",
@@ -961,6 +1051,22 @@ const translations = {
     "law.mandate": "Splnomocnenie s úradne overeným podpisom, bez reťazového delegovania",
     "law.types": "Písomné hlasovanie (per rollam) aj hlasovanie na schôdzi",
     "law.methods": "Tri metódy: podľa spoluvlastníckeho podielu, podľa bytov, podľa plochy",
+    "law.quarter": "Štvrtina vlastníkov môže iniciovať hlasovanie",
+    "law.audit": "Každý hlas auditovaný kryptografickým hashom s e-mailovým potvrdením",
+    "law.compliance.title": "Súlad so zákonom",
+    "law.compliance.req": "Požiadavka zákona",
+    "law.c1": "Hlasovanie podľa spoluvlastníckeho podielu",
+    "law.c2": "Nadpolovičná väčšina všetkých vlastníkov",
+    "law.c3": "Dvojtretinová väčšina všetkých vlastníkov",
+    "law.c4": "Písomné hlasovanie (per rollam)",
+    "law.c5": "Hlasovanie na schôdzi (len papierové hlasy)",
+    "law.c6": "Splnomocnenie s úradne overeným podpisom",
+    "law.c7": "Zákaz reťazenia splnomocnení",
+    "law.c8": "Hlasovanie iniciované ¼ vlastníkov",
+    "law.c9": "Overovateľ hlasovania",
+    "law.c10": "Auditný záznam (SHA-256 + email)",
+    "law.c11": "Nájomníci nemajú hlasovacie právo",
+    "law.c12": "Zápisnica z hlasovania (PDF)",
     "roles.label": "// prístupové práva",
     "roles.title": "Päť rolí, jasné hranice",
     "roles.desc": "Každý vidí len to, čo mu patrí. Roly sú pridelené správcom bytovky.",
@@ -1014,31 +1120,21 @@ const translations = {
     "doc.req.4": "SMTP prístup (pre emaily)",
     "doc.req.tip": "💡 Na lokálne testovanie stačí aj tvoj laptop – Docker Desktop na Windows alebo macOS.",
     "doc.install.title": "Inštalácia",
-    "doc.install.step1": "1. Stiahni súbory",
-    "doc.install.step2": "2. Vytvor konfiguračný súbor",
-    "doc.install.step3": "3. Spusti Docker stack",
-    "doc.install.note": "Toto stiahne Docker images z Docker Hub, vytvorí databázu a spustí app. Migrácie sa spustia automaticky. Prvé spustenie trvá 1–2 minúty.",
+    "doc.install.hub": 'ℹ️ Docker obraz <code>ipk0/open-resiapp</code> je dostupný na <a href="https://hub.docker.com/r/ipk0/open-resiapp" style="color: inherit; text-decoration: underline;">Docker Hub</a>. Podporuje <code>linux/amd64</code> a <code>linux/arm64</code>.',
+    "doc.install.step1": "1. Vytvor docker-compose.yml",
+    "doc.install.step1copy": 'Ulož nasledovný obsah ako <code>docker-compose.yml</code>:',
+    "doc.install.step2": "2. Nastav .env",
+    "doc.install.step2desc": 'Vytvor súbor <code>.env</code> s týmito hodnotami:',
+    "doc.install.step3": "3. Spusti",
+    "doc.install.note": 'Docker automaticky stiahne obrazy z <a href="https://hub.docker.com/r/ipk0/open-resiapp" style="color: var(--accent);">Docker Hub</a>, vytvorí databázu a spustí app. Migrácie sa spustia automaticky.',
     "doc.env.title": "Konfigurácia .env",
     "doc.env.intro": 'Otvor súbor <code>.env</code> a uprav nasledovné hodnoty:',
-    "doc.env.code": `# Názov tvojej bytovky (zobrazí sa v UI a emailoch)
-APP_NAME="Bytové spoločenstvo Hlavná 12"
-
-# URL kde bude app dostupná
-APP_URL=http://localhost:3000
-
-# Silné heslo pre databázu (aspoň 20 znakov)
-POSTGRES_PASSWORD=zmenMaPlease_veľmiDlhéHeslo
-
-# Tajný kľúč pre session (aspoň 32 náhodných znakov)
-# Generuj: openssl rand -base64 32
-NEXTAUTH_SECRET=tu_vloz_nahodny_retazec
-
-# Email (SMTP)
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=tvoj@email.sk
-SMTP_PASS=heslo
-EMAIL_FROM=noreply@mojabytovka.sk`,
+    "doc.env.code": `APP_NAME="Bytove spolocenstvo Hlavna 12"
+APP_URL=https://yourdomain.sk
+APP_DOMAIN=yourdomain.sk
+POSTGRES_PASSWORD=changeMe_veryLongPassword123
+NEXTAUTH_SECRET=changeMe_anotherRandomString456
+# Generate secrets: openssl rand -base64 32`,
     "doc.env.warn": '⚠️ Nikdy nezdieľaj súbor <code>.env</code> a nedávaj ho do Gitu. Súbor <code>.gitignore</code> ho automaticky vylučuje.',
     "doc.first.title": "Prvé spustenie",
     "doc.first.intro": "Po spustení overte, že všetko beží:",
@@ -1059,10 +1155,8 @@ EMAIL_FROM=noreply@mojabytovka.sk`,
     "doc.backup.title": "Zálohovanie",
     "doc.backup.intro": 'Všetky dáta sú v PostgreSQL databáze a v priečinku <code>uploads/</code>. Odporúčame zálohovať denne.',
     "doc.backup.auto": "Automatická záloha",
-    "doc.backup.remote": "Vzdialená záloha (voliteľné)",
-    "doc.backup.remote.desc": "Pre zálohy mimo servera (ochrana aj pri kompromitovaní servera):",
+    "doc.backup.cron": "Pridaj do cronu pre denné zálohy:",
     "doc.backup.restore": "Obnova zo zálohy",
-    "doc.backup.tip": "💡 Vzdialené zálohy s append-only módom zaručia, že útočník nemôže zmazať zálohy ani s root prístupom na server.",
     "doc.update.title": "Aktualizácia na novú verziu",
     "doc.update.desc": "Aktualizácia je jednoduchá – nové migrácie sa spustia automaticky pri štarte.",
     "doc.update.note": "Toto stiahne najnovší Docker image a reštartuje app. Migrácie databázy sa spustia automaticky – žiadne manuálne kroky.",
@@ -1097,8 +1191,9 @@ EMAIL_FROM=noreply@mojabytovka.sk`,
     "hero.title": 'Apartment<br />management<br /><em>for people,</em> not lawyers',
     "hero.desc": "Electronic voting, bulletin board, and owner management for Slovak housing associations. Compliant with Slovak Act No. 182/1993. Free, no subscription, fully self-hosted.",
     "hero.cta": "▶ Quick start",
-    "terminal.comment1": "# Download and run (no git clone needed)",
-    "terminal.comment2": "# Edit .env – building name,<br># DB password, email",
+    "terminal.comment1": "# Create docker-compose.yml and .env",
+    "terminal.comment2": "# (see documentation below)",
+    "terminal.comment3": "# Run – pulls from Docker Hub",
     "terminal.s1": "✔ Database ready",
     "terminal.s2": "✔ Migrations done",
     "terminal.s3": "running on",
@@ -1124,6 +1219,22 @@ EMAIL_FROM=noreply@mojabytovka.sk`,
     "law.mandate": "Power of attorney with certified signature, no chain delegation",
     "law.types": "Written voting (per rollam) and meeting voting",
     "law.methods": "Three methods: by ownership share, by flat, by area",
+    "law.quarter": "A quarter of owners can initiate a vote",
+    "law.audit": "Every vote audited with cryptographic hash and email confirmation",
+    "law.compliance.title": "Legal compliance",
+    "law.compliance.req": "Legal requirement",
+    "law.c1": "Voting by ownership share",
+    "law.c2": "Simple majority of all owners",
+    "law.c3": "Two-thirds majority of all owners",
+    "law.c4": "Written voting (per rollam)",
+    "law.c5": "Meeting voting (paper ballots only)",
+    "law.c6": "Power of attorney with certified signature",
+    "law.c7": "Chain delegation prohibited",
+    "law.c8": "Vote initiated by ¼ of owners",
+    "law.c9": "Vote counter / verifier",
+    "law.c10": "Audit trail (SHA-256 + email)",
+    "law.c11": "Tenants cannot vote",
+    "law.c12": "Voting minutes (PDF)",
     "roles.label": "// access control",
     "roles.title": "Five roles, clear boundaries",
     "roles.desc": "Everyone sees only what they should. Roles are assigned by the building administrator.",
@@ -1177,31 +1288,21 @@ EMAIL_FROM=noreply@mojabytovka.sk`,
     "doc.req.4": "SMTP access (for emails)",
     "doc.req.tip": "💡 For local testing, your laptop is enough – Docker Desktop on Windows or macOS.",
     "doc.install.title": "Installation",
-    "doc.install.step1": "1. Download the files",
-    "doc.install.step2": "2. Create the configuration file",
-    "doc.install.step3": "3. Start the Docker stack",
-    "doc.install.note": "This pulls Docker images from Docker Hub, creates the database, and starts the app. Migrations run automatically. First run takes 1–2 minutes.",
+    "doc.install.hub": 'ℹ️ Docker image <code>ipk0/open-resiapp</code> is available on <a href="https://hub.docker.com/r/ipk0/open-resiapp" style="color: inherit; text-decoration: underline;">Docker Hub</a>. Supports <code>linux/amd64</code> and <code>linux/arm64</code>.',
+    "doc.install.step1": "1. Create docker-compose.yml",
+    "doc.install.step1copy": 'Save the following content as <code>docker-compose.yml</code>:',
+    "doc.install.step2": "2. Set up .env",
+    "doc.install.step2desc": 'Create a <code>.env</code> file with these values:',
+    "doc.install.step3": "3. Run",
+    "doc.install.note": 'Docker automatically pulls images from <a href="https://hub.docker.com/r/ipk0/open-resiapp" style="color: var(--accent);">Docker Hub</a>, creates the database, and starts the app. Migrations run automatically.',
     "doc.env.title": ".env configuration",
     "doc.env.intro": 'Open the <code>.env</code> file and edit these values:',
-    "doc.env.code": `# Your building name (shown in UI and emails)
-APP_NAME="Housing Association Main St 12"
-
-# URL where the app will be available
-APP_URL=http://localhost:3000
-
-# Strong database password (at least 20 characters)
-POSTGRES_PASSWORD=changeMePlease_veryLongPassword
-
-# Secret key for sessions (at least 32 random characters)
-# Generate: openssl rand -base64 32
-NEXTAUTH_SECRET=paste_random_string_here
-
-# Email (SMTP)
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=your@email.com
-SMTP_PASS=password
-EMAIL_FROM=noreply@mybuilding.com`,
+    "doc.env.code": `APP_NAME="Bytove spolocenstvo Hlavna 12"
+APP_URL=https://yourdomain.sk
+APP_DOMAIN=yourdomain.sk
+POSTGRES_PASSWORD=changeMe_veryLongPassword123
+NEXTAUTH_SECRET=changeMe_anotherRandomString456
+# Generate secrets: openssl rand -base64 32`,
     "doc.env.warn": '⚠️ Never share the <code>.env</code> file or commit it to Git. The <code>.gitignore</code> file excludes it automatically.',
     "doc.first.title": "First run",
     "doc.first.intro": "After starting, verify everything is running:",
@@ -1222,10 +1323,8 @@ EMAIL_FROM=noreply@mybuilding.com`,
     "doc.backup.title": "Backups",
     "doc.backup.intro": 'All data is stored in the PostgreSQL database and the <code>uploads/</code> directory. We recommend daily backups.',
     "doc.backup.auto": "Automated backup",
-    "doc.backup.remote": "Remote backup (optional)",
-    "doc.backup.remote.desc": "For off-server backups (protection even if the server is compromised):",
+    "doc.backup.cron": "Add to cron for daily backups:",
     "doc.backup.restore": "Restore from backup",
-    "doc.backup.tip": "💡 Remote backups with append-only mode ensure an attacker cannot delete backups even with root access to the server.",
     "doc.update.title": "Updating to a new version",
     "doc.update.desc": "Updating is simple – new migrations run automatically on startup.",
     "doc.update.note": "This pulls the latest Docker image and restarts the app. Database migrations run automatically – no manual steps needed.",
