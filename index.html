@@ -537,6 +537,7 @@
         <li><a href="#law" data-i18n="nav.law">&sect; Z&aacute;kon</a></li>
         <li><a href="#tech" data-i18n="nav.tech">Tech stack</a></li>
         <li><a href="#docs" data-i18n="nav.docs">Docs</a></li>
+        <li><a href="#community" data-i18n="nav.community">Komunita</a></li>
         <li><a href="https://hub.docker.com/r/ipk0/open-resiapp">Docker Hub</a></li>
         <li><a href="https://github.com/open-resiapp/open-resiapp" class="nav-cta">GitHub &rarr;</a></li>
       </ul>
@@ -580,17 +581,18 @@
       <span class="terminal-label">bash</span>
     </div>
     <div class="terminal-body">
-      <div class="t-comment" data-i18n="terminal.comment1"># Vytvor docker-compose.yml a .env</div>
+      <div class="t-comment" data-i18n="terminal.comment1"># Stiahni a spusti &ndash; to je v&scaron;etko</div>
       <div class="t-cmd">mkdir open-resiapp && cd open-resiapp</div>
-      <div class="t-comment" data-i18n="terminal.comment2"># (obsah v dokument&aacute;cii ni&zcaron;&scaron;ie)</div>
+      <div class="t-cmd">curl -O https://raw.githubusercontent.com/open-resiapp/open-resiapp/main/setup.sh</div>
+      <div class="t-cmd">chmod +x setup.sh && ./setup.sh</div>
       <br />
-      <div class="t-comment" data-i18n="terminal.comment3"># Spusti &ndash; stiahne z Docker Hub</div>
-      <div class="t-cmd">docker compose up -d</div>
-      <br />
+      <div class="t-out" data-i18n="terminal.prompt1">Dom&eacute;na: dom.example.sk</div>
+      <div class="t-out" data-i18n="terminal.prompt2">Admin: admin@dom.example.sk</div>
       <div class="t-out">Pulling ipk0/open-resiapp:latest...</div>
       <div class="t-success" data-i18n="terminal.s1">&check; Datab&aacute;za pripraven&aacute;</div>
       <div class="t-success" data-i18n="terminal.s2">&check; Migr&aacute;cie hotov&eacute;</div>
-      <div class="t-success">&check; App <span data-i18n="terminal.s3">be&zcaron;&iacute; na</span> <span class="t-accent">https://yourdomain.sk</span></div>
+      <div class="t-success" data-i18n="terminal.s3">&check; Admin &uacute;&ccaron;et vytvoren&yacute;</div>
+      <div class="t-success">&check; App <span data-i18n="terminal.s4">be&zcaron;&iacute; na</span> <span class="t-accent">https://dom.example.sk</span></div>
     </div>
   </div>
 </div>
@@ -875,6 +877,20 @@
           <span data-i18n="doc.install.hub">&x2139;&#xFE0F; Docker obraz <code>ipk0/open-resiapp</code> je dostupn&yacute; na <a href="https://hub.docker.com/r/ipk0/open-resiapp" style="color: inherit; text-decoration: underline;">Docker Hub</a>. Podporuje <code>linux/amd64</code> a <code>linux/arm64</code>.</span>
         </div>
 
+        <h4 data-i18n="doc.install.auto">Automatick&yacute; setup (odpor&uacute;&ccaron;an&eacute;)</h4>
+        <p data-i18n="doc.install.autodesc">Skript sa op&yacute;ta na dom&eacute;nu a n&aacute;zov budovy, vygeneruje bezpe&ccaron;n&eacute; hesl&aacute; a vytvor&iacute; v&scaron;etky s&uacute;bory:</p>
+        <pre><code>mkdir open-resiapp && cd open-resiapp
+curl -O https://raw.githubusercontent.com/open-resiapp/open-resiapp/main/setup.sh
+chmod +x setup.sh
+./setup.sh
+docker compose up -d</code></pre>
+        <div class="callout callout-tip">
+          <span data-i18n="doc.install.autotip">&#x1F4A1; Skript automaticky generuje <code>POSTGRES_PASSWORD</code> a <code>NEXTAUTH_SECRET</code> cez <code>openssl rand</code>. Nemus&iacute;&scaron; ni&ccaron; ru&ccaron;ne kop&iacute;rova&#357;.</span>
+        </div>
+
+        <h4 data-i18n="doc.install.manual">Manu&aacute;lny setup</h4>
+        <p data-i18n="doc.install.manualdesc">Ak uprednost&ncaron;uje&scaron; manu&aacute;lnu in&scaron;tal&aacute;ciu:</p>
+
         <h4 data-i18n="doc.install.step1">1. Vytvor docker-compose.yml</h4>
         <pre><code>mkdir open-resiapp && cd open-resiapp</code></pre>
         <p data-i18n="doc.install.step1copy">Ulo&zcaron; nasledovn&yacute; obsah ako <code>docker-compose.yml</code>:</p>
@@ -1046,11 +1062,43 @@ docker compose up -d</code></pre>
   </div>
 </section>
 
+<!-- COMMUNITY -->
+<section id="community" style="border-top: 1px solid var(--border);">
+  <div class="section-inner">
+    <div class="section-label" data-i18n="community.label">// komunita</div>
+    <h2 data-i18n="community.title">Pripojte sa</h2>
+    <p class="section-desc" data-i18n="community.desc">OpenResiApp je komunitn&yacute; projekt. Pomoc je v&iacute;tan&aacute; &ndash; od nahlasovania ch&yacute;b a&zcaron; po nov&eacute; funkcie.</p>
+
+    <div class="features-grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 2rem;">
+      <a href="https://github.com/open-resiapp/open-resiapp/discussions" class="card" style="text-decoration: none; color: inherit;">
+        <div class="card-icon" style="color: var(--accent);">&#x1F4AC;</div>
+        <h3 data-i18n="community.discussions.title">Diskusie</h3>
+        <p class="card-desc" data-i18n="community.discussions.desc">Op&yacute;taj sa &ccaron;oko&#318;vek, zdie&#318;aj n&aacute;pady, uk&aacute;&zcaron; svoju in&scaron;tal&aacute;ciu. GitHub Discussions.</p>
+      </a>
+      <a href="https://github.com/open-resiapp/open-resiapp/issues" class="card" style="text-decoration: none; color: inherit;">
+        <div class="card-icon" style="color: var(--red);">&#x1F41B;</div>
+        <h3 data-i18n="community.issues.title">Nahlasovanie ch&yacute;b</h3>
+        <p class="card-desc" data-i18n="community.issues.desc">Na&scaron;li ste chybu? Otvorte issue. Pou&zcaron;&iacute;vame &scaron;trukt&uacute;rovan&eacute; formul&aacute;re pre jednoduchos&#357;.</p>
+      </a>
+      <a href="https://github.com/open-resiapp/open-resiapp/blob/main/CONTRIBUTING.md" class="card" style="text-decoration: none; color: inherit;">
+        <div class="card-icon" style="color: var(--green);">&#x1F91D;</div>
+        <h3 data-i18n="community.contrib.title">Pr&iacute;spevky</h3>
+        <p class="card-desc" data-i18n="community.contrib.desc">Bug fixy, nov&eacute; funkcie, preklady, dokument&aacute;cia &ndash; ka&zcaron;d&yacute; pr&iacute;spevok pom&aacute;ha.</p>
+      </a>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <p style="color: var(--muted);" data-i18n="community.lang">Komunikujeme po slovensky aj po anglicky. Pou&zcaron;ite &ccaron;oko&#318;vek v&aacute;m vyhovuje.</p>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <p>
     <strong>OpenResiApp</strong> &ndash; open source <span data-i18n="footer.license">pod licenciou</span> MIT &middot;
     <a href="https://github.com/open-resiapp/open-resiapp">GitHub</a> &middot;
+    <a href="https://github.com/open-resiapp/open-resiapp/discussions" data-i18n="footer.discussions">Diskusie</a> &middot;
     <span data-i18n="footer.made">Vytvoren&eacute; pre slovensk&eacute; bytov&eacute; spolo&ccaron;enstv&aacute;</span>
   </p>
   <p style="margin-top: 0.5rem;" data-i18n="footer.contrib">Pr&iacute;spevky v&iacute;tan&eacute; &ndash; otvor issue alebo pull request</p>
@@ -1068,12 +1116,13 @@ const translations = {
     "hero.title": 'Správa bytovky<br /><em>pre ľudí,</em><br />nie pre právnikov',
     "hero.desc": "Elektronické hlasovanie, nástenka a správa vlastníkov pre slovenské bytové spoločenstvá. V súlade so zákonom č. 182/1993 Z.z. Zadarmo, bez predplatného, plne pod vašou kontrolou.",
     "hero.cta": "▶ Rýchly štart",
-    "terminal.comment1": "# Vytvor docker-compose.yml a .env",
-    "terminal.comment2": "# (obsah v dokumentácii nižšie)",
-    "terminal.comment3": "# Spusti – stiahne z Docker Hub",
+    "terminal.comment1": "# Stiahni a spusti – to je všetko",
+    "terminal.prompt1": "Doména: dom.example.sk",
+    "terminal.prompt2": "Admin: admin@dom.example.sk",
     "terminal.s1": "✔ Databáza pripravená",
     "terminal.s2": "✔ Migrácie hotové",
-    "terminal.s3": "beží na",
+    "terminal.s3": "✔ Admin účet vytvorený",
+    "terminal.s4": "beží na",
     "features.label": "// funkcie",
     "features.title": "Všetko čo bytovka potrebuje",
     "features.desc": "Navrhnuté pre slovenské právne prostredie, prístupné pre každého – aj pre dôchodcov.",
@@ -1166,6 +1215,11 @@ const translations = {
     "doc.req.tip": "💡 Na lokálne testovanie stačí aj tvoj laptop – Docker Desktop na Windows alebo macOS.",
     "doc.install.title": "Inštalácia",
     "doc.install.hub": 'ℹ️ Docker obraz <code>ipk0/open-resiapp</code> je dostupný na <a href="https://hub.docker.com/r/ipk0/open-resiapp" style="color: inherit; text-decoration: underline;">Docker Hub</a>. Podporuje <code>linux/amd64</code> a <code>linux/arm64</code>.',
+    "doc.install.auto": "Automatický setup (odporúčané)",
+    "doc.install.autodesc": "Skript sa opýta na doménu a názov budovy, vygeneruje bezpečné heslá a vytvorí všetky súbory:",
+    "doc.install.autotip": '💡 Skript automaticky generuje <code>POSTGRES_PASSWORD</code> a <code>NEXTAUTH_SECRET</code> cez <code>openssl rand</code>. Nemusíš nič ručne kopírovať.',
+    "doc.install.manual": "Manuálny setup",
+    "doc.install.manualdesc": "Ak uprednostňuješ manuálnu inštaláciu:",
     "doc.install.step1": "1. Vytvor docker-compose.yml",
     "doc.install.step1copy": 'Ulož nasledovný obsah ako <code>docker-compose.yml</code>:',
     "doc.install.step2": "2. Nastav .env",
@@ -1222,6 +1276,18 @@ NEXTAUTH_SECRET=changeMe_anotherRandomString456
     "doc.voting.3": "Voliteľne priraď sčítača hlasov pre papierové lístky",
     "doc.voting.4": "Klikni <strong>Spustiť hlasovanie</strong>",
     "doc.voting.note": "Všetkým vlastníkom príde email s odkazom. Výsledky sú viditeľné v reálnom čase. Po skončení môžeš vygenerovať PDF zápisnicu.",
+    "nav.community": "Komunita",
+    "community.label": "// komunita",
+    "community.title": "Pripojte sa",
+    "community.desc": "OpenResiApp je komunitný projekt. Pomoc je vítaná – od nahlasovania chýb až po nové funkcie.",
+    "community.discussions.title": "Diskusie",
+    "community.discussions.desc": "Opýtaj sa čokoľvek, zdieľaj nápady, ukáž svoju inštaláciu. GitHub Discussions.",
+    "community.issues.title": "Nahlasovanie chýb",
+    "community.issues.desc": "Našli ste chybu? Otvorte issue. Používame štruktúrované formuláre pre jednoduchosť.",
+    "community.contrib.title": "Príspevky",
+    "community.contrib.desc": "Bug fixy, nové funkcie, preklady, dokumentácia – každý príspevok pomáha.",
+    "community.lang": "Komunikujeme po slovensky aj po anglicky. Použite čokoľvek vám vyhovuje.",
+    "footer.discussions": "Diskusie",
     "footer.license": "pod licenciou",
     "footer.made": "Vytvorené pre slovenské bytové spoločenstvá",
     "footer.contrib": "Príspevky vítané – otvor issue alebo pull request"
@@ -1236,12 +1302,13 @@ NEXTAUTH_SECRET=changeMe_anotherRandomString456
     "hero.title": 'Apartment<br />management<br /><em>for people,</em> not lawyers',
     "hero.desc": "Electronic voting, bulletin board, and owner management for Slovak housing associations. Compliant with Slovak Act No. 182/1993. Free, no subscription, fully self-hosted.",
     "hero.cta": "▶ Quick start",
-    "terminal.comment1": "# Create docker-compose.yml and .env",
-    "terminal.comment2": "# (see documentation below)",
-    "terminal.comment3": "# Run – pulls from Docker Hub",
+    "terminal.comment1": "# Download and run – that's it",
+    "terminal.prompt1": "Domain: dom.example.sk",
+    "terminal.prompt2": "Admin: admin@dom.example.sk",
     "terminal.s1": "✔ Database ready",
     "terminal.s2": "✔ Migrations done",
-    "terminal.s3": "running on",
+    "terminal.s3": "✔ Admin account created",
+    "terminal.s4": "running on",
     "features.label": "// features",
     "features.title": "Everything your building needs",
     "features.desc": "Designed for Slovak legal requirements, accessible for everyone – including the elderly.",
@@ -1334,6 +1401,11 @@ NEXTAUTH_SECRET=changeMe_anotherRandomString456
     "doc.req.tip": "💡 For local testing, your laptop is enough – Docker Desktop on Windows or macOS.",
     "doc.install.title": "Installation",
     "doc.install.hub": 'ℹ️ Docker image <code>ipk0/open-resiapp</code> is available on <a href="https://hub.docker.com/r/ipk0/open-resiapp" style="color: inherit; text-decoration: underline;">Docker Hub</a>. Supports <code>linux/amd64</code> and <code>linux/arm64</code>.',
+    "doc.install.auto": "Automated setup (recommended)",
+    "doc.install.autodesc": "The script asks for your domain and building name, generates secure passwords, and creates all files:",
+    "doc.install.autotip": '💡 The script auto-generates <code>POSTGRES_PASSWORD</code> and <code>NEXTAUTH_SECRET</code> via <code>openssl rand</code>. No manual copying needed.',
+    "doc.install.manual": "Manual setup",
+    "doc.install.manualdesc": "If you prefer manual installation:",
     "doc.install.step1": "1. Create docker-compose.yml",
     "doc.install.step1copy": 'Save the following content as <code>docker-compose.yml</code>:',
     "doc.install.step2": "2. Set up .env",
@@ -1390,6 +1462,18 @@ NEXTAUTH_SECRET=changeMe_anotherRandomString456
     "doc.voting.3": "Optionally assign a vote counter for paper ballots",
     "doc.voting.4": "Click <strong>Start Vote</strong>",
     "doc.voting.note": "All owners receive an email with a link. Results are visible in real time. After the vote ends, you can generate a PDF minutes document.",
+    "nav.community": "Community",
+    "community.label": "// community",
+    "community.title": "Join the community",
+    "community.desc": "OpenResiApp is a community project. Help is welcome – from bug reports to new features.",
+    "community.discussions.title": "Discussions",
+    "community.discussions.desc": "Ask anything, share ideas, show your setup. GitHub Discussions.",
+    "community.issues.title": "Bug reports",
+    "community.issues.desc": "Found a bug? Open an issue. We use structured forms for easy reporting.",
+    "community.contrib.title": "Contribute",
+    "community.contrib.desc": "Bug fixes, new features, translations, documentation – every contribution helps.",
+    "community.lang": "We communicate in both Slovak and English. Use whichever you're comfortable with.",
+    "footer.discussions": "Discussions",
     "footer.license": "licensed under",
     "footer.made": "Built for Slovak housing associations",
     "footer.contrib": "Contributions welcome – open an issue or pull request"
