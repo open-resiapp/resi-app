@@ -1,0 +1,67 @@
+# OpenResiApp
+
+> Open-source web application for managing Slovak housing associations (bytove spolocenstva). Compliant with Slovak Act No. 182/1993 Z.z.
+
+## What is OpenResiApp?
+
+OpenResiApp is a free, open-source application for managing residential apartment buildings in Slovakia. It provides electronic voting, a bulletin board, owner management, mandate delegation, and automatic PDF minutes generation — all compliant with Slovak Act No. 182/1993 on Ownership of Apartments.
+
+## Key Features
+
+- Weighted electronic voting (by ownership share, by flat, by area)
+- Three quorum types (majority of present, all owners, 2/3 of all)
+- Written voting (per rollam) and meeting voting with paper ballots
+- Mandate delegation with certified signatures (no chain delegation)
+- Bulletin board with announcements, events, maintenance notices
+- Multiple entrances per association
+- Automatic PDF minutes with audit log and QR code
+- SHA-256 audit trail for every vote with email confirmation
+- Five user roles: Admin, Owner, Tenant, Vote Counter, Caretaker
+- Multilingual: Slovak and English
+
+## Tech Stack
+
+Next.js 16, React 19, TypeScript, Tailwind CSS, Drizzle ORM, PostgreSQL 16, NextAuth v5, Docker, Caddy (HTTPS), Nodemailer, next-intl, react-pdf.
+
+## Two Ways to Use
+
+### 1. Self-Hosted (Free)
+Install on your own server using Docker. Full features, MIT license.
+- Docker image: ipk0/open-resiapp on Docker Hub
+- Supports linux/amd64 and linux/arm64
+- Automated setup script available
+- GitHub: https://github.com/open-resiapp/open-resiapp
+
+### 2. Managed Cloud (Paid)
+Hosted at https://cloud.open-resi.app — no server setup needed.
+- Same application, zero maintenance
+- Automatic daily backups, SSL, data isolation
+- Each instance runs in its own isolated container with separate database
+- 7-day free trial, no credit card required
+
+#### Cloud Pricing (per instance, volume discounts)
+| Instances | Price per instance |
+|-----------|-------------------|
+| 1         | 7 EUR/month       |
+| 2-3       | 6 EUR/month       |
+| 4-5       | 5 EUR/month       |
+| 6+        | 4 EUR/month       |
+
+## Legal Compliance (Slovak Law)
+
+The voting module implements requirements from Slovak Act No. 182/1993 Z.z.:
+- § 14a(1-2): Written voting and meeting voting
+- § 14a(4): Mandates with certified signatures, no chain delegation
+- § 14b(1-2): Three quorum types
+- § 14(2): Three voting methods (share, flat, area)
+- § 14b(5): Quarter of owners can initiate a vote
+- Audit trail with SHA-256 hashes and email confirmations
+- Tenants cannot vote (read-only access)
+
+## Links
+
+- Website: https://open-resi.app
+- Cloud: https://cloud.open-resi.app
+- GitHub: https://github.com/open-resiapp/open-resiapp
+- Docker Hub: https://hub.docker.com/r/ipk0/open-resiapp
+- License: MIT

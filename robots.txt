@@ -1,0 +1,11 @@
+# OpenResiApp - open-source housing association management
+# https://open-resi.app
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://open-resi.app/sitemap.xml
+
+# LLM context
+# See also: https://open-resi.app/llms.txt
