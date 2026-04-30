@@ -3,50 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OpenResiApp – správa bytového spoločenstva</title>
-  <meta name="description" content="Open-source aplikácia na správu bytových spoločenstiev na Slovensku. Elektronické hlasovanie podľa zákona č. 182/1993 Z.z., nástenka, správa vlastníkov, PDF zápisnice. Zadarmo self-hosted alebo managed cloud od 4 €/mes." />
-  <meta name="keywords" content="správa bytového domu, bytové spoločenstvo, elektronické hlasovanie, zákon 182/1993, SVB, open source, self-hosted, Docker, Slovensko, cloud hosting, SaaS" />
+  <title>Elektronické hlasovanie SVB · Online schôdza bytového domu — OpenResiApp</title>
+  <meta name="description" content="Elektronické hlasovanie pre SVB a bytové družstvá podľa zákona 182/1993 Z. z. Online schôdza, hlasovanie per rollam, PDF zápisnice. Plus susedská komunita: burza, výpomoc, udalosti. Open-source, self-hosted alebo cloud od 4 €/mes." />
+  <meta name="keywords" content="elektronické hlasovanie, hlasovanie vlastníkov bytov online, online schôdza vlastníkov, hlasovanie per rollam, správa bytového domu, bytové spoločenstvo, SVB, spoločenstvo vlastníkov bytov, bytové družstvo, zákon 182/1993, zákon o vlastníctve bytov, zápisnica zo schôdze PDF, susedská burza, susedská výpomoc, susedské udalosti, adresár susedov, komunita bytovky, SVJ, společenství vlastníků jednotek, shromáždění SVJ, elektronické hlasování, open source, self-hosted, Docker, cloud hosting, SaaS, Slovensko, Česko" />
   <meta name="author" content="OpenResiApp" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="canonical" href="https://open-resi.app" />
   <link rel="alternate" hreflang="sk" href="https://open-resi.app" />
-  <link rel="alternate" hreflang="en" href="https://open-resi.app" />
+  <link rel="alternate" hreflang="cs" href="https://open-resi.app" />
   <link rel="alternate" hreflang="x-default" href="https://open-resi.app" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="OpenResiApp – správa bytového spoločenstva" />
-  <meta property="og:description" content="Open-source aplikácia na správu bytových spoločenstiev na Slovensku. Elektronické hlasovanie, nástenka, správa vlastníkov. Zadarmo self-hosted alebo managed cloud od 4 €/mes." />
+  <meta property="og:title" content="Elektronické hlasovanie SVB · Online schôdza — OpenResiApp" />
+  <meta property="og:description" content="Online hlasovanie a schôdza vlastníkov pre SVB a bytové družstvá. Súlad so zákonom 182/1993 Z. z. Plus susedská komunita (burza, výpomoc, udalosti). Open-source aj cloud od 4 €/mes." />
   <meta property="og:url" content="https://open-resi.app" />
   <meta property="og:site_name" content="OpenResiApp" />
   <meta property="og:locale" content="sk_SK" />
+  <meta property="og:locale:alternate" content="cs_CZ" />
   <meta property="og:locale:alternate" content="en_US" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OpenResiApp – správa bytového spoločenstva" />
-  <meta name="twitter:description" content="Open-source aplikácia na správu bytových spoločenstiev na Slovensku. Elektronické hlasovanie podľa zákona č. 182/1993 Z.z. Self-hosted alebo managed cloud." />
+  <meta name="twitter:title" content="Elektronické hlasovanie SVB · OpenResiApp" />
+  <meta name="twitter:description" content="Hlasovanie vlastníkov bytov online podľa zákona 182/1993. Plus susedská burza, výpomoc, udalosti. Open-source aj cloud od 4 €/mes." />
 
-  <!-- Structured Data -->
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "OpenResiApp",
+    "url": "https://open-resi.app",
+    "logo": "https://open-resi.app/icon.svg",
+    "description": "Open-source platforma pre správu bytových spoločenstiev a bytových družstiev s elektronickým hlasovaním podľa zákona 182/1993 Z. z. a komunitným modulom (susedská burza, výpomoc, udalosti, adresár).",
+    "sameAs": [
+      "https://github.com/open-resiapp/open-resiapp",
+      "https://hub.docker.com/r/ipk0/open-resiapp",
+      "https://cloud.open-resi.app"
+    ],
+    "areaServed": [
+      { "@type": "Country", "name": "Slovakia" },
+      { "@type": "Country", "name": "Czech Republic" }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: WebSite (with SearchAction) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "OpenResiApp",
+    "alternateName": ["Open ResiApp", "ResiApp"],
+    "url": "https://open-resi.app",
+    "inLanguage": ["sk-SK", "cs-CZ", "en-US"],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://open-resi.app/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: SoftwareApplication -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "OpenResiApp",
+    "alternateName": "Open ResiApp",
     "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Linux, Docker",
-    "description": "Open-source web application for managing residential apartment buildings in Slovakia. Electronic voting compliant with Slovak Act No. 182/1993. Available as free self-hosted or managed cloud from 4 EUR/month.",
+    "applicationSubCategory": "Property Management Software",
+    "operatingSystem": "Linux, Docker, Web",
+    "description": "Open-source webová aplikácia pre správu bytových spoločenstiev (SVB), bytových družstiev a českých SVJ. Obsahuje elektronické hlasovanie v súlade so zákonom č. 182/1993 Z. z., nástenku, správu vlastníkov, mandáty, PDF zápisnice s SHA-256 audit logom a komunitný modul (susedská burza, výpomoc, udalosti, opt-in adresár).",
     "url": "https://open-resi.app",
+    "downloadUrl": "https://hub.docker.com/r/ipk0/open-resiapp",
+    "softwareVersion": "latest",
     "license": "https://opensource.org/licenses/MIT",
     "isAccessibleForFree": true,
-    "inLanguage": ["sk", "en"],
+    "inLanguage": ["sk", "cs", "en"],
+    "audience": [
+      { "@type": "Audience", "audienceType": "Predseda SVB" },
+      { "@type": "Audience", "audienceType": "Bytové družstvo" },
+      { "@type": "Audience", "audienceType": "Správca bytového domu" },
+      { "@type": "Audience", "audienceType": "Vlastník bytu" }
+    ],
+    "featureList": [
+      "Elektronické hlasovanie vlastníkov bytov online",
+      "Hlasovanie per rollam (písomné) aj na schôdzi",
+      "Tri metódy hlasovania: podľa podielu, podľa bytov, podľa plochy",
+      "Tri typy kvóra (nadpolovičná väčšina prítomných, všetkých, 2/3 všetkých)",
+      "Mandáty s úradne overeným podpisom (bez reťazenia)",
+      "Automatická PDF zápisnica s QR kódom a SHA-256 audit logom",
+      "Email potvrdenie každého hlasu",
+      "Nástenka s oznamami, udalosťami a údržbou",
+      "Susedská burza (predaj, darovanie, požičanie)",
+      "Susedská výpomoc (prosba aj ponuka)",
+      "Susedské udalosti s RSVP (grilovačka, brigáda, stretnutia)",
+      "Opt-in adresár susedov so zručnosťami (elektrikár, IT, záhrada)",
+      "Email notifikácie a auto-expirácia komunitných postov",
+      "Viac vchodov v jednom spoločenstve",
+      "Päť rolí: Admin, Vlastník, Nájomca, Sčítač hlasov, Správca",
+      "Slovenské aj české právne prostredie (SVB, SVJ, družstvá)",
+      "Multilingválne: slovenčina, čeština, angličtina"
+    ],
     "offers": [
       {
         "@type": "Offer",
-        "name": "Self-hosted (Free)",
+        "name": "Self-hosted (Zadarmo)",
         "price": "0",
         "priceCurrency": "EUR",
-        "description": "Free self-hosted version via Docker. Full features, your own server."
+        "description": "Bezplatná self-hosted verzia cez Docker. Plná funkcionalita, váš server, MIT licencia."
       },
       {
         "@type": "Offer",
@@ -64,7 +132,7 @@
             "unitText": "instance"
           }
         },
-        "description": "Managed cloud hosting starting from 4 EUR per instance per month. No server setup, automatic backups, SSL included.",
+        "description": "Managed cloud hosting od 4 € za inštanciu mesačne. Bez nastavovania servera, automatické zálohy, SSL v cene. 7 dní zadarmo bez kreditnej karty.",
         "url": "https://cloud.open-resi.app",
         "availability": "https://schema.org/InStock"
       }
@@ -72,49 +140,128 @@
   }
   </script>
 
+  <!-- Structured Data: Product (Cloud) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "OpenResiApp Cloud",
+    "description": "Managed cloud hosting OpenResiApp pre bytové spoločenstvá a družstvá. Bez nastavovania servera, automatické zálohy, SSL, izolovaná inštancia s vlastnou databázou. 7 dní zadarmo.",
+    "brand": { "@type": "Brand", "name": "OpenResiApp" },
+    "url": "https://cloud.open-resi.app",
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "EUR",
+      "lowPrice": "4",
+      "highPrice": "7",
+      "offerCount": "4",
+      "availability": "https://schema.org/InStock",
+      "url": "https://cloud.open-resi.app"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Domov", "item": "https://open-resi.app" },
+      { "@type": "ListItem", "position": 2, "name": "Funkcie", "item": "https://open-resi.app#features" },
+      { "@type": "ListItem", "position": 3, "name": "Zákon 182/1993", "item": "https://open-resi.app#law" },
+      { "@type": "ListItem", "position": 4, "name": "Komunita", "item": "https://open-resi.app#komunita" },
+      { "@type": "ListItem", "position": 5, "name": "Cloud", "item": "https://open-resi.app#cloud" },
+      { "@type": "ListItem", "position": 6, "name": "Dokumentácia", "item": "https://open-resi.app#docs" }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage (SK) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "inLanguage": "sk",
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is OpenResiApp?",
+        "name": "Čo je OpenResiApp?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "OpenResiApp is an open-source web application for managing Slovak housing associations (bytove spolocenstva). It includes electronic voting compliant with Slovak Act No. 182/1993, a bulletin board, owner management, PDF minutes generation, and mandate delegation."
+          "text": "OpenResiApp je open-source webová aplikácia pre správu bytových spoločenstiev (SVB), bytových družstiev a českých SVJ. Obsahuje elektronické hlasovanie v súlade so zákonom č. 182/1993 Z. z., nástenku, správu vlastníkov a bytov, mandáty s overeným podpisom, automatické PDF zápisnice a komunitný modul so susedskou burzou, výpomocou, udalosťami a opt-in adresárom susedov."
         }
       },
       {
         "@type": "Question",
-        "name": "Is OpenResiApp free?",
+        "name": "Je elektronické hlasovanie vlastníkov bytov legálne?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, OpenResiApp is free and open-source under the MIT license. You can self-host it using Docker on your own server at no cost. Alternatively, if you don't want to manage a server, a managed cloud version is available starting from 4 EUR per instance per month at cloud.open-resi.app."
+          "text": "Áno. OpenResiApp implementuje hlasovanie podľa zákona č. 182/1993 Z. z. o vlastníctve bytov a nebytových priestorov: tri metódy hlasovania (podľa spoluvlastníckeho podielu, podľa bytov, podľa plochy), tri typy kvóra, písomné hlasovanie (per rollam) aj hlasovanie na schôdzi, mandáty s úradne overeným podpisom bez reťazenia a SHA-256 audit log s emailovým potvrdením každého hlasu."
         }
       },
       {
         "@type": "Question",
-        "name": "Does OpenResiApp comply with Slovak law?",
+        "name": "Aký je rozdiel medzi OpenResiApp a inými systémami pre správu bytoviek (Poschodoch, Resitech)?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. The voting module is designed according to Slovak Act No. 182/1993 on Ownership of Apartments. It supports three voting methods (by ownership share, by flat, by area), three quorum types, written voting (per rollam), mandates with certified signatures, and produces audited PDF minutes."
+          "text": "Tri hlavné rozdiely. (1) OpenResiApp je open-source pod MIT licenciou — kód je verejný na GitHube, nie sú v ňom zadné vrátka, dáta zostávajú u vás. (2) Okrem správy a hlasovania obsahuje plnohodnotnú susedskú komunitu: burzu (predaj/darovanie/požičanie vecí medzi susedmi), susedskú výpomoc (prosby aj ponuky), udalosti s RSVP a opt-in adresár susedov so zručnosťami. Konkurencia rieši paragrafy, OpenResiApp aj život v dome. (3) Self-hosted verzia je zadarmo cez Docker, alebo managed cloud od 4 €/mesiac s 7-dňovou skúškou bez kreditnej karty."
         }
       },
       {
         "@type": "Question",
-        "name": "What is the difference between self-hosted and cloud version?",
+        "name": "Čo všetko obsahuje sekcia Komunita?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The self-hosted version is free — you install it on your own server using Docker. The cloud version at cloud.open-resi.app is a managed service where we handle the server, backups, SSL, and updates for you. Both versions have the same features. The cloud version starts with a free 7-day trial."
+          "text": "Komunitný modul obsahuje štyri samostatné sekcie. Burza: posty typu 'Predám', 'Darujem', 'Požičiam' s filtrami a označením 'Vyriešené/Predané'. Pomoc: susedská výpomoc s rozlíšením 'Prosím o pomoc' vs 'Ponúkam pomoc' (napríklad zaliatie kvetov, IT, drobné opravy). Udalosti: susedské stretnutia ako grilovačky, brigády či zbierky s RSVP systémom (áno/možno/nie) a počítadlom účastníkov. Adresár: opt-in profily susedov so zručnosťami (elektrikár, IT, záhrada) — sused si sám zvolí, či zdieľa telefón a email. Všetko s email notifikáciami a automatickou expiráciou starších postov."
         }
       },
       {
         "@type": "Question",
-        "name": "How much does OpenResiApp Cloud cost?",
+        "name": "Funguje OpenResiApp pre české SVJ a bytové družstvá?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "OpenResiApp Cloud uses per-instance pricing with volume discounts: 1 instance costs 7 EUR/month, 2-3 instances cost 6 EUR each, 4-5 instances cost 5 EUR each, and 6+ instances cost 4 EUR each. A free 7-day trial is available with no credit card required."
+          "text": "Áno. OpenResiApp je lokalizovaný pre slovenský aj český trh. Podporuje slovenské bytové spoločenstvá (SVB) podľa zákona 182/1993 Z. z., bytové družstvá, aj české Společenství vlastníků jednotek (SVJ) podľa českého zákona 89/2012 Sb. Hlasovací algoritmus, model budov, oprávnenia a mandáty sú generické a parametrické — country config nastaví terminológiu, kvóra a štruktúru orgánov (predseda+rada vs výbor)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Je OpenResiApp zadarmo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Áno, OpenResiApp je open-source pod MIT licenciou. Self-hosted verziu cez Docker si môžete nainštalovať na vlastný server bezplatne s plnou funkcionalitou. Ak nechcete spravovať server, managed cloud verzia začína na 4 € za inštanciu mesačne s 7-dňovou skúšobnou dobou bez kreditnej karty na cloud.open-resi.app."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Aký je rozdiel medzi self-hosted a cloud verziou?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Self-hosted verzia je zadarmo — nainštalujete ju na vlastný server cez Docker. Cloud verzia na cloud.open-resi.app je managed služba, kde sa o server, zálohy, SSL a aktualizácie staráme my. Obe verzie majú rovnakú funkcionalitu vrátane elektronického hlasovania, komunity a PDF zápisníc. Cloud začína 7-dňovou skúšobnou dobou bez kreditnej karty."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Koľko stojí OpenResiApp Cloud?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "OpenResiApp Cloud má cenotvorbu za inštanciu s objemovými zľavami: 1 inštancia stojí 7 €/mesiac, 2–3 inštancie po 6 €, 4–5 inštancií po 5 €, 6 a viac inštancií po 4 €. Skúšobná doba 7 dní zadarmo bez kreditnej karty. Účtuje sa len za aktívne inštancie."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ako funguje hlasovanie per rollam?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Per rollam (písomné hlasovanie mimo schôdze) podľa § 14a ods. 1 zákona 182/1993 Z. z. funguje tak, že vlastníci dostanú email s odkazom na hlasovací formulár. Hlas potvrdia online, systém zaznamená SHA-256 hash hlasu a pošle email s potvrdením. Po skončení hlasovania sa automaticky vygeneruje PDF zápisnica s audit logom a QR kódom. Pre vlastníkov bez prístupu na internet sčítač hlasov zadá papierový hlas s fotkou lístka."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Čo s vlastníkmi bez internetu alebo smartfónu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "OpenResiApp má rolu Sčítač hlasov — administrátor priradí dôveryhodnú osobu, ktorá pri hlasovaní zadá hlas za vlastníka bez internetu, priloží fotku papierového lístka. Vlastník dostane email s potvrdením. Rola Sčítač platí len pre konkrétne hlasovanie a po jeho skončení automaticky zaniká."
         }
       }
     ]
@@ -690,7 +837,7 @@
 <body>
 
 <!-- NAV -->
-<nav>
+<nav aria-label="Hlavn&aacute; navig&aacute;cia">
   <div class="nav-inner">
     <a href="#" class="logo">
       <span class="logo-dot">&blacksquare;</span> OpenResiApp
@@ -698,12 +845,13 @@
     <div class="nav-right">
       <ul class="nav-links">
         <li><a href="#features" data-i18n="nav.features">Funkcie</a></li>
+        <li><a href="#komunita" data-i18n="nav.komunita">Komunita</a></li>
         <li><a href="#roly" data-i18n="nav.roles">Roly</a></li>
         <li><a href="#law" data-i18n="nav.law">&sect; Z&aacute;kon</a></li>
         <li><a href="#tech" data-i18n="nav.tech">Tech stack</a></li>
         <li><a href="#cloud" data-i18n="nav.cloud">Cloud</a></li>
         <li><a href="#docs" data-i18n="nav.docs">Docs</a></li>
-        <li><a href="#community" data-i18n="nav.community">Komunita</a></li>
+        <li><a href="#community" data-i18n="nav.community">Komunita kódu</a></li>
         <li><a href="https://hub.docker.com/r/ipk0/open-resiapp">Docker Hub</a></li>
         <li><a href="https://github.com/open-resiapp/open-resiapp" class="nav-cta">GitHub &rarr;</a></li>
       </ul>
@@ -715,25 +863,28 @@
   </div>
 </nav>
 
+<main id="main-content">
+
 <!-- HERO -->
-<div class="hero-section">
+<header class="hero-section">
 <div class="hero">
   <div>
     <div class="badge">
       <span class="badge-dot"></span>
-      Open Source &middot; Self-hosted &middot; <a href="https://cloud.open-resi.app" style="color: inherit; text-decoration: underline;">Cloud</a> &middot; <a href="https://hub.docker.com/r/ipk0/open-resiapp" style="color: inherit; text-decoration: underline;">Docker Hub</a> &middot; <span data-i18n="badge.law">&sect; 182/1993 Z.z.</span>
+      Open Source &middot; Self-hosted &middot; <a href="https://cloud.open-resi.app" style="color: inherit; text-decoration: underline;">Cloud</a> &middot; <a href="https://hub.docker.com/r/ipk0/open-resiapp" style="color: inherit; text-decoration: underline;">Docker Hub</a> &middot; <span data-i18n="badge.law">&sect; 182/1993 Z.z.</span> &middot; SK &amp; CZ
     </div>
-    <h1 data-i18n="hero.title">Spr&aacute;va bytovky<br /><em>pre &#318;ud&iacute;,</em><br />nie pre pr&aacute;vnikov</h1>
+    <h1 data-i18n="hero.title">Elektronick&eacute; hlasovanie<br />a spr&aacute;va bytovky<br /><em>pre &#318;ud&iacute;,</em> nie pre pr&aacute;vnikov</h1>
     <p class="hero-desc" data-i18n="hero.desc">
-      Elektronick&eacute; hlasovanie, n&aacute;stenka a spr&aacute;va vlastn&iacute;kov pre slovensk&eacute; bytov&eacute; spolo&ccaron;enstv&aacute;.
-      V s&uacute;lade so z&aacute;konom &ccaron;. 182/1993 Z.z. Zadarmo, bez predplatn&eacute;ho, plne pod va&scaron;ou kontrolou.
+      Online hlasovanie vlastn&iacute;kov bytov, n&aacute;stenka, mand&aacute;ty a PDF z&aacute;pisnice pre <strong>SVB, bytov&eacute; dru&zcaron;stv&aacute;</strong> a &ccaron;esk&eacute; <strong>SVJ</strong>.
+      Plus susedsk&aacute; komunita: <strong>burza, v&yacute;pomoc, udalosti, adres&aacute;r</strong>.
+      V s&uacute;lade so z&aacute;konom &ccaron;.&nbsp;182/1993 Z.&nbsp;z. Open-source, alebo cloud od 4&nbsp;&euro;/mes.
     </p>
     <div class="hero-actions">
-      <a href="#docs" class="btn btn-primary" data-i18n="hero.cta">
-        &#9654; R&yacute;chly &scaron;tart
+      <a href="https://cloud.open-resi.app" class="btn btn-primary" data-i18n="hero.cloud">
+        &#9729; Vysk&uacute;&scaron;a&#357; cloud zadarmo
       </a>
-      <a href="https://cloud.open-resi.app" class="btn btn-ghost" data-i18n="hero.cloud" style="border-color: var(--accent); color: var(--accent);">
-        &#9729; Vysk&uacute;&scaron;a&#357; cloud
+      <a href="#docs" class="btn btn-ghost" data-i18n="hero.cta">
+        &#9654; Self-hosted setup
       </a>
       <a href="https://github.com/open-resiapp/open-resiapp" class="btn btn-ghost">
         &starf; GitHub
@@ -765,14 +916,41 @@
     </div>
   </div>
 </div>
-</div>
+</header>
+
+<!-- PRE KOHO -->
+<section id="pre-koho" aria-labelledby="pre-koho-h" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="section-inner">
+    <div class="section-label" data-i18n="audience.label">// pre koho</div>
+    <h2 id="pre-koho-h" data-i18n="audience.title">Pre SVB, bytov&eacute; dru&zcaron;stv&aacute; aj &ccaron;esk&eacute; SVJ</h2>
+    <p class="section-desc" data-i18n="audience.desc">Jedna platforma pre tri pr&aacute;vne formy spr&aacute;vy bytov&yacute;ch domov &ndash; slovensk&eacute; aj &ccaron;esk&eacute;.</p>
+
+    <div class="features-grid">
+      <article class="feature">
+        <div class="feature-icon" style="background: rgba(91,143,255,0.15);">&#x1F3DB;&#xFE0F;</div>
+        <h3 data-i18n="aud1.title">Spolo&ccaron;enstv&aacute; vlastn&iacute;kov bytov (SVB)</h3>
+        <p data-i18n="aud1.desc">Pre slovensk&eacute; SVB pod&#318;a z&aacute;kona &ccaron;.&nbsp;182/1993 Z.&nbsp;z. Elektronick&eacute; hlasovanie pod&#318;a podielu, bytov alebo plochy. Tri typy kv&oacute;ra. Mand&aacute;ty s &uacute;radne overen&yacute;m podpisom. Predseda + rada.</p>
+      </article>
+      <article class="feature">
+        <div class="feature-icon" style="background: rgba(62,207,142,0.15);">&#x1F3D7;&#xFE0F;</div>
+        <h3 data-i18n="aud2.title">Bytov&eacute; dru&zcaron;stv&aacute;</h3>
+        <p data-i18n="aud2.desc">Pre dru&zcaron;stevn&yacute; sektor &ndash; &ccaron;lensk&eacute; sch&ocirc;dze, hlasovanie online aj na sch&ocirc;dzi, evidencia bytov a podielov, n&aacute;jomcovia bez hlasovacieho pr&aacute;va, spr&aacute;vca s pr&iacute;stupom k oznamom.</p>
+      </article>
+      <article class="feature">
+        <div class="feature-icon" style="background: rgba(245,197,66,0.15);">&#x1F1E8;&#x1F1FF;</div>
+        <h3 data-i18n="aud3.title">Spole&ccaron;enstv&iacute; vlastn&iacute;k&#367; jednotek (SVJ)</h3>
+        <p data-i18n="aud3.desc">Pro &ccaron;esk&aacute; SVJ podle z&aacute;kona &ccaron;.&nbsp;89/2012 Sb. Lokalizovan&aacute; terminologie (shrom&aacute;&zcaron;d&#283;n&iacute;, v&yacute;bor), &ccaron;esk&aacute; kv&oacute;ra a hlasovac&iacute; pravidla. Stejn&aacute; aplikace, country config p&#345;epne kontext.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
 <!-- FEATURES -->
 <section id="features" style="background: var(--bg);">
   <div class="section-inner">
     <div class="section-label" data-i18n="features.label">// funkcie</div>
     <h2 data-i18n="features.title">V&scaron;etko &ccaron;o bytovka potrebuje</h2>
-    <p class="section-desc" data-i18n="features.desc">Navrhnut&eacute; pre slovensk&eacute; pr&aacute;vne prostredie, pr&iacute;stupn&eacute; pre ka&zcaron;d&eacute;ho &ndash; aj pre d&ocirc;chodcov.</p>
+    <p class="section-desc" data-i18n="features.desc">Hlasovanie, n&aacute;stenka, mand&aacute;ty, PDF z&aacute;pisnice. Navrhnut&eacute; pre slovensk&eacute; aj &ccaron;esk&eacute; pr&aacute;vne prostredie, pr&iacute;stupn&eacute; pre ka&zcaron;d&eacute;ho &ndash; aj pre d&ocirc;chodcov.</p>
 
     <div class="features-grid">
       <div class="feature">
@@ -961,6 +1139,44 @@
           <li data-i18n="role.caretaker.3">Publikuje oznamy</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- KOMUNITA SUSEDOV -->
+<section id="komunita" aria-labelledby="komunita-h" style="background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="section-inner">
+    <div class="section-label" data-i18n="komunita.label">// komunita susedov</div>
+    <h2 id="komunita-h" data-i18n="komunita.title">Nielen spr&aacute;va, ale aj <em>komunita susedov</em></h2>
+    <p class="section-desc" data-i18n="komunita.desc">Konkurencia rie&scaron;i paragrafy. My rie&scaron;ime aj &zcaron;ivot v dome. &Scaron;tyri sekcie pre sused-na-suseda interakciu &ndash; bez Facebooku, bez bazo&scaron;a, bez cudzincov.</p>
+
+    <div class="features-grid">
+      <article class="feature">
+        <div class="feature-icon" style="background: rgba(91,143,255,0.15);">&#x1F6CD;&#xFE0F;</div>
+        <h3 data-i18n="kom1.title">Susedsk&aacute; burza</h3>
+        <p data-i18n="kom1.desc">Pred&aacute;m, darujem, po&zcaron;i&ccaron;iam &ndash; medzi vlastn&iacute;kmi a n&aacute;jomcami v dome. Filter pod&#318;a typu, jedna foto per post, ozna&ccaron;enie &bdquo;Vyrie&scaron;en&eacute; / Pred&aacute;n&eacute;&ldquo;. Voliteľne obmedzen&eacute; len na konkr&eacute;tny vchod.</p>
+      </article>
+      <article class="feature">
+        <div class="feature-icon" style="background: rgba(62,207,142,0.15);">&#x1F91D;</div>
+        <h3 data-i18n="kom2.title">Susedsk&aacute; v&yacute;pomoc</h3>
+        <p data-i18n="kom2.desc">&bdquo;Pros&iacute;m o pomoc&ldquo; vs &bdquo;Pon&uacute;kam pomoc&ldquo; ako dva oddelen&eacute; typy. Zalievanie kvetov po&ccaron;as dovolenky, IT pomoc, drobn&eacute; opravy, vyven&ccaron;enie psa. Bez platieb &ndash; toto je susedsk&aacute; v&yacute;pomoc.</p>
+      </article>
+      <article class="feature">
+        <div class="feature-icon" style="background: rgba(245,197,66,0.15);">&#x1F389;</div>
+        <h3 data-i18n="kom3.title">Susedsk&eacute; udalosti</h3>
+        <p data-i18n="kom3.desc">Grilova&ccaron;ka na dvore, brigáda, vianočné stretnutie, zbierka. RSVP &bdquo;&Aacute;no / Mo&zcaron;no / Nie&ldquo; s po&ccaron;&iacute;tadlom &uacute;&ccaron;astn&iacute;kov. Email pripomienka de&ncaron; pred udalos&#357;ou. Nadch&aacute;dzaj&uacute;ce vs ukon&ccaron;en&eacute; udalosti.</p>
+      </article>
+      <article class="feature">
+        <div class="feature-icon" style="background: rgba(167,139,250,0.15);">&#x1F4D2;</div>
+        <h3 data-i18n="kom4.title">Adres&aacute;r susedov (opt-in)</h3>
+        <p data-i18n="kom4.desc">Sused si s&aacute;m zvol&iacute;, &ccaron;i zdie&#318;a telefón, email, pozn&aacute;mku a zru&ccaron;nosti (elektrik&aacute;r, IT, z&aacute;hrada). Nemus&iacute;te v&iacute;ckrát hľadať elektrik&aacute;ra cez Google &ndash; b&yacute;va o tri poschodia ni&zcaron;&scaron;ie.</p>
+      </article>
+    </div>
+
+    <div style="margin-top: 2.5rem; padding: 1.5rem; background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);">
+      <p style="color: var(--muted); font-size: 0.95rem; margin: 0;" data-i18n="komunita.notify">
+        &#x2709;&#xFE0F; <strong>Email notifik&aacute;cie a auto-expir&aacute;cia.</strong> Autor postu dostane email pri ka&zcaron;dej re&aacute;kcii. Star&scaron;ie posty sa automaticky expiruj&uacute;. Pripomienky udalost&iacute; chod&iacute;a 1 de&ncaron; vopred. Cron job to v&scaron;etko rie&scaron;i automaticky.
+      </p>
     </div>
   </div>
 </section>
@@ -1313,6 +1529,8 @@ docker compose up -d</code></pre>
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer>
   <p>
@@ -1334,9 +1552,9 @@ const translations = {
     "nav.tech": "Tech stack",
     "nav.docs": "Dokumentácia",
     "badge.law": "§ 182/1993 Z.z.",
-    "hero.title": 'Správa bytovky<br /><em>pre ľudí,</em><br />nie pre právnikov',
-    "hero.desc": "Elektronické hlasovanie, nástenka a správa vlastníkov pre slovenské bytové spoločenstvá. V súlade so zákonom č. 182/1993 Z.z. Zadarmo, bez predplatného, plne pod vašou kontrolou.",
-    "hero.cta": "▶ Rýchly štart",
+    "hero.title": 'Elektronické hlasovanie<br />a správa bytovky<br /><em>pre ľudí,</em> nie pre právnikov',
+    "hero.desc": 'Online hlasovanie vlastníkov bytov, nástenka, mandáty a PDF zápisnice pre <strong>SVB, bytové družstvá</strong> a české <strong>SVJ</strong>. Plus susedská komunita: <strong>burza, výpomoc, udalosti, adresár</strong>. V súlade so zákonom č.&nbsp;182/1993 Z.&nbsp;z. Open-source, alebo cloud od 4&nbsp;€/mes.',
+    "hero.cta": "▶ Self-hosted setup",
     "terminal.comment1": "# Stiahni a spusti – to je všetko",
     "terminal.prompt1": "Doména: dom.example.sk",
     "terminal.prompt2": "Admin: admin@dom.example.sk",
@@ -1346,7 +1564,7 @@ const translations = {
     "terminal.s4": "beží na",
     "features.label": "// funkcie",
     "features.title": "Všetko čo bytovka potrebuje",
-    "features.desc": "Navrhnuté pre slovenské právne prostredie, prístupné pre každého – aj pre dôchodcov.",
+    "features.desc": "Hlasovanie, nástenka, mandáty, PDF zápisnice. Navrhnuté pre slovenské aj české právne prostredie, prístupné pre každého – aj pre dôchodcov.",
     "f1.title": "Váhované hlasovanie",
     "f1.desc": "Tri metódy hlasovania podľa § 14 zákona 182/1993 Z.z.: podľa podielu, podľa bytov, podľa plochy. Tri typy kvóra (nadpolovičná väčšina prítomných, všetkých, 2/3 všetkých). Každý hlas je auditovaný SHA-256 hashom.",
     "f2.title": "Papierové hlasy",
@@ -1522,11 +1740,33 @@ NEXTAUTH_SECRET=changeMe_anotherRandomString456
     "cloud.table.price": "Cena za inštanciu",
     "cloud.cta": "Vyskúšajte 7 dní zadarmo →",
     "cloud.note": "Bez kreditnej karty. Plné funkcie počas skúšobného obdobia.",
-    "hero.cloud": "☁ Vyskúšať cloud",
+    "hero.cloud": "☁ Vyskúšať cloud zadarmo",
+    "nav.komunita": "Komunita",
+    "audience.label": "// pre koho",
+    "audience.title": "Pre SVB, bytové družstvá aj české SVJ",
+    "audience.desc": "Jedna platforma pre tri právne formy správy bytových domov – slovenské aj české.",
+    "aud1.title": "Spoločenstvá vlastníkov bytov (SVB)",
+    "aud1.desc": "Pre slovenské SVB podľa zákona č.&nbsp;182/1993 Z.&nbsp;z. Elektronické hlasovanie podľa podielu, bytov alebo plochy. Tri typy kvóra. Mandáty s úradne overeným podpisom. Predseda + rada.",
+    "aud2.title": "Bytové družstvá",
+    "aud2.desc": "Pre družstevný sektor – členské schôdze, hlasovanie online aj na schôdzi, evidencia bytov a podielov, nájomcovia bez hlasovacieho práva, správca s prístupom k oznamom.",
+    "aud3.title": "Společenství vlastníků jednotek (SVJ)",
+    "aud3.desc": "Pro česká SVJ podle zákona č.&nbsp;89/2012 Sb. Lokalizovaná terminologie (shromáždění, výbor), česká kvóra a hlasovací pravidla. Stejná aplikace, country config přepne kontext.",
+    "komunita.label": "// komunita susedov",
+    "komunita.title": "Nielen správa, ale aj <em>komunita susedov</em>",
+    "komunita.desc": "Konkurencia rieši paragrafy. My riešime aj život v dome. Štyri sekcie pre sused-na-suseda interakciu – bez Facebooku, bez bazoša, bez cudzincov.",
+    "kom1.title": "Susedská burza",
+    "kom1.desc": 'Predám, darujem, požičiam – medzi vlastníkmi a nájomcami v dome. Filter podľa typu, jedna foto per post, označenie „Vyriešené / Predané". Voliteľne obmedzené len na konkrétny vchod.',
+    "kom2.title": "Susedská výpomoc",
+    "kom2.desc": '„Prosím o pomoc" vs „Ponúkam pomoc" ako dva oddelené typy. Zalievanie kvetov počas dovolenky, IT pomoc, drobné opravy, vyvenčenie psa. Bez platieb – toto je susedská výpomoc.',
+    "kom3.title": "Susedské udalosti",
+    "kom3.desc": 'Grilovačka na dvore, brigáda, vianočné stretnutie, zbierka. RSVP „Áno / Možno / Nie" s počítadlom účastníkov. Email pripomienka deň pred udalosťou. Nadchádzajúce vs ukončené udalosti.',
+    "kom4.title": "Adresár susedov (opt-in)",
+    "kom4.desc": "Sused si sám zvolí, či zdieľa telefón, email, poznámku a zručnosti (elektrikár, IT, záhrada). Nemusíte viackrát hľadať elektrikára cez Google – býva o tri poschodia nižšie.",
+    "komunita.notify": "✉️ <strong>Email notifikácie a auto-expirácia.</strong> Autor postu dostane email pri každej reakcii. Staršie posty sa automaticky expirujú. Pripomienky udalostí chodia 1 deň vopred. Cron job to všetko rieši automaticky.",
     "footer.cloud": "Cloud",
     "footer.discussions": "Diskusie",
     "footer.license": "pod licenciou",
-    "footer.made": "Vytvorené pre slovenské bytové spoločenstvá",
+    "footer.made": "Vytvorené pre slovenské a české bytové spoločenstvá, družstvá a SVJ",
     "footer.contrib": "Príspevky vítané – otvor issue alebo pull request"
   },
   en: {
@@ -1536,9 +1776,9 @@ NEXTAUTH_SECRET=changeMe_anotherRandomString456
     "nav.tech": "Tech stack",
     "nav.docs": "Docs",
     "badge.law": "§ 182/1993 Z.z.",
-    "hero.title": 'Apartment<br />management<br /><em>for people,</em> not lawyers',
-    "hero.desc": "Electronic voting, bulletin board, and owner management for Slovak housing associations. Compliant with Slovak Act No. 182/1993. Free, no subscription, fully self-hosted.",
-    "hero.cta": "▶ Quick start",
+    "hero.title": 'Electronic voting<br />and apartment management<br /><em>for people,</em> not lawyers',
+    "hero.desc": 'Online voting, bulletin board, mandates, and PDF minutes for Slovak <strong>SVB, housing cooperatives</strong>, and Czech <strong>SVJ</strong>. Plus a neighborhood community: <strong>marketplace, help, events, directory</strong>. Compliant with Slovak Act No.&nbsp;182/1993. Open-source, or cloud from 4&nbsp;€/month.',
+    "hero.cta": "▶ Self-hosted setup",
     "terminal.comment1": "# Download and run – that's it",
     "terminal.prompt1": "Domain: dom.example.sk",
     "terminal.prompt2": "Admin: admin@dom.example.sk",
@@ -1548,7 +1788,7 @@ NEXTAUTH_SECRET=changeMe_anotherRandomString456
     "terminal.s4": "running on",
     "features.label": "// features",
     "features.title": "Everything your building needs",
-    "features.desc": "Designed for Slovak legal requirements, accessible for everyone – including the elderly.",
+    "features.desc": "Voting, bulletin board, mandates, PDF minutes. Designed for Slovak and Czech legal requirements, accessible for everyone – including the elderly.",
     "f1.title": "Weighted voting",
     "f1.desc": "Three voting methods per § 14 of Act 182/1993: by ownership share, by flat, by area. Three quorum types (majority of present, of all, 2/3 of all). Every vote is audited with a SHA-256 hash.",
     "f2.title": "Paper ballots",
@@ -1726,10 +1966,33 @@ NEXTAUTH_SECRET=changeMe_anotherRandomString456
     "community.contrib.title": "Contribute",
     "community.contrib.desc": "Bug fixes, new features, translations, documentation – every contribution helps.",
     "community.lang": "We communicate in both Slovak and English. Use whichever you're comfortable with.",
+    "hero.cloud": "☁ Try the cloud free",
+    "nav.komunita": "Community",
+    "audience.label": "// for whom",
+    "audience.title": "For Slovak SVB, housing cooperatives, and Czech SVJ",
+    "audience.desc": "One platform for three legal forms of building management – Slovak and Czech.",
+    "aud1.title": "Slovak housing associations (SVB)",
+    "aud1.desc": "For Slovak SVB under Act No. 182/1993 Z. z. Electronic voting by share, by flat or by area. Three quorum types. Mandates with certified signatures. Chairman + board.",
+    "aud2.title": "Housing cooperatives",
+    "aud2.desc": "For the cooperative sector – member meetings, online and in-person voting, apartment and share registry, tenants without voting rights, caretaker with announcement access.",
+    "aud3.title": "Czech SVJ (Společenství vlastníků jednotek)",
+    "aud3.desc": "For Czech SVJ under Act No. 89/2012 Sb. Localized terminology (shromáždění, výbor), Czech quorum and voting rules. Same app — country config switches the legal context.",
+    "komunita.label": "// neighborhood community",
+    "komunita.title": "Not just management — a <em>neighborhood community</em>",
+    "komunita.desc": "Competitors solve paragraphs. We also solve life in the building. Four sections for neighbor-to-neighbor interaction — without Facebook, without classifieds, without strangers.",
+    "kom1.title": "Neighborhood marketplace",
+    "kom1.desc": 'Sell, give away, lend – between owners and tenants in the building. Filter by type, one photo per post, "Resolved / Sold" marker. Optional entrance-only visibility.',
+    "kom2.title": "Neighborly help",
+    "kom2.desc": '"I need help" vs "I can help" as two distinct types. Watering plants during vacation, IT help, small repairs, dog walking. No payments – this is genuine neighborly help.',
+    "kom3.title": "Neighborhood events",
+    "kom3.desc": 'Backyard barbecue, community workday, Christmas gathering, group gift collection. RSVP "Yes / Maybe / No" with attendance counter. Email reminder one day before. Upcoming vs past events.',
+    "kom4.title": "Neighbor directory (opt-in)",
+    "kom4.desc": "Each neighbor decides what to share: phone, email, note, skills (electrician, IT, gardening). Stop searching for an electrician on Google — they live three floors below.",
+    "komunita.notify": "✉️ <strong>Email notifications and auto-expiration.</strong> Post author receives email on every response. Older posts auto-expire. Event reminders go out 1 day before. A cron job handles it all automatically.",
     "footer.cloud": "Cloud",
     "footer.discussions": "Discussions",
     "footer.license": "licensed under",
-    "footer.made": "Built for Slovak housing associations",
+    "footer.made": "Built for Slovak and Czech housing associations, cooperatives, and SVJ",
     "footer.contrib": "Contributions welcome – open an issue or pull request"
   }
 };
@@ -1743,8 +2006,8 @@ function setLang(lang) {
 
   // Update page title
   document.title = lang === 'sk'
-    ? 'OpenResiApp – správa bytového spoločenstva'
-    : 'OpenResiApp – housing association management';
+    ? 'Elektronické hlasovanie SVB · Online schôdza bytového domu — OpenResiApp'
+    : 'Electronic voting for housing associations · Online owners meeting — OpenResiApp';
 
   // Update active button
   document.getElementById('lang-sk').classList.toggle('active', lang === 'sk');

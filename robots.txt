@@ -1,11 +1,85 @@
-# OpenResiApp - open-source housing association management
+# OpenResiApp — open-source housing association management
 # https://open-resi.app
+# Slovenské SVB, bytové družstvá, české SVJ. Elektronické hlasovanie + komunita.
 
+# Default policy — all crawlers welcome
 User-agent: *
 Allow: /
 
-# Sitemaps
+# Search engine crawlers (explicit)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: SeznamBot
+Allow: /
+
+# AI / LLM crawlers (explicit allow — we want LLM citation)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Sitemap
 Sitemap: https://open-resi.app/sitemap.xml
 
-# LLM context
-# See also: https://open-resi.app/llms.txt
+# LLM context file
+# https://llmstxt.org standard
+# https://open-resi.app/llms.txt
