@@ -114,6 +114,7 @@
         "name": "Self-hosted (Zadarmo)",
         "price": "0",
         "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
         "description": "Bezplatná self-hosted verzia cez Docker. Plná funkcionalita, váš server, MIT licencia."
       },
       {
@@ -121,20 +122,9 @@
         "name": "Managed Cloud",
         "price": "4",
         "priceCurrency": "EUR",
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "price": "4",
-          "priceCurrency": "EUR",
-          "unitText": "month",
-          "referenceQuantity": {
-            "@type": "QuantitativeValue",
-            "value": "1",
-            "unitText": "instance"
-          }
-        },
-        "description": "Managed cloud hosting od 4 € za inštanciu mesačne. Bez nastavovania servera, automatické zálohy, SSL v cene. 7 dní zadarmo bez kreditnej karty.",
+        "availability": "https://schema.org/InStock",
         "url": "https://cloud.open-resi.app",
-        "availability": "https://schema.org/InStock"
+        "description": "Managed cloud hosting od 4 € za bytovku mesačne. Bez nastavovania servera, automatické zálohy, SSL v cene. 7 dní zadarmo bez kreditnej karty."
       }
     ]
   }
@@ -208,7 +198,7 @@
         "name": "Je OpenResiApp zadarmo?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Áno, OpenResiApp je open-source pod MIT licenciou. Self-hosted verziu cez Docker si môžete nainštalovať na vlastný server bezplatne s plnou funkcionalitou. Ak nechcete spravovať server, managed cloud verzia začína na 4 € za inštanciu mesačne s 7-dňovou skúšobnou dobou bez kreditnej karty na cloud.open-resi.app."
+          "text": "Áno, OpenResiApp je open-source pod MIT licenciou. Self-hosted verziu cez Docker si môžete nainštalovať na vlastný server bezplatne s plnou funkcionalitou. Ak nechcete spravovať server, managed cloud verzia začína na 4 € za bytovku mesačne s 7-dňovou skúšobnou dobou bez kreditnej karty na cloud.open-resi.app."
         }
       },
       {
@@ -224,7 +214,7 @@
         "name": "Koľko stojí OpenResiApp Cloud?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "OpenResiApp Cloud má cenotvorbu za inštanciu s objemovými zľavami: 1 inštancia stojí 7 €/mesiac, 2–3 inštancie po 6 €, 4–5 inštancií po 5 €, 6 a viac inštancií po 4 €. Skúšobná doba 7 dní zadarmo bez kreditnej karty. Účtuje sa len za aktívne inštancie."
+          "text": "OpenResiApp Cloud má cenotvorbu za bytovku s objemovými zľavami: 1 bytovka stojí 7 €/mesiac, 2–3 bytovky po 6 €, 4–5 bytoviek po 5 €, 6 a viac bytoviek po 4 €. Skúšobná doba 7 dní zadarmo bez kreditnej karty. Účtuje sa len za aktívne bytovky."
         }
       },
       {
@@ -1270,17 +1260,17 @@
       <div class="cloud-benefit">
         <div class="cloud-icon">&#x26A1;</div>
         <h3 data-i18n="cloud.b1.title">Spusten&eacute; za 5 min&uacute;t</h3>
-        <p data-i18n="cloud.b1.desc">&Zcaron;iadny server, &zcaron;iadny Docker, &zcaron;iadna konfigur&aacute;cia. Zaregistrujte sa a va&scaron;a in&scaron;tancia be&zcaron;&iacute;.</p>
+        <p data-i18n="cloud.b1.desc">&Zcaron;iadny server, &zcaron;iadny Docker, &zcaron;iadna konfigur&aacute;cia. Zaregistrujte sa a va&scaron;a bytovka be&zcaron;&iacute; v cloude.</p>
       </div>
       <div class="cloud-benefit">
         <div class="cloud-icon">&#x1F512;</div>
         <h3 data-i18n="cloud.b2.title">Z&aacute;lohy a bezpe&ccaron;nos&#357;</h3>
-        <p data-i18n="cloud.b2.desc">Automatick&eacute; denn&eacute; z&aacute;lohy, SSL, izol&aacute;cia d&aacute;t. Ka&zcaron;d&aacute; in&scaron;tancia be&zcaron;&iacute; v samostatnom kontajneri.</p>
+        <p data-i18n="cloud.b2.desc">Automatick&eacute; denn&eacute; z&aacute;lohy, SSL, izol&aacute;cia d&aacute;t. Ka&zcaron;d&aacute; bytovka be&zcaron;&iacute; v samostatnom prostred&iacute;.</p>
       </div>
       <div class="cloud-benefit">
         <div class="cloud-icon">&#x1F4B6;</div>
         <h3 data-i18n="cloud.b3.title">Od 4 &euro;/mesiac</h3>
-        <p data-i18n="cloud.b3.desc">Plat&iacute;te len za akt&iacute;vne in&scaron;tancie. &Ccaron;&iacute;m viac in&scaron;tanci&iacute;, t&yacute;m ni&zcaron;&scaron;ia cena za jednu.</p>
+        <p data-i18n="cloud.b3.desc">Plat&iacute;te len za akt&iacute;vne bytovky. &Ccaron;&iacute;m viac bytoviek, t&yacute;m ni&zcaron;&scaron;ia cena za jednu.</p>
       </div>
     </div>
 
@@ -1288,8 +1278,8 @@
       <table>
         <thead>
           <tr>
-            <th data-i18n="cloud.table.count">Po&ccaron;et in&scaron;tanci&iacute;</th>
-            <th data-i18n="cloud.table.price">Cena za in&scaron;tanciu</th>
+            <th data-i18n="cloud.table.count">Po&ccaron;et bytoviek</th>
+            <th data-i18n="cloud.table.price">Cena za bytovku</th>
           </tr>
         </thead>
         <tbody>
@@ -1785,13 +1775,13 @@ NEXTAUTH_SECRET=changeMe_anotherRandomString456
     "cloud.title": "Nechcete sa starať o server?",
     "cloud.desc": "Spustíme to za vás. Rovnaká aplikácia, žiadna údržba. 7 dní zadarmo.",
     "cloud.b1.title": "Spustené za 5 minút",
-    "cloud.b1.desc": "Žiadny server, žiadny Docker, žiadna konfigurácia. Zaregistrujte sa a vaša inštancia beží.",
+    "cloud.b1.desc": "Žiadny server, žiadny Docker, žiadna konfigurácia. Zaregistrujte sa a vaša bytovka beží v cloude.",
     "cloud.b2.title": "Zálohy a bezpečnosť",
-    "cloud.b2.desc": "Automatické denné zálohy, SSL, izolácia dát. Každá inštancia beží v samostatnom kontajneri.",
+    "cloud.b2.desc": "Automatické denné zálohy, SSL, izolácia dát. Každá bytovka beží v samostatnom prostredí.",
     "cloud.b3.title": "Od 4 €/mesiac",
-    "cloud.b3.desc": "Platíte len za aktívne inštancie. Čím viac inštancií, tým nižšia cena za jednu.",
-    "cloud.table.count": "Počet inštancií",
-    "cloud.table.price": "Cena za inštanciu",
+    "cloud.b3.desc": "Platíte len za aktívne bytovky. Čím viac bytoviek, tým nižšia cena za jednu.",
+    "cloud.table.count": "Počet bytoviek",
+    "cloud.table.price": "Cena za bytovku",
     "cloud.cta": "Vyskúšajte 7 dní zadarmo →",
     "cloud.note": "Bez kreditnej karty. Plné funkcie počas skúšobného obdobia.",
     "hero.cloud": "☁ Vyskúšať cloud zadarmo",
@@ -1998,13 +1988,13 @@ NEXTAUTH_SECRET=changeMe_anotherRandomString456
     "cloud.title": "Don't want to manage a server?",
     "cloud.desc": "We'll run it for you. Same app, zero maintenance. 7 days free.",
     "cloud.b1.title": "Running in 5 minutes",
-    "cloud.b1.desc": "No server, no Docker, no configuration. Sign up and your instance is live.",
+    "cloud.b1.desc": "No server, no Docker, no configuration. Sign up and your building is live in the cloud.",
     "cloud.b2.title": "Backups & security",
-    "cloud.b2.desc": "Automatic daily backups, SSL, data isolation. Each instance runs in its own container.",
+    "cloud.b2.desc": "Automatic daily backups, SSL, data isolation. Each building runs in its own isolated environment.",
     "cloud.b3.title": "From 4 EUR/month",
-    "cloud.b3.desc": "Pay only for active instances. The more instances, the lower the price per instance.",
-    "cloud.table.count": "Number of instances",
-    "cloud.table.price": "Price per instance",
+    "cloud.b3.desc": "Pay only for active buildings. The more buildings, the lower the per-building price.",
+    "cloud.table.count": "Number of buildings",
+    "cloud.table.price": "Price per building",
     "cloud.cta": "Try 7 days free →",
     "cloud.note": "No credit card required. Full features during trial.",
     "hero.cloud": "☁ Try the cloud",
