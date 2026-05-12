@@ -44,6 +44,7 @@ OpenResiApp is a free, open-source web application for managing residential apar
 - SHA-256 audit trail for every vote with email confirmation
 - Five user roles: Admin (chairman), Owner, Tenant, Vote Counter, Caretaker (unchanged)
 - Board and statutory bodies tracking (orthogonal to user roles): governance_model per building (`chairman_council`, `committee`, `chairman_only`), board members with terms and roles (`chairman`, `council_member`, `committee_chairman`, `committee_member`), full CRUD, archived on term end
+- Easy import wizard for new buildings: paste-from-Kataster-LV (Slovak land registry) with heuristic regex, XLSX template (share columns text-formatted so `1/96` doesn't become a date), or in-browser editable grid. Handles BSM (spousal co-ownership) and multi-owner units. Share-format leniency (fractions, decimals, percentages). Dry-run preview + atomic seed in one DB transaction. Shell users for owners without email.
 - QR-based bulk onboarding: admin generates invite QR with expiry; owners scan and sign up; admin approves from pending-owners queue
 - Dark mode (cookie-persisted, SSR-safe, no flash)
 - Web Push notifications (VAPID) with email fallback for unsupported browsers

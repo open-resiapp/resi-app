@@ -1,0 +1,2 @@
+id,SVB_nazov,mesto,bytov,vchodov,kontakt_meno,kontakt_email,plan_typ,cena_eur_mes,signup_datum,trial_end_datum,prve_hlasovanie_datum,aktivni_pouzivatelia,zdroj_kanal,onboarding_typ,nps,churn_risk,testimonial_yn,referencie_dal_pocet,pozn
+1,,,,,,,trial,7,,,,,,,white-glove,,,no,0,prvy testovaci zakaznik

@@ -1309,8 +1309,45 @@
   </div>
 </section>
 
+<!-- IMPORT -->
+<section id="import" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="section-inner">
+    <div class="section-label" data-i18n="import.label">// import bytov a vlastn&iacute;kov</div>
+    <h2 data-i18n="import.title">96 bytov, 120 vlastn&iacute;kov, 6 vchodov &mdash; za 10 min&uacute;t</h2>
+    <p class="section-desc" data-i18n="import.desc">Nov&aacute; bytovka v aplik&aacute;cii nie je hodina klikania po jednom byte. Importn&iacute; sprievodca preberie celej bytovku z toho, &ccaron;o m&aacute; predseda doma: <strong>list vlastn&iacute;ctva z Katastra</strong>, <strong>Excel tabu&#318;ka</strong>, alebo prosto napísa&#357; do tabuľky v prehliada&ccaron;i.</p>
+
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon" style="background: rgba(91,143,255,0.15);">&#x1F4CB;</div>
+        <h3 data-i18n="import.m1.title">Vlo&zcaron;te z LV (Kataster)</h3>
+        <p data-i18n="import.m1.desc">Otvor&iacute;te list vlastn&iacute;ctva v prehliada&ccaron;i, <code>Ctrl+A</code>, <code>Ctrl+C</code>, vlo&zcaron;&iacute;te do okna. Parser rozozn&aacute; slovensk&yacute; LV form&aacute;t, predvypln&iacute; vlastn&iacute;kov, byty, podiely, vchody &mdash; v&aacute;tane <strong>BSM</strong> a viac-vlastn&iacute;ckych bytov. Bez OCR, bez API, bez ru&ccaron;n&eacute;ho prepisovania mien.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" style="background: rgba(62,207,142,0.15);">&#x1F4D7;</div>
+        <h3 data-i18n="import.m2.title">XLSX &scaron;abl&oacute;na</h3>
+        <p data-i18n="import.m2.desc">Stiahnite Excel &scaron;abl&oacute;nu prisp&ocirc;soben&uacute; vašej budove (vchody on/off, bloky on/off). Pod&iacute;lov&eacute; st&#318;pce s&uacute; form&aacute;tovan&eacute; ako text &mdash; <code>1/96</code> sa <strong>nepremen&iacute;</strong> na 1. janu&aacute;r 1996. Vyplníte v Exceli, uploadnete, hotovo.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" style="background: rgba(245,197,66,0.15);">&#x270F;&#xFE0F;</div>
+        <h3 data-i18n="import.m3.title">Alebo p&iacute;&scaron;te priamo</h3>
+        <p data-i18n="import.m3.desc">Editovate&#318;n&aacute; tabu&#318;ka priamo v aplik&aacute;cii. Validation per cell, chyby s tooltipom, opravi&#357; bez re-uploadu. Pre mal&eacute; SVB (5-10 bytov) najrýchlej&scaron;ia cesta.</p>
+      </div>
+    </div>
+
+    <div class="callout callout-info" style="margin-top: 2.5rem;">
+      <span data-i18n="import.share"><strong>&#x1F4D0; Podiely v ka&zcaron;dom form&aacute;te.</strong> Zlomky (<code>1/96</code>), dlh&eacute; zlomky (<code>5614/100000</code>), desatinn&eacute; &ccaron;&iacute;sla (<code>0.01042</code>), percent&aacute; (<code>1,042%</code>) &mdash; v&scaron;etko sa znormalizuje na exaktn&uacute; raciоn&aacute;lnu aritmetiku. Sumy podielov sa skontroluj&uacute; &mdash; ke&#271; sa byt nez&iacute;ska na 1/1, dozvete sa pred importom.</span>
+    </div>
+
+    <div class="callout callout-tip" style="margin-top: 1rem;">
+      <span data-i18n="import.atomic">&#x1F4A1; <strong>Dry-run preview pred uplo&zcaron;en&iacute;m.</strong> Sprievodca uk&aacute;&zcaron;e koľko entitied a vlastn&iacute;kov vznikne, kde s&uacute; chyby, koľko je sum podielov. Až po va&scaron;om kliknut&iacute; <em>Importova&#357;</em> sa cel&aacute; bytovka zalo&zcaron;&iacute; v jednej DB transakcii &mdash; buď v&scaron;etko, alebo ni&ccaron;.</span>
+    </div>
+
+    <p style="color: var(--muted); font-size: 0.95rem; margin-top: 1.5rem; text-align: center;" data-i18n="import.note">Vlastn&iacute;ci bez emailu sa zalo&zcaron;ia ako <em>shell users</em> &mdash; pln&yacute; z&aacute;znam v evidencii, prihlasovanie aktivuj&uacute; nesk&ocirc;r cez QR (vi&#271; ni&zcaron;&scaron;ie) alebo email pozv&aacute;nku.</p>
+  </div>
+</section>
+
 <!-- ONBOARDING -->
-<section id="onboarding" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+<section id="onboarding" style="background: var(--bg);">
   <div class="section-inner">
     <div class="section-label" data-i18n="onb.label">// onboarding vlastn&iacute;kov</div>
     <h2 data-i18n="onb.title">Pozvite v&scaron;etk&yacute;ch vlastn&iacute;kov naraz &mdash; QR k&oacute;d na sch&ocirc;dzi</h2>
@@ -2069,6 +2106,19 @@ NEXTAUTH_SECRET=changeMe_anotherRandomString456
     "vybor.crud": "📅 <strong>Plný CRUD pre členov výboru</strong> — pridanie, úprava, odvolanie. Funkčné obdobie (od / do) per člen, po skončení sa záznam archivuje, nemaže — pre históriu uznesení a auditu. Notifikácia týždeň pred koncom obdobia (kvórum vo výbore môže klesnúť).",
     "vybor.country": "Prepínač krajiny na budove (SK / CZ) ovplyvňuje, ktoré governance modely sú v UI ponúknuté ako default a aká terminológia sa zobrazuje (predseda vs předseda, člen rady vs člen výboru). Schémy enumov sú spoločné — jurisdikčné je len UI mapovanie.",
 
+    "import.label": "// import bytov a vlastníkov",
+    "import.title": "96 bytov, 120 vlastníkov, 6 vchodov — za 10 minút",
+    "import.desc": "Nová bytovka v aplikácii nie je hodina klikania po jednom byte. Importný sprievodca preberie celú bytovku z toho, čo má predseda doma: <strong>list vlastníctva z Katastra</strong>, <strong>Excel tabuľka</strong>, alebo prosto napísať do tabuľky v prehliadači.",
+    "import.m1.title": "Vložte z LV (Kataster)",
+    "import.m1.desc": "Otvoríte list vlastníctva v prehliadači, <code>Ctrl+A</code>, <code>Ctrl+C</code>, vložíte do okna. Parser rozozná slovenský LV formát, predvyplní vlastníkov, byty, podiely, vchody — vrátane <strong>BSM</strong> a viac-vlastníckych bytov. Bez OCR, bez API, bez ručného prepisovania mien.",
+    "import.m2.title": "XLSX šablóna",
+    "import.m2.desc": "Stiahnite Excel šablónu prispôsobenú vašej budove (vchody on/off, bloky on/off). Podielové stĺpce sú formátované ako text — <code>1/96</code> sa <strong>nepremení</strong> na 1. január 1996. Vyplníte v Exceli, uploadnete, hotovo.",
+    "import.m3.title": "Alebo píšte priamo",
+    "import.m3.desc": "Editovateľná tabuľka priamo v aplikácii. Validation per cell, chyby s tooltipom, opraviť bez re-uploadu. Pre malé SVB (5-10 bytov) najrýchlejšia cesta.",
+    "import.share": "<strong>📐 Podiely v každom formáte.</strong> Zlomky (<code>1/96</code>), dlhé zlomky (<code>5614/100000</code>), desatinné čísla (<code>0.01042</code>), percentá (<code>1,042%</code>) — všetko sa znormalizuje na exaktnú racionálnu aritmetiku. Sumy podielov sa skontrolujú — keď sa byt nezíska na 1/1, dozviete sa pred importom.",
+    "import.atomic": "💡 <strong>Dry-run preview pred uložením.</strong> Sprievodca ukáže koľko entít a vlastníkov vznikne, kde sú chyby, koľko je sum podielov. Až po vašom kliknutí <em>Importovať</em> sa celá bytovka založí v jednej DB transakcii — buď všetko, alebo nič.",
+    "import.note": "Vlastníci bez emailu sa založia ako <em>shell users</em> — plný záznam v evidencii, prihlasovanie aktivujú neskôr cez QR (viď nižšie) alebo email pozvánku.",
+
     "onb.label": "// onboarding vlastníkov",
     "onb.title": "Pozvite všetkých vlastníkov naraz — QR kód na schôdzi",
     "onb.desc": "Klasická schôdza, predseda premietne QR kód. Vlastníci ho naskenujú, vyplnia základné údaje, hotovo. Žiadne emailové pozvánky vyhľadávané manuálne v evidencii, žiadne reset-password telefonáty.",
@@ -2395,6 +2445,19 @@ NEXTAUTH_SECRET=changeMe_anotherRandomString456
     "bm4.desc": "Votes at committee sessions, shares statutory decision-making.",
     "vybor.crud": "📅 <strong>Full CRUD for board members</strong> — add, edit, dismiss. Term (from / to) per member; after the term ends the record is archived, not deleted — for resolution history and audit. A reminder fires a week before the term ends (board quorum could otherwise drop unnoticed).",
     "vybor.country": "The country toggle on the building (SK / CZ) drives which governance models the UI suggests by default and which terminology shows (predseda vs předseda, council member vs committee member). Enum schemas are shared — only UI mapping is jurisdiction-specific.",
+
+    "import.label": "// units & owners import",
+    "import.title": "96 units, 120 owners, 6 entrances — in 10 minutes",
+    "import.desc": "Setting up a new building isn't an hour of clicking one flat at a time. The import wizard takes the whole building from what the chair already has at home: <strong>the Kataster land-registry record (LV)</strong>, an <strong>Excel sheet</strong>, or just typing into a table in the browser.",
+    "import.m1.title": "Paste from the Land Registry (LV)",
+    "import.m1.desc": "Open the LV in your browser, <code>Ctrl+A</code>, <code>Ctrl+C</code>, paste it into the wizard. The parser recognises the Slovak LV format and pre-fills owners, units, shares, entrances — including <strong>BSM</strong> (spousal co-ownership) and multi-owner units. No OCR, no API, no retyping names.",
+    "import.m2.title": "XLSX template",
+    "import.m2.desc": "Download an Excel template tailored to your building (entrances on/off, blocks on/off). Share columns are formatted as text — <code>1/96</code> <strong>won't</strong> turn into January 1, 1996. Fill in Excel, upload, done.",
+    "import.m3.title": "Or just type it",
+    "import.m3.desc": "Editable table inside the app. Per-cell validation, errors with tooltips, fix without re-uploading. For small SVB (5-10 units) this is the fastest path.",
+    "import.share": "<strong>📐 Shares in any format.</strong> Fractions (<code>1/96</code>), long fractions (<code>5614/100000</code>), decimals (<code>0.01042</code>), percentages (<code>1,042%</code>) — everything normalises to exact rational arithmetic. Share sums are checked — if a unit doesn't sum to 1/1, you'll know before the import.",
+    "import.atomic": "💡 <strong>Dry-run preview before saving.</strong> The wizard shows how many entities and owners will be created, where errors are, and the total share sum. Only after you click <em>Import</em> does the whole building seed in a single DB transaction — all or nothing.",
+    "import.note": "Owners without an email become <em>shell users</em> — full record in the registry; they activate login later via QR (see below) or an email invite.",
 
     "onb.label": "// owner onboarding",
     "onb.title": "Invite every owner at once — a QR code at the meeting",

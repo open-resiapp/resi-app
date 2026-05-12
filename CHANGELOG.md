@@ -1,5 +1,13 @@
 # Landing page changelog — open-resi.app
 
+## 2026-05-12 (later)
+
+### Added
+- New section: Hromadný import bytov a vlastníkov (`#import`) — paste-from-Kataster-LV, XLSX template, in-browser editable grid. Killer differentiator for Slovak market. Section placed between `#vybor` and `#onboarding` (narrative: governance → seed building → owners join).
+- 10 new i18n keys per language (`import.*`)
+- Updated `#onboarding` background to `var(--bg)` to alternate with new `#import` block
+- `llms.txt` features list updated to surface the importer
+
 ## 2026-05-12
 
 ### Added
