@@ -890,8 +890,10 @@
     <div class="nav-right">
       <ul class="nav-links" id="nav-links">
         <li><a href="#features" data-i18n="nav.features">Funkcie</a></li>
+        <li><a href="#moduly" data-i18n="nav.moduly">Moduly</a></li>
         <li><a href="#komunita" data-i18n="nav.komunita">Komunita</a></li>
         <li><a href="#law" data-i18n="nav.law">&sect; Z&aacute;kon</a></li>
+        <li><a href="#api" data-i18n="nav.api">API</a></li>
         <li><a href="#cloud" data-i18n="nav.cloud">Cloud</a></li>
         <li><a href="#docs" data-i18n="nav.docs">Docs</a></li>
         <li><a href="https://github.com/open-resiapp/open-resiapp" class="nav-cta">GitHub &rarr;</a></li>
@@ -919,9 +921,9 @@
     </div>
     <h1 data-i18n="hero.title">Elektronick&eacute; hlasovanie<br />a spr&aacute;va bytovky<br /><em>pre &#318;ud&iacute;,</em> nie pre pr&aacute;vnikov</h1>
     <p class="hero-desc" data-i18n="hero.desc">
-      Online hlasovanie vlastn&iacute;kov bytov, n&aacute;stenka, mand&aacute;ty a PDF z&aacute;pisnice pre <strong>SVB, bytov&eacute; dru&zcaron;stv&aacute;</strong> a &ccaron;esk&eacute; <strong>SVJ</strong>.
+      Online hlasovanie vlastn&iacute;kov bytov, n&aacute;stenka s diskusiami a anketami, mand&aacute;ty, PDF z&aacute;pisnice a push notifik&aacute;cie pre <strong>SVB, bytov&eacute; dru&zcaron;stv&aacute;</strong> a &ccaron;esk&eacute; <strong>SVJ</strong>.
       Plus susedsk&aacute; komunita: <strong>burza, v&yacute;pomoc, udalosti, adres&aacute;r</strong>.
-      V s&uacute;lade so z&aacute;konom &ccaron;.&nbsp;182/1993 Z.&nbsp;z. Open-source, alebo cloud od 4&nbsp;&euro;/mes.
+      V s&uacute;lade so z&aacute;konom &ccaron;.&nbsp;182/1993 Z.&nbsp;z. a &ccaron;esk&yacute;m &sect;&nbsp;89/2012 Sb. Open-source, alebo cloud od 4&nbsp;&euro;/mes.
     </p>
     <div class="hero-actions">
       <a href="https://cloud.open-resi.app" class="btn btn-primary" data-i18n="hero.cloud">
@@ -967,7 +969,7 @@
   <div class="section-inner">
     <div class="section-label" data-i18n="audience.label">// pre koho</div>
     <h2 id="pre-koho-h" data-i18n="audience.title">Pre SVB, bytov&eacute; dru&zcaron;stv&aacute; aj &ccaron;esk&eacute; SVJ</h2>
-    <p class="section-desc" data-i18n="audience.desc">Jedna platforma pre tri pr&aacute;vne formy spr&aacute;vy bytov&yacute;ch domov &ndash; slovensk&eacute; aj &ccaron;esk&eacute;.</p>
+    <p class="section-desc" data-i18n="audience.desc">Jedna platforma pre tri pr&aacute;vne formy spr&aacute;vy bytov&yacute;ch domov &ndash; slovensk&eacute; aj &ccaron;esk&eacute;. Country prepína&ccaron; na &uacute;rovni budovy mení terminol&oacute;giu, kv&oacute;rá aj model v&yacute;boru.</p>
 
     <div class="features-grid">
       <article class="feature">
@@ -983,7 +985,7 @@
       <article class="feature">
         <div class="feature-icon" style="background: rgba(245,197,66,0.15);">&#x1F1E8;&#x1F1FF;</div>
         <h3 data-i18n="aud3.title">Spole&ccaron;enstv&iacute; vlastn&iacute;k&#367; jednotek (SVJ)</h3>
-        <p data-i18n="aud3.desc">Pro &ccaron;esk&aacute; SVJ podle z&aacute;kona &ccaron;.&nbsp;89/2012 Sb. Lokalizovan&aacute; terminologie (shrom&aacute;&zcaron;d&#283;n&iacute;, v&yacute;bor), &ccaron;esk&aacute; kv&oacute;ra a hlasovac&iacute; pravidla. Stejn&aacute; aplikace, country config p&#345;epne kontext.</p>
+        <p data-i18n="aud3.desc">Pro &ccaron;esk&aacute; SVJ podle z&aacute;kona &ccaron;.&nbsp;89/2012 Sb. (ob&ccaron;ansk&yacute; z&aacute;kon&iacute;k, &sect;&nbsp;1158&ndash;1222). Lokalizovan&aacute; terminologie &mdash; <em>shrom&aacute;&zcaron;d&#283;n&iacute;</em>, <em>v&yacute;bor</em>, <em>p&#345;edseda / m&iacute;stop&#345;edseda / &ccaron;len v&yacute;boru</em>. &Ccaron;esk&aacute; kv&oacute;ra a hlasovac&iacute; pravidla (nadpolovi&ccaron;n&iacute; v&#283;t&scaron;ina p&#345;&iacute;tomn&yacute;ch, kvalifikovan&aacute; v&#283;t&scaron;ina pro zm&#283;nu prohl&aacute;&scaron;en&iacute; vlastn&iacute;ka). Stejn&aacute; aplikace, country toggle p&#345;epne kontext: terminologii, kv&oacute;ra, model org&aacute;n&#367;.</p>
       </article>
     </div>
   </div>
@@ -1014,8 +1016,8 @@
       </div>
       <div class="feature">
         <div class="feature-icon" style="background: rgba(255,107,107,0.15);">&#x1F4CB;</div>
-        <h3 data-i18n="f4.title">N&aacute;stenka</h3>
-        <p data-i18n="f4.desc">Oznamy, udalosti, opravy. Mo&zcaron;nos&#357; cieli&#357; na konkr&eacute;tny vchod. 4 kateg&oacute;rie: info, n&aacute;liehav&eacute;, udalos&#357;, &uacute;dr&zcaron;ba.</p>
+        <h3 data-i18n="f4.title">N&aacute;stenka, diskusie a ankety</h3>
+        <p data-i18n="f4.desc">Oznamy, udalosti, opravy. 4 kateg&oacute;rie (info, n&aacute;liehav&eacute;, udalos&#357;, &uacute;dr&zcaron;ba), cielenie na konkr&eacute;tny vchod. Pod ka&zcaron;d&yacute;m oznamom m&ocirc;&zcaron;u susedia diskutova&#357; vo vl&aacute;kne &mdash; alebo predseda prid&aacute; r&yacute;chlu anketu (napr. <em>&bdquo;S&uacute;hlas&iacute;te s opravou strechy?&ldquo;</em>) bez sp&uacute;&scaron;&#357;ania pln&eacute;ho hlasovania. Po&ccaron;et odpoved&iacute; vidno hne&#271; v zozname.</p>
       </div>
       <div class="feature">
         <div class="feature-icon" style="background: rgba(91,143,255,0.15);">&#x1F3E0;</div>
@@ -1028,6 +1030,39 @@
         <p data-i18n="f6.desc">Po hlasovan&iacute; automaticky vygenerovan&aacute; z&aacute;pisnica s audit logom a QR k&oacute;dom. Predseda ju podp&iacute;&scaron;e fyzicky.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- MODULY -->
+<section id="moduly" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="section-inner">
+    <div class="section-label" data-i18n="moduly.label">// modul&aacute;rna architekt&uacute;ra</div>
+    <h2 data-i18n="moduly.title">Zapnite len to, &ccaron;o va&scaron;a bytovka potrebuje</h2>
+    <p class="section-desc" data-i18n="moduly.desc">Funkcie ako hlasovanie, komunita, intercom alebo vlastn&eacute; integr&aacute;cie s&uacute; samostatn&eacute; moduly. Ka&zcaron;d&aacute; bytovka si zapne len tie, ktor&eacute; pou&zcaron;&iacute;va. Men&scaron;ie SVB nepotrebuje pln&uacute; komunitn&uacute; vrstvu &mdash; v&auml;&ccaron;&scaron;ie dru&zcaron;stvo zase chce intercom a smart z&aacute;mky. &Zcaron;iadny modul navy&scaron;e neznamen&aacute; &zcaron;iadny &scaron;um v UI.</p>
+
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon" style="background: rgba(91,143,255,0.15);">&#x1F5F3;&#xFE0F;</div>
+        <h3 data-i18n="mod1.title">Hlasovanie a mand&aacute;ty</h3>
+        <p data-i18n="mod1.desc">Jadro, ktor&eacute; nikdy nevypnete. Tri met&oacute;dy hlasovania, tri kv&oacute;rá, mand&aacute;ty s overen&yacute;m podpisom, audit log, PDF z&aacute;pisnice.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" style="background: rgba(62,207,142,0.15);">&#x1F465;</div>
+        <h3 data-i18n="mod2.title">Komunita susedov</h3>
+        <p data-i18n="mod2.desc">Burza, v&yacute;pomoc, udalosti, adres&aacute;r. Voliteľn&eacute; &mdash; komunity, ktor&eacute; chc&uacute; dr&zcaron;a&#357; aplik&aacute;ciu &bdquo;len na hlasovanie&ldquo;, to nezapn&uacute;.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" style="background: rgba(245,197,66,0.15);">&#x1F4E1;</div>
+        <h3 data-i18n="mod3.title">Intercom a smart zariadenia</h3>
+        <p data-i18n="mod3.desc">Pripojte intercom syst&eacute;m, smart z&aacute;mky vchodu, IoT senzory cez modul s API kľ&uacute;&ccaron;mi a p&aacute;rovac&iacute;mi po&zcaron;iadavkami.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" style="background: rgba(167,139,250,0.15);">&#x1F9E9;</div>
+        <h3 data-i18n="mod4.title">Vlastn&eacute; moduly (SDK)</h3>
+        <p data-i18n="mod4.desc">Self-hosters si m&ocirc;&zcaron;u nap&iacute;sa&#357; vlastn&yacute; modul &mdash; SDK + lifecycle hooks. Oznamy z lok&aacute;lnej webky, integr&aacute;cia s &uacute;&ccaron;tovn&iacute;ckym softv&eacute;rom, &ccaron;oko&#318;vek.</p>
+      </div>
+    </div>
+    <p style="color: var(--muted); font-size: 0.95rem; margin-top: 2rem; text-align: center;" data-i18n="moduly.note">Granty modulov s&uacute; per-komunita &mdash; admin ich kedyko&#318;vek zapne alebo vypne v nastaveniach budovy.</p>
   </div>
 </section>
 
@@ -1120,14 +1155,48 @@
               <td style="padding: 0.6rem 1rem;" data-i18n="law.c11">N&aacute;jomn&iacute;ci nemaj&uacute; hlasovacie pr&aacute;vo</td>
               <td style="padding: 0.6rem 1rem; color: var(--green);">&#x2705;</td>
             </tr>
-            <tr>
+            <tr style="border-bottom: 1px solid var(--border);">
               <td style="padding: 0.6rem 1rem;" data-i18n="law.c12">Z&aacute;pisnica z hlasovania (PDF)</td>
+              <td style="padding: 0.6rem 1rem; color: var(--green);">&#x2705;</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.6rem 1rem;" data-i18n="law.c13">Jednomyse&#318;n&yacute; s&uacute;hlas v&scaron;etk&yacute;ch vlastn&iacute;kov (p&ocirc;&zcaron;i&ccaron;ky, predaj spol. &ccaron;ast&iacute;)</td>
               <td style="padding: 0.6rem 1rem; color: var(--green);">&#x2705;</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
+
+    <!-- Czech §89/2012 subsection -->
+    <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border);">
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 1.5rem; margin-bottom: 1rem;" data-i18n="law.cz.title">A pre &ccaron;esk&eacute; SVJ &mdash; z&aacute;kon &ccaron;. 89/2012 Sb.</h3>
+      <p style="color: var(--muted); margin-bottom: 2rem;" data-i18n="law.cz.desc">Country prepína&ccaron; na &uacute;rovni budovy aktivuje &ccaron;esk&uacute; vetvu pravidiel: shrom&aacute;&zcaron;den&iacute; s nadpolovi&ccaron;nou v&auml;&ccaron;&scaron;inou pr&iacute;tomn&yacute;ch, kvalifikovan&aacute; v&auml;&ccaron;&scaron;ina pre zmenu prehl&aacute;senia vlastn&iacute;ka, v&yacute;bor s predsedom a miestopredsedom. Terminol&oacute;gia v UI sa prisp&ocirc;sob&iacute;.</p>
+      <ul style="list-style: none; padding: 0; display: grid; gap: 0.75rem;">
+        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><span style="color: var(--accent); flex-shrink: 0;">&rarr;</span><span data-i18n="law.cz.b1">Shrom&aacute;&zcaron;den&iacute; &mdash; nadpolovi&ccaron;n&aacute; v&auml;&ccaron;&scaron;ina pr&iacute;tomn&yacute;ch</span></li>
+        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><span style="color: var(--accent); flex-shrink: 0;">&rarr;</span><span data-i18n="law.cz.b2">Kvalifikovan&aacute; v&auml;&ccaron;&scaron;ina pre zmenu prehl&aacute;senia vlastn&iacute;ka</span></li>
+        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><span style="color: var(--accent); flex-shrink: 0;">&rarr;</span><span data-i18n="law.cz.b3">V&yacute;bor &mdash; predseda, miestopredseda, &ccaron;len</span></li>
+        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><span style="color: var(--accent); flex-shrink: 0;">&rarr;</span><span data-i18n="law.cz.b4">Pln&aacute; moc &mdash; p&iacute;somn&aacute;, bez &uacute;radn&eacute;ho overenia</span></li>
+        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><span style="color: var(--accent); flex-shrink: 0;">&rarr;</span><span data-i18n="law.cz.b5">Per rollam (mimo shrom&aacute;&zcaron;den&iacute;) &mdash; &sect; 1210</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- GDPR -->
+<section id="gdpr" style="background: var(--bg);">
+  <div class="section-inner">
+    <div class="section-label" data-i18n="gdpr.label">// gdpr a s&uacute;kromie</div>
+    <h2 data-i18n="gdpr.title">S&uacute;hlasy a privacy, ktor&eacute; obstoja pri kontrole</h2>
+    <p class="section-desc" data-i18n="gdpr.desc">GDPR nie je gal&eacute;ria za&scaron;krt&aacute;vac&iacute;ch boxov. Ka&zcaron;d&yacute; s&uacute;hlas m&aacute; verziu, d&aacute;tum, IP a dr&zcaron;&iacute;me audit log zmien &mdash; aby ste pri s&#357;a&zcaron;nosti dotknutej osoby alebo kontrole z &Uacute;OO&Uacute; vedeli, kto, kedy a ak&yacute; s&uacute;hlas dal.</p>
+
+    <ul style="list-style: none; padding: 0; display: grid; gap: 1rem; max-width: 800px; margin: 2rem auto 0;">
+      <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><span style="color: var(--accent); flex-shrink: 0; font-weight: 600;">&#x2713;</span><span data-i18n="gdpr.b1"><strong>Per-user consent management</strong> &mdash; vlastn&iacute;k vid&iacute; v&scaron;etky svoje s&uacute;hlasy a m&ocirc;&zcaron;e ich kedyko&#318;vek odvola&#357;.</span></li>
+      <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><span style="color: var(--accent); flex-shrink: 0; font-weight: 600;">&#x2713;</span><span data-i18n="gdpr.b2"><strong>Verzionovan&eacute; s&uacute;hlasy</strong> &mdash; ke&#271; uprav&iacute;te text privacy policy, star&eacute; s&uacute;hlasy zostan&uacute; platn&eacute;, nov&eacute; sa p&yacute;taj&uacute; znovu.</span></li>
+      <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><span style="color: var(--accent); flex-shrink: 0; font-weight: 600;">&#x2713;</span><span data-i18n="gdpr.b3"><strong>Audit log</strong> &mdash; kto, kedy, ak&yacute; s&uacute;hlas, z akej IP. Exportovate&#318;n&eacute; do CSV pre pr&iacute;padn&uacute; kontrolu.</span></li>
+      <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><span style="color: var(--accent); flex-shrink: 0; font-weight: 600;">&#x2713;</span><span data-i18n="gdpr.b4"><strong>Privacy policy a cookie banner</strong> s&uacute; s&uacute;&ccaron;as&#357;ou aplik&aacute;cie &mdash; nie nalepen&eacute; z gener&aacute;tora, ale vygenerovan&eacute; z konfigur&aacute;cie in&scaron;tancie.</span></li>
+      <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><span style="color: var(--accent); flex-shrink: 0; font-weight: 600;">&#x2713;</span><span data-i18n="gdpr.b5"><strong>Self-hosted</strong> = d&aacute;ta s&uacute; u v&aacute;s. <strong>Cloud</strong> = d&aacute;ta v E&Uacute; (Hetzner Helsinki / Falkenstein), spracovate&#318;sk&aacute; zmluva pripraven&aacute;.</span></li>
+    </ul>
   </div>
 </section>
 
@@ -1187,6 +1256,84 @@
   </div>
 </section>
 
+<!-- VYBOR -->
+<section id="vybor" style="background: var(--bg);">
+  <div class="section-inner">
+    <div class="section-label" data-i18n="vybor.label">// v&yacute;bor a &scaron;tatut&aacute;ri</div>
+    <h2 data-i18n="vybor.title">V&yacute;bor a spr&aacute;va &mdash; kto pr&aacute;vne zastupuje spolo&ccaron;enstvo</h2>
+    <p class="section-desc" data-i18n="vybor.desc">Roly v aplik&aacute;cii hovoria, kto &ccaron;o vid&iacute;. V&yacute;bor hovor&iacute;, kto za spolo&ccaron;enstvo podpisuje z&aacute;pisnice, jedn&aacute; s &uacute;radmi a zvol&aacute;va sch&ocirc;dze. S&uacute; ortogon&aacute;lne &mdash; predseda b&yacute;va &ccaron;asto aj admin, ale nemus&iacute; by&#357;. Eviduje sa zlo&zcaron;enie v&yacute;boru, funk&ccaron;n&eacute; obdobia a podpisov&eacute; opr&aacute;vnenia.</p>
+
+    <h3 style="font-family: 'DM Serif Display', serif; font-size: 1.25rem; margin: 2.5rem 0 1rem;" data-i18n="vybor.gm.title">Tri modely riadenia (per budova)</h3>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon" style="background: rgba(255,107,107,0.15);">&#x1F451;</div>
+        <h3 data-i18n="gm1.title">Predseda + rada</h3>
+        <p data-i18n="gm1.desc">Klasick&yacute; slovensk&yacute; model (&sect; 7c z&aacute;kona 182/1993). Predseda + 1&ndash;N &ccaron;lenov rady. Vhodn&eacute; pre stredn&eacute; a v&auml;&ccaron;&scaron;ie SVB. <code>chairman_council</code></p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" style="background: rgba(62,207,142,0.15);">&#x1F465;</div>
+        <h3 data-i18n="gm2.title">V&yacute;bor</h3>
+        <p data-i18n="gm2.desc">&Ccaron;esk&yacute; model pod&#318;a &sect; 1205 z&aacute;k. 89/2012 Sb. &mdash; kolekt&iacute;vny &scaron;tatut&aacute;rny org&aacute;n: predseda v&yacute;boru + &ccaron;lenovia v&yacute;boru. Pou&zcaron;ite&#318;n&eacute; aj pre slovensk&eacute; dru&zcaron;stv&aacute;. <code>committee</code></p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" style="background: rgba(245,197,66,0.15);">&#x1F464;</div>
+        <h3 data-i18n="gm3.title">Len predseda</h3>
+        <p data-i18n="gm3.desc">Pre mal&eacute; SVB (typicky &lt; 10 bytov), kde stanovy povo&#318;uj&uacute; jednoosobov&yacute; &scaron;tatut&aacute;r. Bez rady ani v&yacute;boru. <code>chairman_only</code></p>
+      </div>
+    </div>
+
+    <h3 style="font-family: 'DM Serif Display', serif; font-size: 1.25rem; margin: 3rem 0 1rem;" data-i18n="vybor.bm.title">&Scaron;tyri funkcie vo v&yacute;bore</h3>
+    <div class="features-grid">
+      <div class="feature">
+        <h3 data-i18n="bm1.title">Predseda <code style="font-weight: 400; font-size: 0.75rem;">chairman</code></h3>
+        <p data-i18n="bm1.desc">&Scaron;tatut&aacute;r v modeli predseda+rada alebo len predseda. Podpisuje z&aacute;pisnice, zvol&aacute;va sch&ocirc;dzu.</p>
+      </div>
+      <div class="feature">
+        <h3 data-i18n="bm2.title">&Ccaron;len rady <code style="font-weight: 400; font-size: 0.75rem;">council_member</code></h3>
+        <p data-i18n="bm2.desc">Spolurozhoduje s predsedom v modeli predseda+rada (&sect; 7c).</p>
+      </div>
+      <div class="feature">
+        <h3 data-i18n="bm3.title">Predseda v&yacute;boru <code style="font-weight: 400; font-size: 0.75rem;">committee_chairman</code></h3>
+        <p data-i18n="bm3.desc">Ved&uacute;ci kolekt&iacute;vneho v&yacute;boru (&ccaron;esk&yacute; model + slovensk&eacute; dru&zcaron;stv&aacute;).</p>
+      </div>
+      <div class="feature">
+        <h3 data-i18n="bm4.title">&Ccaron;len v&yacute;boru <code style="font-weight: 400; font-size: 0.75rem;">committee_member</code></h3>
+        <p data-i18n="bm4.desc">Hlasuje na zasadnutiach v&yacute;boru, podiel na &scaron;tatut&aacute;rnom rozhodovan&iacute;.</p>
+      </div>
+    </div>
+
+    <div class="callout callout-info" style="margin-top: 2.5rem;">
+      <span data-i18n="vybor.crud">&#x1F4C5; <strong>Pln&yacute; CRUD pre &ccaron;lenov v&yacute;boru</strong> &mdash; pridanie, &uacute;prava, odvolanie. Funk&ccaron;n&eacute; obdobie (od / do) per &ccaron;len, po skon&ccaron;en&iacute; sa z&aacute;znam archivuje, nema&zcaron;e &mdash; pre hist&oacute;riu uznesen&iacute; a auditu. Notifik&aacute;cia t&yacute;&zcaron;de&ncaron; pred koncom obdobia (kv&oacute;rum vo v&yacute;bore m&ocirc;&zcaron;e klesn&uacute;&#357;).</span>
+    </div>
+    <p style="color: var(--muted); font-size: 0.95rem; margin-top: 1rem;" data-i18n="vybor.country">Prep&iacute;na&ccaron; krajiny na budove (SK / CZ) ovplyv&ncaron;uje, ktor&eacute; governance modely s&uacute; v UI ponukn&uacute;te ako default a ak&aacute; terminol&oacute;gia sa zobrazuje (predseda vs p&#345;edseda, &ccaron;len rady vs &ccaron;len v&yacute;boru). Sch&eacute;my enumov s&uacute; spolo&ccaron;n&eacute; &mdash; jurisdik&ccaron;n&eacute; je len UI mapovanie.</p>
+  </div>
+</section>
+
+<!-- ONBOARDING -->
+<section id="onboarding" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="section-inner">
+    <div class="section-label" data-i18n="onb.label">// onboarding vlastn&iacute;kov</div>
+    <h2 data-i18n="onb.title">Pozvite v&scaron;etk&yacute;ch vlastn&iacute;kov naraz &mdash; QR k&oacute;d na sch&ocirc;dzi</h2>
+    <p class="section-desc" data-i18n="onb.desc">Klasick&aacute; sch&ocirc;dza, predseda premietne QR k&oacute;d. Vlastn&iacute;ci ho naskenuj&uacute;, vyplnia z&aacute;kladn&eacute; &uacute;daje, hotovo. &Zcaron;iadne emailov&eacute; pozv&aacute;nky vyh&#318;ad&aacute;van&eacute; manu&aacute;lne v evidencii, &zcaron;iadne reset-password telefon&aacute;ty.</p>
+
+    <ol style="list-style: none; counter-reset: step; padding: 0; display: grid; gap: 1.25rem; max-width: 800px; margin: 2.5rem auto 0;">
+      <li style="counter-increment: step; display: flex; gap: 1rem; align-items: flex-start;">
+        <span style="background: var(--accent); color: #fff; min-width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0;">1</span>
+        <span data-i18n="onb.s1">Admin v aplik&aacute;cii klikne <em>Generova&#357; pozývací QR</em> &mdash; vznikne token s expir&aacute;ciou (default 24&nbsp;h).</span>
+      </li>
+      <li style="counter-increment: step; display: flex; gap: 1rem; align-items: flex-start;">
+        <span style="background: var(--accent); color: #fff; min-width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0;">2</span>
+        <span data-i18n="onb.s2">Vlastn&iacute;k naskenuje, otvor&iacute; sa registra&ccaron;n&yacute; formul&aacute;r predvyplnen&yacute; n&aacute;zvom bytovky a vchodu.</span>
+      </li>
+      <li style="counter-increment: step; display: flex; gap: 1rem; align-items: flex-start;">
+        <span style="background: var(--accent); color: #fff; min-width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0;">3</span>
+        <span data-i18n="onb.s3">Po odoslan&iacute; sa zarad&iacute; medzi <em>&ccaron;akaj&uacute;cich vlastn&iacute;kov</em> &mdash; admin vid&iacute; dashboard, schva&#318;uje a priraďuje k bytu jedn&yacute;m klikom.</span>
+      </li>
+    </ol>
+    <p style="color: var(--muted); font-size: 0.95rem; margin-top: 2rem; text-align: center;" data-i18n="onb.note">Pre ve&#318;k&eacute; dru&zcaron;stv&aacute;: jeden QR vytla&ccaron;en&yacute; na n&aacute;stenku plat&iacute; v&scaron;etk&yacute;m vchodom, alebo per-vchod token pre cielen&eacute; pozvanie.</p>
+  </div>
+</section>
+
 <!-- KOMUNITA SUSEDOV -->
 <section id="komunita" aria-labelledby="komunita-h" style="background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
   <div class="section-inner">
@@ -1219,9 +1366,58 @@
 
     <div style="margin-top: 2.5rem; padding: 1.5rem; background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);">
       <p style="color: var(--muted); font-size: 0.95rem; margin: 0;" data-i18n="komunita.notify">
-        &#x2709;&#xFE0F; <strong>Email notifik&aacute;cie a auto-expir&aacute;cia.</strong> Autor postu dostane email pri ka&zcaron;dej re&aacute;kcii. Star&scaron;ie posty sa automaticky expiruj&uacute;. Pripomienky udalost&iacute; chod&iacute;a 1 de&ncaron; vopred. Cron job to v&scaron;etko rie&scaron;i automaticky.
+        &#x2709;&#xFE0F; <strong>Email notifik&aacute;cie a auto-expir&aacute;cia.</strong> Autor postu dostane email pri ka&zcaron;dej re&aacute;kcii. Star&scaron;ie posty sa automaticky expiruj&uacute;. Pripomienky udalost&iacute; chod&iacute;a 1 de&ncaron; vopred. Cron job to v&scaron;etko rie&scaron;i automaticky. Susedia m&ocirc;&zcaron;u zapn&uacute;&#357; push notifik&aacute;cie na nov&eacute; oznamy, RSVP a pripomienky udalost&iacute; (vi&#271; ni&zcaron;&scaron;ie).
       </p>
     </div>
+  </div>
+</section>
+
+<!-- NOTIFIKACIE -->
+<section id="notifikacie" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="section-inner">
+    <div class="section-label" data-i18n="notif.label">// notifik&aacute;cie</div>
+    <h2 data-i18n="notif.title">Push priamo do preh&#318;ada&ccaron;a &mdash; &zcaron;iadna apka netreba</h2>
+    <p class="section-desc" data-i18n="notif.desc">Web Push (VAPID) doru&ccaron;&iacute; oznam, hlasovanie alebo udalos&#357; aj ke&#271; m&aacute;te zatvoren&yacute; tab. Funguje na Chrome, Edge, Firefox, Safari (iOS 16.4+). Pre preh&#318;ada&ccaron;e bez podpory m&aacute;me email fallback.</p>
+
+    <ul style="list-style: none; padding: 0; display: grid; gap: 1rem; max-width: 800px; margin: 2rem auto 0;">
+      <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><span style="color: var(--accent); flex-shrink: 0;">&#x1F514;</span><span data-i18n="notif.b1">Vlastn&iacute;k si zapne push v profile &mdash; sta&ccaron;&iacute; raz, browser si pam&auml;t&aacute;.</span></li>
+      <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><span style="color: var(--accent); flex-shrink: 0;">&#x1F4E2;</span><span data-i18n="notif.b2">Nov&eacute; hlasovanie, nov&yacute; oznam, nov&aacute; odpove&#271; v diskusii, RSVP pripomienka &mdash; u&zcaron;&iacute;vate&#318; si vyberie typy.</span></li>
+      <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><span style="color: var(--accent); flex-shrink: 0;">&#x21A9;&#xFE0F;</span><span data-i18n="notif.b3">Detekcia odmietnutej alebo nepodporovanej notifik&aacute;cie &mdash; vr&aacute;time sa na email, bez tich&eacute;ho zlyhania.</span></li>
+      <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><span style="color: var(--accent); flex-shrink: 0;">&#x1F30D;</span><span data-i18n="notif.b4">Email &scaron;abl&oacute;ny lokalizovan&eacute; SK/CZ/EN, dedup a throttling proti zaplaveniu schr&aacute;nky.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- API & INTEGRACIE -->
+<section id="api" style="background: var(--bg);">
+  <div class="section-inner">
+    <div class="section-label" data-i18n="api.label">// api a integr&aacute;cie</div>
+    <h2 data-i18n="api.title">Pripojte intercom, smart z&aacute;mky alebo vlastn&eacute; syst&eacute;my</h2>
+    <p class="section-desc" data-i18n="api.desc">External connections + pairing requests v sch&eacute;me. API kľ&uacute;&ccaron;e s granul&aacute;rnymi opr&aacute;vneniami (read-only, write-posts, manage-devices&hellip;). Ka&zcaron;d&eacute; pripojen&eacute; zariadenie alebo slu&zcaron;ba je auditovan&eacute; &mdash; kedy sa pripojilo, ak&uacute; akciu volalo.</p>
+
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon" style="background: rgba(91,143,255,0.15);">&#x1F517;</div>
+        <h3 data-i18n="api.b1.title">P&aacute;rovanie zariaden&iacute;</h3>
+        <p data-i18n="api.b1">Admin schva&#318;uje pairing request (z intercomu, z&aacute;mky, IoT senzora) v dashboarde.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" style="background: rgba(62,207,142,0.15);">&#x1F510;</div>
+        <h3 data-i18n="api.b2.title">Granul&aacute;rne API kľ&uacute;&ccaron;e</h3>
+        <p data-i18n="api.b2">Permissions enum &mdash; od &ccaron;ist&eacute;ho read-only a&zcaron; po spr&aacute;vu modulov. &Zcaron;iadne all-or-nothing tokeny.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" style="background: rgba(245,197,66,0.15);">&#x26A1;</div>
+        <h3 data-i18n="api.b3.title">Webhooks</h3>
+        <p data-i18n="api.b3">Pre zmeny stavu &mdash; nov&yacute; vlastn&iacute;k schv&aacute;len&yacute;, hlasovanie ukon&ccaron;en&eacute;, oznam publikovan&yacute;.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" style="background: rgba(167,139,250,0.15);">&#x1F4D6;</div>
+        <h3 data-i18n="api.b4.title">OpenAPI 3.1</h3>
+        <p data-i18n="api.b4">Dokument&aacute;cia OpenAPI 3.1, generovan&eacute; klienty pre TypeScript a Python.</p>
+      </div>
+    </div>
+    <p style="color: var(--muted); font-size: 0.95rem; margin-top: 2rem; text-align: center;" data-i18n="api.note"><strong>Self-hosted</strong> = va&scaron;e API na va&scaron;ej dom&eacute;ne. <strong>Cloud</strong> = <code>api.&lt;vasabytovka&gt;.open-resi.app</code></p>
   </div>
 </section>
 
@@ -1231,6 +1427,10 @@
     <div class="section-label">// tech stack</div>
     <h2 data-i18n="tech.title">Postaven&eacute; na moderne</h2>
     <p class="section-desc" data-i18n="tech.desc">Ove&zcaron;en&eacute; technol&oacute;gie, ktor&eacute; v&aacute;m u&#318;ah&ccaron;ia deploy aj pr&iacute;spevky.</p>
+
+    <div class="callout callout-info" style="margin: 1.5rem 0 2.5rem;">
+      <span data-i18n="tech.polish">&#x2728; <strong>Detaily, ktor&eacute; pou&zcaron;&iacute;vatelia naozaj vn&iacute;maj&uacute;:</strong> svetl&yacute; a tmav&yacute; re&zcaron;im s cookie persistence (SSR-safe, bez bliknutia pri prepnut&iacute;), pln&aacute; lokaliz&aacute;cia SK / CZ / EN, dashboard so zoznamom posledn&yacute;ch pr&iacute;spevkov a nadch&aacute;dzaj&uacute;cich udalost&iacute; &mdash; nie zastaran&eacute; statistick&eacute; karty.</span>
+    </div>
 
     <div class="tech-grid">
       <div class="tech-item">Next.js 16 <span>App Router</span></div>
@@ -1244,6 +1444,8 @@
       <div class="tech-item">Caddy <span>HTTPS</span></div>
       <div class="tech-item">Nodemailer <span>Email</span></div>
       <div class="tech-item">next-intl <span>i18n</span></div>
+      <div class="tech-item">next-themes <span>Dark mode</span></div>
+      <div class="tech-item">Web Push (VAPID) <span>Push notif</span></div>
       <div class="tech-item">react-pdf <span>PDF export</span></div>
     </div>
   </div>
@@ -1357,21 +1559,17 @@
           <span data-i18n="doc.install.hub">&x2139;&#xFE0F; Docker obraz <code>ipk0/open-resiapp</code> je dostupn&yacute; na <a href="https://hub.docker.com/r/ipk0/open-resiapp" style="color: inherit; text-decoration: underline;">Docker Hub</a>. Podporuje <code>linux/amd64</code> a <code>linux/arm64</code>.</span>
         </div>
 
-        <h4 data-i18n="doc.install.auto">Automatick&yacute; setup (odpor&uacute;&ccaron;an&eacute;)</h4>
-        <p data-i18n="doc.install.autodesc">Skript sa op&yacute;ta na dom&eacute;nu a n&aacute;zov budovy, vygeneruje bezpe&ccaron;n&eacute; hesl&aacute; a vytvor&iacute; v&scaron;etky s&uacute;bory:</p>
-        <pre><code>mkdir open-resiapp && cd open-resiapp
-curl -O https://raw.githubusercontent.com/open-resiapp/open-resiapp/main/setup.sh
-chmod +x setup.sh
-./setup.sh
-docker compose up -d</code></pre>
+        <h4 data-i18n="doc.install.oneliner.title">Jeden pr&iacute;kaz (odpor&uacute;&ccaron;an&eacute;)</h4>
+        <p data-i18n="doc.install.oneliner.desc">Setup skript zist&iacute; v&aacute;&scaron; OS (macOS / Linux), nain&scaron;taluje Docker a openssl ak ch&yacute;baj&uacute;, op&yacute;ta sa na dom&eacute;nu a n&aacute;zov budovy, vygeneruje bezpe&ccaron;n&eacute; hesl&aacute; a vytvor&iacute; admin &uacute;&ccaron;et:</p>
+        <pre><code>curl -fsSL https://get.open-resi.app | bash</code></pre>
         <div class="callout callout-tip">
-          <span data-i18n="doc.install.autotip">&#x1F4A1; Skript automaticky generuje <code>POSTGRES_PASSWORD</code> a <code>NEXTAUTH_SECRET</code> cez <code>openssl rand</code>. Nemus&iacute;&scaron; ni&ccaron; ru&ccaron;ne kop&iacute;rova&#357;.</span>
+          <span data-i18n="doc.install.oneliner.note">&#x1F4A1; Skript je idempotentn&yacute; &mdash; ak ho spust&iacute;te druh&yacute;kr&aacute;t, len doplní ch&yacute;baj&uacute;ce kroky. Funguje na &ccaron;istom Ubuntu, Debian, Fedora, macOS (Homebrew Docker Desktop). Generuje <code>POSTGRES_PASSWORD</code> aj <code>NEXTAUTH_SECRET</code> cez <code>openssl rand</code>.</span>
         </div>
 
-        <h4 data-i18n="doc.install.manual">Manu&aacute;lny setup</h4>
-        <p data-i18n="doc.install.manualdesc">Ak uprednost&ncaron;uje&scaron; manu&aacute;lnu in&scaron;tal&aacute;ciu:</p>
+        <details style="margin-top: 1.5rem; padding: 1rem 1.25rem; background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);">
+        <summary style="cursor: pointer; font-weight: 600;" data-i18n="doc.install.manual.toggle">Manu&aacute;lna in&scaron;tal&aacute;cia (pre spr&aacute;vcov, ktor&iacute; chc&uacute; ka&zcaron;d&yacute; krok pod kontrolou)</summary>
 
-        <h4 data-i18n="doc.install.step1">1. Vytvor docker-compose.yml</h4>
+        <h4 data-i18n="doc.install.step1" style="margin-top: 1.5rem;">1. Vytvor docker-compose.yml</h4>
         <pre><code>mkdir open-resiapp && cd open-resiapp</code></pre>
         <p data-i18n="doc.install.step1copy">Ulo&zcaron; nasledovn&yacute; obsah ako <code>docker-compose.yml</code>:</p>
         <pre><code>services:
@@ -1435,6 +1633,7 @@ NEXTAUTH_SECRET=changeMe_anotherRandomString456
         <h4 data-i18n="doc.install.step3">3. Spusti</h4>
         <pre><code>docker compose up -d</code></pre>
         <p data-i18n="doc.install.note">Docker automaticky stiahne obrazy z <a href="https://hub.docker.com/r/ipk0/open-resiapp" style="color: var(--accent);">Docker Hub</a>, vytvor&iacute; datab&aacute;zu a spust&iacute; app. Migr&aacute;cie sa spustia automaticky.</p>
+        </details>
 
         <h3 id="doc-env" data-i18n="doc.env.title">Konfigur&aacute;cia .env</h3>
         <p data-i18n="doc.env.intro">Otvor s&uacute;bor <code>.env</code> a uprav nasledovn&eacute; hodnoty:</p>
@@ -1806,7 +2005,108 @@ NEXTAUTH_SECRET=changeMe_anotherRandomString456
     "kom3.desc": 'Grilovačka na dvore, brigáda, vianočné stretnutie, zbierka. RSVP „Áno / Možno / Nie" s počítadlom účastníkov. Email pripomienka deň pred udalosťou. Nadchádzajúce vs ukončené udalosti.',
     "kom4.title": "Adresár susedov (opt-in)",
     "kom4.desc": "Sused si sám zvolí, či zdieľa telefón, email, poznámku a zručnosti (elektrikár, IT, záhrada). Nemusíte viackrát hľadať elektrikára cez Google – býva o tri poschodia nižšie.",
-    "komunita.notify": "✉️ <strong>Email notifikácie a auto-expirácia.</strong> Autor postu dostane email pri každej reakcii. Staršie posty sa automaticky expirujú. Pripomienky udalostí chodia 1 deň vopred. Cron job to všetko rieši automaticky.",
+    "komunita.notify": "✉️ <strong>Email notifikácie a auto-expirácia.</strong> Autor postu dostane email pri každej reakcii. Staršie posty sa automaticky expirujú. Pripomienky udalostí chodia 1 deň vopred. Cron job to všetko rieši automaticky. Susedia môžu zapnúť push notifikácie na nové oznamy, RSVP a pripomienky udalostí (viď nižšie).",
+
+    "nav.moduly": "Moduly",
+    "nav.api": "API",
+
+    "audience.desc": "Jedna platforma pre tri právne formy správy bytových domov – slovenské aj české. Country prepínač na úrovni budovy mení terminológiu, kvóra aj model výboru.",
+    "aud3.desc": "Pro česká SVJ podle zákona č.&nbsp;89/2012 Sb. (občanský zákoník, §&nbsp;1158–1222). Lokalizovaná terminologie — <em>shromáždění</em>, <em>výbor</em>, <em>předseda / místopředseda / člen výboru</em>. Česká kvóra a hlasovací pravidla (nadpoloviční většina přítomných, kvalifikovaná většina pro změnu prohlášení vlastníka). Stejná aplikace, country toggle přepne kontext: terminologii, kvóra, model orgánů.",
+
+    "f4.title": "Nástenka, diskusie a ankety",
+    "f4.desc": "Oznamy, udalosti, opravy. 4 kategórie (info, naliehavé, udalosť, údržba), cielenie na konkrétny vchod. Pod každým oznamom môžu susedia diskutovať vo vlákne — alebo predseda pridá rýchlu anketu (napr. <em>„Súhlasíte s opravou strechy?“</em>) bez spúšťania plného hlasovania. Počet odpovedí vidno hneď v zozname.",
+
+    "moduly.label": "// modulárna architektúra",
+    "moduly.title": "Zapnite len to, čo vaša bytovka potrebuje",
+    "moduly.desc": "Funkcie ako hlasovanie, komunita, intercom alebo vlastné integrácie sú samostatné moduly. Každá bytovka si zapne len tie, ktoré používa. Menšie SVB nepotrebuje plnú komunitnú vrstvu — väčšie družstvo zase chce intercom a smart zámky. Žiadny modul navyše neznamená žiadny šum v UI.",
+    "mod1.title": "Hlasovanie a mandáty",
+    "mod1.desc": "Jadro, ktoré nikdy nevypnete. Tri metódy hlasovania, tri kvórá, mandáty s overeným podpisom, audit log, PDF zápisnice.",
+    "mod2.title": "Komunita susedov",
+    "mod2.desc": "Burza, výpomoc, udalosti, adresár. Voliteľné — komunity, ktoré chcú držať aplikáciu „len na hlasovanie“, to nezapnú.",
+    "mod3.title": "Intercom a smart zariadenia",
+    "mod3.desc": "Pripojte intercom systém, smart zámky vchodu, IoT senzory cez modul s API kľúčmi a párovacími požiadavkami.",
+    "mod4.title": "Vlastné moduly (SDK)",
+    "mod4.desc": "Self-hosters si môžu napísať vlastný modul — SDK + lifecycle hooks. Oznamy z lokálnej webky, integrácia s účtovníckym softvérom, čokoľvek.",
+    "moduly.note": "Granty modulov sú per-komunita — admin ich kedykoľvek zapne alebo vypne v nastaveniach budovy.",
+
+    "law.c13": "Jednomyseľný súhlas všetkých vlastníkov (pôžičky, predaj spol. častí)",
+    "law.cz.title": "A pre české SVJ — zákon č. 89/2012 Sb.",
+    "law.cz.desc": "Country prepínač na úrovni budovy aktivuje českú vetvu pravidiel: shromáždění s nadpoloviční většinou přítomných, kvalifikovaná většina pre zmenu prohlášení vlastníka, výbor s předsedou a místopředsedou. Terminológia v UI sa prispôsobí.",
+    "law.cz.b1": "Shromáždění — nadpoloviční většina přítomných",
+    "law.cz.b2": "Kvalifikovaná většina pre zmenu prohlášení vlastníka",
+    "law.cz.b3": "Výbor — předseda, místopředseda, člen",
+    "law.cz.b4": "Plná moc — písemná, bez úředního ověření",
+    "law.cz.b5": "Per rollam (mimo shromáždění) — § 1210",
+
+    "gdpr.label": "// gdpr a súkromie",
+    "gdpr.title": "Súhlasy a privacy, ktoré obstoja pri kontrole",
+    "gdpr.desc": "GDPR nie je galéria zaškrtávacích boxov. Každý súhlas má verziu, dátum, IP a držíme audit log zmien — aby ste pri sťažnosti dotknutej osoby alebo kontrole z ÚOOÚ vedeli, kto, kedy a aký súhlas dal.",
+    "gdpr.b1": "<strong>Per-user consent management</strong> — vlastník vidí všetky svoje súhlasy a môže ich kedykoľvek odvolať.",
+    "gdpr.b2": "<strong>Verzionované súhlasy</strong> — keď upravíte text privacy policy, staré súhlasy zostanú platné, nové sa pýtajú znovu.",
+    "gdpr.b3": "<strong>Audit log</strong> — kto, kedy, aký súhlas, z akej IP. Exportovateľné do CSV pre prípadnú kontrolu.",
+    "gdpr.b4": "<strong>Privacy policy a cookie banner</strong> sú súčasťou aplikácie — nie nalepené z generátora, ale vygenerované z konfigurácie inštancie.",
+    "gdpr.b5": "<strong>Self-hosted</strong> = dáta sú u vás. <strong>Cloud</strong> = dáta v EÚ (Hetzner Helsinki / Falkenstein), spracovateľská zmluva pripravená.",
+
+    "vybor.label": "// výbor a štatutári",
+    "vybor.title": "Výbor a správa — kto právne zastupuje spoločenstvo",
+    "vybor.desc": "Roly v aplikácii hovoria, kto čo vidí. Výbor hovorí, kto za spoločenstvo podpisuje zápisnice, jedná s úradmi a zvoláva schôdze. Sú ortogonálne — predseda býva často aj admin, ale nemusí byť. Eviduje sa zloženie výboru, funkčné obdobia a podpisové oprávnenia.",
+    "vybor.gm.title": "Tri modely riadenia (per budova)",
+    "gm1.title": "Predseda + rada",
+    "gm1.desc": "Klasický slovenský model (§ 7c zákona 182/1993). Predseda + 1–N členov rady. Vhodné pre stredné a väčšie SVB. <code>chairman_council</code>",
+    "gm2.title": "Výbor",
+    "gm2.desc": "Český model podľa § 1205 zák. 89/2012 Sb. — kolektívny štatutárny orgán: predseda výboru + členovia výboru. Použiteľné aj pre slovenské družstvá. <code>committee</code>",
+    "gm3.title": "Len predseda",
+    "gm3.desc": "Pre malé SVB (typicky &lt; 10 bytov), kde stanovy povoľujú jednoosobový štatutár. Bez rady ani výboru. <code>chairman_only</code>",
+    "vybor.bm.title": "Štyri funkcie vo výbore",
+    "bm1.title": "Predseda <code style=\"font-weight: 400; font-size: 0.75rem;\">chairman</code>",
+    "bm1.desc": "Štatutár v modeli predseda+rada alebo len predseda. Podpisuje zápisnice, zvoláva schôdzu.",
+    "bm2.title": "Člen rady <code style=\"font-weight: 400; font-size: 0.75rem;\">council_member</code>",
+    "bm2.desc": "Spolurozhoduje s predsedom v modeli predseda+rada (§ 7c).",
+    "bm3.title": "Predseda výboru <code style=\"font-weight: 400; font-size: 0.75rem;\">committee_chairman</code>",
+    "bm3.desc": "Vedúci kolektívneho výboru (český model + slovenské družstvá).",
+    "bm4.title": "Člen výboru <code style=\"font-weight: 400; font-size: 0.75rem;\">committee_member</code>",
+    "bm4.desc": "Hlasuje na zasadnutiach výboru, podiel na štatutárnom rozhodovaní.",
+    "vybor.crud": "📅 <strong>Plný CRUD pre členov výboru</strong> — pridanie, úprava, odvolanie. Funkčné obdobie (od / do) per člen, po skončení sa záznam archivuje, nemaže — pre históriu uznesení a auditu. Notifikácia týždeň pred koncom obdobia (kvórum vo výbore môže klesnúť).",
+    "vybor.country": "Prepínač krajiny na budove (SK / CZ) ovplyvňuje, ktoré governance modely sú v UI ponúknuté ako default a aká terminológia sa zobrazuje (predseda vs předseda, člen rady vs člen výboru). Schémy enumov sú spoločné — jurisdikčné je len UI mapovanie.",
+
+    "onb.label": "// onboarding vlastníkov",
+    "onb.title": "Pozvite všetkých vlastníkov naraz — QR kód na schôdzi",
+    "onb.desc": "Klasická schôdza, predseda premietne QR kód. Vlastníci ho naskenujú, vyplnia základné údaje, hotovo. Žiadne emailové pozvánky vyhľadávané manuálne v evidencii, žiadne reset-password telefonáty.",
+    "onb.s1": "Admin v aplikácii klikne <em>Generovať pozývací QR</em> — vznikne token s expiráciou (default 24&nbsp;h).",
+    "onb.s2": "Vlastník naskenuje, otvorí sa registračný formulár predvyplnený názvom bytovky a vchodu.",
+    "onb.s3": "Po odoslaní sa zaradí medzi <em>čakajúcich vlastníkov</em> — admin vidí dashboard, schvaľuje a priraďuje k bytu jedným klikom.",
+    "onb.note": "Pre veľké družstvá: jeden QR vytlačený na nástenku platí všetkým vchodom, alebo per-vchod token pre cielené pozvanie.",
+
+    "notif.label": "// notifikácie",
+    "notif.title": "Push priamo do prehliadača — žiadna apka netreba",
+    "notif.desc": "Web Push (VAPID) doručí oznam, hlasovanie alebo udalosť aj keď máte zatvorený tab. Funguje na Chrome, Edge, Firefox, Safari (iOS 16.4+). Pre prehliadače bez podpory máme email fallback.",
+    "notif.b1": "Vlastník si zapne push v profile — stačí raz, browser si pamätá.",
+    "notif.b2": "Nové hlasovanie, nový oznam, nová odpoveď v diskusii, RSVP pripomienka — užívateľ si vyberie typy.",
+    "notif.b3": "Detekcia odmietnutej alebo nepodporovanej notifikácie — vrátime sa na email, bez tichého zlyhania.",
+    "notif.b4": "Email šablóny lokalizované SK/CZ/EN, dedup a throttling proti zaplaveniu schránky.",
+
+    "api.label": "// api a integrácie",
+    "api.title": "Pripojte intercom, smart zámky alebo vlastné systémy",
+    "api.desc": "External connections + pairing requests v schéme. API kľúče s granulárnymi oprávneniami (read-only, write-posts, manage-devices…). Každé pripojené zariadenie alebo služba je auditované — kedy sa pripojilo, akú akciu volalo.",
+    "api.b1.title": "Párovanie zariadení",
+    "api.b1": "Admin schvaľuje pairing request (z intercomu, zámky, IoT senzora) v dashboarde.",
+    "api.b2.title": "Granulárne API kľúče",
+    "api.b2": "Permissions enum — od čistého read-only až po správu modulov. Žiadne all-or-nothing tokeny.",
+    "api.b3.title": "Webhooks",
+    "api.b3": "Pre zmeny stavu — nový vlastník schválený, hlasovanie ukončené, oznam publikovaný.",
+    "api.b4.title": "OpenAPI 3.1",
+    "api.b4": "Dokumentácia OpenAPI 3.1, generované klienty pre TypeScript a Python.",
+    "api.note": "<strong>Self-hosted</strong> = vaše API na vašej doméne. <strong>Cloud</strong> = <code>api.&lt;vasabytovka&gt;.open-resi.app</code>",
+
+    "tech.polish": "✨ <strong>Detaily, ktoré používatelia naozaj vnímajú:</strong> svetlý a tmavý režim s cookie persistence (SSR-safe, bez bliknutia pri prepnutí), plná lokalizácia SK / CZ / EN, dashboard so zoznamom posledných príspevkov a nadchádzajúcich udalostí — nie zastarané statistické karty.",
+
+    "doc.install.oneliner.title": "Jeden príkaz (odporúčané)",
+    "doc.install.oneliner.desc": "Setup skript zistí váš OS (macOS / Linux), nainštaluje Docker a openssl ak chýbajú, opýta sa na doménu a názov budovy, vygeneruje bezpečné heslá a vytvorí admin účet:",
+    "doc.install.oneliner.note": "💡 Skript je idempotentný — ak ho spustíte druhýkrát, len doplní chýbajúce kroky. Funguje na čistom Ubuntu, Debian, Fedora, macOS (Homebrew Docker Desktop). Generuje <code>POSTGRES_PASSWORD</code> aj <code>NEXTAUTH_SECRET</code> cez <code>openssl rand</code>.",
+    "doc.install.manual.toggle": "Manuálna inštalácia (pre správcov, ktorí chcú každý krok pod kontrolou)",
+
+    "hero.desc": 'Online hlasovanie vlastníkov bytov, nástenka s diskusiami a anketami, mandáty, PDF zápisnice a push notifikácie pre <strong>SVB, bytové družstvá</strong> a české <strong>SVJ</strong>. Plus susedská komunita: <strong>burza, výpomoc, udalosti, adresár</strong>. V súlade so zákonom č.&nbsp;182/1993 Z.&nbsp;z. a českým §&nbsp;89/2012 Sb. Open-source, alebo cloud od 4&nbsp;€/mes.',
+
     "footer.cloud": "Cloud",
     "footer.discussions": "Diskusie",
     "footer.license": "pod licenciou",
@@ -2032,7 +2332,108 @@ NEXTAUTH_SECRET=changeMe_anotherRandomString456
     "kom3.desc": 'Backyard barbecue, community workday, Christmas gathering, group gift collection. RSVP "Yes / Maybe / No" with attendance counter. Email reminder one day before. Upcoming vs past events.',
     "kom4.title": "Neighbor directory (opt-in)",
     "kom4.desc": "Each neighbor decides what to share: phone, email, note, skills (electrician, IT, gardening). Stop searching for an electrician on Google — they live three floors below.",
-    "komunita.notify": "✉️ <strong>Email notifications and auto-expiration.</strong> Post author receives email on every response. Older posts auto-expire. Event reminders go out 1 day before. A cron job handles it all automatically.",
+    "komunita.notify": "✉️ <strong>Email notifications and auto-expiration.</strong> Post author receives email on every response. Older posts auto-expire. Event reminders go out 1 day before. A cron job handles it all automatically. Neighbours can opt in to push notifications for new posts, RSVPs, and event reminders (see below).",
+
+    "nav.moduly": "Modules",
+    "nav.api": "API",
+
+    "audience.desc": "One platform for three legal forms of apartment building governance — Slovak and Czech. A country toggle on the building switches terminology, quora, and the board model.",
+    "aud3.desc": "For Czech SVJ under Act No.&nbsp;89/2012 Coll. (Civil Code, §&nbsp;1158–1222). Localised terminology — <em>shromáždění</em>, <em>výbor</em>, <em>předseda / místopředseda / člen výboru</em>. Czech quora and voting rules (simple majority of those present, qualified majority for amending the unit owners' declaration). Same app — a country toggle on the building switches terminology, quora, and the board model.",
+
+    "f4.title": "Bulletin, discussions, polls",
+    "f4.desc": "Announcements, events, repairs. 4 categories (info, urgent, event, maintenance), targetable to a specific entrance. Under every post, neighbours can discuss in a thread — or the chair drops a quick poll (e.g. <em>\"Do you support fixing the roof?\"</em>) without triggering a formal vote. Response count shows in the list view.",
+
+    "moduly.label": "// modular architecture",
+    "moduly.title": "Turn on only what your building needs",
+    "moduly.desc": "Voting, community, intercom and custom integrations are separate modules. Each building enables only what it uses. A small SVB doesn't need the full community layer — a larger cooperative wants intercom and smart locks. No extra module means no extra noise in the UI.",
+    "mod1.title": "Voting and mandates",
+    "mod1.desc": "The core you never turn off. Three voting methods, three quorum types, mandates with verified signatures, audit log, PDF minutes.",
+    "mod2.title": "Neighbour community",
+    "mod2.desc": "Marketplace, help, events, directory. Optional — communities that want a 'voting-only' app simply don't enable it.",
+    "mod3.title": "Intercom and smart devices",
+    "mod3.desc": "Connect the intercom, smart entrance locks, IoT sensors via the module with API keys and pairing requests.",
+    "mod4.title": "Custom modules (SDK)",
+    "mod4.desc": "Self-hosters can build their own module — SDK + lifecycle hooks. Announcements from a local site, accounting software integration, anything.",
+    "moduly.note": "Module grants are per-community — admin enables or disables any module in building settings at any time.",
+
+    "law.c13": "Unanimous consent of all owners (loans, sale of common parts)",
+    "law.cz.title": "And for Czech SVJ — Act No. 89/2012 Coll.",
+    "law.cz.desc": "A country toggle on the building activates the Czech rule branch: shromáždění with simple majority of those present, qualified majority for amending the unit owners' declaration, výbor with předseda and místopředseda. UI terminology adapts.",
+    "law.cz.b1": "Shromáždění — simple majority of those present",
+    "law.cz.b2": "Qualified majority for amending the declaration",
+    "law.cz.b3": "Výbor — předseda, místopředseda, člen",
+    "law.cz.b4": "Plná moc — written, no notarisation required",
+    "law.cz.b5": "Per rollam (outside shromáždění) — § 1210",
+
+    "gdpr.label": "// gdpr and privacy",
+    "gdpr.title": "Consents and privacy that survive an audit",
+    "gdpr.desc": "GDPR isn't a gallery of checkboxes. Every consent has a version, timestamp, IP, and we keep a change audit log — so that on a data subject's complaint or a DPA audit you can show who gave what consent and when.",
+    "gdpr.b1": "<strong>Per-user consent management</strong> — the owner sees every consent and can revoke any of them at any time.",
+    "gdpr.b2": "<strong>Versioned consents</strong> — when you update the privacy policy, old consents stay valid; new ones are re-collected.",
+    "gdpr.b3": "<strong>Audit log</strong> — who, when, what consent, from which IP. CSV-exportable for audits.",
+    "gdpr.b4": "<strong>Privacy policy and cookie banner</strong> ship with the app — not pasted from a generator, but generated from your instance config.",
+    "gdpr.b5": "<strong>Self-hosted</strong> = your data on your server. <strong>Cloud</strong> = data in EU (Hetzner Helsinki / Falkenstein), DPA ready.",
+
+    "vybor.label": "// board and statutory bodies",
+    "vybor.title": "Board and governance — who legally represents the community",
+    "vybor.desc": "App roles say who sees what. The board says who signs minutes, deals with authorities, and calls meetings on behalf of the community. They are orthogonal — the chair is often also admin, but doesn't have to be. The board's composition, terms, and signing authority are tracked separately.",
+    "vybor.gm.title": "Three governance models (per building)",
+    "gm1.title": "Chair + council",
+    "gm1.desc": "Classic Slovak model (§ 7c of Act 182/1993). Chair + 1–N council members. Fits mid-sized and larger SVB. <code>chairman_council</code>",
+    "gm2.title": "Committee (výbor)",
+    "gm2.desc": "Czech model under § 1205 of Act 89/2012 Coll. — collective statutory body: committee chair + committee members. Also usable by Slovak cooperatives. <code>committee</code>",
+    "gm3.title": "Chair only",
+    "gm3.desc": "For small SVB (typically &lt; 10 units) whose articles allow a one-person statutory body. No council, no committee. <code>chairman_only</code>",
+    "vybor.bm.title": "Four board roles",
+    "bm1.title": "Chairman <code style=\"font-weight: 400; font-size: 0.75rem;\">chairman</code>",
+    "bm1.desc": "Statutory body in chair+council or chair-only models. Signs minutes, calls meetings.",
+    "bm2.title": "Council member <code style=\"font-weight: 400; font-size: 0.75rem;\">council_member</code>",
+    "bm2.desc": "Co-decides with the chair in the chair+council model (§ 7c).",
+    "bm3.title": "Committee chairman <code style=\"font-weight: 400; font-size: 0.75rem;\">committee_chairman</code>",
+    "bm3.desc": "Lead of the collective committee (Czech model + Slovak cooperatives).",
+    "bm4.title": "Committee member <code style=\"font-weight: 400; font-size: 0.75rem;\">committee_member</code>",
+    "bm4.desc": "Votes at committee sessions, shares statutory decision-making.",
+    "vybor.crud": "📅 <strong>Full CRUD for board members</strong> — add, edit, dismiss. Term (from / to) per member; after the term ends the record is archived, not deleted — for resolution history and audit. A reminder fires a week before the term ends (board quorum could otherwise drop unnoticed).",
+    "vybor.country": "The country toggle on the building (SK / CZ) drives which governance models the UI suggests by default and which terminology shows (predseda vs předseda, council member vs committee member). Enum schemas are shared — only UI mapping is jurisdiction-specific.",
+
+    "onb.label": "// owner onboarding",
+    "onb.title": "Invite every owner at once — a QR code at the meeting",
+    "onb.desc": "A regular meeting. The chair projects a QR code. Owners scan, fill in basics, done. No email invites manually looked up in records, no reset-password phone calls.",
+    "onb.s1": "Admin clicks <em>Generate invite QR</em> in the app — a token is created with an expiry (default 24&nbsp;h).",
+    "onb.s2": "Owner scans, the signup form opens pre-filled with the building and entrance.",
+    "onb.s3": "After submitting, the user lands in the <em>pending owners</em> queue — admin sees a dashboard and approves / assigns to a unit in one click.",
+    "onb.note": "For large cooperatives: one QR pinned to the bulletin board works for all entrances, or use per-entrance tokens for targeted invites.",
+
+    "notif.label": "// notifications",
+    "notif.title": "Push straight to the browser — no app needed",
+    "notif.desc": "Web Push (VAPID) delivers a post, vote, or event even if your tab is closed. Works on Chrome, Edge, Firefox, Safari (iOS 16.4+). Browsers without support fall back to email.",
+    "notif.b1": "The owner enables push in their profile once — the browser remembers.",
+    "notif.b2": "New vote, new post, new discussion reply, RSVP reminder — the user picks which types.",
+    "notif.b3": "Denied or unsupported notifications detected — we fall back to email gracefully, no silent failures.",
+    "notif.b4": "Email templates localised SK/CZ/EN, dedup and throttling protect the inbox.",
+
+    "api.label": "// api and integrations",
+    "api.title": "Plug in the intercom, smart locks, or your own systems",
+    "api.desc": "External connections + pairing requests in the schema. API keys with granular permissions (read-only, write-posts, manage-devices…). Every connected device or service is audited — when it paired, what action it called.",
+    "api.b1.title": "Device pairing",
+    "api.b1": "Admin approves a pairing request (from the intercom, lock, IoT sensor) in the dashboard.",
+    "api.b2.title": "Granular API keys",
+    "api.b2": "Permissions enum — from pure read-only to module management. No all-or-nothing tokens.",
+    "api.b3.title": "Webhooks",
+    "api.b3": "For state changes — new owner approved, vote ended, post published.",
+    "api.b4.title": "OpenAPI 3.1",
+    "api.b4": "OpenAPI 3.1 docs, generated clients for TypeScript and Python.",
+    "api.note": "<strong>Self-hosted</strong> = your API on your domain. <strong>Cloud</strong> = <code>api.&lt;yourbuilding&gt;.open-resi.app</code>",
+
+    "tech.polish": "✨ <strong>Details users actually feel:</strong> light and dark mode with cookie persistence (SSR-safe, no flash on switch), full SK / CZ / EN localisation, dashboard showing recent posts and upcoming events — not stale stat cards.",
+
+    "doc.install.oneliner.title": "One command (recommended)",
+    "doc.install.oneliner.desc": "The setup script detects your OS (macOS / Linux), installs Docker and openssl if missing, asks for domain and building name, generates secure passwords, and creates an admin account:",
+    "doc.install.oneliner.note": "💡 The script is idempotent — running it again just fills in missing steps. Works on fresh Ubuntu, Debian, Fedora, macOS (Homebrew Docker Desktop). Generates <code>POSTGRES_PASSWORD</code> and <code>NEXTAUTH_SECRET</code> via <code>openssl rand</code>.",
+    "doc.install.manual.toggle": "Manual installation (for admins who want every step under control)",
+
+    "hero.desc": 'Online voting, bulletin board with threaded discussions and polls, mandates, PDF minutes, and push notifications for Slovak <strong>SVB, housing cooperatives</strong>, and Czech <strong>SVJ</strong>. Plus a neighborhood community: <strong>marketplace, help, events, directory</strong>. Compliant with Slovak Act No.&nbsp;182/1993 and Czech §&nbsp;89/2012. Open-source, or cloud from 4&nbsp;€/month.',
+
     "footer.cloud": "Cloud",
     "footer.discussions": "Discussions",
     "footer.license": "licensed under",
