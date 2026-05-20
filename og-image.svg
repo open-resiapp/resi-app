@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e0f11"/>
+      <stop offset="100%" stop-color="#141518"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5b8fff"/>
+      <stop offset="100%" stop-color="#3d6fe8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#2a2b30" stroke-width="1" opacity="0.4">
+    <line x1="0" y1="105" x2="1200" y2="105"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+  </g>
+
+  <!-- logo dot -->
+  <rect x="80" y="80" width="40" height="40" rx="8" fill="url(#accent)"/>
+  <text x="140" y="110" font-family="'DM Mono', 'SF Mono', monospace" font-size="22" font-weight="600" fill="#e8e9ec">OpenResiApp</text>
+
+  <!-- badge -->
+  <rect x="80" y="170" width="320" height="40" rx="20" fill="#1c1d21" stroke="#2a2b30"/>
+  <circle cx="100" cy="190" r="5" fill="#3ecf8e"/>
+  <text x="115" y="197" font-family="'DM Mono', 'SF Mono', monospace" font-size="14" fill="#888a94">§ 182/1993 Z. z. compliant</text>
+
+  <!-- main heading -->
+  <text x="80" y="290" font-family="'DM Serif Display', Georgia, serif" font-size="64" font-weight="400" fill="#e8e9ec">Elektronické hlasovanie</text>
+  <text x="80" y="365" font-family="'DM Serif Display', Georgia, serif" font-size="64" font-weight="400" fill="#e8e9ec">a správa bytovky</text>
+  <text x="80" y="440" font-family="'DM Serif Display', Georgia, serif" font-style="italic" font-size="64" font-weight="400" fill="#5b8fff">pre ľudí, nie pre právnikov</text>
+
+  <!-- subtitle row -->
+  <text x="80" y="510" font-family="'DM Sans', sans-serif" font-size="22" fill="#888a94">SVB · Bytové družstvá · České SVJ</text>
+
+  <!-- footer chips -->
+  <g font-family="'DM Mono', 'SF Mono', monospace" font-size="16">
+    <rect x="80" y="540" width="160" height="40" rx="8" fill="#1c1d21" stroke="#2a2b30"/>
+    <text x="160" y="566" fill="#e8e9ec" text-anchor="middle">Open source</text>
+
+    <rect x="252" y="540" width="160" height="40" rx="8" fill="#1c1d21" stroke="#2a2b30"/>
+    <text x="332" y="566" fill="#e8e9ec" text-anchor="middle">Self-hosted</text>
+
+    <rect x="424" y="540" width="200" height="40" rx="8" fill="#1c1d21" stroke="#2a2b30"/>
+    <text x="524" y="566" fill="#e8e9ec" text-anchor="middle">Cloud od 4 €/mes.</text>
+  </g>
+
+  <!-- url right -->
+  <text x="1120" y="600" font-family="'DM Mono', 'SF Mono', monospace" font-size="18" fill="#5b8fff" text-anchor="end">open-resi.app</text>
+</svg>

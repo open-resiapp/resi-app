@@ -8,10 +8,11 @@
   <meta name="keywords" content="elektronické hlasovanie, hlasovanie vlastníkov bytov online, online schôdza vlastníkov, hlasovanie per rollam, správa bytového domu, bytové spoločenstvo, SVB, spoločenstvo vlastníkov bytov, bytové družstvo, zákon 182/1993, zákon o vlastníctve bytov, zápisnica zo schôdze PDF, susedská burza, susedská výpomoc, susedské udalosti, adresár susedov, komunita bytovky, SVJ, společenství vlastníků jednotek, shromáždění SVJ, elektronické hlasování, open source, self-hosted, Docker, cloud hosting, SaaS, Slovensko, Česko" />
   <meta name="author" content="OpenResiApp" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <link rel="canonical" href="https://open-resi.app" />
-  <link rel="alternate" hreflang="sk" href="https://open-resi.app" />
-  <link rel="alternate" hreflang="cs" href="https://open-resi.app" />
-  <link rel="alternate" hreflang="x-default" href="https://open-resi.app" />
+  <link rel="canonical" href="https://open-resi.app/" />
+  <link rel="alternate" hreflang="sk" href="https://open-resi.app/" />
+  <link rel="alternate" hreflang="x-default" href="https://open-resi.app/" />
+  <!-- NOTE: hreflang for cs/en will be added once /cs/ and /en/ subpaths exist.
+       Pointing different hreflang values to the same URL is a wrong signal. -->
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -22,11 +23,19 @@
   <meta property="og:locale" content="sk_SK" />
   <meta property="og:locale:alternate" content="cs_CZ" />
   <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:image" content="https://open-resi.app/og-image.png" />
+  <meta property="og:image:secure_url" content="https://open-resi.app/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="OpenResiApp — elektronické hlasovanie a správa bytovky pre SVB, bytové družstvá a české SVJ. Open source, self-hosted alebo cloud od 4 €/mes." />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Elektronické hlasovanie SVB · OpenResiApp" />
   <meta name="twitter:description" content="Hlasovanie vlastníkov bytov online podľa zákona 182/1993. Plus susedská burza, výpomoc, udalosti. Open-source aj cloud od 4 €/mes." />
+  <meta name="twitter:image" content="https://open-resi.app/og-image.png" />
+  <meta name="twitter:image:alt" content="OpenResiApp — elektronické hlasovanie pre SVB, bytové družstvá, české SVJ." />
 
   <!-- Structured Data: Organization -->
   <script type="application/ld+json">
@@ -141,7 +150,8 @@
       { "@type": "ListItem", "position": 3, "name": "Zákon 182/1993", "item": "https://open-resi.app#law" },
       { "@type": "ListItem", "position": 4, "name": "Komunita", "item": "https://open-resi.app#komunita" },
       { "@type": "ListItem", "position": 5, "name": "Cloud", "item": "https://open-resi.app#cloud" },
-      { "@type": "ListItem", "position": 6, "name": "Dokumentácia", "item": "https://open-resi.app#docs" }
+      { "@type": "ListItem", "position": 6, "name": "Dokumentácia", "item": "https://open-resi.app#docs" },
+      { "@type": "ListItem", "position": 7, "name": "Časté otázky", "item": "https://open-resi.app#faq" }
     ]
   }
   </script>
@@ -877,6 +887,24 @@
         linear-gradient(90deg, rgba(91,143,255,0.03) 1px, transparent 1px);
       background-size: 40px 40px;
     }
+
+    /* FAQ accordion marker */
+    #faq details summary { position: relative; padding-right: 2rem; }
+    #faq details summary::-webkit-details-marker { display: none; }
+    #faq details summary::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--accent);
+      transition: transform 0.15s ease;
+      line-height: 1;
+    }
+    #faq details[open] summary::after { content: "−"; }
+    #faq details:hover { border-color: var(--accent) !important; }
   </style>
 </head>
 <body>
@@ -896,6 +924,7 @@
         <li><a href="#api" data-i18n="nav.api">API</a></li>
         <li><a href="#cloud" data-i18n="nav.cloud">Cloud</a></li>
         <li><a href="#docs" data-i18n="nav.docs">Docs</a></li>
+        <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
         <li><a href="https://github.com/open-resiapp/open-resiapp" class="nav-cta">GitHub &rarr;</a></li>
       </ul>
       <div class="lang-switch">
@@ -1774,6 +1803,89 @@ docker compose up -d</code></pre>
         <p data-i18n="doc.voting.note">V&scaron;etk&yacute;m vlastn&iacute;kom pr&iacute;de email s odkazom. V&yacute;sledky s&uacute; viditeľn&eacute; v re&aacute;lnom &ccaron;ase. Po skon&ccaron;en&iacute; m&ocirc;&zcaron;e&scaron; vygenerova&#357; PDF z&aacute;pisnicu.</p>
 
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" aria-labelledby="faq-h" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="section-inner">
+    <div class="section-label">// časté otázky</div>
+    <h2 id="faq-h">Časté otázky o OpenResiApp</h2>
+    <p class="section-desc">Stručné odpovede na to, čo sa najčastejšie pýtajú predsedovia SVB, výbory bytových družstiev a české SVJ. Ak ti niečo chýba, napíš do <a href="https://github.com/open-resiapp/open-resiapp/discussions" style="color: var(--accent);">GitHub Discussions</a>.</p>
+
+    <div style="margin-top: 2rem; max-width: 820px;">
+
+      <details style="border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 0.75rem; background: var(--bg);">
+        <summary style="cursor: pointer; font-weight: 600; color: var(--text); list-style: none;">Čo je OpenResiApp?</summary>
+        <div style="margin-top: 0.75rem; color: var(--muted); line-height: 1.7;">
+          <p>OpenResiApp je open-source webová aplikácia pre správu bytových spoločenstiev (SVB), bytových družstiev a českých SVJ. Obsahuje elektronické hlasovanie v súlade so zákonom č. 182/1993 Z. z., nástenku, správu vlastníkov a bytov, mandáty s overeným podpisom, automatické PDF zápisnice a komunitný modul so susedskou burzou, výpomocou, udalosťami a opt-in adresárom susedov.</p>
+        </div>
+      </details>
+
+      <details style="border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 0.75rem; background: var(--bg);">
+        <summary style="cursor: pointer; font-weight: 600; color: var(--text); list-style: none;">Je elektronické hlasovanie vlastníkov bytov legálne?</summary>
+        <div style="margin-top: 0.75rem; color: var(--muted); line-height: 1.7;">
+          <p>Áno. OpenResiApp implementuje hlasovanie podľa zákona č. 182/1993 Z. z. o vlastníctve bytov a nebytových priestorov: tri metódy hlasovania (podľa spoluvlastníckeho podielu, podľa bytov, podľa plochy), tri typy kvóra, písomné hlasovanie (per rollam) aj hlasovanie na schôdzi, mandáty s úradne overeným podpisom bez reťazenia a SHA-256 audit log s emailovým potvrdením každého hlasu.</p>
+        </div>
+      </details>
+
+      <details style="border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 0.75rem; background: var(--bg);">
+        <summary style="cursor: pointer; font-weight: 600; color: var(--text); list-style: none;">Aký je rozdiel medzi OpenResiApp a inými systémami pre správu bytoviek (Poschodoch, Resitech)?</summary>
+        <div style="margin-top: 0.75rem; color: var(--muted); line-height: 1.7;">
+          <p>Tri hlavné rozdiely. <strong>(1)</strong> OpenResiApp je open-source pod MIT licenciou — kód je verejný na GitHube, nie sú v ňom zadné vrátka, dáta zostávajú u vás. <strong>(2)</strong> Okrem správy a hlasovania obsahuje plnohodnotnú susedskú komunitu: burzu (predaj/darovanie/požičanie vecí medzi susedmi), susedskú výpomoc (prosby aj ponuky), udalosti s RSVP a opt-in adresár susedov so zručnosťami. Konkurencia rieši paragrafy, OpenResiApp aj život v dome. <strong>(3)</strong> Self-hosted verzia je zadarmo cez Docker, alebo managed cloud od 4 €/mesiac s 7-dňovou skúškou bez kreditnej karty.</p>
+        </div>
+      </details>
+
+      <details style="border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 0.75rem; background: var(--bg);">
+        <summary style="cursor: pointer; font-weight: 600; color: var(--text); list-style: none;">Čo všetko obsahuje sekcia Komunita?</summary>
+        <div style="margin-top: 0.75rem; color: var(--muted); line-height: 1.7;">
+          <p>Komunitný modul obsahuje štyri samostatné sekcie. <strong>Burza:</strong> posty typu „Predám", „Darujem", „Požičiam" s filtrami a označením „Vyriešené/Predané". <strong>Pomoc:</strong> susedská výpomoc s rozlíšením „Prosím o pomoc" vs „Ponúkam pomoc" (napríklad zaliatie kvetov, IT, drobné opravy). <strong>Udalosti:</strong> susedské stretnutia ako grilovačky, brigády či zbierky s RSVP systémom (áno/možno/nie) a počítadlom účastníkov. <strong>Adresár:</strong> opt-in profily susedov so zručnosťami (elektrikár, IT, záhrada) — sused si sám zvolí, či zdieľa telefón a email. Všetko s email notifikáciami a automatickou expiráciou starších postov.</p>
+        </div>
+      </details>
+
+      <details style="border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 0.75rem; background: var(--bg);">
+        <summary style="cursor: pointer; font-weight: 600; color: var(--text); list-style: none;">Funguje OpenResiApp pre české SVJ a bytové družstvá?</summary>
+        <div style="margin-top: 0.75rem; color: var(--muted); line-height: 1.7;">
+          <p>Áno. OpenResiApp je lokalizovaný pre slovenský aj český trh. Podporuje slovenské bytové spoločenstvá (SVB) podľa zákona 182/1993 Z. z., bytové družstvá, aj české Společenství vlastníků jednotek (SVJ) podľa českého zákona 89/2012 Sb. Hlasovací algoritmus, model budov, oprávnenia a mandáty sú generické a parametrické — country config nastaví terminológiu, kvóra a štruktúru orgánov (predseda+rada vs výbor).</p>
+        </div>
+      </details>
+
+      <details style="border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 0.75rem; background: var(--bg);">
+        <summary style="cursor: pointer; font-weight: 600; color: var(--text); list-style: none;">Je OpenResiApp zadarmo?</summary>
+        <div style="margin-top: 0.75rem; color: var(--muted); line-height: 1.7;">
+          <p>Áno, OpenResiApp je open-source pod MIT licenciou. Self-hosted verziu cez Docker si môžete nainštalovať na vlastný server bezplatne s plnou funkcionalitou. Ak nechcete spravovať server, managed cloud verzia začína na 4 € za bytovku mesačne s 7-dňovou skúšobnou dobou bez kreditnej karty na <a href="https://cloud.open-resi.app" style="color: var(--accent);">cloud.open-resi.app</a>.</p>
+        </div>
+      </details>
+
+      <details style="border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 0.75rem; background: var(--bg);">
+        <summary style="cursor: pointer; font-weight: 600; color: var(--text); list-style: none;">Aký je rozdiel medzi self-hosted a cloud verziou?</summary>
+        <div style="margin-top: 0.75rem; color: var(--muted); line-height: 1.7;">
+          <p>Self-hosted verzia je zadarmo — nainštalujete ju na vlastný server cez Docker. Cloud verzia na <a href="https://cloud.open-resi.app" style="color: var(--accent);">cloud.open-resi.app</a> je managed služba, kde sa o server, zálohy, SSL a aktualizácie staráme my. Obe verzie majú rovnakú funkcionalitu vrátane elektronického hlasovania, komunity a PDF zápisníc. Cloud začína 7-dňovou skúšobnou dobou bez kreditnej karty.</p>
+        </div>
+      </details>
+
+      <details style="border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 0.75rem; background: var(--bg);">
+        <summary style="cursor: pointer; font-weight: 600; color: var(--text); list-style: none;">Koľko stojí OpenResiApp Cloud?</summary>
+        <div style="margin-top: 0.75rem; color: var(--muted); line-height: 1.7;">
+          <p>OpenResiApp Cloud má cenotvorbu za bytovku s objemovými zľavami: 1 bytovka stojí 7 €/mesiac, 2–3 bytovky po 6 €, 4–5 bytoviek po 5 €, 6 a viac bytoviek po 4 €. Skúšobná doba 7 dní zadarmo bez kreditnej karty. Účtuje sa len za aktívne bytovky.</p>
+        </div>
+      </details>
+
+      <details style="border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 0.75rem; background: var(--bg);">
+        <summary style="cursor: pointer; font-weight: 600; color: var(--text); list-style: none;">Ako funguje hlasovanie per rollam?</summary>
+        <div style="margin-top: 0.75rem; color: var(--muted); line-height: 1.7;">
+          <p>Per rollam (písomné hlasovanie mimo schôdze) podľa § 14a ods. 1 zákona 182/1993 Z. z. funguje tak, že vlastníci dostanú email s odkazom na hlasovací formulár. Hlas potvrdia online, systém zaznamená SHA-256 hash hlasu a pošle email s potvrdením. Po skončení hlasovania sa automaticky vygeneruje PDF zápisnica s audit logom a QR kódom. Pre vlastníkov bez prístupu na internet sčítač hlasov zadá papierový hlas s fotkou lístka.</p>
+        </div>
+      </details>
+
+      <details style="border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 0.75rem; background: var(--bg);">
+        <summary style="cursor: pointer; font-weight: 600; color: var(--text); list-style: none;">Čo s vlastníkmi bez internetu alebo smartfónu?</summary>
+        <div style="margin-top: 0.75rem; color: var(--muted); line-height: 1.7;">
+          <p>OpenResiApp má rolu <strong>Sčítač hlasov</strong> — administrátor priradí dôveryhodnú osobu, ktorá pri hlasovaní zadá hlas za vlastníka bez internetu, priloží fotku papierového lístka. Vlastník dostane email s potvrdením. Rola Sčítač platí len pre konkrétne hlasovanie a po jeho skončení automaticky zaniká.</p>
+        </div>
+      </details>
+
     </div>
   </div>
 </section>
