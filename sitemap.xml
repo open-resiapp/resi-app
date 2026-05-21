@@ -3,10 +3,84 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://open-resi.app/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="sk" href="https://open-resi.app/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://open-resi.app/" />
+  </url>
+  <url>
+    <loc>https://open-resi.app/elektronicke-hlasovanie-svb/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://open-resi.app/elektronicke-hlasovanie-svb/" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://open-resi.app/cs/elektronicke-hlasovani-svj/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://open-resi.app/elektronicke-hlasovanie-svb/" />
+  </url>
+  <url>
+    <loc>https://open-resi.app/elektronicke-hlasovanie-bytove-druzstvo/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://open-resi.app/elektronicke-hlasovanie-bytove-druzstvo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://open-resi.app/elektronicke-hlasovanie-bytove-druzstvo/" />
+  </url>
+  <url>
+    <loc>https://open-resi.app/alternativa-resitech/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://open-resi.app/alternativa-resitech/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://open-resi.app/alternativa-resitech/" />
+  </url>
+  <url>
+    <loc>https://open-resi.app/zakon-182-1993-hlasovanie/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://open-resi.app/zakon-182-1993-hlasovanie/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://open-resi.app/zakon-182-1993-hlasovanie/" />
+  </url>
+  <url>
+    <loc>https://open-resi.app/komunita-susedia/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://open-resi.app/komunita-susedia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://open-resi.app/komunita-susedia/" />
+  </url>
+  <url>
+    <loc>https://open-resi.app/cloud-cennik/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://open-resi.app/cloud-cennik/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://open-resi.app/cloud-cennik/" />
+  </url>
+  <url>
+    <loc>https://open-resi.app/self-hosted-docker-instalacia/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://open-resi.app/self-hosted-docker-instalacia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://open-resi.app/self-hosted-docker-instalacia/" />
+  </url>
+  <url>
+    <loc>https://open-resi.app/dokumentacia-prve-hlasovanie/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://open-resi.app/dokumentacia-prve-hlasovanie/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://open-resi.app/dokumentacia-prve-hlasovanie/" />
+  </url>
+  <url>
+    <loc>https://open-resi.app/cs/elektronicke-hlasovani-svj/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://open-resi.app/cs/elektronicke-hlasovani-svj/" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://open-resi.app/elektronicke-hlasovanie-svb/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://open-resi.app/elektronicke-hlasovanie-svb/" />
   </url>
 </urlset>

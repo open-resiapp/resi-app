@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prvé hlasovanie v OpenResiApp · Krok za krokom — dokumentácia</title>
+  <meta name="description" content="Ako spustiť prvé elektronické hlasovanie v OpenResiApp. Step-by-step návod od vytvorenia hlasovania po PDF zápisnicu. Vrátane prípravy návrhu, výberu kvóra a riešenia papierových hlasov." />
+  <meta name="keywords" content="prvé hlasovanie OpenResiApp, návod elektronické hlasovanie, ako spustiť hlasovanie SVB, dokumentácia OpenResiApp, krok za krokom hlasovanie, PDF zápisnica generovanie" />
+  <meta name="author" content="OpenResiApp" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://open-resi.app/dokumentacia-prve-hlasovanie/" />
+  <link rel="alternate" hreflang="sk" href="https://open-resi.app/dokumentacia-prve-hlasovanie/" />
+  <link rel="alternate" hreflang="x-default" href="https://open-resi.app/dokumentacia-prve-hlasovanie/" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Prvé hlasovanie v OpenResiApp — sprievodca krok za krokom" />
+  <meta property="og:description" content="Step-by-step návod od vytvorenia hlasovania po PDF zápisnicu." />
+  <meta property="og:url" content="https://open-resi.app/dokumentacia-prve-hlasovanie/" />
+  <meta property="og:site_name" content="OpenResiApp" />
+  <meta property="og:locale" content="sk_SK" />
+  <meta property="og:image" content="https://open-resi.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prvé hlasovanie · Dokumentácia OpenResiApp" />
+  <meta name="twitter:description" content="Krok za krokom — od vytvorenia po PDF zápisnicu." />
+  <meta name="twitter:image" content="https://open-resi.app/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Domov", "item": "https://open-resi.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Dokumentácia", "item": "https://open-resi.app/#docs" },
+      { "@type": "ListItem", "position": 3, "name": "Prvé hlasovanie", "item": "https://open-resi.app/dokumentacia-prve-hlasovanie/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "inLanguage": "sk",
+    "name": "Ako spustiť prvé elektronické hlasovanie v OpenResiApp",
+    "description": "Step-by-step návod ako predseda SVB alebo predstavenstvo bytového družstva spustí prvé elektronické hlasovanie cez OpenResiApp — od prípravy návrhu po vygenerovanie podpísanej PDF zápisnice.",
+    "totalTime": "PT30M",
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "Príprava návrhu", "text": "Pripravte text návrhu, dôvodovú správu a všetky prílohy (cenové ponuky, zmluvy, projekty)." },
+      { "@type": "HowToStep", "position": 2, "name": "Vytvorenie hlasovania", "text": "V administrácii kliknite Hlasovania → Vytvoriť. Vyplňte základné údaje." },
+      { "@type": "HowToStep", "position": 3, "name": "Výber parametrov", "text": "Forma (per rollam / schôdza), metóda hlasovania, typ kvóra, dátum začiatku a konca." },
+      { "@type": "HowToStep", "position": 4, "name": "Priradenie sčítača", "text": "Voliteľne pre vlastníkov bez internetu — sčítač zadá ich hlasy s fotkou papierového lístka." },
+      { "@type": "HowToStep", "position": 5, "name": "Spustenie", "text": "Klikom na 'Spustiť hlasovanie' systém pošle všetkým vlastníkom email s odkazom na hlasovací formulár." },
+      { "@type": "HowToStep", "position": 6, "name": "Sledovanie účasti", "text": "V dashboarde vidíte v reálnom čase, kto už hlasoval, koľko ľudí ešte chýba do kvóra." },
+      { "@type": "HowToStep", "position": 7, "name": "Generovanie zápisnice", "text": "Po skončení hlasovania kliknite 'Generovať zápisnicu'. PDF je hotové do 30 sekúnd." }
+    ],
+    "url": "https://open-resi.app/dokumentacia-prve-hlasovanie/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "sk",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Aké údaje musím pripraviť pred prvým hlasovaním?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Pripravte: (1) text návrhu — krátky, jasný, s konkrétnym výsledkom; (2) dôvodovú správu — prečo to robíme, čo sa stane ak schválime/zamietneme; (3) prílohy — pre opravy: cenová ponuka, projekt, zmluva; pre voľby: životopis kandidáta. Pre per rollam tiež dátum konca hlasovania. Ak je to úverové rozhodnutie, vyžaduje to 2/3 kvórum — over si paragraf zákona pred vytvorením." }
+      },
+      {
+        "@type": "Question",
+        "name": "Ako sa vlastníci dozvedia o hlasovaní?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Pri kliknutí 'Spustiť hlasovanie' systém pošle automaticky email všetkým oprávneným vlastníkom s jedinečným odkazom na hlasovací formulár. Vlastníci, ktorí majú aj telefón v profile a zapnuté SMS notifikácie, dostanú aj SMS. Pre vlastníkov bez emailu (typicky dôchodcovia) zadá hlas sčítač s fotkou papierového lístka." }
+      },
+      {
+        "@type": "Question",
+        "name": "Čo ak nedosiahneme kvórum?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Hlasovanie sa po skončení označí ako 'Neuznášania-schopné' a vygeneruje sa zápisnica s vysvetlením prečo. Návrh nie je prijatý ani zamietnutý — proste neprešiel. Môžete znovu vyhlásiť to isté hlasovanie s lepšou propagáciou medzi vlastníkmi (osobné oslovenie, plagát vo vchode), alebo zmeniť typ kvóra ak ste pôvodne použili prísnejšie, ako bolo potrebné." }
+      },
+      {
+        "@type": "Question",
+        "name": "Môžem hlasovanie zrušiť po jeho spustení?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Áno, ale len pred prvým doručeným hlasom. Po prvom hlase už zrušenie nie je možné — chránime dôveru vlastníkov, ktorí už hlasovali. Alternatívou je nechať hlasovanie dobehnúť (aj keď nedosiahne kvórum) a označiť ho v ďalšom dokumente ako 'predčasne ukončené z dôvodu...'. Audit log uchová všetko." }
+      },
+      {
+        "@type": "Question",
+        "name": "Ako podpíšem PDF zápisnicu?",
+        "acceptedAnswer": { "@type": "Answer", "text": "PDF zápisnica generovaná systémom obsahuje miesto pre fyzický podpis predsedu a overovateľa. Vytlačíte ju, podpíšete ručne, naskenujete späť a nahráte do systému ako finálnu verziu. Alebo môžete použiť elektronický podpis (eGov, alebo cez Adobe Acrobat) — záleží, či vaša SVB / banka akceptuje elektronický podpis (väčšina už áno). Originálnu vygenerovanú verziu systém uchová ako audit dôkaz vedľa podpísanej." }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%235b8fff'/><text x='16' y='22' font-family='system-ui' font-size='18' font-weight='700' fill='white' text-anchor='middle'>R</text></svg>" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+
+<nav aria-label="Hlavná navigácia">
+  <div class="nav-inner">
+    <a href="/" class="logo"><span class="logo-dot">&blacksquare;</span> OpenResiApp</a>
+    <div class="nav-right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#features">Funkcie</a></li>
+        <li><a href="/#moduly">Moduly</a></li>
+        <li><a href="/#komunita">Komunita</a></li>
+        <li><a href="/#law">&sect; Zákon</a></li>
+        <li><a href="/#api">API</a></li>
+        <li><a href="/#cloud">Cloud</a></li>
+        <li><a href="/#docs">Docs</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="https://github.com/open-resiapp/open-resiapp" class="nav-cta">GitHub &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<nav class="breadcrumb" aria-label="Drobčeková navigácia">
+  <ol>
+    <li><a href="/">Domov</a></li>
+    <li><a href="/#docs">Dokumentácia</a></li>
+    <li aria-current="page">Prvé hlasovanie</li>
+  </ol>
+</nav>
+
+<main>
+
+<header class="article-hero">
+  <h1>Prvé hlasovanie v OpenResiApp — krok za krokom</h1>
+  <p class="lede">Praktický návod ako predseda SVB alebo predstavenstvo bytového družstva spustí prvé elektronické hlasovanie cez OpenResiApp. Od prípravy návrhu cez výber kvóra po vygenerovanie podpísanej PDF zápisnice. Celý proces trvá cca 30 minút prípravy + dĺžku hlasovania (typicky 7-14 dní pri per rollam).</p>
+  <div class="article-meta">
+    <span><strong>Typ:</strong> Návod krok za krokom</span>
+    <span><strong>Čas na nastavenie:</strong> ~30 minút</span>
+    <span><strong>Aktualizované:</strong> 21. máj 2026</span>
+  </div>
+</header>
+
+<article class="content">
+
+  <h2 id="priprava">Krok 1 — príprava obsahu</h2>
+  <p>Pred tým, než otvoríte OpenResiApp, pripravte si tieto materiály na ploche:</p>
+  <ul>
+    <li><strong>Návrh uznesenia</strong> — krátky, jasný text. Príklad: <em>„Spoločenstvo vlastníkov bytového domu Hviezdoslavova 12, Trnava schvaľuje realizáciu opravy strešnej krytiny v cene 24 800 € s DPH podľa cenovej ponuky spoločnosti Strechy SK s.r.o. zo dňa 5. mája 2026."</em></li>
+    <li><strong>Dôvodová správa</strong> — odstavec textu prečo to robíme. Príklad: <em>„Strecha vykazuje známky zatekania nad bytmi 4. nadzemného podlažia. Pri revízii v marci 2026 bola zistená potreba kompletnej výmeny krytiny. Z dôvodu predĺženia životnosti odporúčame použitie betónových škridiel namiesto plechu."</em></li>
+    <li><strong>Prílohy</strong> — cenová ponuka v PDF, fotografie poškodenia, projekt, zmluva o dielo (návrh). Pri opravách bez priložených cenoviek je rozhodnutie napadnuteľné.</li>
+    <li><strong>Termín konca hlasovania</strong> — typicky 14 dní pri per rollam. Pri schôdzi dátum a čas konania.</li>
+    <li><strong>Typ kvóra</strong> — overte si v zákone 182/1993 § 14b alebo v stanovách družstva, ktoré kvórum sa vyžaduje. Pre úvery nad určitý limit, predaj spoločných častí, rekonštrukcie nad ~20 000 € to typicky bude 2/3 všetkých vlastníkov.</li>
+  </ul>
+
+  <h2 id="vytvorenie">Krok 2 — vytvorenie hlasovania v systéme</h2>
+  <p>Prihláste sa do OpenResiApp ako Admin / Predseda. V hlavnej navigácii kliknite <strong>Hlasovania → Vytvoriť nové</strong>.</p>
+  <p>Wizard vás prevedie štyrmi krokmi:</p>
+
+  <h3>2.1 Základné údaje</h3>
+  <ul>
+    <li><strong>Názov hlasovania</strong> — krátky názov pre zoznam. Napr. „Oprava strechy 2026".</li>
+    <li><strong>Návrh uznesenia</strong> — vložte pripravený text z prípravy.</li>
+    <li><strong>Dôvodová správa</strong> — vložte odstavec vysvetlenia.</li>
+    <li><strong>Prílohy</strong> — drag-and-drop PDF, JPG, PNG súborov. Maximálne 20 MB na súbor, 10 súborov celkovo. Cenovú ponuku v PDF priložiť VŽDY.</li>
+  </ul>
+
+  <h3>2.2 Forma hlasovania</h3>
+  <p>Vyberte:</p>
+  <ul>
+    <li><strong>Per rollam</strong> — písomné mimo schôdze. Vhodné pre rutinné a stredne dôležité rozhodnutia.</li>
+    <li><strong>Na schôdzi</strong> — prezenčne. Pre veľmi dôležité rozhodnutia kde sa očakáva diskusia.</li>
+    <li><strong>Hybridné</strong> — kombinácia (časť prezenčne, časť diaľkovo cez QR kód) — pri väčších bytovkách kde sa ťažko zhromaždí kvórum prítomných.</li>
+  </ul>
+
+  <h3>2.3 Metóda a kvórum</h3>
+  <ul>
+    <li><strong>Metóda hlasovania</strong> — podľa podielu / bytov / plochy (podľa domového poriadku alebo stanov).</li>
+    <li><strong>Typ kvóra</strong> — dropdown:
+      <ul>
+        <li>Nadpolovičná väčšina prítomných</li>
+        <li>Nadpolovičná väčšina všetkých vlastníkov</li>
+        <li>Dvojtretinová väčšina všetkých vlastníkov</li>
+        <li>Jednomyseľnosť všetkých</li>
+      </ul>
+    </li>
+    <li><strong>Dátum začiatku</strong> — kedy hlasovanie spustiť (môže byť aj okamžite alebo s odkladom napr. o 3 dni).</li>
+    <li><strong>Dátum konca</strong> — kedy hlasovanie skončí. Pri per rollam typicky 14 dní od začiatku.</li>
+  </ul>
+
+  <h3>2.4 Sčítač hlasov (voliteľne)</h3>
+  <p>Ak máte vo svojej bytovke vlastníkov bez emailu alebo bez prístupu na internet (typicky dôchodcovia), priraďte na tomto kroku rolu <strong>Sčítač</strong> dôveryhodnej osobe (typicky podpredseda alebo člen výboru). Sčítač pri samotnom hlasovaní pôjde k týmto vlastníkom, vyplnia papierový lístok, sčítač lístok odfotí a hlas zadá do systému.</p>
+  <p>Sčítač má časovo-ohraničenú rolu — platí len pre toto konkrétne hlasovanie, po jeho skončení sa automaticky deaktivuje.</p>
+
+  <h2 id="spustenie">Krok 3 — spustenie</h2>
+  <p>Po vyplnení všetkých štyroch krokov uvidíte súhrnnú obrazovku s prehľadom — názov, návrh, prílohy, parametre. Skontrolujte a kliknite <strong>„Spustiť hlasovanie"</strong>.</p>
+  <p>Čo sa stane okamžite:</p>
+  <ul>
+    <li>Systém vygeneruje pre každého oprávneného vlastníka unikátny hlasovací token.</li>
+    <li>Všetkým vlastníkom pošle email s odkazom na hlasovací formulár.</li>
+    <li>Vlastníkom so zapnutými SMS notifikáciami pošle aj SMS upozornenie.</li>
+    <li>Sčítačovi pošle zoznam vlastníkov, ktorí ešte nehlasovali (aktualizuje sa v reálnom čase).</li>
+    <li>Hlasovanie sa zobrazí v nástenke ako aktívne s odpočtom do konca.</li>
+  </ul>
+
+  <h2 id="sledovanie">Krok 4 — sledovanie účasti</h2>
+  <p>V administrátorskom dashboarde uvidíte v reálnom čase:</p>
+  <ul>
+    <li><strong>Aktuálny stav</strong> — koľko vlastníkov už hlasovalo (z koľkých oprávnených).</li>
+    <li><strong>Súčet hlasov</strong> — koľko ZA, PROTI, ZDRŽAL SA (s priebežnými percentami).</li>
+    <li><strong>Stav kvóra</strong> — či sa už dosiahlo požadované kvórum, alebo koľko ešte chýba.</li>
+    <li><strong>Zoznam ne-hlasujúcich</strong> — pre prípadné osobné oslovenie (telefón, schránka).</li>
+  </ul>
+  <p>Odporúčanie: 3 dni pred koncom hlasovania automaticky odíde pripomienka vlastníkom, ktorí ešte nehlasovali. Ak sa kvórum stále nedosahuje, môže predseda osobne osloviť (zazvoniť, zavolať) vlastníkov, ktorí ešte nereagovali.</p>
+
+  <h2 id="zapisnica">Krok 5 — generovanie PDF zápisnice</h2>
+  <p>Po skončení hlasovania (uplynie dátum konca alebo všetci vlastníci hlasovali) sa v hornej časti hlasovacieho dashboardu objaví tlačidlo <strong>„Generovať zápisnicu"</strong>.</p>
+  <p>Klikom sa do 30 sekúnd vygeneruje PDF zápisnica obsahujúca:</p>
+  <ul>
+    <li>Hlavičku s identifikáciou SVB / bytového družstva (názov, IČO, sídlo, IBAN)</li>
+    <li>Dátum konania hlasovania</li>
+    <li>Návrh uznesenia v plnom znení</li>
+    <li>Dôvodovú správu</li>
+    <li>Zoznam príloh ako linky na priložené PDF</li>
+    <li>Tabuľku všetkých vlastníkov s ich hlasmi (alebo absenciou)</li>
+    <li>Výpočet kvóra — koľko vlastníkov bolo oprávnených, koľko hlasovalo, koľko ZA, percentá podľa zvolenej metódy</li>
+    <li>Použité mandáty s odkazmi na overené splnomocnenia</li>
+    <li>Papierové hlasy s odkazmi na fotografie lístkov</li>
+    <li>Výsledok — UZNESENIE PRIJATÉ alebo UZNESENIE NEPRIJATÉ alebo HLASOVANIE NEUZNÁŠANIA-SCHOPNÉ</li>
+    <li>SHA-256 hash celej zápisnice (audit dôkaz)</li>
+    <li>QR kód s odkazom na online overovaciu stránku (banka, ŠFRB to môže overiť bez prihlásenia)</li>
+    <li>Miesto pre fyzický podpis predsedu</li>
+    <li>Miesto pre fyzický podpis overovateľa zápisnice</li>
+  </ul>
+
+  <h2 id="podpis">Krok 6 — fyzický podpis</h2>
+  <p>Vytlačte vygenerované PDF, predseda a overovateľ podpíšu, naskenujete späť a nahráte do systému ako finálnu verziu cez tlačidlo <strong>„Nahrať podpísanú zápisnicu"</strong>.</p>
+  <p>Systém uchová obe verzie:</p>
+  <ul>
+    <li><strong>Originálnu (automaticky generovanú)</strong> — ako audit dôkaz s SHA-256 hash.</li>
+    <li><strong>Podpísanú (od vás)</strong> — pre vonkajšie použitie (banka, ŠFRB, okresný úrad).</li>
+  </ul>
+  <p>Pri kontrole úradu môžete vždy ukázať obe — overovateľ porovná, či sa nemenil obsah, len pridal fyzický podpis.</p>
+
+  <h2 id="dalsie-kroky">Po prvom hlasovaní — čo ďalej</h2>
+  <p>Prvé hlasovanie ste zvládli. Pre udržanie dobrých návykov:</p>
+  <ul>
+    <li><strong>Archivujte podpísanú PDF zápisnicu</strong> aj fyzicky (v zložke s ostatnými dokumentmi SVB) aj v cloude (Google Drive, Dropbox) — okrem OpenResiApp ako poistka.</li>
+    <li><strong>Pošlite ju vlastníkom ako informáciu</strong> — niektorí majú radi papierovú kópiu do schránky, väčšine stačí email s linkom na nástenku.</li>
+    <li><strong>Pri väčšej investícii</strong> (napr. tých 24 800 € na strechu) zápisnicu predložte aj svojmu správcovi alebo účtovníkovi pre kontrolu finančných implikácií.</li>
+    <li><strong>Po 3-6 mesiacoch</strong> skontrolujte, či ste návrh skutočne realizovali — väčšina hlasovaní v slovenských bytovkách sa zaknihuje a potom roky nepokračuje.</li>
+  </ul>
+
+</article>
+
+<section class="faq-list" id="faq" aria-labelledby="faq-h">
+  <h2 id="faq-h">Časté otázky — prvé hlasovanie</h2>
+
+  <details><summary>Aké údaje musím pripraviť pred prvým hlasovaním?</summary><div class="answer"><p>Pripravte: (1) text návrhu — krátky, jasný, s konkrétnym výsledkom; (2) dôvodovú správu — prečo to robíme, čo sa stane ak schválime/zamietneme; (3) prílohy — pre opravy: cenová ponuka, projekt, zmluva; pre voľby: životopis kandidáta. Pre per rollam tiež dátum konca hlasovania. Ak je to úverové rozhodnutie, vyžaduje to 2/3 kvórum — over si paragraf zákona pred vytvorením.</p></div></details>
+
+  <details><summary>Ako sa vlastníci dozvedia o hlasovaní?</summary><div class="answer"><p>Pri kliknutí 'Spustiť hlasovanie' systém pošle automaticky email všetkým oprávneným vlastníkom s jedinečným odkazom na hlasovací formulár. Vlastníci, ktorí majú aj telefón v profile a zapnuté SMS notifikácie, dostanú aj SMS. Pre vlastníkov bez emailu (typicky dôchodcovia) zadá hlas sčítač s fotkou papierového lístka.</p></div></details>
+
+  <details><summary>Čo ak nedosiahneme kvórum?</summary><div class="answer"><p>Hlasovanie sa po skončení označí ako 'Neuznášania-schopné' a vygeneruje sa zápisnica s vysvetlením prečo. Návrh nie je prijatý ani zamietnutý — proste neprešiel. Môžete znovu vyhlásiť to isté hlasovanie s lepšou propagáciou medzi vlastníkmi (osobné oslovenie, plagát vo vchode), alebo zmeniť typ kvóra ak ste pôvodne použili prísnejšie, ako bolo potrebné.</p></div></details>
+
+  <details><summary>Môžem hlasovanie zrušiť po jeho spustení?</summary><div class="answer"><p>Áno, ale len pred prvým doručeným hlasom. Po prvom hlase už zrušenie nie je možné — chránime dôveru vlastníkov, ktorí už hlasovali. Alternatívou je nechať hlasovanie dobehnúť (aj keď nedosiahne kvórum) a označiť ho v ďalšom dokumente ako 'predčasne ukončené z dôvodu...'. Audit log uchová všetko.</p></div></details>
+
+  <details><summary>Ako podpíšem PDF zápisnicu?</summary><div class="answer"><p>PDF zápisnica generovaná systémom obsahuje miesto pre fyzický podpis predsedu a overovateľa. Vytlačíte ju, podpíšete ručne, naskenujete späť a nahráte do systému ako finálnu verziu. Alebo môžete použiť elektronický podpis (eGov, alebo cez Adobe Acrobat) — záleží, či vaša SVB / banka akceptuje elektronický podpis (väčšina už áno). Originálnu vygenerovanú verziu systém uchová ako audit dôkaz vedľa podpísanej.</p></div></details>
+</section>
+
+<section class="page-cta">
+  <h2>Spustite svoje prvé hlasovanie</h2>
+  <p>OpenResiApp Cloud — 7-dňová skúška bez kreditnej karty. Alebo self-hosted Docker zadarmo.</p>
+  <div class="btns">
+    <a href="https://cloud.open-resi.app" class="btn btn-primary">Cloud skúška</a>
+    <a href="/self-hosted-docker-instalacia/" class="btn btn-ghost">Self-hosted návod</a>
+  </div>
+</section>
+
+<section class="related-pages" aria-labelledby="related-h">
+  <h2 id="related-h">Súvisiace témy</h2>
+  <ul>
+    <li><a href="/elektronicke-hlasovanie-svb/">Elektronické hlasovanie SVB — sprievodca</a><p>Hlbší kontext o tom, ako funguje systém z právneho hľadiska.</p></li>
+    <li><a href="/zakon-182-1993-hlasovanie/">Zákon 182/1993 a hlasovanie</a><p>Výklad paragrafov, ktoré určujú pravidlá.</p></li>
+    <li><a href="/self-hosted-docker-instalacia/">Self-hosted inštalácia</a><p>Ako nasadiť OpenResiApp na vlastnom serveri.</p></li>
+    <li><a href="/cloud-cennik/">Cloud cenník</a><p>Ak nechcete spravovať server.</p></li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>
+    <strong>OpenResiApp</strong> &ndash; open source pod licenciou MIT &middot;
+    <a href="/">Domov</a> &middot;
+    <a href="https://github.com/open-resiapp/open-resiapp">GitHub</a> &middot;
+    <a href="https://cloud.open-resi.app">Cloud</a> &middot;
+    <a href="https://github.com/open-resiapp/open-resiapp/discussions">Diskusie</a>
+  </p>
+  <p style="margin-top: 0.5rem;">Vytvorené pre slovenské bytové spoločenstvá, bytové družstvá a české SVJ.</p>
+</footer>
+
+</body>
+</html>

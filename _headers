@@ -35,6 +35,20 @@
   Cache-Control: public, max-age=3600
   Content-Type: text/plain; charset=utf-8
 
+/llms-full.txt
+  Cache-Control: public, max-age=3600
+  Content-Type: text/plain; charset=utf-8
+  X-Robots-Tag: index, follow
+
+/.well-known/ai.txt
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain; charset=utf-8
+
+# ─── Stylesheets ───
+/assets/style.css
+  Cache-Control: public, max-age=86400, s-maxage=604800
+  Content-Type: text/css; charset=utf-8
+
 # ─── Images: long cache (immutable, content-addressable would be even better) ───
 /og-image.png
   Cache-Control: public, max-age=2592000, immutable

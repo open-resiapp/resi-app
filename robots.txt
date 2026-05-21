@@ -80,6 +80,7 @@ Allow: /
 # Sitemap
 Sitemap: https://open-resi.app/sitemap.xml
 
-# LLM context file
-# https://llmstxt.org standard
-# https://open-resi.app/llms.txt
+# LLM context files (https://llmstxt.org standard)
+# https://open-resi.app/llms.txt          - index for LLMs
+# https://open-resi.app/llms-full.txt     - full content dump
+# https://open-resi.app/.well-known/ai.txt - AI usage policy

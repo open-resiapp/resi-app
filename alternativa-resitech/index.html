@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alternatíva Resitech zadarmo — porovnanie s OpenResiApp · open-source správa SVB</title>
+  <meta name="description" content="Hľadáte alternatívu k Resitech pre správu bytového domu? OpenResiApp je open-source softvér pre SVB a bytové družstvá — zadarmo self-hosted (Docker) alebo cloud od 4 €/mes. Férové porovnanie funkcií, ceny a obmedzení." />
+  <meta name="keywords" content="alternatíva resitech, resitech zadarmo, resitech vs openresiapp, open source správa bytovky, lacnejšia alternatíva resitech, porovnanie systémov správy bytového domu, susedia.sk alternatíva, poschodoch alternatíva, open source SVB" />
+  <meta name="author" content="OpenResiApp" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://open-resi.app/alternativa-resitech/" />
+  <link rel="alternate" hreflang="sk" href="https://open-resi.app/alternativa-resitech/" />
+  <link rel="alternate" hreflang="x-default" href="https://open-resi.app/alternativa-resitech/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Alternatíva Resitech — férové porovnanie s OpenResiApp" />
+  <meta property="og:description" content="Hľadáte open-source alternatívu k Resitech? Porovnanie funkcií, ceny a obmedzení. Self-hosted zadarmo cez Docker alebo cloud od 4 €/mes." />
+  <meta property="og:url" content="https://open-resi.app/alternativa-resitech/" />
+  <meta property="og:site_name" content="OpenResiApp" />
+  <meta property="og:locale" content="sk_SK" />
+  <meta property="og:image" content="https://open-resi.app/og-image.png" />
+  <meta property="og:image:secure_url" content="https://open-resi.app/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="OpenResiApp — open-source alternatíva pre správu bytového domu." />
+  <meta property="article:section" content="Porovnanie" />
+  <meta property="article:tag" content="Resitech" />
+  <meta property="article:tag" content="open source" />
+  <meta property="article:tag" content="správa bytového domu" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Alternatíva Resitech · OpenResiApp" />
+  <meta name="twitter:description" content="Open-source alternatíva pre správu SVB. Férové porovnanie funkcií, ceny a obmedzení." />
+  <meta name="twitter:image" content="https://open-resi.app/og-image.png" />
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Domov", "item": "https://open-resi.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Porovnanie", "item": "https://open-resi.app/alternativa-resitech/" }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: Article (Comparison) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "inLanguage": "sk",
+    "headline": "Alternatíva Resitech — porovnanie s OpenResiApp",
+    "description": "Detailné porovnanie OpenResiApp ako alternatívy k Resitech pre správu bytových spoločenstiev. Funkcie, cena, open source vs proprietary, kedy ktorý systém vyhráva.",
+    "url": "https://open-resi.app/alternativa-resitech/",
+    "image": "https://open-resi.app/og-image.png",
+    "author": {
+      "@type": "Organization",
+      "name": "OpenResiApp",
+      "url": "https://open-resi.app/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "OpenResiApp",
+      "url": "https://open-resi.app/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://open-resi.app/og-image.png"
+      }
+    },
+    "datePublished": "2026-05-21",
+    "dateModified": "2026-05-21",
+    "about": [
+      { "@type": "Thing", "name": "Resitech" },
+      { "@type": "Thing", "name": "Správa bytového domu" },
+      { "@type": "Thing", "name": "Open source softvér" }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage (page-specific) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "sk",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Je OpenResiApp skutočne zadarmo na rozdiel od Resitech?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Áno, ak ho hostujete sami. OpenResiApp je open-source pod MIT licenciou — Docker image ipk0/open-resiapp je verejne dostupný na Docker Hub a obsahuje plnú funkcionalitu bez limitov. Cloud verzia začína na 4 €/bytovku/mes pre väčšie objemy (7 € pre 1 bytovku) s 7-dňovou skúškou bez kreditnej karty. Resitech je proprietárny SaaS produkt s licenčným modelom — cenovo sa typicky pohybuje vyššie a self-hosted variantu neponúka."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Aké funkcie má Resitech, ktoré OpenResiApp nemá?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Resitech má dlhšiu históriu na slovenskom trhu — širšiu sieť referenčných správcovských spoločností, mature účtovný modul s priamou integráciou pre profesionálnych správcov, a telefonickú podporu s SLA. OpenResiApp sa zameriava na hlasovanie + komunitu, účtovný modul má v roadmape (Q4 2026), a support beží cez GitHub Discussions s reakčným časom 24-48 h. Ak hľadáte hlavne profesionálne účtovníctvo a okamžitú telefonickú podporu, Resitech môže byť aktuálne vhodnejší."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Aké funkcie má OpenResiApp, ktoré Resitech nemá?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tri kľúčové. (1) Plnohodnotný komunitný modul: susedská burza (predaj/darovanie/požičiavanie), výpomoc (prosby aj ponuky), udalosti s RSVP, opt-in adresár susedov so zručnosťami. Resitech sa sústreďuje len na administratívu. (2) Open source pod MIT licenciou — kód je verejný, audit, fork, self-hosting bez vendor lock-in. (3) Self-hosted nasadenie cez Docker — vaše dáta ostávajú na vašom serveri, nikdy neopúšťajú vašu infraštruktúru."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Akceptujú banky a ŠFRB hlasovanie cez OpenResiApp?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PDF zápisnica z OpenResiApp obsahuje všetky náležitosti vyžadované zákonom 182/1993 Z. z.: kompletný hlasovací výpočet, identifikáciu vlastníkov, použité mandáty s odkazmi na overené splnomocnenia, SHA-256 audit log, QR kód na overenie. Tieto výstupy spĺňajú formálne požiadavky bánk aj ŠFRB. Pred prvým úverom alebo dotáciou odporúčame ukázať vzor zápisnice konkrétnemu úverovému pracovníkovi vopred — formát je rovnaký ako pri papierovom hlasovaní, len je generovaný automaticky."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ako dlho trvá migrácia z Resitech do OpenResiApp?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pri 20-60 bytovej bytovke typicky 1-2 hodiny práce predsedu. Postup: (1) Export vlastníkov a bytov z Resitech (CSV/XLSX), (2) Import do OpenResiApp cez drag-and-drop wizard alebo Kataster LV PDF, (3) Onboarding vlastníkov cez QR kód na najbližšej schôdzi, (4) Spustenie prvého hlasovania paralelne v oboch systémoch (dual-run) na overenie konzistencie, (5) Migrácia archívnych dokumentov ako PDF prílohy. Detailný migračný sprievodca je v dokumentácii."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%235b8fff'/><text x='16' y='22' font-family='system-ui' font-size='18' font-weight='700' fill='white' text-anchor='middle'>R</text></svg>" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav aria-label="Hlavná navigácia">
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <span class="logo-dot">&blacksquare;</span> OpenResiApp
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#features">Funkcie</a></li>
+        <li><a href="/#moduly">Moduly</a></li>
+        <li><a href="/#komunita">Komunita</a></li>
+        <li><a href="/#law">&sect; Zákon</a></li>
+        <li><a href="/#api">API</a></li>
+        <li><a href="/#cloud">Cloud</a></li>
+        <li><a href="/#docs">Docs</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="https://github.com/open-resiapp/open-resiapp" class="nav-cta">GitHub &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Drobčeková navigácia">
+  <ol>
+    <li><a href="/">Domov</a></li>
+    <li aria-current="page">Alternatíva Resitech</li>
+  </ol>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<header class="article-hero">
+  <h1>Hľadáte alternatívu k Resitech? Férové porovnanie s OpenResiApp</h1>
+  <p class="lede">Resitech je dlhoročný hráč na slovenskom trhu správy bytových domov a v mnohých veciach robí dobrú prácu. Tento článok nie je o zhadzovaní — je o tom, kedy má zmysel zvážiť open-source alternatívu OpenResiApp a kedy radšej ostať pri Resitech. Bez marketingových klišé, s konkrétnymi číslami a férovým hodnotením oboch strán.</p>
+  <div class="article-meta">
+    <span><strong>Typ:</strong> Porovnanie alternatív</span>
+    <span><strong>Pre koho:</strong> Predseda SVB hľadajúci softvér</span>
+    <span><strong>Aktualizované:</strong> 21. máj 2026</span>
+  </div>
+</header>
+
+<article class="content">
+
+  <h2 id="preco-alternativa">Prečo predsedovia SVB hľadajú alternatívu k Resitech</h2>
+  <p>Najčastejšie dôvody, prečo vlastníci a predsedovia zadávajú do Googlu „alternatíva Resitech":</p>
+  <ul>
+    <li><strong>Cena</strong> — pre menšiu bytovku (10-30 bytov) sa licencia za viacero modulov môže vyšplhať na úroveň, kde si predseda hovorí: „Toto za to nestojí."</li>
+    <li><strong>Komunitné funkcie chýbajú</strong> — Resitech rieši paragrafy a financie, ale nemá modul pre susedské nažívanie (burza, výpomoc, udalosti). Mladší vlastníci hľadajú niečo, čo zmení bytovku na komunitu.</li>
+    <li><strong>Vendor lock-in</strong> — proprietárny systém znamená, že vaše dáta vlastní niekto iný. Ak chcete prejsť inde, export nemusí byť čistý alebo úplný.</li>
+    <li><strong>Self-hosting</strong> — IT-vedomé bytovky chcú dáta na vlastnom serveri (NAS, VPS), nie na cloude tretej strany.</li>
+    <li><strong>Open source preferencia</strong> — niektorí vlastníci chcú vidieť kód, auditovať bezpečnosť, prípadne sami prispieť opravami.</li>
+  </ul>
+  <p>Ak sa nájdete v jednom alebo viac z týchto bodov, OpenResiApp môže byť reálna alternatíva. Ak nie, Resitech je pravdepodobne stále lepšia voľba — a túto stránku si pokojne pridajte do bookmarkov pre prípad zmeny situácie.</p>
+
+  <h2 id="porovnavacia-tabulka">Porovnávacia tabuľka</h2>
+  <p>Porovnanie OpenResiApp s tromi najčastejšími slovenskými systémami pre správu bytového domu. Údaje sú k máju 2026 podľa verejne dostupných zdrojov; pred rozhodnutím si overte aktuálne podmienky priamo u poskytovateľov.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Funkcia / aspekt</th>
+        <th>OpenResiApp</th>
+        <th>Resitech</th>
+        <th>Susedia.sk</th>
+        <th>Poschodoch</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Open source (MIT)</td>
+        <td>✅ Áno</td>
+        <td>❌ Proprietárny</td>
+        <td>❌ Proprietárny</td>
+        <td>❌ Proprietárny</td>
+      </tr>
+      <tr>
+        <td>Self-hosting (vlastný server)</td>
+        <td>✅ Docker</td>
+        <td>❌ Len SaaS</td>
+        <td>❌ Len SaaS</td>
+        <td>❌ Len SaaS</td>
+      </tr>
+      <tr>
+        <td>Cena (20-bytová bytovka, mesačne)</td>
+        <td>0 € self-host / 6 € cloud</td>
+        <td>vyššia trieda</td>
+        <td>stredná trieda</td>
+        <td>nižšia trieda</td>
+      </tr>
+      <tr>
+        <td>Súlad so zákonom 182/1993</td>
+        <td>✅ Všetky 3 metódy + 4 kvóra</td>
+        <td>✅ Áno</td>
+        <td>⚠ Čiastočne</td>
+        <td>✅ Áno</td>
+      </tr>
+      <tr>
+        <td>Hlasovanie per rollam</td>
+        <td>✅ Áno</td>
+        <td>✅ Áno</td>
+        <td>⚠ Obmedzené</td>
+        <td>✅ Áno</td>
+      </tr>
+      <tr>
+        <td>Mandáty so úradne overeným podpisom</td>
+        <td>✅ Áno</td>
+        <td>✅ Áno</td>
+        <td>❌ Nie</td>
+        <td>⚠ Manuálne</td>
+      </tr>
+      <tr>
+        <td>PDF zápisnica s SHA-256 audit logom</td>
+        <td>✅ Áno</td>
+        <td>⚠ PDF bez hash</td>
+        <td>❌ Nie</td>
+        <td>⚠ PDF bez hash</td>
+      </tr>
+      <tr>
+        <td>Komunitná burza / výpomoc / udalosti</td>
+        <td>✅ Plnohodnotný modul</td>
+        <td>❌ Nie</td>
+        <td>✅ Hlavná feature</td>
+        <td>❌ Nie</td>
+      </tr>
+      <tr>
+        <td>Účtovný modul (DPH, knihy)</td>
+        <td>⚠ Roadmap Q4 2026</td>
+        <td>✅ Mature</td>
+        <td>❌ Nie</td>
+        <td>✅ Áno</td>
+      </tr>
+      <tr>
+        <td>Integrácia s bankou (XML import)</td>
+        <td>⚠ V príprave</td>
+        <td>✅ Áno</td>
+        <td>❌ Nie</td>
+        <td>✅ Áno</td>
+      </tr>
+      <tr>
+        <td>Telefonická podpora s SLA</td>
+        <td>❌ Len GitHub Discussions</td>
+        <td>✅ Áno</td>
+        <td>⚠ Email only</td>
+        <td>✅ Áno</td>
+      </tr>
+      <tr>
+        <td>API + webhooks pre integráciu</td>
+        <td>✅ OpenAPI 3.1</td>
+        <td>❌ Nie</td>
+        <td>❌ Nie</td>
+        <td>❌ Nie</td>
+      </tr>
+      <tr>
+        <td>Multi-jazyčnosť (SK + CZ + EN)</td>
+        <td>✅ Áno</td>
+        <td>⚠ Len SK</td>
+        <td>⚠ Len SK</td>
+        <td>⚠ Len SK</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="cena">Cena — kľúčový rozdiel</h2>
+  <p>Cenové porovnanie je najjasnejší rozdiel. OpenResiApp má dve cesty:</p>
+  <h3>Self-hosted (Docker) — 0 € licencia</h3>
+  <p>Stiahnete Docker image, spustíte na vlastnom serveri (môže byť aj malý VPS za 5 €/mes, alebo Raspberry Pi v technickej miestnosti bytovky). Zaplatíte len za hosting + svoj čas na nastavenie (typicky 30 min cez setup.sh script). Funkcionalita je rovnaká ako v platenej verzii — žiadne „lite" obmedzenia.</p>
+
+  <h3>Managed cloud — od 4 €/bytovku/mes</h3>
+  <table>
+    <thead>
+      <tr><th>Počet bytoviek</th><th>Cena za bytovku/mes</th><th>Mesačne celkom (príklad)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>7 €</td><td>7 €</td></tr>
+      <tr><td>2–3</td><td>6 €</td><td>12-18 €</td></tr>
+      <tr><td>4–5</td><td>5 €</td><td>20-25 €</td></tr>
+      <tr><td>6+</td><td>4 €</td><td>od 24 €</td></tr>
+    </tbody>
+  </table>
+  <p>Cena zahŕňa všetky funkcie: hlasovanie, komunita, nástenka, mandáty, PDF zápisnice, email notifikácie, dark mode, multi-jazyk. Bez per-user fees alebo skrytých modulov. 7-dňová skúška bez kreditnej karty.</p>
+
+  <p><strong>Pre porovnanie:</strong> Resitech v základnom balíku stojí typicky niekoľkonásobne viac za podobne veľkú bytovku, najmä pri zapnutí pokročilých modulov (účtovníctvo, banková integrácia, mobilná aplikácia). Presnú cenu si vyžiadajte priamo u Resitech, keďže ich cenník nie je verejný.</p>
+
+  <h2 id="open-source-vs-proprietary">Open source vs proprietary — prečo na tom záleží</h2>
+  <p>Open source nie je marketingový buzzword. Pre bytovku to znamená konkrétne veci:</p>
+  <ul>
+    <li><strong>Bezpečnostný audit</strong> — ktokoľvek (vrátane vašich IT-vedomých vlastníkov) môže prečítať zdrojový kód, overiť, že tam nie sú backdoors alebo zlé spracovanie dát. Pri proprietárnom softvéri sa musíte spoľahnúť na vyhlásenia výrobcu.</li>
+    <li><strong>Dáta zostávajú vaše</strong> — pri self-host inštalácii nikdy neopustia váš server. Pri cloude máte právo si dáta kedykoľvek exportovať v štandardných formátoch (CSV, JSON, PDF).</li>
+    <li><strong>Fork ako poistka</strong> — keby zajtra OpenResiApp prestal byť vyvíjaný (vždy je to riziko pri každom softvéri), kód ostane verejný, ktokoľvek ho môže prevziať a pokračovať. Pri proprietárnom konkurze ostávate s nefunkčným systémom.</li>
+    <li><strong>Vlastné úpravy</strong> — máte programátora vo vlastníkoch? Môže dorobiť funkciu, ktorú potrebujete (napr. integráciu s vaším konkrétnym intercom systémom). Pri proprietárnom systéme platíte hodinovku vendorovi alebo nemáte šancu.</li>
+  </ul>
+
+  <h2 id="kde-resitech-vyhrava">Kde Resitech vyhráva — buďme úprimní</h2>
+  <p>OpenResiApp nie je vo všetkom lepší. Tu sú oblasti, kde Resitech (alebo iné komerčné systémy) majú prevahu a treba to priznať:</p>
+  <ul>
+    <li><strong>Účtovný modul</strong> — Resitech má mature účtovné funkcie pre profesionálnych správcov: DPH, daňové priznania, integrácia s bankou cez XML import bankových výpisov. OpenResiApp má účtovný modul v roadmape na Q4 2026, ale aktuálne ho nemá. Ak ste správcovská firma, ktorá robí účtovníctvo pre desiatky bytoviek, Resitech je pravdepodobne stále vhodnejší.</li>
+    <li><strong>Profesionálna telefonická podpora</strong> — Resitech má call centrum s definovanou SLA. OpenResiApp má GitHub Discussions s typickým časom odpovede 24-48 h. Pre stresové situácie (zlyhanie hlasovania pol hodiny pred deadline) je telefón lepší.</li>
+    <li><strong>Mature na slovenskom trhu</strong> — Resitech beží desiatky rokov, má širokú sieť referenčných správcov, mnohí účtovníci a notári ho poznajú. OpenResiApp je mladší (od roku 2024), referenčná báza menšia.</li>
+    <li><strong>Onboarding zdarma</strong> — Resitech typicky robí onboarding nových klientov ako súčasť ceny. Pri OpenResiApp si onboarding robíte sami cez dokumentáciu (ale máme detailné step-by-step guide-y).</li>
+  </ul>
+
+  <h2 id="kde-openresiapp-vyhrava">Kde OpenResiApp vyhráva</h2>
+  <p>Oblasti, kde OpenResiApp má jasný náskok:</p>
+  <ul>
+    <li><strong>Komunitný modul</strong> — burza, výpomoc, udalosti, opt-in adresár susedov. Resitech a väčšina konkurentov tento aspekt vôbec nemajú alebo majú v primitívnej forme. Pre bytovky s mladšími rodinami toto rozhoduje.</li>
+    <li><strong>Cena za malé a stredné bytovky</strong> — pri 10-30 bytoch je rozdiel niekoľko stoviek € ročne. To je dobrá káva v predajni dvakrát.</li>
+    <li><strong>Self-hosting na NAS / Raspberry Pi</strong> — bytovka s technicky zdatným vlastníkom môže prevádzkovať systém úplne zadarmo, plne v rámci budovy.</li>
+    <li><strong>API a webhooks</strong> — chcete prepojiť hlasovací systém s intercomom, smart zámkami, alebo vlastnou dashboardom? OpenResiApp má OpenAPI 3.1 dokumentáciu, API kľúče s granulárnymi oprávneniami, webhooks. Resitech takúto otvorenosť typicky neponúka.</li>
+    <li><strong>Web Push notifikácie</strong> — vlastníci dostanú notifikáciu o novom hlasovaní priamo do prehliadača bez potreby inštalovať mobilnú apku.</li>
+    <li><strong>Český trh</strong> — OpenResiApp podporuje slovenský SVB aj český SVJ s automatickým prepínaním terminológie a kvór podľa krajiny. Ideálne pre cezhraničné správcovstvá.</li>
+  </ul>
+
+  <h2 id="migracia">Migrácia z Resitech do OpenResiApp</h2>
+  <p>Ak ste sa rozhodli prejsť, samotná migrácia pri 20-60 bytovej bytovke je 1-2 hodiny práce predsedu. Postup:</p>
+  <ol>
+    <li><strong>Export dát z Resitech</strong> — vlastníci, byty, podiely. Formát typicky CSV alebo XLSX. Žiadajte si export priamo u svojho Resitech zástupcu, máte na to právo aj v rámci GDPR.</li>
+    <li><strong>Import do OpenResiApp</strong> — buď cez drag-and-drop wizard (XLSX template), alebo nahratím PDF z Kataster LV — backend ho rozparsuje a vytvorí pre-filled tabuľku. Editovateľný grid umožní opraviť nezrovnalosti pred uložením.</li>
+    <li><strong>Onboarding vlastníkov</strong> — vygenerujete QR kód s inviteom a expiráciou. Vlastníci na najbližšej schôdzi alebo cez vývesku v paneláku si telefónom skenujú a registrujú sa. Vy v pending-owners queue jednoducho odsúhlasíte.</li>
+    <li><strong>Dual-run pre overenie</strong> — pri prvom hlasovaní môžete bežať obidva systémy paralelne, porovnať výsledky. Toto odporúčame pre psychickú istotu, hlavne pri zložitejších kvórach.</li>
+    <li><strong>Migrácia archívnych dokumentov</strong> — staré zápisnice, zmluvy, faktúry uploadnete ako PDF prílohy do sekcie dokumentov.</li>
+    <li><strong>Vypnutie starého systému</strong> — po 1-2 mesiacoch paralelného behu môžete Resitech zrušiť. Final export archivujte pre prípad spätnej kontroly.</li>
+  </ol>
+  <p>Detailný step-by-step migračný sprievodca s screenshotmi je v dokumentácii OpenResiApp. Ak narazíte na bariéru pri exporte z Resitech, opýtajte sa v <a href="https://github.com/open-resiapp/open-resiapp/discussions" rel="noopener">GitHub Discussions</a> — komunita má skúsenosti s viacerými migráciami.</p>
+
+  <h2 id="kedy-ostat">Kedy ostať pri Resitech</h2>
+  <p>OpenResiApp nie je pre každého. Ostaňte pri Resitech ak:</p>
+  <ul>
+    <li>Ste správcovská firma s desiatkami bytoviek a potrebujete mature účtovné moduly a integráciu s bankou.</li>
+    <li>Vaše vedenie SVB nemá žiadneho IT-zdatného člena a potrebuje telefonickú podporu pri každom probléme.</li>
+    <li>Vaša banka alebo ŠFRB špecificky vyžaduje Resitech-vygenerované výstupy (overte si, je to zriedkavé).</li>
+    <li>Nemáte čas ani chuť robiť migráciu — váš aktuálny systém funguje, nepokazujte to.</li>
+  </ul>
+
+</article>
+
+<!-- FAQ -->
+<section class="faq-list" id="faq" aria-labelledby="faq-h">
+  <h2 id="faq-h">Časté otázky — Resitech vs OpenResiApp</h2>
+
+  <details>
+    <summary>Je OpenResiApp skutočne zadarmo na rozdiel od Resitech?</summary>
+    <div class="answer">
+      <p>Áno, ak ho hostujete sami. OpenResiApp je open-source pod MIT licenciou — Docker image <code>ipk0/open-resiapp</code> je verejne dostupný na Docker Hub a obsahuje plnú funkcionalitu bez limitov. Cloud verzia začína na 4 €/bytovku/mes pre väčšie objemy (7 € pre 1 bytovku) s 7-dňovou skúškou bez kreditnej karty. Resitech je proprietárny SaaS produkt s licenčným modelom — cenovo sa typicky pohybuje vyššie a self-hosted variantu neponúka.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Aké funkcie má Resitech, ktoré OpenResiApp nemá?</summary>
+    <div class="answer">
+      <p>Resitech má dlhšiu históriu na slovenskom trhu — širšiu sieť referenčných správcovských spoločností, mature účtovný modul s priamou integráciou pre profesionálnych správcov, a telefonickú podporu s SLA. OpenResiApp sa zameriava na hlasovanie + komunitu, účtovný modul má v roadmape (Q4 2026), a support beží cez GitHub Discussions s reakčným časom 24-48 h. Ak hľadáte hlavne profesionálne účtovníctvo a okamžitú telefonickú podporu, Resitech môže byť aktuálne vhodnejší.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Aké funkcie má OpenResiApp, ktoré Resitech nemá?</summary>
+    <div class="answer">
+      <p>Tri kľúčové. <strong>(1)</strong> Plnohodnotný komunitný modul: susedská burza (predaj/darovanie/požičiavanie), výpomoc (prosby aj ponuky), udalosti s RSVP, opt-in adresár susedov so zručnosťami. Resitech sa sústreďuje len na administratívu. <strong>(2)</strong> Open source pod MIT licenciou — kód je verejný, audit, fork, self-hosting bez vendor lock-in. <strong>(3)</strong> Self-hosted nasadenie cez Docker — vaše dáta ostávajú na vašom serveri, nikdy neopúšťajú vašu infraštruktúru.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Akceptujú banky a ŠFRB hlasovanie cez OpenResiApp?</summary>
+    <div class="answer">
+      <p>PDF zápisnica z OpenResiApp obsahuje všetky náležitosti vyžadované zákonom 182/1993 Z. z.: kompletný hlasovací výpočet, identifikáciu vlastníkov, použité mandáty s odkazmi na overené splnomocnenia, SHA-256 audit log, QR kód na overenie. Tieto výstupy spĺňajú formálne požiadavky bánk aj ŠFRB. Pred prvým úverom alebo dotáciou odporúčame ukázať vzor zápisnice konkrétnemu úverovému pracovníkovi vopred — formát je rovnaký ako pri papierovom hlasovaní, len je generovaný automaticky.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Ako dlho trvá migrácia z Resitech do OpenResiApp?</summary>
+    <div class="answer">
+      <p>Pri 20-60 bytovej bytovke typicky 1-2 hodiny práce predsedu. Postup: (1) Export vlastníkov a bytov z Resitech (CSV/XLSX), (2) Import do OpenResiApp cez drag-and-drop wizard alebo Kataster LV PDF, (3) Onboarding vlastníkov cez QR kód na najbližšej schôdzi, (4) Spustenie prvého hlasovania paralelne v oboch systémoch (dual-run) na overenie konzistencie, (5) Migrácia archívnych dokumentov ako PDF prílohy. Detailný migračný sprievodca je v dokumentácii.</p>
+    </div>
+  </details>
+</section>
+
+<!-- CTA -->
+<section class="page-cta">
+  <h2>Vyskúšajte OpenResiApp 7 dní zadarmo</h2>
+  <p>Bez kreditnej karty. Po skúške sa rozhodnete, či migrovať z Resitech alebo zostať. Plná funkcionalita aj v skúšobnej verzii.</p>
+  <div class="btns">
+    <a href="https://cloud.open-resi.app" class="btn btn-primary">Spustiť cloud skúšku</a>
+    <a href="https://github.com/open-resiapp/open-resiapp" class="btn btn-ghost">GitHub repo</a>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="related-pages" aria-labelledby="related-h">
+  <h2 id="related-h">Súvisiace témy</h2>
+  <ul>
+    <li>
+      <a href="/elektronicke-hlasovanie-svb/">Elektronické hlasovanie SVB — sprievodca</a>
+      <p>Per rollam, kvórum, mandáty, PDF zápisnica, postup spustenia podľa zákona 182/1993.</p>
+    </li>
+    <li>
+      <a href="/#komunita">Susedská komunita — modul</a>
+      <p>Hlavný rozdiel oproti Resitech: burza, výpomoc, udalosti, adresár.</p>
+    </li>
+    <li>
+      <a href="/cloud-cennik/">Cloud cenník OpenResiApp</a>
+      <p>Detail cien s objemovými zľavami od 4 €/mes, fakturácia, storno podmienky.</p>
+    </li>
+    <li>
+      <a href="/#docs">Dokumentácia inštalácie</a>
+      <p>Ako rozbehnúť self-hosted verziu cez Docker za 10 minút.</p>
+    </li>
+  </ul>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    <strong>OpenResiApp</strong> &ndash; open source pod licenciou MIT &middot;
+    <a href="/">Domov</a> &middot;
+    <a href="https://github.com/open-resiapp/open-resiapp">GitHub</a> &middot;
+    <a href="https://cloud.open-resi.app">Cloud</a> &middot;
+    <a href="https://github.com/open-resiapp/open-resiapp/discussions">Diskusie</a>
+  </p>
+  <p style="margin-top: 0.5rem;">Vytvorené pre slovenské bytové spoločenstvá, bytové družstvá a české SVJ.</p>
+</footer>
+
+</body>
+</html>

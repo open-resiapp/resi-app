@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elektronické hlasování SVJ · Shromáždění online podle zákona 89/2012 — OpenResiApp</title>
+  <meta name="description" content="Elektronické hlasování pro česká Společenství vlastníků jednotek (SVJ) podle občanského zákoníku (zákon 89/2012 Sb., § 1158–1222). Shromáždění online, hlasování per rollam, mandáty, automatická PDF zápisnice. Open-source SaaS od 4 €/měs nebo self-hosted zdarma." />
+  <meta name="keywords" content="elektronické hlasování SVJ, shromáždění SVJ online, společenství vlastníků jednotek hlasování, zákon 89/2012 SVJ, výbor SVJ, předseda společenství, hlasování per rollam SVJ, PDF zápis ze shromáždění" />
+  <meta name="author" content="OpenResiApp" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://open-resi.app/cs/elektronicke-hlasovani-svj/" />
+  <link rel="alternate" hreflang="cs" href="https://open-resi.app/cs/elektronicke-hlasovani-svj/" />
+  <link rel="alternate" hreflang="sk" href="https://open-resi.app/elektronicke-hlasovanie-svb/" />
+  <link rel="alternate" hreflang="x-default" href="https://open-resi.app/" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Elektronické hlasování SVJ — průvodce pro výbor společenství" />
+  <meta property="og:description" content="Shromáždění online, per rollam, mandáty, PDF zápisy pro česká Společenství vlastníků jednotek." />
+  <meta property="og:url" content="https://open-resi.app/cs/elektronicke-hlasovani-svj/" />
+  <meta property="og:site_name" content="OpenResiApp" />
+  <meta property="og:locale" content="cs_CZ" />
+  <meta property="og:locale:alternate" content="sk_SK" />
+  <meta property="og:image" content="https://open-resi.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Elektronické hlasování SVJ · OpenResiApp" />
+  <meta name="twitter:description" content="Shromáždění online, per rollam, PDF zápisy pro SVJ." />
+  <meta name="twitter:image" content="https://open-resi.app/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://open-resi.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Česky", "item": "https://open-resi.app/cs/" },
+      { "@type": "ListItem", "position": 3, "name": "Elektronické hlasování SVJ", "item": "https://open-resi.app/cs/elektronicke-hlasovani-svj/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "inLanguage": "cs",
+    "headline": "Elektronické hlasování SVJ — průvodce pro výbor společenství",
+    "description": "Praktický průvodce elektronickým hlasováním v českých Společenstvích vlastníků jednotek (SVJ) podle zákona 89/2012 Sb. Shromáždění, per rollam, mandáty, kvórum, PDF zápis.",
+    "url": "https://open-resi.app/cs/elektronicke-hlasovani-svj/",
+    "image": "https://open-resi.app/og-image.png",
+    "author": { "@type": "Organization", "name": "OpenResiApp", "url": "https://open-resi.app/" },
+    "publisher": { "@type": "Organization", "name": "OpenResiApp", "logo": { "@type": "ImageObject", "url": "https://open-resi.app/og-image.png" } },
+    "datePublished": "2026-05-21",
+    "dateModified": "2026-05-21",
+    "about": [
+      { "@type": "Thing", "name": "Společenství vlastníků jednotek" },
+      { "@type": "Thing", "name": "Shromáždění SVJ" },
+      { "@type": "Thing", "name": "Zákon 89/2012 Sb. (občanský zákoník)" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "cs",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Je elektronické hlasování SVJ podle českého práva platné?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ano, pokud splňuje požadavky občanského zákoníku (zákon 89/2012 Sb., § 1158–1222) a stanov společenství. Zákon nepředepisuje konkrétní technologii — elektronická forma je přípustná, pokud zachovává procedurální požadavky: oznámení, hlasovací lístek, zápis, podpisy. OpenResiApp generuje SHA-256 audit log, e-mailové potvrzení každého hlasu a automatický PDF zápis s QR kódem ověření. Banky, SBD a krajské úřady takový výstup akceptují." }
+      },
+      {
+        "@type": "Question",
+        "name": "Jak funguje hlasování per rollam ve SVJ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Per rollam (rozhodování mimo shromáždění) je upraveno v § 1210 občanského zákoníku. Podmínkou je, že stanovy společenství tuto formu připouštějí. Vlastníci jednotek dostanou e-mail s odkazem na hlasovací formulář, hlasují v určeném termínu (typicky 15–30 dní), systém zaznamená SHA-256 hash hlasu a vygeneruje PDF zápis. Pro některá rozhodnutí (změna stanov, zrušení společenství) je per rollam vyloučeno — musí se rozhodovat na shromáždění." }
+      },
+      {
+        "@type": "Question",
+        "name": "Jak se počítá kvórum v SVJ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Občanský zákoník (§ 1206 a násl.) stanoví, že shromáždění je usnášeníschopné, pokud jsou přítomni vlastníci jednotek mající většinu všech hlasů. Pro běžné rozhodnutí stačí prostá většina přítomných. Pro kvalifikovaná rozhodnutí (změna prohlášení vlastníka, změna podílu na společných částech) se vyžaduje souhlas všech vlastníků dotčených jednotek. Pro většinu stanovami předpokládaných rozhodnutí stačí kvalifikovaná většina podle stanov." }
+      },
+      {
+        "@type": "Question",
+        "name": "Jaký je rozdíl mezi shromážděním a per rollam?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Shromáždění (§ 1207) je nejvyšší orgán SVJ, kde se vlastníci osobně setkávají, diskutují a hlasují. OpenResiApp podporuje i hybridní formát — část vlastníků prezenčně, část vzdáleně přes QR kód. Per rollam (§ 1210) je písemné rozhodování mimo shromáždění, hodí se pro rutinní rozhodnutí. Některá zásadní rozhodnutí lze provést pouze na shromáždění — vždy ověřte ve stanovách." }
+      },
+      {
+        "@type": "Question",
+        "name": "Funguje OpenResiApp i pro slovenské SVB a družstva?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ano. OpenResiApp je vícejazyčná aplikace s country toggle — při založení společenství vyberete zemi (SK/CZ) a systém aplikuje správnou terminologii, kvórum a model orgánů. Pro slovenské SVB platí zákon 182/1993 Z. z., pro česká SVJ zákon 89/2012 Sb., pro bytová družstva Obchodní zákoník + stanovy. Jedna aplikace, tři právní formy." }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%235b8fff'/><text x='16' y='22' font-family='system-ui' font-size='18' font-weight='700' fill='white' text-anchor='middle'>R</text></svg>" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+
+<nav aria-label="Hlavní navigace">
+  <div class="nav-inner">
+    <a href="/" class="logo"><span class="logo-dot">&blacksquare;</span> OpenResiApp</a>
+    <div class="nav-right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#features">Funkce</a></li>
+        <li><a href="/#moduly">Moduly</a></li>
+        <li><a href="/#komunita">Komunita</a></li>
+        <li><a href="/#law">&sect; Zákon</a></li>
+        <li><a href="/#api">API</a></li>
+        <li><a href="/#cloud">Cloud</a></li>
+        <li><a href="/#docs">Docs</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="https://github.com/open-resiapp/open-resiapp" class="nav-cta">GitHub &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<nav class="breadcrumb" aria-label="Drobečková navigace">
+  <ol>
+    <li><a href="/">Domů</a></li>
+    <li aria-current="page">Elektronické hlasování SVJ</li>
+  </ol>
+</nav>
+
+<main>
+
+<header class="article-hero">
+  <h1>Elektronické hlasování SVJ — průvodce pro výbor společenství</h1>
+  <p class="lede">Pro česká Společenství vlastníků jednotek (SVJ) podle občanského zákoníku (zákon 89/2012 Sb., § 1158–1222). Shromáždění online, per rollam pro vlastníky, mandáty, automatický PDF zápis. OpenResiApp podporuje slovenský i český trh — country toggle přepne terminologii, kvórum a model orgánů, samotná aplikace zůstává jedna. Tento průvodce vysvětluje, jak elektronické hlasování v SVJ funguje a jak ho rozjet za hodinu.</p>
+  <div class="article-meta">
+    <span><strong>Typ:</strong> Průvodce pro česká SVJ</span>
+    <span><strong>Pro koho:</strong> Výbor, předseda společenství</span>
+    <span><strong>Aktualizováno:</strong> 21. května 2026</span>
+  </div>
+</header>
+
+<article class="content">
+
+  <h2 id="co-je-svj">Co je Společenství vlastníků jednotek (SVJ)</h2>
+  <p>Společenství vlastníků jednotek (SVJ) je právnická osoba zakládaná podle občanského zákoníku (§ 1194 a násl.) pro správu společných částí domu, ve kterém jsou vlastníci jednotlivých bytových jednotek. Vzniká buď ze zákona (při více než pěti jednotkách s alespoň třemi vlastníky), nebo dobrovolně.</p>
+  <p>SVJ má dva povinné orgány: <strong>shromáždění vlastníků jednotek</strong> (nejvyšší orgán) a <strong>výbor</strong> (statutární orgán, případně předseda společenství při menších SVJ). Větší SVJ mohou navíc zřídit kontrolní komisi.</p>
+
+  <h2 id="pravni-ramec">Právní rámec — zákon 89/2012 Sb.</h2>
+  <p>Hlavním předpisem je občanský zákoník (zákon č. 89/2012 Sb.) v paragrafech § 1158 až § 1222. Pro hlasování jsou klíčové:</p>
+  <ul>
+    <li><strong>§ 1206 a násl.</strong> — pravidla usnášeníschopnosti shromáždění a způsoby rozhodování.</li>
+    <li><strong>§ 1207</strong> — shromáždění jako nejvyšší orgán SVJ.</li>
+    <li><strong>§ 1208</strong> — výlučná působnost shromáždění (rozhodnutí, která nesmí být delegována).</li>
+    <li><strong>§ 1210</strong> — rozhodování per rollam (mimo shromáždění), pokud to stanovy připouštějí.</li>
+    <li><strong>§ 1212</strong> — neplatnost rozhodnutí a možnost soudního přezkumu.</li>
+  </ul>
+  <p>Stanovy společenství doplňují zákon — určují konkrétní kvórum pro různé typy rozhodnutí, frekvenci shromáždění, model výboru, atd. Pro elektronické hlasování je důležité ověřit ve stanovách: (1) zda je per rollam vůbec povoleno, (2) jaké jsou kvalifikované většiny pro důležitá rozhodnutí.</p>
+
+  <h2 id="organy">Orgány SVJ a jejich role v OpenResiApp</h2>
+
+  <h3>Shromáždění vlastníků jednotek</h3>
+  <p>Nejvyšší orgán, rozhoduje o všech otázkách správy domu, jeho společných částí a podnikatelské činnosti SVJ. OpenResiApp podporuje shromáždění ve třech formátech: prezenční, hybridní (kombinace prezenčních a vzdálených vlastníků), per rollam.</p>
+
+  <h3>Výbor</h3>
+  <p>Statutární orgán SVJ, voleno shromážděním. V OpenResiApp má roli <strong>Admin</strong>. Konkrétní členové (předseda výboru, místopředseda, členové) jsou v sekci Výbor s funkčními obdobími. Při menších SVJ může výbor nahradit jediná osoba — <strong>předseda společenství</strong> (zvolený shromážděním, vykonává funkci výboru sám). OpenResiApp podporuje oba modely přes country toggle.</p>
+
+  <h3>Kontrolní komise (volitelná)</h3>
+  <p>Některá SVJ ji ve stanovách zřizují. Má kontrolní působnost nad výborem. V OpenResiApp samostatná role s read-only přístupem ke finančním a hlasovacím datům.</p>
+
+  <h3>Vlastníci jednotek</h3>
+  <p>Členové společenství s rolí <strong>Vlastník</strong>. Každý vlastník má hlasovací právo v poměru velikosti svého podílu na společných částech (typicky podle rozlohy jednotky), pokud stanovy neurčí jinak. OpenResiApp implementuje vážené hlasování automaticky z údajů jednotek.</p>
+
+  <h2 id="shromazdeni">Shromáždění SVJ — kdy a jak</h2>
+  <p>Shromáždění svolává výbor (nebo předseda společenství) nejméně jednou ročně, případně kdykoli o to požádá určitý počet vlastníků (typicky 1/4, podle stanov). Pozvánka musí být doručena minimálně 30 dní před konáním (pokud stanovy neurčí jinak) a musí obsahovat:</p>
+  <ul>
+    <li>Datum, čas a místo konání</li>
+    <li>Program s konkrétními body, o kterých se bude hlasovat</li>
+    <li>Případné podklady k bodům (cenové nabídky, smlouvy, projekty)</li>
+  </ul>
+  <p>Při elektronickém shromáždění v OpenResiApp:</p>
+  <ol>
+    <li>Výbor vytvoří shromáždění v systému, vyplní program (jednotlivé hlasovací body).</li>
+    <li>Pozvánka jde automaticky e-mailem všem vlastníkům 30 dní předem (s opakovaným připomenutím 7 dní a 1 den předem).</li>
+    <li>V den shromáždění prezenční účastníci hlasují přes QR kód na svém telefonu (nebo papírový lístek s následným zápisem sčítačem). Vzdálení vlastníci hlasují přes link v e-mailu.</li>
+    <li>Po projednání všech bodů systém vygeneruje PDF zápis pro každý bod zvlášť a souhrnný zápis ze shromáždění.</li>
+  </ol>
+
+  <h2 id="per-rollam-svj">Per rollam ve SVJ — § 1210</h2>
+  <p>Per rollam je hodno pro rutinní rozhodnutí, kde se nepředpokládá diskuse. <strong>Podmínkou je, že stanovy tuto formu připouštějí</strong> — bez toho ji nelze použít. Některá rozhodnutí (změna stanov, zrušení SVJ) jsou ze zákona vyloučena z per rollam a musí se rozhodovat na shromáždění.</p>
+  <p>Postup v OpenResiApp:</p>
+  <ol>
+    <li>Výbor vytvoří per rollam hlasování. Systém požaduje potvrzení, že stanovy tuto formu povolují (compliance check).</li>
+    <li>Vyplnění návrhu, důvodové zprávy, příloh.</li>
+    <li>Výběr kvóra podle stanov SVJ.</li>
+    <li>Lehotu na hlasování typicky 15 dní (stanovy mohou určit jinak).</li>
+    <li>Spuštění — všichni vlastníci dostanou e-mail s odkazem na hlasovací formulář.</li>
+    <li>Po skončení vygenerování PDF zápisu se všemi náležitostmi: identifikace SVJ, návrh, výsledek hlasování, audit log, QR kód.</li>
+  </ol>
+
+  <h2 id="zapis">PDF zápis ze shromáždění / per rollam</h2>
+  <p>OpenResiApp generuje zápis automaticky se všemi povinnými náležitostmi:</p>
+  <ul>
+    <li>Identifikace SVJ (název, IČO, sídlo, IBAN)</li>
+    <li>Datum a místo konání (u per rollam datum vyhlášení a uzavření)</li>
+    <li>Forma rozhodování — shromáždění / per rollam (s citací § 1207 nebo § 1210)</li>
+    <li>Program s jednotlivými hlasovacími body</li>
+    <li>Pro každý bod: návrh usnesení, výsledek hlasování (počet ZA / PROTI / ZDRŽEL SE), procenta, dosažení kvóra</li>
+    <li>Seznam přítomných vlastníků s velikostmi podílů</li>
+    <li>Použité mandáty s odkazy na ověřené plné moci</li>
+    <li>SHA-256 hash celého zápisu (audit důkaz)</li>
+    <li>QR kód s odkazem na online ověřovací stránku</li>
+    <li>Místo pro podpis předsedy výboru a ověřovatele</li>
+  </ul>
+  <p>Zápis je v souladu s požadavky občanského zákoníku a obvyklými požadavky bank, SBD a krajských úřadů.</p>
+
+  <h2 id="rozdily-sk-cz">Rozdíly mezi SK a CZ — co je třeba vědět</h2>
+  <p>OpenResiApp podporuje obě země s automatickým přepínáním terminologie a pravidel. Pro výbor SVJ je užitečné vědět, kde jsou rozdíly oproti slovenskému SVB:</p>
+  <table>
+    <thead>
+      <tr><th>Aspekt</th><th>Slovenské SVB</th><th>České SVJ</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Právní rámec</td><td>Zákon 182/1993 Z. z.</td><td>Zákon 89/2012 Sb. (občanský zákoník)</td></tr>
+      <tr><td>Nejvyšší orgán</td><td>Schôdza vlastníkov</td><td>Shromáždění vlastníků jednotek</td></tr>
+      <tr><td>Statutární orgán</td><td>Predseda + výbor (volitelný)</td><td>Výbor / předseda společenství</td></tr>
+      <tr><td>Metody hlasování</td><td>3 metody (podíl / byty / plocha)</td><td>Obvykle podle podílu, stanovy mohou určit jinak</td></tr>
+      <tr><td>Kvórum</td><td>3 typy předepsané zákonem</td><td>Většina podle stanov (občanský zákoník je flexibilní)</td></tr>
+      <tr><td>Per rollam</td><td>§ 14a ods. 1</td><td>§ 1210 (pokud stanovy povolí)</td></tr>
+      <tr><td>Mandáty</td><td>Úředně ověřený podpis</td><td>Plná moc (písemná, podpis nemusí být ověřen)</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="jak-zacit">Jak začít s OpenResiApp ve SVJ</h2>
+  <ol>
+    <li><strong>Příprava údajů</strong> — seznam vlastníků jednotek, podíly na společných částech (z prohlášení vlastníka), stanovy SVJ jako PDF.</li>
+    <li><strong>Založení společenství v systému</strong> — vyberete zemi <em>Česká republika</em>; systém aplikuje českou terminologii a model orgánů.</li>
+    <li><strong>Import jednotek</strong> — přes XLSX šablonu nebo manuálně. Pro každou: označení jednotky, vlastník, podíl, m².</li>
+    <li><strong>Nastavení stanov</strong> — kvórum, per rollam ano/ne, frekvence shromáždění (jednorázové).</li>
+    <li><strong>Onboarding vlastníků</strong> — QR kód na nejbližším shromáždění nebo ve vchodu paneláku. Vlastníci se sami registrují, výbor potvrzuje pending queue.</li>
+    <li><strong>První hlasování</strong> — doporučujeme začít drobným per rollam (např. schválení rozpočtu na drobnou údržbu) pro osvojení postupu.</li>
+  </ol>
+
+</article>
+
+<section class="faq-list" id="faq" aria-labelledby="faq-h">
+  <h2 id="faq-h">Časté otázky — elektronické hlasování SVJ</h2>
+
+  <details><summary>Je elektronické hlasování SVJ podle českého práva platné?</summary><div class="answer"><p>Ano, pokud splňuje požadavky občanského zákoníku (zákon 89/2012 Sb., § 1158–1222) a stanov společenství. Zákon nepředepisuje konkrétní technologii — elektronická forma je přípustná, pokud zachovává procedurální požadavky: oznámení, hlasovací lístek, zápis, podpisy. OpenResiApp generuje SHA-256 audit log, e-mailové potvrzení každého hlasu a automatický PDF zápis s QR kódem ověření. Banky, SBD a krajské úřady takový výstup akceptují.</p></div></details>
+
+  <details><summary>Jak funguje hlasování per rollam ve SVJ?</summary><div class="answer"><p>Per rollam (rozhodování mimo shromáždění) je upraveno v § 1210 občanského zákoníku. Podmínkou je, že stanovy společenství tuto formu připouštějí. Vlastníci jednotek dostanou e-mail s odkazem na hlasovací formulář, hlasují v určeném termínu (typicky 15–30 dní), systém zaznamená SHA-256 hash hlasu a vygeneruje PDF zápis. Pro některá rozhodnutí (změna stanov, zrušení společenství) je per rollam vyloučeno — musí se rozhodovat na shromáždění.</p></div></details>
+
+  <details><summary>Jak se počítá kvórum v SVJ?</summary><div class="answer"><p>Občanský zákoník (§ 1206 a násl.) stanoví, že shromáždění je usnášeníschopné, pokud jsou přítomni vlastníci jednotek mající většinu všech hlasů. Pro běžné rozhodnutí stačí prostá většina přítomných. Pro kvalifikovaná rozhodnutí (změna prohlášení vlastníka, změna podílu na společných částech) se vyžaduje souhlas všech vlastníků dotčených jednotek. Pro většinu stanovami předpokládaných rozhodnutí stačí kvalifikovaná většina podle stanov.</p></div></details>
+
+  <details><summary>Jaký je rozdíl mezi shromážděním a per rollam?</summary><div class="answer"><p>Shromáždění (§ 1207) je nejvyšší orgán SVJ, kde se vlastníci osobně setkávají, diskutují a hlasují. OpenResiApp podporuje i hybridní formát — část vlastníků prezenčně, část vzdáleně přes QR kód. Per rollam (§ 1210) je písemné rozhodování mimo shromáždění, hodí se pro rutinní rozhodnutí. Některá zásadní rozhodnutí lze provést pouze na shromáždění — vždy ověřte ve stanovách.</p></div></details>
+
+  <details><summary>Funguje OpenResiApp i pro slovenské SVB a družstva?</summary><div class="answer"><p>Ano. OpenResiApp je vícejazyčná aplikace s country toggle — při založení společenství vyberete zemi (SK/CZ) a systém aplikuje správnou terminologii, kvórum a model orgánů. Pro slovenské SVB platí zákon 182/1993 Z. z., pro česká SVJ zákon 89/2012 Sb., pro bytová družstva Obchodní zákoník + stanovy. Jedna aplikace, tři právní formy.</p></div></details>
+</section>
+
+<section class="page-cta">
+  <h2>Vyzkoušejte OpenResiApp pro vaše SVJ</h2>
+  <p>Open-source pod MIT licencí. Self-hosted zdarma přes Docker, nebo managed cloud od 4 €/měs s 7denní zkušební dobou bez platební karty.</p>
+  <div class="btns">
+    <a href="https://cloud.open-resi.app" class="btn btn-primary">Spustit cloud zkoušku</a>
+    <a href="https://github.com/open-resiapp/open-resiapp" class="btn btn-ghost">GitHub repo</a>
+  </div>
+</section>
+
+<section class="related-pages" aria-labelledby="related-h">
+  <h2 id="related-h">Související témata</h2>
+  <ul>
+    <li><a href="/elektronicke-hlasovanie-svb/">Elektronické hlasovanie SVB (SK)</a><p>Slovenská verze průvodce — pro SVB podle zákona 182/1993.</p></li>
+    <li><a href="/alternativa-resitech/">Alternativa Resitech — porovnání</a><p>Detailní porovnání funkcí a cen.</p></li>
+    <li><a href="/cloud-cennik/">Cloud cenník</a><p>4–7 €/měs za společenství s objemovými slevami.</p></li>
+    <li><a href="/komunita-susedia/">Sousedská komunita — modul</a><p>Burza, výpomoc, události, adresář pro vlastníky jednotek.</p></li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>
+    <strong>OpenResiApp</strong> &ndash; open source pod licencí MIT &middot;
+    <a href="/">Domů</a> &middot;
+    <a href="https://github.com/open-resiapp/open-resiapp">GitHub</a> &middot;
+    <a href="https://cloud.open-resi.app">Cloud</a> &middot;
+    <a href="https://github.com/open-resiapp/open-resiapp/discussions">Diskuze</a>
+  </p>
+  <p style="margin-top: 0.5rem;">Vytvořeno pro slovenská bytová společenstva, bytová družstva a česká SVJ.</p>
+</footer>
+
+</body>
+</html>

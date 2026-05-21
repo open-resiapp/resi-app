@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Self-hosted OpenResiApp · Docker inštalácia za 10 minút — sprievodca</title>
+  <meta name="description" content="Ako nasadiť OpenResiApp na vlastnom serveri cez Docker. Setup script za 10 minút, alebo manuálny docker-compose. Caddy + Let's Encrypt pre automatické HTTPS. Linux + macOS, amd64 + arm64." />
+  <meta name="keywords" content="self-hosted OpenResiApp, Docker inštalácia, docker-compose správa SVB, setup.sh OpenResiApp, hosting bytovky vlastný server, VPS pre bytové spoločenstvo, Raspberry Pi správa bytovky, Caddy HTTPS Let's Encrypt" />
+  <meta name="author" content="OpenResiApp" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://open-resi.app/self-hosted-docker-instalacia/" />
+  <link rel="alternate" hreflang="sk" href="https://open-resi.app/self-hosted-docker-instalacia/" />
+  <link rel="alternate" hreflang="x-default" href="https://open-resi.app/self-hosted-docker-instalacia/" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Self-hosted OpenResiApp cez Docker — sprievodca inštaláciou" />
+  <meta property="og:description" content="Postup nasadenia na vlastnom serveri za 10 minút. Setup script + manuálny docker-compose. Caddy + HTTPS." />
+  <meta property="og:url" content="https://open-resi.app/self-hosted-docker-instalacia/" />
+  <meta property="og:site_name" content="OpenResiApp" />
+  <meta property="og:locale" content="sk_SK" />
+  <meta property="og:image" content="https://open-resi.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Self-hosted Docker inštalácia · OpenResiApp" />
+  <meta name="twitter:description" content="Nasaďte OpenResiApp na vlastnom serveri za 10 minút." />
+  <meta name="twitter:image" content="https://open-resi.app/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Domov", "item": "https://open-resi.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Dokumentácia", "item": "https://open-resi.app/#docs" },
+      { "@type": "ListItem", "position": 3, "name": "Self-hosted Docker inštalácia", "item": "https://open-resi.app/self-hosted-docker-instalacia/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "inLanguage": "sk",
+    "name": "Ako nasadiť OpenResiApp na vlastnom serveri cez Docker",
+    "description": "Postup nasadenia open-source aplikácie OpenResiApp na vlastnom Linux/macOS serveri za pomoci Docker a docker-compose. Vrátane automatického HTTPS cez Caddy a Let's Encrypt.",
+    "totalTime": "PT10M",
+    "supply": [
+      { "@type": "HowToSupply", "name": "Server s Docker (Linux alebo macOS)" },
+      { "@type": "HowToSupply", "name": "Vlastná doména alebo subdoména" },
+      { "@type": "HowToSupply", "name": "Port 80 a 443 dostupný z internetu" }
+    ],
+    "tool": [
+      { "@type": "HowToTool", "name": "Docker (verzia 20+)" },
+      { "@type": "HowToTool", "name": "docker-compose alebo docker compose plugin" }
+    ],
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "Stiahnutie setup.sh", "text": "curl -fsSL https://get.open-resi.app -o setup.sh && chmod +x setup.sh" },
+      { "@type": "HowToStep", "position": 2, "name": "Spustenie skriptu", "text": "./setup.sh — script auto-detekuje OS, doinštaluje Docker a openssl, generuje bezpečné heslá." },
+      { "@type": "HowToStep", "position": 3, "name": "Konfigurácia domény a admin účtu", "text": "Skript interaktívne pýta doménu a email pre admin účet." },
+      { "@type": "HowToStep", "position": 4, "name": "Prvé prihlásenie", "text": "Otvorte https://vasa-domena.sk v prehliadači, prihláste sa zadanými údajmi." }
+    ],
+    "url": "https://open-resi.app/self-hosted-docker-instalacia/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "sk",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Aké sú minimálne požiadavky na server pre OpenResiApp?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Minimálne: 1 GB RAM, 10 GB disku, 1 vCPU. Odporúčané pre bytovku do 50 bytov: 2 GB RAM, 20 GB SSD, 2 vCPU. Postačujúce: VPS od 5 €/mes (Hetzner, Contabo, DigitalOcean), Raspberry Pi 4 s 2GB RAM (musí mať verejnú IP cez router port-forward alebo Cloudflare Tunnel), alebo Synology / QNAP NAS s podporou Docker." }
+      },
+      {
+        "@type": "Question",
+        "name": "Funguje setup.sh aj na macOS?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Áno. Setup script auto-detekuje OS (macOS / Linux) a použije zodpovedajúce inštalátory — Homebrew na macOS, apt/yum/dnf na Linuxe. Pri macOS bude pravdepodobne pýtať heslo pre sudo na inštaláciu Docker Desktop. Pre produkčné nasadenie odporúčame Linux server, nie macOS." }
+      },
+      {
+        "@type": "Question",
+        "name": "Ako funguje automatické HTTPS cez Caddy?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Docker compose obsahuje Caddy server, ktorý pri spustení automaticky vystaví Let's Encrypt certifikát pre zadanú doménu. Predpokladom je, že porty 80 a 443 sú dostupné z internetu a doména ukazuje DNS A/AAAA záznamom na váš server. Obnova certifikátov je automatická — Caddy ich obnoví ~30 dní pred expiráciou. Nepotrebujete Certbot ani manuálnu konfiguráciu." }
+      },
+      {
+        "@type": "Question",
+        "name": "Ako sa robia zálohy v self-hosted verzii?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Setup script vytvorí cron job, ktorý každý deň vyrobí dump PostgreSQL databázy + tar archív súborových príloh (PDF zápisnice, foto papierových hlasov). Zálohy sa ukladajú do /var/openresi/backups s 30-dňovou retenciou (staršie sa automaticky mažú). Odporúčame ich tiež syncovať na off-site úložisko cez rsync alebo restic — toto si nastavíte sami podľa preferovaného poskytovateľa." }
+      },
+      {
+        "@type": "Question",
+        "name": "Ako aktualizujem self-hosted inštanciu na novú verziu?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Príkazom docker compose pull && docker compose up -d v adresári inštalácie. Migrácie databázy sa spustia automaticky pri štarte novej verzie. Pred aktualizáciou odporúčame manuálnu zálohu cez ./backup.sh script. Pre kontrolu novej verzie pozrite CHANGELOG.md v GitHub repe. Breaking changes sú vždy explicitne označené." }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%235b8fff'/><text x='16' y='22' font-family='system-ui' font-size='18' font-weight='700' fill='white' text-anchor='middle'>R</text></svg>" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+
+<nav aria-label="Hlavná navigácia">
+  <div class="nav-inner">
+    <a href="/" class="logo"><span class="logo-dot">&blacksquare;</span> OpenResiApp</a>
+    <div class="nav-right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#features">Funkcie</a></li>
+        <li><a href="/#moduly">Moduly</a></li>
+        <li><a href="/#komunita">Komunita</a></li>
+        <li><a href="/#law">&sect; Zákon</a></li>
+        <li><a href="/#api">API</a></li>
+        <li><a href="/#cloud">Cloud</a></li>
+        <li><a href="/#docs">Docs</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="https://github.com/open-resiapp/open-resiapp" class="nav-cta">GitHub &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<nav class="breadcrumb" aria-label="Drobčeková navigácia">
+  <ol>
+    <li><a href="/">Domov</a></li>
+    <li><a href="/#docs">Dokumentácia</a></li>
+    <li aria-current="page">Self-hosted Docker inštalácia</li>
+  </ol>
+</nav>
+
+<main>
+
+<header class="article-hero">
+  <h1>Self-hosted OpenResiApp cez Docker — sprievodca inštaláciou</h1>
+  <p class="lede">Self-hosted znamená: vaše dáta, váš server, žiadny mesačný poplatok. OpenResiApp je open-source pod MIT licenciou — Docker image <code>ipk0/open-resiapp</code> je verejne dostupný a obsahuje plnú funkcionalitu. Tento sprievodca prevedie postupom od stiahnutia setup skriptu po prvé prihlásenie. Pri normálnom serveri trvá kompletná inštalácia ~10 minút.</p>
+  <div class="article-meta">
+    <span><strong>Typ:</strong> Technický návod</span>
+    <span><strong>Čas:</strong> ~10 minút</span>
+    <span><strong>Pre koho:</strong> IT-zdatný predseda alebo správca</span>
+  </div>
+</header>
+
+<article class="content">
+
+  <h2 id="poziadavky">Čo budete potrebovať</h2>
+  <ul>
+    <li><strong>Server</strong> s Linux distribúciou (Debian/Ubuntu odporúčaná) alebo macOS. Linux pre produkčné, macOS na testovanie.</li>
+    <li><strong>Minimálne 1 GB RAM, 10 GB disku, 1 vCPU.</strong> Odporúčané: 2 GB RAM, 20 GB SSD pre bytovku do 50 bytov.</li>
+    <li><strong>Vlastnú doménu alebo subdoménu</strong> (napr. <code>bytovka.example.sk</code>), ktorá DNS A/AAAA záznamom smeruje na IP vášho servera.</li>
+    <li><strong>Otvorené porty 80 a 443</strong> z internetu na server. Ak ste za router-om, nastavte port-forward. Ak ste za CGNAT alebo firewallom, použite Cloudflare Tunnel.</li>
+    <li><strong>SSH prístup</strong> na server s sudo právami.</li>
+  </ul>
+  <p>Doménu môžete obstarať za ~10 €/rok napr. cez Websupport, GoDaddy, Namecheap. Ak nechcete vlastnú doménu, môžete využiť <strong>DuckDNS</strong> (zadarmo) — <code>bytovka.duckdns.org</code> funguje rovnako dobre.</p>
+
+  <h2 id="instalacia-script">Rýchla inštalácia cez setup.sh (odporúčané)</h2>
+  <p>Pripravený jednoriadkový script automatizuje takmer všetko. Pripojte sa SSH-om na server a spustite:</p>
+
+  <pre><code>curl -fsSL https://get.open-resi.app -o setup.sh
+chmod +x setup.sh
+./setup.sh</code></pre>
+
+  <p>Čo script urobí:</p>
+  <ol>
+    <li>Detekuje OS (Linux distribúcia alebo macOS).</li>
+    <li>Ak chýba Docker, doinštaluje ho cez package manager (apt/yum/dnf/brew).</li>
+    <li>Ak chýba openssl, doinštaluje.</li>
+    <li>Vytvorí adresár <code>/opt/openresi</code> s konfiguráciou.</li>
+    <li>Vygeneruje bezpečné heslá pre databázu a session secret (cez openssl rand).</li>
+    <li>Interaktívne pýta:
+      <ul>
+        <li>Vašu doménu (napr. <code>bytovka.example.sk</code>)</li>
+        <li>Email pre admin účet</li>
+        <li>(Voliteľne) SMTP server pre odosielanie emailov, alebo necháte default Brevo s API kľúčom, ktorý si nastavíte neskôr</li>
+      </ul>
+    </li>
+    <li>Stiahne docker-compose.yml a Docker image.</li>
+    <li>Spustí kontajnery: PostgreSQL, OpenResiApp web, Caddy reverse proxy.</li>
+    <li>Caddy automaticky získa Let's Encrypt certifikát pre vašu doménu.</li>
+    <li>Vytvorí admin účet a vypíše prvé heslo do konzoly.</li>
+  </ol>
+  <p>Script je <strong>idempotentný</strong> — môžete ho spustiť opakovane, zachová existujúce dáta a heslá, opraví len to čo treba.</p>
+
+  <h2 id="prve-prihlasenie">Prvé prihlásenie</h2>
+  <p>Po dokončení skriptu otvorte v prehliadači:</p>
+  <pre><code>https://vasa-domena.sk</code></pre>
+  <p>Caddy automaticky presmeruje HTTP → HTTPS, certifikát je platný od prvej sekundy. Uvítací screen vyzve na zadanie:</p>
+  <ul>
+    <li>Email (rovnaký, ktorý ste zadali pri inštalácii)</li>
+    <li>Iniciálne heslo (zobrazil ho setup script — uložte si ho do password managera!)</li>
+  </ul>
+  <p>Po prihlásení vás čaká wizard pre vytvorenie prvej bytovky. Môžete:</p>
+  <ul>
+    <li>Naimportovať vlastníkov a byty z Kataster LV (PDF) — backend rozparsuje a vytvorí pre-filled tabuľku</li>
+    <li>Alebo cez XLSX template (preddefinovaný — stiahnete priamo z wizardu)</li>
+    <li>Alebo manuálne zadať vo editovateľnom gride</li>
+  </ul>
+
+  <h2 id="manualne-compose">Manuálna inštalácia cez docker-compose</h2>
+  <p>Ak preferujete manuálny postup pre väčšiu kontrolu, alebo upravený setup (napr. external PostgreSQL, vlastný reverse proxy), stiahnite docker-compose.yml a upravte:</p>
+
+  <pre><code># Vytvorenie adresára
+mkdir -p /opt/openresi && cd /opt/openresi
+
+# Stiahnutie docker-compose.yml
+curl -fsSL https://raw.githubusercontent.com/open-resiapp/open-resiapp/main/docker-compose.yml \
+  -o docker-compose.yml
+
+# Vytvorenie .env súboru
+cp .env.example .env
+nano .env  # upraviť heslá, doménu, SMTP
+
+# Spustenie
+docker compose up -d
+
+# Sledovanie logov
+docker compose logs -f openresi</code></pre>
+
+  <p>Minimálne hodnoty, ktoré musíte v <code>.env</code> upraviť:</p>
+  <ul>
+    <li><code>DOMAIN</code> — vaša doména (napr. <code>bytovka.example.sk</code>)</li>
+    <li><code>ADMIN_EMAIL</code> — email pre admin účet</li>
+    <li><code>POSTGRES_PASSWORD</code> — bezpečné heslo pre PostgreSQL (generujte cez <code>openssl rand -base64 32</code>)</li>
+    <li><code>NEXTAUTH_SECRET</code> — secret pre session (rovnako vygenerujte)</li>
+    <li><code>SMTP_*</code> — konfigurácia odosielania emailov (Brevo, Mailgun, Postmark, alebo vlastný SMTP)</li>
+  </ul>
+
+  <h2 id="zalohovanie">Zálohovanie</h2>
+  <p>Setup script vytvorí cron job, ktorý každú noc o 3:00 spustí backup script:</p>
+  <pre><code>0 3 * * * /opt/openresi/backup.sh</code></pre>
+  <p>Script vyrobí:</p>
+  <ul>
+    <li>PostgreSQL dump (<code>pg_dump</code>) komprimovaný gzipom</li>
+    <li>Tar archív súborových príloh (zápisnice, foto papierových hlasov, dokumenty)</li>
+    <li>Uloží do <code>/var/openresi/backups/YYYY-MM-DD/</code></li>
+  </ul>
+  <p>Retencia 30 dní — staršie zálohy sa automaticky mažú. Toto je <strong>local backup</strong>; odporúčame nakonfigurovať aj <strong>off-site backup</strong> na inú lokalitu (S3, Backblaze B2, alebo vlastný NAS) cez rsync alebo restic. Ukážková restic konfigurácia je v <code>docs/backups.md</code>.</p>
+
+  <h2 id="aktualizacie">Aktualizácie na novú verziu</h2>
+  <p>Aktualizácia je jednoduchá:</p>
+  <pre><code>cd /opt/openresi
+./backup.sh                    # manuálna záloha pred aktualizáciou
+docker compose pull            # stiahne novú verziu image-u
+docker compose up -d           # reštart s novou verziou
+docker compose logs -f openresi  # sledovanie migrácií</code></pre>
+  <p>Migrácie PostgreSQL databázy sa spustia automaticky pri štarte. Pred aktualizáciou si pozrite <a href="https://github.com/open-resiapp/open-resiapp/blob/main/CHANGELOG.md" rel="noopener">CHANGELOG.md</a> — breaking changes sú vždy explicitne označené sekciou „⚠️ Breaking changes" a obsahujú migračné inštrukcie.</p>
+
+  <h2 id="troubleshooting">Časté problémy a riešenia</h2>
+
+  <h3>Caddy nedokáže získať SSL certifikát</h3>
+  <p>Najčastejšia príčina: porty 80/443 nie sú dostupné z internetu, alebo DNS A záznam ešte nepropagoval. Skontrolujte:</p>
+  <pre><code>dig vasa-domena.sk +short
+# Má vrátiť IP vášho servera
+
+curl -I http://vasa-domena.sk
+# Má vrátiť odpoveď zo servera, nie timeout</code></pre>
+  <p>Ak DNS ešte nepropagoval, Caddy bude skúšať každých 5 minút; nechajte bežať a počkajte. Logy: <code>docker compose logs caddy</code>.</p>
+
+  <h3>OpenResiApp kontajner sa neštartuje</h3>
+  <p>Najčastejšie: chyba v .env súbore (chýbajúce povinné premenné) alebo databáza nedostupná. Pozrite:</p>
+  <pre><code>docker compose logs openresi --tail 50</code></pre>
+  <p>Riadky obsahujúce „missing required env" alebo „connection refused" ukážu konkrétny problém.</p>
+
+  <h3>Emaily sa neodosielajú</h3>
+  <p>Skontrolujte SMTP konfiguráciu v .env. Najčastejšia chyba: použitie SendGrid/Brevo bez správneho API kľúča, alebo firewall blokuje port 587. Testujte priamo:</p>
+  <pre><code>docker exec -it openresi node -e "require('./scripts/test-email.js')()"</code></pre>
+
+</article>
+
+<section class="faq-list" id="faq" aria-labelledby="faq-h">
+  <h2 id="faq-h">Časté otázky — self-hosted inštalácia</h2>
+
+  <details><summary>Aké sú minimálne požiadavky na server pre OpenResiApp?</summary><div class="answer"><p>Minimálne: 1 GB RAM, 10 GB disku, 1 vCPU. Odporúčané pre bytovku do 50 bytov: 2 GB RAM, 20 GB SSD, 2 vCPU. Postačujúce: VPS od 5 €/mes (Hetzner, Contabo, DigitalOcean), Raspberry Pi 4 s 2GB RAM (musí mať verejnú IP cez router port-forward alebo Cloudflare Tunnel), alebo Synology / QNAP NAS s podporou Docker.</p></div></details>
+
+  <details><summary>Funguje setup.sh aj na macOS?</summary><div class="answer"><p>Áno. Setup script auto-detekuje OS (macOS / Linux) a použije zodpovedajúce inštalátory — Homebrew na macOS, apt/yum/dnf na Linuxe. Pri macOS bude pravdepodobne pýtať heslo pre sudo na inštaláciu Docker Desktop. Pre produkčné nasadenie odporúčame Linux server, nie macOS.</p></div></details>
+
+  <details><summary>Ako funguje automatické HTTPS cez Caddy?</summary><div class="answer"><p>Docker compose obsahuje Caddy server, ktorý pri spustení automaticky vystaví Let's Encrypt certifikát pre zadanú doménu. Predpokladom je, že porty 80 a 443 sú dostupné z internetu a doména ukazuje DNS A/AAAA záznamom na váš server. Obnova certifikátov je automatická — Caddy ich obnoví ~30 dní pred expiráciou. Nepotrebujete Certbot ani manuálnu konfiguráciu.</p></div></details>
+
+  <details><summary>Ako sa robia zálohy v self-hosted verzii?</summary><div class="answer"><p>Setup script vytvorí cron job, ktorý každý deň vyrobí dump PostgreSQL databázy + tar archív súborových príloh (PDF zápisnice, foto papierových hlasov). Zálohy sa ukladajú do <code>/var/openresi/backups</code> s 30-dňovou retenciou (staršie sa automaticky mažú). Odporúčame ich tiež syncovať na off-site úložisko cez rsync alebo restic — toto si nastavíte sami podľa preferovaného poskytovateľa.</p></div></details>
+
+  <details><summary>Ako aktualizujem self-hosted inštanciu na novú verziu?</summary><div class="answer"><p>Príkazom <code>docker compose pull &amp;&amp; docker compose up -d</code> v adresári inštalácie. Migrácie databázy sa spustia automaticky pri štarte novej verzie. Pred aktualizáciou odporúčame manuálnu zálohu cez <code>./backup.sh</code> script. Pre kontrolu novej verzie pozrite CHANGELOG.md v GitHub repe. Breaking changes sú vždy explicitne označené.</p></div></details>
+</section>
+
+<section class="page-cta">
+  <h2>Spustite vlastnú inštanciu</h2>
+  <p>Open-source pod MIT licenciou. Docker image <code>ipk0/open-resiapp</code> verejný na Docker Hub. Bez registrácie, bez licenčných poplatkov.</p>
+  <div class="btns">
+    <a href="https://github.com/open-resiapp/open-resiapp" class="btn btn-primary">GitHub repo</a>
+    <a href="https://hub.docker.com/r/ipk0/open-resiapp" class="btn btn-ghost">Docker Hub image</a>
+  </div>
+</section>
+
+<section class="related-pages" aria-labelledby="related-h">
+  <h2 id="related-h">Súvisiace témy</h2>
+  <ul>
+    <li><a href="/cloud-cennik/">Cloud cenník — alternatíva k self-hosted</a><p>Ak nechcete spravovať server, cloud od 4 €/bytovku/mes.</p></li>
+    <li><a href="/elektronicke-hlasovanie-svb/">Elektronické hlasovanie SVB</a><p>Hlavná funkcia po inštalácii — ako spustiť prvé hlasovanie.</p></li>
+    <li><a href="/alternativa-resitech/">Alternatíva Resitech — porovnanie</a><p>Self-hosting je kľúčový rozdiel oproti SaaS konkurentom.</p></li>
+    <li><a href="/#api">API a integrácie</a><p>OpenAPI 3.1 docs pre rozšírenie self-hosted inštalácie.</p></li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>
+    <strong>OpenResiApp</strong> &ndash; open source pod licenciou MIT &middot;
+    <a href="/">Domov</a> &middot;
+    <a href="https://github.com/open-resiapp/open-resiapp">GitHub</a> &middot;
+    <a href="https://cloud.open-resi.app">Cloud</a> &middot;
+    <a href="https://github.com/open-resiapp/open-resiapp/discussions">Diskusie</a>
+  </p>
+  <p style="margin-top: 0.5rem;">Vytvorené pre slovenské bytové spoločenstvá, bytové družstvá a české SVJ.</p>
+</footer>
+
+</body>
+</html>

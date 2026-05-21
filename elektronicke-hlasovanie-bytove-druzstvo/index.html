@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elektronické hlasovanie bytového družstva · Členská schôdza online — OpenResiApp</title>
+  <meta name="description" content="Elektronické hlasovanie pre bytové družstvá podľa Obchodného zákonníka a stanov. Členská schôdza online, hlasovanie per rollam pre družstevníkov, mandáty, automatická PDF zápisnica. OpenResiApp — open source zadarmo alebo cloud od 4 €/mes." />
+  <meta name="keywords" content="elektronické hlasovanie bytového družstva, členská schôdza online, hlasovanie družstevníkov, bytové družstvo softvér, správa bytového družstva, Obchodný zákonník družstvo, stanovy bytového družstva, predstavenstvo družstva" />
+  <meta name="author" content="OpenResiApp" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://open-resi.app/elektronicke-hlasovanie-bytove-druzstvo/" />
+  <link rel="alternate" hreflang="sk" href="https://open-resi.app/elektronicke-hlasovanie-bytove-druzstvo/" />
+  <link rel="alternate" hreflang="x-default" href="https://open-resi.app/elektronicke-hlasovanie-bytove-druzstvo/" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Elektronické hlasovanie bytového družstva — sprievodca pre predstavenstvo" />
+  <meta property="og:description" content="Členská schôdza online, per rollam pre družstevníkov, mandáty, PDF zápisnice. OpenResiApp pre bytové družstvá." />
+  <meta property="og:url" content="https://open-resi.app/elektronicke-hlasovanie-bytove-druzstvo/" />
+  <meta property="og:site_name" content="OpenResiApp" />
+  <meta property="og:locale" content="sk_SK" />
+  <meta property="og:image" content="https://open-resi.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Elektronické hlasovanie bytového družstva · OpenResiApp" />
+  <meta name="twitter:description" content="Členská schôdza online, per rollam, mandáty, PDF zápisnice pre bytové družstvá." />
+  <meta name="twitter:image" content="https://open-resi.app/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Domov", "item": "https://open-resi.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Elektronické hlasovanie bytového družstva", "item": "https://open-resi.app/elektronicke-hlasovanie-bytove-druzstvo/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "inLanguage": "sk",
+    "headline": "Elektronické hlasovanie bytového družstva — sprievodca pre predstavenstvo",
+    "description": "Praktický sprievodca elektronickým hlasovaním v bytových družstvách na Slovensku. Členská schôdza, per rollam pre družstevníkov, mandáty, kvórum podľa stanov, automatická PDF zápisnica.",
+    "url": "https://open-resi.app/elektronicke-hlasovanie-bytove-druzstvo/",
+    "image": "https://open-resi.app/og-image.png",
+    "author": { "@type": "Organization", "name": "OpenResiApp", "url": "https://open-resi.app/" },
+    "publisher": { "@type": "Organization", "name": "OpenResiApp", "logo": { "@type": "ImageObject", "url": "https://open-resi.app/og-image.png" } },
+    "datePublished": "2026-05-21",
+    "dateModified": "2026-05-21",
+    "about": [
+      { "@type": "Thing", "name": "Bytové družstvo" },
+      { "@type": "Thing", "name": "Členská schôdza" },
+      { "@type": "Thing", "name": "Obchodný zákonník" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "sk",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Aký je rozdiel medzi hlasovaním v SVB a v bytovom družstve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SVB sa riadi zákonom č. 182/1993 Z. z., kde sa hlasuje podľa spoluvlastníckeho podielu, bytov alebo plochy. Bytové družstvo sa riadi Obchodným zákonníkom (zákon 513/1991 Zb., § 221-260) a svojimi stanovami — typicky platí pravidlo „jeden člen, jeden hlas", bez ohľadu na výšku členského podielu. Predstavenstvo a kontrolná komisia majú vlastné kompetencie definované v stanovách. OpenResiApp podporuje obe modely paralelne — pri vytvorení bytovky v systéme sa zvolí typ (SVB / bytové družstvo) a aplikujú sa správne pravidlá."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Môže bytové družstvo hlasovať per rollam?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Áno, ak to umožňujú stanovy družstva. Obchodný zákonník (§ 240a) výslovne dovoľuje rozhodovanie mimo členskej schôdze, ak stanovy túto formu pripúšťajú. OpenResiApp pri vytvorení per rollam hlasovania vyžaduje od administrátora potvrdenie, že stanovy túto formu umožňujú. Lehota na hlasovanie sa určí v rozsahu definovanom stanovami (typicky 7-30 dní)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ako sa vypočítava kvórum v bytovom družstve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kvórum sa určuje stanovami družstva, nie zákonom priamo. Typicky: členská schôdza je uznášaniaschopná ak je prítomná nadpolovičná väčšina členov; uznesenie je prijaté nadpolovičnou väčšinou prítomných; pre zásadné rozhodnutia (zmena stanov, zrušenie družstva) sa vyžaduje 2/3 alebo 3/4 väčšina. OpenResiApp pri vytvorení hlasovania umožňuje administrátorovi vybrať typ kvóra podľa stanov."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Aké úlohy má predstavenstvo bytového družstva v systéme?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Predstavenstvo má v OpenResiApp rolu Admin. Konkrétni členovia (predseda, podpredseda, členovia) sú v sekcii Predstavenstvo s funkčnými obdobiami a kompetenciami. Predstavenstvo vytvára hlasovania, publikuje oznamy na nástenku, spravuje členov a byty. Kontrolná komisia má samostatnú rolu s read-only prístupom k finančným dátam a hlasovacím výstupom."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Funguje OpenResiApp pre kombinované družstvá (časť bytov v družstevnom vlastníctve, časť v osobnom)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Áno. Toto je častý scenár — pôvodne družstevné byty postupne prevedené do osobného vlastníctva. OpenResiApp v takomto prípade rozlišuje dve skupiny: členovia družstva (hlasujú v družstevných veciach podľa stanov) a vlastníci jednotiek prevedených do osobného vlastníctva (hlasujú v SVB veciach podľa zákona 182/1993). Pri konkrétnom hlasovaní administrátor vyberie cieľovú skupinu — systém automaticky pošle pozvánky správnym osobám a aplikuje správne kvórum."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%235b8fff'/><text x='16' y='22' font-family='system-ui' font-size='18' font-weight='700' fill='white' text-anchor='middle'>R</text></svg>" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+
+<nav aria-label="Hlavná navigácia">
+  <div class="nav-inner">
+    <a href="/" class="logo"><span class="logo-dot">&blacksquare;</span> OpenResiApp</a>
+    <div class="nav-right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#features">Funkcie</a></li>
+        <li><a href="/#moduly">Moduly</a></li>
+        <li><a href="/#komunita">Komunita</a></li>
+        <li><a href="/#law">&sect; Zákon</a></li>
+        <li><a href="/#api">API</a></li>
+        <li><a href="/#cloud">Cloud</a></li>
+        <li><a href="/#docs">Docs</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="https://github.com/open-resiapp/open-resiapp" class="nav-cta">GitHub &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<nav class="breadcrumb" aria-label="Drobčeková navigácia">
+  <ol>
+    <li><a href="/">Domov</a></li>
+    <li aria-current="page">Elektronické hlasovanie bytového družstva</li>
+  </ol>
+</nav>
+
+<main>
+
+<header class="article-hero">
+  <h1>Elektronické hlasovanie bytového družstva — sprievodca pre predstavenstvo</h1>
+  <p class="lede">Bytové družstvo má iné právne prostredie ako SVB — riadi sa Obchodným zákonníkom a vlastnými stanovami, nie zákonom 182/1993. Hlasovacie pravidlá sú odlišné, štruktúra orgánov (predstavenstvo, kontrolná komisia) tiež. Tento sprievodca vysvetľuje, ako OpenResiApp implementuje rozdiely a ako spustiť elektronickú členskú schôdzu alebo per rollam hlasovanie družstevníkov za hodinu.</p>
+  <div class="article-meta">
+    <span><strong>Typ:</strong> Sprievodca pre bytové družstvá</span>
+    <span><strong>Pre koho:</strong> Predstavenstvo, predseda družstva</span>
+    <span><strong>Aktualizované:</strong> 21. máj 2026</span>
+  </div>
+</header>
+
+<article class="content">
+
+  <h2 id="bd-vs-svb">Bytové družstvo vs. SVB — kľúčové rozdiely</h2>
+  <p>Slovenské bytovky existujú v dvoch hlavných právnych formách: SVB (Spoločenstvo vlastníkov bytov a nebytových priestorov) a bytové družstvo. Pri hlasovaní sú rozdiely zásadné:</p>
+  <table>
+    <thead>
+      <tr><th>Aspekt</th><th>SVB</th><th>Bytové družstvo</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Právny rámec</td><td>Zákon 182/1993 Z. z.</td><td>Obchodný zákonník (513/1991 Zb.) + stanovy</td></tr>
+      <tr><td>Vlastníctvo bytu</td><td>Osobné vlastníctvo (LV katastra)</td><td>Členský podiel (právo užívať)</td></tr>
+      <tr><td>Spôsob hlasovania</td><td>Podľa podielu / bytov / plochy</td><td>Typicky „jeden člen, jeden hlas"</td></tr>
+      <tr><td>Riadiaci orgán</td><td>Predseda + výbor (voliteľný)</td><td>Predstavenstvo + kontrolná komisia (povinné)</td></tr>
+      <tr><td>Najvyšší orgán</td><td>Schôdza vlastníkov</td><td>Členská schôdza</td></tr>
+      <tr><td>Per rollam</td><td>§ 14a ods. 1 zákona 182/1993</td><td>§ 240a Obchodného zákonníka (ak to stanovy umožňujú)</td></tr>
+      <tr><td>Kvórum</td><td>Zákonom predpísané (3 typy)</td><td>Stanovy družstva</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="pravny-ramec">Právny rámec bytového družstva</h2>
+  <p>Bytové družstvo je osobitným druhom družstva podľa Obchodného zákonníka, paragrafy § 221 – 260. Účelom je zabezpečovať bytové potreby svojich členov. Hlavné dokumenty, ktoré rozhodujú o hlasovacích pravidlách:</p>
+  <ul>
+    <li><strong>Obchodný zákonník</strong> (zákon č. 513/1991 Zb.) — všeobecné pravidlá pre družstvá: členská schôdza, predstavenstvo, kontrolná komisia, per rollam (§ 240a).</li>
+    <li><strong>Stanovy družstva</strong> — konkretizujú: výšku členského podielu, spôsob hlasovania (typicky 1 člen = 1 hlas), kvórum pre rôzne typy rozhodnutí, dĺžku funkčného obdobia členov predstavenstva, kompetencie kontrolnej komisie.</li>
+    <li><strong>Zákon 182/1993 Z. z.</strong> — uplatňuje sa len pre tie byty, ktoré boli prevedené do osobného vlastníctva členov (vtedy paralelne s družstevnými právami platia aj práva spoluvlastníka).</li>
+  </ul>
+  <p>Najčastejšia chyba: predstavenstvo predpokladá, že platia rovnaké pravidlá ako v SVB. Nie sú. Pred prvým elektronickým hlasovaním je dôležité prejsť stanovy a overiť: (1) či povoľujú per rollam, (2) aké kvórum stanovujú pre dané rozhodnutie, (3) ako sa pri hlasovaní zohľadňujú spoluvlastníci členského podielu (manželia, BSM).</p>
+
+  <h2 id="clenske-prava">Členské práva a štruktúra orgánov</h2>
+  <p>OpenResiApp implementuje štruktúru orgánov bytového družstva ako rozšírenie nad rolami vlastníkov:</p>
+
+  <h3>Predstavenstvo</h3>
+  <p>Štatutárny orgán družstva. V OpenResiApp má rolu <strong>Admin</strong>. Konkrétni členovia sú v sekcii Predstavenstvo s rolami: predseda, podpredseda, členovia. Pre každého sa eviduje funkčné obdobie (začiatok, koniec, dôvod ukončenia: voľby / odstúpenie / odvolanie). Po skončení funkčného obdobia sa role automaticky archivuje.</p>
+
+  <h3>Kontrolná komisia</h3>
+  <p>Kontrolný orgán nezávislý od predstavenstva. V OpenResiApp má samostatnú rolu s read-only prístupom k: zápisniciam, finančným výstupom, hlasovacím audit logom. Členovia kontrolnej komisie nemôžu vytvárať hlasovania ani spravovať členov — len kontrolovať.</p>
+
+  <h3>Členovia družstva</h3>
+  <p>Bežní družstevníci s rolou <strong>Vlastník</strong>. Každý člen hlasuje jedným hlasom (ak stanovy neurčia inak). Členský podiel a iné finančné údaje sa zobrazujú v profile člena.</p>
+
+  <h3>Nájomcovia</h3>
+  <p>Niektoré družstevné byty môžu byť prenajaté nečlenom. Nájomca má read-only rolu — vidí nástenku a oznamy, ale nemá hlasovacie práva.</p>
+
+  <h2 id="clenska-schodza">Členská schôdza — kľúčový orgán</h2>
+  <p>Členská schôdza je najvyšší orgán bytového družstva. Rozhoduje o zásadných otázkach: schválenie ročnej účtovnej závierky, voľba a odvolanie členov predstavenstva a kontrolnej komisie, zmena stanov, zrušenie družstva, prevod družstevných bytov do osobného vlastníctva.</p>
+  <p>OpenResiApp podporuje členskú schôdzu v troch formátoch:</p>
+  <ol>
+    <li><strong>Klasická prezenčná schôdza</strong> — členovia sa zídu fyzicky, hlasujú zdvihnutím ruky alebo papierovým lístkom; sčítač zadá hlasy do systému v reálnom čase cez tablet alebo notebook.</li>
+    <li><strong>Hybridná schôdza</strong> — kombinácia prezenčných členov a vzdialených, ktorí hlasujú cez QR kód na svojom telefóne počas schôdze.</li>
+    <li><strong>Per rollam</strong> — písomné rozhodovanie mimo schôdze podľa § 240a Obchodného zákonníka. Členovia dostanú email s odkazom na hlasovací formulár, hlasujú v určenom termíne.</li>
+  </ol>
+
+  <h2 id="per-rollam-druzstvo">Per rollam pre družstevníkov</h2>
+  <p>Per rollam (§ 240a Obchodného zákonníka) je vhodné pre rutinné rozhodnutia, kde sa neočakáva diskusia. <strong>Podmienkou je, že stanovy túto formu povoľujú</strong> — bez toho nemôže predstavenstvo per rollam vyhlásiť.</p>
+  <p>Postup v OpenResiApp:</p>
+  <ol>
+    <li>Predseda predstavenstva otvorí Hlasovania → Vytvoriť → Per rollam.</li>
+    <li>Systém vyžaduje potvrdenie, že stanovy túto formu povoľujú (legal compliance check).</li>
+    <li>Vyplnenie návrhu, dôvodovej správy, príloh (zápisnica predstavenstva, ktorý hlasovanie vyhlásil).</li>
+    <li>Výber kvóra podľa stanov (typicky nadpolovičná väčšina všetkých členov; pre zásadné rozhodnutia kvalifikovaná).</li>
+    <li>Spustenie — všetci členovia dostanú email/SMS s odkazom na hlasovací formulár.</li>
+    <li>Po skončení sa generuje PDF zápisnica obsahujúca: zoznam členov, ich hlasy, výpočet kvóra, výsledok, audit log, QR kód overovania.</li>
+  </ol>
+  <p>Pre členov bez internetu kontrolná komisia (alebo poverený člen predstavenstva) zadá papierový hlas s fotografiou podpísaného lístka — rovnaký mechanizmus ako pri SVB.</p>
+
+  <h2 id="kombinovane-byty">Kombinované družstvá — časť bytov v osobnom vlastníctve</h2>
+  <p>Reálna situácia mnohých starších slovenských bytoviek: pôvodne všetky byty boli v družstevnom vlastníctve, postupne sa časť previedla do osobného vlastníctva členov. Vznikol hybrid: časť obyvateľov sú stále členovia družstva, časť sú vlastníci podľa SVB pravidiel.</p>
+  <p>OpenResiApp tento scenár rieši týmto spôsobom:</p>
+  <ul>
+    <li>Každý byt má atribút <em>typ vlastníctva</em>: <code>cooperative</code> (družstevný), <code>personal</code> (osobné vlastníctvo), <code>mixed</code> (časť oboje).</li>
+    <li>Pri vytvorení hlasovania administrátor vyberie cieľovú skupinu: <em>Všetci členovia družstva</em> / <em>Všetci vlastníci podľa SVB</em> / <em>Kombinácia podľa typu rozhodnutia</em>.</li>
+    <li>Systém automaticky pošle pozvánky správnym osobám a aplikuje správne kvórum pre danú skupinu.</li>
+    <li>PDF zápisnica jasne uvádza, ktoré pravidlá sa aplikovali (Obchodný zákonník vs. zákon 182/1993).</li>
+  </ul>
+
+  <h2 id="audit-zapisnica">Audit log a PDF zápisnica</h2>
+  <p>Rovnako ako pri SVB, každý hlas má SHA-256 hash, email potvrdenie, časovú pečiatku. PDF zápisnica obsahuje:</p>
+  <ul>
+    <li>Hlavičku s IČO, sídlom, IBAN bytového družstva</li>
+    <li>Identifikáciu typu hlasovania: členská schôdza / per rollam</li>
+    <li>Citáciu paragrafu stanov, podľa ktorého sa hlasovanie konalo</li>
+    <li>Zoznam členov s ich hlasmi (alebo absenciou)</li>
+    <li>Výpočet kvóra podľa stanov + výsledok</li>
+    <li>Použité mandáty s odkazmi na overené splnomocnenia</li>
+    <li>Miesto pre podpis predsedu predstavenstva a člena kontrolnej komisie ako overovateľa</li>
+    <li>QR kód s linkom na online overenie zápisnice</li>
+  </ul>
+
+  <h2 id="spustenie">Ako spustiť OpenResiApp v bytovom družstve</h2>
+  <ol>
+    <li><strong>Príprava údajov</strong> — zoznam členov družstva (z evidencie družstva), zoznam bytov s typmi vlastníctva, stanovy družstva (PDF) na referenciu.</li>
+    <li><strong>Vytvorenie bytovky v systéme</strong> — pri zakladaní vyberiete typ <em>Bytové družstvo</em>; systém aplikuje správny model orgánov (predstavenstvo + kontrolná komisia).</li>
+    <li><strong>Import členov</strong> — cez XLSX template alebo manuálne. Pre každého: meno, byt, email/SMS, typ vlastníctva.</li>
+    <li><strong>Nastavenie stanov</strong> — zadanie kvórových pravidiel a per rollam povolenia (jednorazové, podľa textu stanov).</li>
+    <li><strong>Onboarding členov</strong> — QR kód na členskej schôdzi alebo na vývesku v paneláku. Členovia sa registrujú, kontrolná komisia overuje pending queue.</li>
+    <li><strong>Prvé hlasovanie</strong> — odporúčame začať drobným per rollam (napr. schválenie kategórie údržbových výdavkov) na osvojenie postupu.</li>
+  </ol>
+
+</article>
+
+<section class="faq-list" id="faq" aria-labelledby="faq-h">
+  <h2 id="faq-h">Časté otázky — elektronické hlasovanie bytového družstva</h2>
+
+  <details>
+    <summary>Aký je rozdiel medzi hlasovaním v SVB a v bytovom družstve?</summary>
+    <div class="answer"><p>SVB sa riadi zákonom č. 182/1993 Z. z., kde sa hlasuje podľa spoluvlastníckeho podielu, bytov alebo plochy. Bytové družstvo sa riadi Obchodným zákonníkom (zákon 513/1991 Zb., § 221-260) a svojimi stanovami — typicky platí pravidlo „jeden člen, jeden hlas", bez ohľadu na výšku členského podielu. Predstavenstvo a kontrolná komisia majú vlastné kompetencie definované v stanovách. OpenResiApp podporuje obe modely paralelne — pri vytvorení bytovky v systéme sa zvolí typ (SVB / bytové družstvo) a aplikujú sa správne pravidlá.</p></div>
+  </details>
+
+  <details>
+    <summary>Môže bytové družstvo hlasovať per rollam?</summary>
+    <div class="answer"><p>Áno, ak to umožňujú stanovy družstva. Obchodný zákonník (§ 240a) výslovne dovoľuje rozhodovanie mimo členskej schôdze, ak stanovy túto formu pripúšťajú. OpenResiApp pri vytvorení per rollam hlasovania vyžaduje od administrátora potvrdenie, že stanovy túto formu umožňujú. Lehota na hlasovanie sa určí v rozsahu definovanom stanovami (typicky 7-30 dní).</p></div>
+  </details>
+
+  <details>
+    <summary>Ako sa vypočítava kvórum v bytovom družstve?</summary>
+    <div class="answer"><p>Kvórum sa určuje stanovami družstva, nie zákonom priamo. Typicky: členská schôdza je uznášaniaschopná ak je prítomná nadpolovičná väčšina členov; uznesenie je prijaté nadpolovičnou väčšinou prítomných; pre zásadné rozhodnutia (zmena stanov, zrušenie družstva) sa vyžaduje 2/3 alebo 3/4 väčšina. OpenResiApp pri vytvorení hlasovania umožňuje administrátorovi vybrať typ kvóra podľa stanov.</p></div>
+  </details>
+
+  <details>
+    <summary>Aké úlohy má predstavenstvo bytového družstva v systéme?</summary>
+    <div class="answer"><p>Predstavenstvo má v OpenResiApp rolu <strong>Admin</strong>. Konkrétni členovia (predseda, podpredseda, členovia) sú v sekcii Predstavenstvo s funkčnými obdobiami a kompetenciami. Predstavenstvo vytvára hlasovania, publikuje oznamy na nástenku, spravuje členov a byty. Kontrolná komisia má samostatnú rolu s read-only prístupom k finančným dátam a hlasovacím výstupom.</p></div>
+  </details>
+
+  <details>
+    <summary>Funguje OpenResiApp pre kombinované družstvá?</summary>
+    <div class="answer"><p>Áno. Toto je častý scenár — pôvodne družstevné byty postupne prevedené do osobného vlastníctva. OpenResiApp v takomto prípade rozlišuje dve skupiny: členovia družstva (hlasujú v družstevných veciach podľa stanov) a vlastníci jednotiek prevedených do osobného vlastníctva (hlasujú v SVB veciach podľa zákona 182/1993). Pri konkrétnom hlasovaní administrátor vyberie cieľovú skupinu — systém automaticky pošle pozvánky správnym osobám a aplikuje správne kvórum.</p></div>
+  </details>
+</section>
+
+<section class="page-cta">
+  <h2>Vyskúšajte OpenResiApp v bytovom družstve</h2>
+  <p>7-dňová cloud skúška bez kreditnej karty, alebo plne self-hosted cez Docker zadarmo. Plná podpora kombinovaných družstiev a SVB modelu.</p>
+  <div class="btns">
+    <a href="https://cloud.open-resi.app" class="btn btn-primary">Spustiť cloud skúšku</a>
+    <a href="https://github.com/open-resiapp/open-resiapp" class="btn btn-ghost">GitHub repo</a>
+  </div>
+</section>
+
+<section class="related-pages" aria-labelledby="related-h">
+  <h2 id="related-h">Súvisiace témy</h2>
+  <ul>
+    <li><a href="/elektronicke-hlasovanie-svb/">Elektronické hlasovanie SVB — sprievodca</a><p>Pre bytové spoločenstvá vlastníkov podľa zákona 182/1993.</p></li>
+    <li><a href="/alternativa-resitech/">Alternatíva Resitech — porovnanie</a><p>Pre družstvá hľadajúce alternatívu k existujúcemu softvéru.</p></li>
+    <li><a href="/cloud-cennik/">Cloud cenník</a><p>4-7 €/bytovku/mes s objemovými zľavami pre väčšie družstvá.</p></li>
+    <li><a href="/#komunita">Susedská komunita — modul</a><p>Burza, výpomoc, udalosti pre členov družstva.</p></li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>
+    <strong>OpenResiApp</strong> &ndash; open source pod licenciou MIT &middot;
+    <a href="/">Domov</a> &middot;
+    <a href="https://github.com/open-resiapp/open-resiapp">GitHub</a> &middot;
+    <a href="https://cloud.open-resi.app">Cloud</a> &middot;
+    <a href="https://github.com/open-resiapp/open-resiapp/discussions">Diskusie</a>
+  </p>
+  <p style="margin-top: 0.5rem;">Vytvorené pre slovenské bytové spoločenstvá, bytové družstvá a české SVJ.</p>
+</footer>
+
+</body>
+</html>

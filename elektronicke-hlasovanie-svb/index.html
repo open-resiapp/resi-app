@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elektronické hlasovanie SVB · Online hlasovanie vlastníkov bytov podľa zákona 182/1993 — OpenResiApp</title>
+  <meta name="description" content="Ako funguje elektronické hlasovanie v SVB podľa zákona 182/1993 Z. z. Per rollam, hlasovanie na schôdzi, kvórum, mandáty, PDF zápisnice. OpenResiApp — open-source software pre bytové spoločenstvá zadarmo (self-hosted) alebo cloud od 4 €/mes." />
+  <meta name="keywords" content="elektronické hlasovanie SVB, elektronické hlasovanie vlastníkov bytov, online hlasovanie bytového spoločenstva, hlasovanie per rollam, zákon 182/1993, online schôdza SVB, mandát so úradne overeným podpisom, kvórum bytového spoločenstva, PDF zápisnica zo schôdze, sčítač hlasov" />
+  <meta name="author" content="OpenResiApp" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://open-resi.app/elektronicke-hlasovanie-svb/" />
+  <link rel="alternate" hreflang="sk" href="https://open-resi.app/elektronicke-hlasovanie-svb/" />
+  <link rel="alternate" hreflang="cs" href="https://open-resi.app/cs/elektronicke-hlasovani-svj/" />
+  <link rel="alternate" hreflang="x-default" href="https://open-resi.app/elektronicke-hlasovanie-svb/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Elektronické hlasovanie SVB — sprievodca podľa zákona 182/1993" />
+  <meta property="og:description" content="Ako funguje elektronické hlasovanie v SVB. Právny rámec, postup spustenia, kvórum, mandáty, PDF zápisnice. Open-source software OpenResiApp zadarmo alebo cloud od 4 €/mes." />
+  <meta property="og:url" content="https://open-resi.app/elektronicke-hlasovanie-svb/" />
+  <meta property="og:site_name" content="OpenResiApp" />
+  <meta property="og:locale" content="sk_SK" />
+  <meta property="og:image" content="https://open-resi.app/og-image.png" />
+  <meta property="og:image:secure_url" content="https://open-resi.app/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="OpenResiApp — elektronické hlasovanie a správa bytovky pre SVB, bytové družstvá a české SVJ." />
+  <meta property="article:section" content="Elektronické hlasovanie" />
+  <meta property="article:tag" content="SVB" />
+  <meta property="article:tag" content="zákon 182/1993" />
+  <meta property="article:tag" content="per rollam" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Elektronické hlasovanie SVB · OpenResiApp" />
+  <meta name="twitter:description" content="Sprievodca elektronickým hlasovaním v SVB podľa zákona 182/1993. Per rollam, mandáty, kvórum, PDF zápisnice." />
+  <meta name="twitter:image" content="https://open-resi.app/og-image.png" />
+  <meta name="twitter:image:alt" content="OpenResiApp — elektronické hlasovanie pre SVB." />
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Domov", "item": "https://open-resi.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Funkcie", "item": "https://open-resi.app/#features" },
+      { "@type": "ListItem", "position": 3, "name": "Elektronické hlasovanie SVB", "item": "https://open-resi.app/elektronicke-hlasovanie-svb/" }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: TechArticle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "inLanguage": "sk",
+    "headline": "Elektronické hlasovanie SVB — sprievodca podľa zákona 182/1993",
+    "description": "Praktický sprievodca elektronickým hlasovaním v bytových spoločenstvách (SVB) podľa zákona č. 182/1993 Z. z. Vysvetľuje per rollam, hlasovanie na schôdzi, mandáty, kvórum, PDF zápisnice a postup spustenia hlasovania krok za krokom.",
+    "url": "https://open-resi.app/elektronicke-hlasovanie-svb/",
+    "image": "https://open-resi.app/og-image.png",
+    "author": {
+      "@type": "Organization",
+      "name": "OpenResiApp",
+      "url": "https://open-resi.app/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "OpenResiApp",
+      "url": "https://open-resi.app/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://open-resi.app/og-image.png"
+      }
+    },
+    "datePublished": "2026-05-21",
+    "dateModified": "2026-05-21",
+    "about": [
+      { "@type": "Thing", "name": "Elektronické hlasovanie vlastníkov bytov" },
+      { "@type": "Thing", "name": "Zákon č. 182/1993 Z. z. o vlastníctve bytov" },
+      { "@type": "Thing", "name": "Hlasovanie per rollam" }
+    ],
+    "audience": [
+      { "@type": "Audience", "audienceType": "Predseda SVB" },
+      { "@type": "Audience", "audienceType": "Výbor bytového družstva" }
+    ],
+    "proficiencyLevel": "Beginner"
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage (page-specific, 5 questions) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "sk",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Je elektronické hlasovanie SVB právne záväzné?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Áno, ak je vykonané v súlade so zákonom č. 182/1993 Z. z. a domovým poriadkom. Zákon nepredpisuje konkrétnu technológiu — vyžaduje len, aby bola dodržaná procedúra (oznámenie, hlasovací lístok, zápisnica, podpisy). Elektronické hlasovanie cez OpenResiApp generuje SHA-256 audit log, email potvrdenie každého hlasu a automatickú PDF zápisnicu s QR kódom overovania. Toto všetko obstojí pri kontrole zo strany banky, ŠFRB aj okresného úradu."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Aký je rozdiel medzi hlasovaním per rollam a hlasovaním na schôdzi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Per rollam (§ 14a ods. 1 zákona 182/1993) je písomné hlasovanie mimo schôdze — vlastníci hlasujú v určenom termíne, nemusia sa fyzicky zísť. Hlasovanie na schôdzi prebieha prezenčne, ale OpenResiApp umožňuje aj v tomto formáte zaznamenať hlasy elektronicky (cez tablet alebo telefón priamo v miestnosti). Per rollam je vhodné pre rutinné rozhodnutia, schôdza pre závažnejšie veci kde sa očakáva diskusia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ako sa vypočítava kvórum pri elektronickom hlasovaní?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zákon 182/1993 pozná tri typy kvóra (§ 14b): (1) nadpolovičná väčšina prítomných — pre bežné rozhodnutia, (2) nadpolovičná väčšina všetkých vlastníkov — pre dôležitejšie veci, (3) 2/3 všetkých vlastníkov — pre zásadné rozhodnutia (úver, predaj spoločných častí). OpenResiApp pri vytvorení hlasovania vyžaduje výber typu kvóra, automaticky počíta dosiahnutie a v PDF zápisnici uvedie ako čísla, tak percentá."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Aké podmienky platia pre mandát (splnomocnenie)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Podľa § 14a ods. 4 musí byť splnomocnenie s úradne overeným podpisom (notár alebo matrika). Reťazové mandáty sú zakázané — splnomocnenec nemôže ďalej delegovať. OpenResiApp pri zadávaní mandátu vyžaduje upload skenu/fotky overeného dokumentu, ktorý sa zaznamená v audit logu a priloží k PDF zápisnici. Mandát platí len pre konkrétne hlasovanie, po jeho skončení automaticky zaniká."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Čo s vlastníkmi, ktorí nemajú internet alebo smartfón?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "OpenResiApp má rolu Sčítač hlasov. Administrátor jej pri vytvorení hlasovania priradí dôveryhodnú osobu (typicky predseda alebo člen výboru). Vlastník bez internetu vyplní papierový hlasovací lístok, sčítač ho odfotí a hlas zadá do systému za neho. Vlastník dostane SMS alebo email potvrdenie (ak má aspoň jedno z toho). Rola sčítača platí len pre konkrétne hlasovanie a po jeho skončení automaticky zaniká — nedá sa zneužiť spätne."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%235b8fff'/><text x='16' y='22' font-family='system-ui' font-size='18' font-weight='700' fill='white' text-anchor='middle'>R</text></svg>" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav aria-label="Hlavná navigácia">
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <span class="logo-dot">&blacksquare;</span> OpenResiApp
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#features">Funkcie</a></li>
+        <li><a href="/#moduly">Moduly</a></li>
+        <li><a href="/#komunita">Komunita</a></li>
+        <li><a href="/#law">&sect; Zákon</a></li>
+        <li><a href="/#api">API</a></li>
+        <li><a href="/#cloud">Cloud</a></li>
+        <li><a href="/#docs">Docs</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="https://github.com/open-resiapp/open-resiapp" class="nav-cta">GitHub &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Drobčeková navigácia">
+  <ol>
+    <li><a href="/">Domov</a></li>
+    <li><a href="/#features">Funkcie</a></li>
+    <li aria-current="page">Elektronické hlasovanie SVB</li>
+  </ol>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<header class="article-hero">
+  <h1>Elektronické hlasovanie SVB — sprievodca podľa zákona 182/1993</h1>
+  <p class="lede">Online hlasovanie vlastníkov bytov nie je len pohodlie — je to spôsob, ako splniť všetky náležitosti zákona č. 182/1993 Z. z., zachovať auditný záznam každého hlasu a vygenerovať zápisnicu, ktorá obstojí pri kontrole banky, ŠFRB aj okresného úradu. Tento sprievodca vysvetľuje, ako to celé funguje a ako to nastavíte za hodinu.</p>
+  <div class="article-meta">
+    <span><strong>Téma:</strong> Elektronické hlasovanie vlastníkov bytov</span>
+    <span><strong>Pre koho:</strong> Predseda SVB, výbor bytového družstva</span>
+    <span><strong>Aktualizované:</strong> 21. máj 2026</span>
+  </div>
+</header>
+
+<article class="content">
+
+  <h2 id="co-je">Čo je elektronické hlasovanie SVB</h2>
+  <p>Elektronické hlasovanie v bytovom spoločenstve (SVB) je proces, pri ktorom vlastníci bytov hlasujú o návrhoch cez webovú aplikáciu, nie papierovými lístkami v miestnosti. Hlasy sa zaznamenávajú v reálnom čase, systém kontroluje kvórum, generuje audit log a po skončení automaticky vytvorí PDF zápisnicu s podpismi a QR kódom overenia.</p>
+  <p>Z právneho hľadiska nejde o samostatnú „elektronickú" formu — zákon 182/1993 nepredpisuje konkrétnu technológiu. Zákon hovorí o <strong>procedúre</strong>: oznámenie, hlasovací lístok, zápisnica, podpisy. Ak elektronické riešenie spĺňa všetky tieto kroky a zachová audit trail, je rovnocenné s papierovým hlasovaním.</p>
+  <p>V praxi <strong>elektronické hlasovanie ušetrí 2-3 hodiny administratívy</strong> pri každom rozhodnutí. Predseda nezbiera lístky po schránkach, neprepisuje hlasy do tabuľky, nepočíta kvórum manuálne. Vlastníci hlasujú z telefónu počas obeda. PDF zápisnica je hotová tridsať sekúnd po skončení hlasovania.</p>
+
+  <h2 id="pravny-ramec">Právny rámec — zákon č. 182/1993 Z. z.</h2>
+  <p>Zákon č. 182/1993 Z. z. o vlastníctve bytov a nebytových priestorov v znení neskorších predpisov je hlavným právnym predpisom upravujúcim správu bytového domu na Slovensku. Pre účely hlasovania sú dôležité najmä tieto paragrafy:</p>
+  <ul>
+    <li><strong>§ 14 ods. 2</strong> — tri metódy hlasovania: podľa <em>spoluvlastníckeho podielu</em>, podľa <em>bytov</em>, alebo podľa <em>plochy</em>.</li>
+    <li><strong>§ 14a ods. 1</strong> — možnosť hlasovať <em>per rollam</em> (písomne mimo schôdze).</li>
+    <li><strong>§ 14a ods. 4</strong> — mandát so úradne overeným podpisom; zákaz reťazenia.</li>
+    <li><strong>§ 14b ods. 1–2</strong> — tri typy kvóra (väčšina prítomných, väčšina všetkých, 2/3 všetkých).</li>
+    <li><strong>§ 14b ods. 5</strong> — ¼ vlastníkov môže iniciovať hlasovanie.</li>
+  </ul>
+  <p>OpenResiApp implementuje všetky tieto požiadavky priamo v hlasovacom module — pri vytváraní hlasovania administrátor vyberie spôsob, typ kvóra a formu (per rollam alebo na schôdzi). Systém potom automaticky aplikuje správnu logiku počítania hlasov.</p>
+  <p>Plné znenie zákona nájdete na <a href="https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1993/182/" rel="noopener">slov-lex.sk</a> — odporúčame predsedom prečítať si aspoň § 14 a § 14a, aby rozumeli, čo systém v pozadí robí.</p>
+
+  <h2 id="per-rollam-vs-schodza">Per rollam vs. hlasovanie na schôdzi</h2>
+  <p>Toto sú dve odlišné formy hlasovania, ktoré zákon povoľuje. OpenResiApp podporuje obe, no líšia sa procedúrou aj typom rozhodnutí.</p>
+
+  <h3>Per rollam — písomné hlasovanie mimo schôdze</h3>
+  <p>Vlastníci dostanú email (alebo SMS, ak nemajú email) s odkazom na hlasovací formulár. Otvoria ho v prehliadači, vidia návrh, dôvodovú správu, prílohy. Kliknú <em>Áno / Nie / Zdržal sa</em>. Systém zaznamená SHA-256 hash hlasu, pošle email potvrdenie, hlas je zarátaný. Hlasovanie trvá typicky 7-14 dní (lehotu určí administrátor).</p>
+  <p>Per rollam je vhodné pre: schválenie ročnej účtovnej závierky, odsúhlasenie drobnej opravy, voľbu člena výboru, rutinné rozhodnutia bez potreby diskusie.</p>
+
+  <h3>Hlasovanie na schôdzi</h3>
+  <p>Vlastníci sa zídu fyzicky (alebo online cez videokonferenciu). OpenResiApp na schôdzi využijete tak, že každý prítomný hlasuje z telefónu cez QR kód premietnutý na plátne, alebo sčítač zadá hlasy z papierových lístkov priamo v miestnosti. Výsledok je viditeľný v reálnom čase a okamžite po skončení sa generuje PDF zápisnica.</p>
+  <p>Hlasovanie na schôdzi je vhodné pre: zásadné rozhodnutia (úver, rekonštrukcia strechy, predaj spoločných častí), rozhodnutia kde sa očakáva diskusia, voľbu predsedu.</p>
+
+  <h2 id="metody-hlasovania">Tri metódy hlasovania</h2>
+  <p>Zákon (§ 14 ods. 2) povoľuje tri spôsoby vyjadrenia hlasu, ktoré určí domový poriadok alebo zhromaždenie:</p>
+  <table>
+    <thead>
+      <tr><th>Metóda</th><th>Princíp</th><th>Kedy použiť</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Podľa podielu</strong></td>
+        <td>Hlas každého vlastníka má váhu jeho spoluvlastníckeho podielu (napr. 1/96 = váha 0,0104).</td>
+        <td>Najčastejšie. Spravodlivé voči majiteľom väčších bytov.</td>
+      </tr>
+      <tr>
+        <td><strong>Podľa bytov</strong></td>
+        <td>Každý byt = 1 hlas, bez ohľadu na podiel alebo počet vlastníkov bytu.</td>
+        <td>Keď je dôležitý počet hlasujúcich entít, nie majetková sila.</td>
+      </tr>
+      <tr>
+        <td><strong>Podľa plochy</strong></td>
+        <td>Hlas = váha podľa m² podlahovej plochy bytu.</td>
+        <td>Zriedka. Pri rozhodovaniach týkajúcich sa údržby plôch.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>OpenResiApp pri vytváraní hlasovania vyžaduje výber metódy a automaticky aplikuje správne váhy zo zaznamenaných údajov bytov. Pri importe kataster LV (slovenského listu vlastníctva) systém prevezme presné podiely vo formáte 1/96, 5/128 atď.</p>
+
+  <h2 id="kvorum">Tri typy kvóra</h2>
+  <p>Kvórum (§ 14b) určuje, koľko vlastníkov musí byť za, aby návrh prešiel. Zákon pozná tri základné typy + jeden špeciálny:</p>
+  <ul>
+    <li><strong>Nadpolovičná väčšina prítomných</strong> — najbežnejšia. Pre rutinné rozhodnutia.</li>
+    <li><strong>Nadpolovičná väčšina všetkých vlastníkov</strong> — pre dôležitejšie rozhodnutia (napr. zmena domového poriadku).</li>
+    <li><strong>Dvojtretinová väčšina všetkých</strong> — pre zásadné rozhodnutia (úver, predaj spoločných častí, rekonštrukcia nad určitý limit).</li>
+    <li><strong>Jednomyseľnosť všetkých</strong> — pre extrémne závažné rozhodnutia (zmena spôsobu vyhotovenia hlasovania na trvalo).</li>
+  </ul>
+  <p>OpenResiApp pri vytváraní hlasovania ponúkne dropdown s typom kvóra. Po skončení v reálnom čase ukazuje stav: <em>„Pre: 12 / 24 vlastníkov (50,0 %) — kvórum nedosiahnuté"</em> alebo <em>„Pre: 18 / 24 (75 % — kvórum dosiahnuté)"</em>. V PDF zápisnici je výpočet rozpísaný kompletne — auditor banky si vie všetko overiť.</p>
+
+  <h2 id="mandaty">Mandáty so úradne overeným podpisom</h2>
+  <p>Vlastník, ktorý sa nemôže zúčastniť hlasovania (dovolenka, hospitalizácia, pobyt v zahraničí), môže splnomocniť suseda. Podľa § 14a ods. 4 musí byť splnomocnenie <strong>úradne overené</strong> — notár alebo matrika (poplatok ~3 €).</p>
+  <p>Dôležité obmedzenia:</p>
+  <ul>
+    <li>Reťazové delegovanie je <strong>zakázané</strong> — splnomocnenec nemôže ďalej splnomocniť tretiu osobu.</li>
+    <li>Mandát platí len pre <strong>konkrétne hlasovanie</strong>, na ktoré bol vystavený. Po jeho skončení automaticky zaniká.</li>
+    <li>V OpenResiApp sa skén/foto overeného dokumentu uploaduje pri zadávaní mandátu a stáva sa súčasťou audit logu + prílohou PDF zápisnice.</li>
+  </ul>
+  <p>Toto je oblasť, kde elektronický systém pomôže najviac — papierové mandáty sa stratia, OpenResiApp ich uchová natrvalo a previaže s konkrétnym hlasom v audit logu.</p>
+
+  <h2 id="postup">Postup: ako spustiť hlasovanie v 5 krokoch</h2>
+  <p>V OpenResiApp je vytvorenie hlasovania otázka 5 minút. Postup:</p>
+  <ol>
+    <li><strong>Prihlás sa ako Admin / Predseda</strong> a otvor sekciu <em>Hlasovania</em> → <em>Vytvoriť nové</em>.</li>
+    <li><strong>Vyplň základné údaje:</strong> názov, popis návrhu, prílohy (zmluva, projekt, cenová ponuka).</li>
+    <li><strong>Vyber parametre:</strong> forma (per rollam / schôdza), metóda (podiel / byty / plocha), typ kvóra, dátum začiatku a konca.</li>
+    <li><strong>Voliteľne priraď sčítača hlasov</strong> pre vlastníkov bez internetu a notifikačný kanál (email / SMS / oboje).</li>
+    <li><strong>Spusti hlasovanie</strong> — všetkým oprávneným vlastníkom okamžite odíde notifikácia s jedinečným odkazom.</li>
+  </ol>
+  <p>Po skončení hlasovania klikneš <em>Generovať zápisnicu</em>. Systém vyrobí PDF s presným výpočtom, audit logom, QR kódom na overenie a miestom pre fyzický podpis predsedu a overovateľa. Skenovaný podpísaný PDF si potom môžeš nahrať späť do systému ako finálnu verziu.</p>
+
+  <h2 id="audit-log">Audit log a PDF zápisnica</h2>
+  <p>Každý hlas v OpenResiApp je zaznamenaný s týmito údajmi:</p>
+  <ul>
+    <li>Identifikátor vlastníka + jeho podiel / byt / plocha</li>
+    <li>Hodnota hlasu (Áno / Nie / Zdržal sa)</li>
+    <li>Časová pečiatka (presnosť na milisekundu)</li>
+    <li>SHA-256 hash kompletnej hlasovacej transakcie (nezfalšovateľný)</li>
+    <li>IP adresa (z dôvodov auditu, nie GDPR sledovania — popisované v privacy policy)</li>
+    <li>Email potvrdenie s ID hlasu — vlastník má dôkaz svojho hlasovania</li>
+  </ul>
+  <p>PDF zápisnica obsahuje:</p>
+  <ul>
+    <li>Hlavičku s názvom SVB, IČO, adresou, dátumom hlasovania</li>
+    <li>Plné znenie návrhu + prílohy ako odkazy</li>
+    <li>Tabuľku všetkých hlasov so súčtami a percentami</li>
+    <li>Vyhodnotenie kvóra s výpočtom</li>
+    <li>Zoznam použitých mandátov s odkazmi na overené splnomocnenia</li>
+    <li>QR kód s odkazom na online verziu zápisnice (na overenie tretími stranami — banka, ŠFRB)</li>
+    <li>Miesto pre fyzický podpis predsedu a overovateľa</li>
+  </ul>
+  <p>Tento výstup obstojí pri kontrole zo strany ŠFRB pri žiadosti o úver, pri kontrole katastra pri zápise nájomnej zmluvy, aj pri spore u súdu.</p>
+
+  <h2 id="bez-internetu">Pre vlastníkov bez internetu — rola Sčítač hlasov</h2>
+  <p>Realita slovenských bytoviek: ~10–15 % vlastníkov sú dôchodcovia bez internetu alebo emailovej adresy. OpenResiApp to rieši rolou <em>Sčítač hlasov</em>.</p>
+  <p>Pri vytváraní hlasovania administrátor priradí dôveryhodnú osobu (typicky predseda alebo člen výboru) na rolu sčítača. Tá pri stretnutí so seniorom-vlastníkom:</p>
+  <ol>
+    <li>Vytlačí papierový hlasovací lístok (OpenResiApp ho generuje s QR kódom unikátnym pre daného vlastníka).</li>
+    <li>Vlastník hlas vyplní, podpíše.</li>
+    <li>Sčítač lístok odfotí mobilom a v aplikácii klikne <em>„Pridať papierový hlas"</em>, vyberie vlastníka, hodnotu, priloží foto.</li>
+    <li>Systém pošle vlastníkovi SMS potvrdenie (ak má telefón) — má dôkaz, že hlas bol zaznamenaný.</li>
+  </ol>
+  <p>Rola sčítača je <strong>časovo ohraničená</strong> — platí len pre konkrétne hlasovanie. Po jeho skončení sa role v systéme deaktivuje. Sčítač sa nemôže prihlásiť ako vlastník a nemôže pristúpiť k iným hlasovaniam, ku ktorým nedostal poverenie.</p>
+
+</article>
+
+<!-- FAQ -->
+<section class="faq-list" id="faq" aria-labelledby="faq-h">
+  <h2 id="faq-h">Časté otázky — elektronické hlasovanie SVB</h2>
+
+  <details>
+    <summary>Je elektronické hlasovanie SVB právne záväzné?</summary>
+    <div class="answer">
+      <p>Áno, ak je vykonané v súlade so zákonom č. 182/1993 Z. z. a domovým poriadkom. Zákon nepredpisuje konkrétnu technológiu — vyžaduje len, aby bola dodržaná procedúra (oznámenie, hlasovací lístok, zápisnica, podpisy). Elektronické hlasovanie cez OpenResiApp generuje SHA-256 audit log, email potvrdenie každého hlasu a automatickú PDF zápisnicu s QR kódom overovania. Toto všetko obstojí pri kontrole zo strany banky, ŠFRB aj okresného úradu.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Aký je rozdiel medzi hlasovaním per rollam a hlasovaním na schôdzi?</summary>
+    <div class="answer">
+      <p>Per rollam (§ 14a ods. 1 zákona 182/1993) je písomné hlasovanie mimo schôdze — vlastníci hlasujú v určenom termíne, nemusia sa fyzicky zísť. Hlasovanie na schôdzi prebieha prezenčne, ale OpenResiApp umožňuje aj v tomto formáte zaznamenať hlasy elektronicky (cez tablet alebo telefón priamo v miestnosti). Per rollam je vhodné pre rutinné rozhodnutia, schôdza pre závažnejšie veci kde sa očakáva diskusia.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Ako sa vypočítava kvórum pri elektronickom hlasovaní?</summary>
+    <div class="answer">
+      <p>Zákon 182/1993 pozná tri typy kvóra (§ 14b): (1) nadpolovičná väčšina prítomných — pre bežné rozhodnutia, (2) nadpolovičná väčšina všetkých vlastníkov — pre dôležitejšie veci, (3) 2/3 všetkých vlastníkov — pre zásadné rozhodnutia (úver, predaj spoločných častí). OpenResiApp pri vytvorení hlasovania vyžaduje výber typu kvóra, automaticky počíta dosiahnutie a v PDF zápisnici uvedie ako čísla, tak percentá.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Aké podmienky platia pre mandát (splnomocnenie)?</summary>
+    <div class="answer">
+      <p>Podľa § 14a ods. 4 musí byť splnomocnenie s úradne overeným podpisom (notár alebo matrika). Reťazové mandáty sú zakázané — splnomocnenec nemôže ďalej delegovať. OpenResiApp pri zadávaní mandátu vyžaduje upload skenu/fotky overeného dokumentu, ktorý sa zaznamená v audit logu a priloží k PDF zápisnici. Mandát platí len pre konkrétne hlasovanie, po jeho skončení automaticky zaniká.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Čo s vlastníkmi, ktorí nemajú internet alebo smartfón?</summary>
+    <div class="answer">
+      <p>OpenResiApp má rolu Sčítač hlasov. Administrátor jej pri vytvorení hlasovania priradí dôveryhodnú osobu (typicky predseda alebo člen výboru). Vlastník bez internetu vyplní papierový hlasovací lístok, sčítač ho odfotí a hlas zadá do systému za neho. Vlastník dostane SMS alebo email potvrdenie (ak má aspoň jedno z toho). Rola sčítača platí len pre konkrétne hlasovanie a po jeho skončení automaticky zaniká — nedá sa zneužiť spätne.</p>
+    </div>
+  </details>
+</section>
+
+<!-- CTA -->
+<section class="page-cta">
+  <h2>Vyskúšajte OpenResiApp pre svoje SVB</h2>
+  <p>Open-source pod MIT licenciou. Self-hosted zadarmo cez Docker, alebo managed cloud od 4&nbsp;€/mes s 7-dňovou skúškou bez kreditnej karty.</p>
+  <div class="btns">
+    <a href="https://cloud.open-resi.app" class="btn btn-primary">Spustiť cloud verziu</a>
+    <a href="https://github.com/open-resiapp/open-resiapp" class="btn btn-ghost">GitHub repo</a>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="related-pages" aria-labelledby="related-h">
+  <h2 id="related-h">Súvisiace témy</h2>
+  <ul>
+    <li>
+      <a href="/alternativa-resitech/">Alternatíva Resitech — porovnanie</a>
+      <p>Férové porovnanie OpenResiApp vs Resitech vs Susedia.sk vs Poschodoch. Cena, funkcie, migrácia.</p>
+    </li>
+    <li>
+      <a href="/zakon-182-1993-hlasovanie/">Zákon 182/1993 — výklad paragrafov</a>
+      <p>Detailný výklad § 14, § 14a, § 14b s príkladmi a odkazmi na slov-lex.</p>
+    </li>
+    <li>
+      <a href="/elektronicke-hlasovanie-bytove-druzstvo/">Hlasovanie bytového družstva</a>
+      <p>Iný právny rámec — Obchodný zákonník + stanovy; pre družstevníkov.</p>
+    </li>
+    <li>
+      <a href="/komunita-susedia/">Susedská komunita — modul</a>
+      <p>Burza, výpomoc, udalosti, adresár — life-in-building features.</p>
+    </li>
+    <li>
+      <a href="/cs/elektronicke-hlasovani-svj/" hreflang="cs">Verze pro česká SVJ →</a>
+      <p>Pro Společenství vlastníků jednotek podle zákona 89/2012 Sb.</p>
+    </li>
+    <li>
+      <a href="/cloud-cennik/">Cloud cenník</a>
+      <p>Od 4&nbsp;€/mes za bytovku s objemovými zľavami, fakturáciou a storno podmienkami.</p>
+    </li>
+    <li>
+      <a href="/#docs">Dokumentácia inštalácie</a>
+      <p>Ako rozbehnúť self-hosted verziu cez Docker za 10 minút.</p>
+    </li>
+  </ul>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    <strong>OpenResiApp</strong> &ndash; open source pod licenciou MIT &middot;
+    <a href="/">Domov</a> &middot;
+    <a href="https://github.com/open-resiapp/open-resiapp">GitHub</a> &middot;
+    <a href="https://cloud.open-resi.app">Cloud</a> &middot;
+    <a href="https://github.com/open-resiapp/open-resiapp/discussions">Diskusie</a>
+  </p>
+  <p style="margin-top: 0.5rem;">Vytvorené pre slovenské bytové spoločenstvá, bytové družstvá a české SVJ.</p>
+</footer>
+
+</body>
+</html>

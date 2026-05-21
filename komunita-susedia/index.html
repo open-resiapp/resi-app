@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Susedská komunita v bytovke · Burza, výpomoc, udalosti, adresár — OpenResiApp</title>
+  <meta name="description" content="Komunitný modul OpenResiApp premení bytovku na skutočné susedstvo. Susedská burza (predaj, darovanie, požičiavanie), výpomoc, udalosti s RSVP, opt-in adresár susedov so zručnosťami. Súčasť open-source aplikácie pre správu SVB." />
+  <meta name="keywords" content="susedská komunita, komunita bytovky, susedská burza, susedská výpomoc, susedské udalosti, adresár susedov, neighborly help, panelák komunita, sused-na-suseda, komunita v bytovom dome" />
+  <meta name="author" content="OpenResiApp" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://open-resi.app/komunita-susedia/" />
+  <link rel="alternate" hreflang="sk" href="https://open-resi.app/komunita-susedia/" />
+  <link rel="alternate" hreflang="x-default" href="https://open-resi.app/komunita-susedia/" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Susedská komunita v bytovke — modul OpenResiApp" />
+  <meta property="og:description" content="Burza, výpomoc, udalosti, adresár susedov. Komunitný modul ktorý zmení bytovku na susedstvo." />
+  <meta property="og:url" content="https://open-resi.app/komunita-susedia/" />
+  <meta property="og:site_name" content="OpenResiApp" />
+  <meta property="og:locale" content="sk_SK" />
+  <meta property="og:image" content="https://open-resi.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Susedská komunita v bytovke · OpenResiApp" />
+  <meta name="twitter:description" content="Burza, výpomoc, udalosti, adresár susedov pre slovenské bytovky." />
+  <meta name="twitter:image" content="https://open-resi.app/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Domov", "item": "https://open-resi.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Susedská komunita", "item": "https://open-resi.app/komunita-susedia/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "inLanguage": "sk",
+    "headline": "Susedská komunita v bytovke — modul OpenResiApp",
+    "description": "Detailný popis komunitného modulu OpenResiApp pre slovenské bytovky. Štyri sekcie: burza, výpomoc, udalosti, opt-in adresár susedov so zručnosťami.",
+    "url": "https://open-resi.app/komunita-susedia/",
+    "image": "https://open-resi.app/og-image.png",
+    "author": { "@type": "Organization", "name": "OpenResiApp", "url": "https://open-resi.app/" },
+    "publisher": { "@type": "Organization", "name": "OpenResiApp", "logo": { "@type": "ImageObject", "url": "https://open-resi.app/og-image.png" } },
+    "datePublished": "2026-05-21",
+    "dateModified": "2026-05-21",
+    "about": [
+      { "@type": "Thing", "name": "Komunita bytového domu" },
+      { "@type": "Thing", "name": "Susedské vzťahy" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "sk",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Čo je komunitný modul OpenResiApp?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Komunitný modul obsahuje štyri samostatné sekcie: Burza (susedský predaj, darovanie, požičiavanie vecí), Pomoc (susedská výpomoc — prosby aj ponuky), Udalosti (grilovačka, brigáda, vianočné stretnutie s RSVP) a Adresár (opt-in profily susedov so zručnosťami ako elektrikár, IT, záhrada). Všetko je viditeľné len pre obyvateľov bytovky, nikdy navonok." }
+      },
+      {
+        "@type": "Question",
+        "name": "Aký je rozdiel medzi susedskou burzou a Bazošom alebo Facebook Marketplace?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Hlavný rozdiel je dôvera a okruh ľudí. Na Bazoši inzerujete cudzincom, riešite stretnutia, dopravu, podvody. V susedskej burze inzerujete len ľuďom z vašej bytovky — sused príde 5 schodov nižšie, poznáte sa od videnia. Žiadne platby v aplikácii (vyrovnáte sa medzi sebou), žiadne ratingy. Vec sa „prevedie cez schodisko" za pár minút." }
+      },
+      {
+        "@type": "Question",
+        "name": "Ako funguje opt-in adresár susedov?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Každý sused sám rozhoduje, čo zdieľa: meno (vždy), telefón (toggle), email (toggle), poznámku (toggle), zručnosti (toggle). Nič nie je verejné navonok — adresár vidia len prihlásení obyvatelia danej bytovky. Vlastník alebo nájomca môže kedykoľvek vypnúť ktorúkoľvek položku. Vyhľadávanie je možné podľa mena, vchodu alebo zručnosti (napríklad „elektrikár", „IT", „záhrada")." }
+      },
+      {
+        "@type": "Question",
+        "name": "Sú komunitné posty viditeľné mimo bytovky?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nie. Všetky komunitné posty (burza, pomoc, udalosti) sú prístupné len prihláseným vlastníkom a nájomcom danej bytovky. Niektoré posty môžu byť ešte ďalej obmedzené na konkrétny vchod (entrance-scoped visibility) — užitočné pri bytovkách s viacerými vchodmi, kde sa susedia z rôznych vchodov málokedy stretávajú. Externé vyhľadávače (Google) komunitné posty neindexujú." }
+      },
+      {
+        "@type": "Question",
+        "name": "Čo sa stane s postom po vyriešení?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Autor (alebo administrátor) môže označiť post ako vyriešený — „Predané", „Darované", „Pomoc poskytnutá". Post sa naďalej zobrazuje v archíve, ale je vizuálne odlíšený a vypadne z hlavného feedu. Pre Burzu a Pomoc je nastavená automatická expirácia (typicky 30 dní), pre Udalosti 7 dní po dátume udalosti. Tým zostáva feed čerstvý a relevantný." }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%235b8fff'/><text x='16' y='22' font-family='system-ui' font-size='18' font-weight='700' fill='white' text-anchor='middle'>R</text></svg>" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+
+<nav aria-label="Hlavná navigácia">
+  <div class="nav-inner">
+    <a href="/" class="logo"><span class="logo-dot">&blacksquare;</span> OpenResiApp</a>
+    <div class="nav-right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#features">Funkcie</a></li>
+        <li><a href="/#moduly">Moduly</a></li>
+        <li><a href="/#komunita">Komunita</a></li>
+        <li><a href="/#law">&sect; Zákon</a></li>
+        <li><a href="/#api">API</a></li>
+        <li><a href="/#cloud">Cloud</a></li>
+        <li><a href="/#docs">Docs</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="https://github.com/open-resiapp/open-resiapp" class="nav-cta">GitHub &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<nav class="breadcrumb" aria-label="Drobčeková navigácia">
+  <ol>
+    <li><a href="/">Domov</a></li>
+    <li aria-current="page">Susedská komunita</li>
+  </ol>
+</nav>
+
+<main>
+
+<header class="article-hero">
+  <h1>Susedská komunita v bytovke — modul, ktorý odlišuje OpenResiApp</h1>
+  <p class="lede">Väčšina softvéru pre správu bytového domu rieši paragrafy a financie. OpenResiApp robí to isté plus jednu vec navyše: premení bytovku na skutočné susedstvo. Štyri sekcie — burza, výpomoc, udalosti, adresár — pre interakcie sused-na-suseda, bez Facebooku, bez Bazoša, bez cudzincov. Tento článok vysvetľuje, ako modul funguje a prečo pri 30-bytovej bytovke generuje typicky 10-15 aktívnych postov mesačne už po troch mesiacoch používania.</p>
+  <div class="article-meta">
+    <span><strong>Typ:</strong> Popis modulu</span>
+    <span><strong>Pre koho:</strong> Mladší vlastníci, predseda SVB</span>
+    <span><strong>Aktualizované:</strong> 21. máj 2026</span>
+  </div>
+</header>
+
+<article class="content">
+
+  <h2 id="preco">Prečo komunita v bytovke vôbec dáva zmysel</h2>
+  <p>Reálny pohľad: v priemernom paneláku každý vchod osídľujú ľudia, ktorí sa pozdravia v lifte, ale nepoznajú sa krstným menom. Vlastníci vedia, že 4 poschodia nižšie býva niekto, kto vie opraviť rozvod, ale nikto nikomu nedáva číslo. Brigády sa robia len keď strecha tečie. Susedské vzťahy degradovali na „nech ten štekajúci pes prestane".</p>
+  <p>Komunita v bytovom dome nemá vznikať na Facebook skupine (ktorá je open, nepriateľská, riadená algoritmom), ani na Messenger skupine (která sa zaplaví spamom za týždeň). Patrí do jedného miesta, ktoré je:</p>
+  <ul>
+    <li><strong>Uzavreté</strong> — len pre obyvateľov tej istej bytovky.</li>
+    <li><strong>Účelové</strong> — štyri jasné kategórie, nie všeobecný chat o všetkom.</li>
+    <li><strong>Funkčné</strong> — RSVP, marked-resolved, expirácia, žiadne nekonečné scrollovanie.</li>
+    <li><strong>Bezpečné</strong> — opt-in zdieľanie kontaktov, nikdy externe nezdielané údaje.</li>
+  </ul>
+  <p>To je presne to, čo komunitný modul OpenResiApp robí. Štyri sekcie, každá s jasným účelom.</p>
+
+  <h2 id="burza">Burza — susedský predaj a darovanie</h2>
+  <p>Sekcia <code>/komunita/burza</code> má tri typy postov:</p>
+  <ul>
+    <li><strong>Predám</strong> — bicykel, detský kočík, kuchynský robot, ktorý ste prerástli.</li>
+    <li><strong>Darujem</strong> — vec, ktorú by ste inak hodili do kontajnera, ale sused ju využije.</li>
+    <li><strong>Požičiam</strong> — vŕtačka, predlžovačka, formička na muffiny, ktorú potrebujete raz za rok.</li>
+  </ul>
+  <p>Každý post môže obsahovať jednu fotku (MVP — viac fotiek je v roadmape). Filter taby (nie dropdown — kvôli rýchlosti) umožňujú prepnúť medzi typmi. Pri každom poste je tlačidlo <strong>„Mám záujem"</strong> — pri kliknutí sa otvorí ResponseModal s textovou správou. Autor dostane email notifikáciu.</p>
+  <p>Po úspešnom predaji / darovaní / vrátení požičaného autor klikne <strong>„Označiť ako vyriešené"</strong> a post sa archivuje. Žiadne platby v aplikácii (vyrovnáte sa medzi sebou pri stretnutí), žiadne ratingy (poznáte sa zo schodiska — netreba 5 hviezdičiek).</p>
+
+  <h3>Praktický príklad</h3>
+  <p>Pán Kováč z 3. poschodia kúpil nový kočík pre druhé dieťa, prvý mu zostal v pivnici. Pred OpenResiApp by ho dal na Bazoš, riešil 30 správ od cudzincov, jeden z nich by neprišiel, druhý by zmluvene zaplatil menej. S OpenResiApp ho dal na susedskú burzu za 0 € (darujem) — pani Nováková z 5. poschodia ho zobrala za 10 minút. Kontakt: stretli sa pri schránkach. Žiadny stres, žiadna doprava.</p>
+
+  <h2 id="pomoc">Pomoc — susedská výpomoc</h2>
+  <p>Sekcia <code>/komunita/pomoc</code> má dva typy postov, ostro oddelené:</p>
+  <ul>
+    <li><strong>Prosím o pomoc</strong> — môžete mi zaliať kvety na dovolenke? Pomohol by ste mi vyniesť skriňu na 5. poschodie? Mám problém s wifi routerom, vie niekto?</li>
+    <li><strong>Ponúkam pomoc</strong> — som elektrikár, ak niekto potrebuje výmenu zásuvky, zavolajte. Mám voľný čas vo víkende, ak chcete pomoc so záhradou.</li>
+  </ul>
+  <p>Žiadne platby — toto je o susedskej výpomoci, nie o trhu služieb. Ak chce sused profesionálne platiť za prácu elektrikára, dohodne sa s ním priamo. Aplikácia len uľahčí <em>spojenie</em>.</p>
+  <p>Tlačidlá <strong>„Rád pomôžem"</strong> alebo <strong>„Mám záujem"</strong> spustia ResponseModal. Po vyriešení sa post označí ako vybavený, ostane v archíve pre referenciu (užitočné — keď budete riešiť podobný problém o pol roka, pozriete, kto vám minule pomohol).</p>
+
+  <h2 id="udalosti">Udalosti — RSVP pre susedské stretnutia</h2>
+  <p>Sekcia <code>/komunita/udalosti</code> umožňuje organizovať akcie typu:</p>
+  <ul>
+    <li><strong>Grilovačka pred bytovkou</strong> — sobota o 18:00, niekto donesie šaláty, niekto pivo, niekto deti.</li>
+    <li><strong>Brigáda na dvore</strong> — vyčistime kontajnery, posaďme novú lipku, opravme lavičky.</li>
+    <li><strong>Vianočné stretnutie</strong> — v spoločenskej miestnosti, glühwein + vianočné koláče.</li>
+    <li><strong>Zbierka na konkrétny účel</strong> — kvety pre tetu Magdu, ktorá ide do dôchodku po 30 rokoch ako správca bytovky.</li>
+  </ul>
+  <p>Každá udalosť má povinné polia: dátum, čas, miesto. Voliteľne popis, cena, čo doniesť. RSVP s tromi statusmi: <strong>Áno / Možno / Nie</strong> — počítané samostatne, nie spojene (organizátor vidí, koľko ľudí príde + koľko sa rozhoduje).</p>
+  <p>Sortovanie podľa dátumu vzostupne (najbližšie hore), s automatickou segmentáciou na <em>nadchádzajúce</em> a <em>minulé</em>. Email pripomienka deň pred udalosťou všetkým, ktorí dali RSVP áno alebo možno.</p>
+
+  <h2 id="adresar">Adresár — opt-in profily susedov</h2>
+  <p>Sekcia <code>/komunita/adresar</code> je interný „LinkedIn" bytovky. Každý sused sám rozhoduje, čo zdieľa:</p>
+  <ul>
+    <li><strong>Meno</strong> — vždy viditeľné (rovnaké ako pri hlasovaniach).</li>
+    <li><strong>Telefón</strong> — toggle <code>sharePhone</code>. Ak je zapnutý, ostatní vidia + môžu kliknúť na <code>tel:</code> odkaz.</li>
+    <li><strong>Email</strong> — toggle <code>shareEmail</code>. Podobne s <code>mailto:</code> odkazom.</li>
+    <li><strong>Poznámka</strong> — voľný text. Napríklad: „Doma cez deň, večerom v práci." Alebo: „Pes Daky, neštekáme keď je ticho."</li>
+    <li><strong>Zručnosti</strong> — tags ako <em>elektrikár, IT, záhrada, varenie, deti, doprava</em>. Vyhľadateľné v adresári.</li>
+  </ul>
+  <p>Vyhľadávanie umožní filtrovať podľa: meno, vchod, zručnosť. Predseda chce vedieť, kto v bytovke má IT skúsenosti? Otvorí adresár → filter <em>IT</em> → vidí Pavla z 2. poschodia, ktorý si toggle zapol.</p>
+  <p><strong>Privacy first:</strong> bez explicitného zapnutia toggle nič nie je viditeľné. Žiadne pre-fill, žiadne nudge notifikácie. Adresár nie je nikdy externe zdieľaný — ani nie indexovaný Google bottom.</p>
+
+  <h2 id="vchodove-cielenie">Vchodové cielenie</h2>
+  <p>Pri bytovkách s viacerými vchodmi (typicky 3-6 vchodové paneláky) je výzva — sused z vchodu A málokedy potrebuje vec od suseda z vchodu D. Komunitné posty by sa rozptyľovali.</p>
+  <p>OpenResiApp rieši cez voliteľnú <em>entrance-scoped visibility</em>. Pri každom poste (burza, pomoc, udalosti) môže autor vybrať:</p>
+  <ul>
+    <li><strong>Celá bytovka</strong> — default, viditeľné všetkým obyvateľom.</li>
+    <li><strong>Len môj vchod</strong> — viditeľné iba obyvateľom toho istého vchodu.</li>
+  </ul>
+  <p>Užitočné napríklad pre grilovačku pred konkrétnym vchodom, alebo požičanie elektrického náradia, ktoré sa typicky vracia rýchlo a má zmysel byť po blízku.</p>
+
+  <h2 id="notifikacie">Email notifikácie a auto-expirácia</h2>
+  <p>Komunita potrebuje rytmus, aby žila. OpenResiApp posiela tieto automatické emaily:</p>
+  <ul>
+    <li><strong>Odpoveď na váš post</strong> — keď niekto klikne „Mám záujem" na vašu burzu / pomoc / udalosť.</li>
+    <li><strong>Pripomienka pred expiráciou</strong> — 3 dni pred uplynutím vašej burzy / pomoci dostanete pripomienku s možnosťou predĺžiť alebo označiť vyriešené.</li>
+    <li><strong>Pripomienka pred udalosťou</strong> — deň pred dátumom udalosti dostanete email, ak ste RSVP-li áno/možno.</li>
+    <li><strong>Týždenný sumár</strong> — voliteľný (default off), jeden email v pondelok s prehľadom čo sa udialo cez víkend.</li>
+  </ul>
+  <p>Notifikácie sú konfigurovateľné per-user (môžete vypnúť niektoré kategórie). Frekvencia je úmyselne nízka — žiadne push spam.</p>
+  <p>Auto-expirácia: Burza a Pomoc majú default 30-dňovú expiráciu (po nej post zmizne z feedu, ale ostane v archíve). Udalosti expirujú 7 dní po dátume udalosti. Tým feed ostáva čerstvý a relevantný — neexistuje burza s ponukami spred dvoch rokov.</p>
+
+  <h2 id="kde-konkurenti">Kde konkurenti nemajú toto všetko</h2>
+  <p>Pre porovnanie — bežné slovenské systémy pre správu bytového domu (Resitech, Poschodoch) sa sústreďujú na administratívu: hlasovanie, financie, dokumenty. Komunitný aspekt buď chýba úplne, alebo je v podobe primitívnej „nástenky" bez RSVP, bez kategórií, bez expirácie.</p>
+  <p>Najbližšie ku komunite je Susedia.sk, ale ten zase nemá poriadny administratívny modul. Predseda v Susedia.sk nemôže formálne vyhlásiť hlasovanie podľa zákona 182/1993, generovať PDF zápisnicu, spravovať mandáty.</p>
+  <p>OpenResiApp kombinuje oba aspekty — silný administratívny + plnohodnotný komunitný — v jednej aplikácii. Pre vlastníkov to znamená: jedno login, jedno miesto, žiadne paralelné nástroje.</p>
+
+</article>
+
+<section class="faq-list" id="faq" aria-labelledby="faq-h">
+  <h2 id="faq-h">Časté otázky — komunita susedia</h2>
+
+  <details><summary>Čo je komunitný modul OpenResiApp?</summary><div class="answer"><p>Komunitný modul obsahuje štyri samostatné sekcie: Burza (susedský predaj, darovanie, požičiavanie vecí), Pomoc (susedská výpomoc — prosby aj ponuky), Udalosti (grilovačka, brigáda, vianočné stretnutie s RSVP) a Adresár (opt-in profily susedov so zručnosťami ako elektrikár, IT, záhrada). Všetko je viditeľné len pre obyvateľov bytovky, nikdy navonok.</p></div></details>
+
+  <details><summary>Aký je rozdiel medzi susedskou burzou a Bazošom alebo Facebook Marketplace?</summary><div class="answer"><p>Hlavný rozdiel je dôvera a okruh ľudí. Na Bazoši inzerujete cudzincom, riešite stretnutia, dopravu, podvody. V susedskej burze inzerujete len ľuďom z vašej bytovky — sused príde 5 schodov nižšie, poznáte sa od videnia. Žiadne platby v aplikácii (vyrovnáte sa medzi sebou), žiadne ratingy. Vec sa „prevedie cez schodisko" za pár minút.</p></div></details>
+
+  <details><summary>Ako funguje opt-in adresár susedov?</summary><div class="answer"><p>Každý sused sám rozhoduje, čo zdieľa: meno (vždy), telefón (toggle), email (toggle), poznámku (toggle), zručnosti (toggle). Nič nie je verejné navonok — adresár vidia len prihlásení obyvatelia danej bytovky. Vlastník alebo nájomca môže kedykoľvek vypnúť ktorúkoľvek položku. Vyhľadávanie je možné podľa mena, vchodu alebo zručnosti (napríklad „elektrikár", „IT", „záhrada").</p></div></details>
+
+  <details><summary>Sú komunitné posty viditeľné mimo bytovky?</summary><div class="answer"><p>Nie. Všetky komunitné posty (burza, pomoc, udalosti) sú prístupné len prihláseným vlastníkom a nájomcom danej bytovky. Niektoré posty môžu byť ešte ďalej obmedzené na konkrétny vchod (entrance-scoped visibility) — užitočné pri bytovkách s viacerými vchodmi, kde sa susedia z rôznych vchodov málokedy stretávajú. Externé vyhľadávače (Google) komunitné posty neindexujú.</p></div></details>
+
+  <details><summary>Čo sa stane s postom po vyriešení?</summary><div class="answer"><p>Autor (alebo administrátor) môže označiť post ako vyriešený — „Predané", „Darované", „Pomoc poskytnutá". Post sa naďalej zobrazuje v archíve, ale je vizuálne odlíšený a vypadne z hlavného feedu. Pre Burzu a Pomoc je nastavená automatická expirácia (typicky 30 dní), pre Udalosti 7 dní po dátume udalosti. Tým zostáva feed čerstvý a relevantný.</p></div></details>
+</section>
+
+<section class="page-cta">
+  <h2>Premeňte bytovku na susedstvo</h2>
+  <p>Komunitný modul je súčasťou OpenResiApp — ako pri cloud, tak pri self-hosted verzii. Bez dodatočných poplatkov. 7-dňová cloud skúška bez kreditnej karty.</p>
+  <div class="btns">
+    <a href="https://cloud.open-resi.app" class="btn btn-primary">Spustiť cloud skúšku</a>
+    <a href="https://github.com/open-resiapp/open-resiapp" class="btn btn-ghost">GitHub repo</a>
+  </div>
+</section>
+
+<section class="related-pages" aria-labelledby="related-h">
+  <h2 id="related-h">Súvisiace témy</h2>
+  <ul>
+    <li><a href="/elektronicke-hlasovanie-svb/">Elektronické hlasovanie SVB</a><p>Hlavný administratívny modul ku komunitnému.</p></li>
+    <li><a href="/alternativa-resitech/">Alternatíva Resitech — porovnanie</a><p>Komunita je kľúčový rozdiel oproti konkurencii.</p></li>
+    <li><a href="/cloud-cennik/">Cloud cenník</a><p>Komunita zahrnutá v cene od 4 €/bytovku/mes.</p></li>
+    <li><a href="/elektronicke-hlasovanie-bytove-druzstvo/">Hlasovanie bytového družstva</a><p>Komunita funguje aj v družstevnom prostredí.</p></li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>
+    <strong>OpenResiApp</strong> &ndash; open source pod licenciou MIT &middot;
+    <a href="/">Domov</a> &middot;
+    <a href="https://github.com/open-resiapp/open-resiapp">GitHub</a> &middot;
+    <a href="https://cloud.open-resi.app">Cloud</a> &middot;
+    <a href="https://github.com/open-resiapp/open-resiapp/discussions">Diskusie</a>
+  </p>
+  <p style="margin-top: 0.5rem;">Vytvorené pre slovenské bytové spoločenstvá, bytové družstvá a české SVJ.</p>
+</footer>
+
+</body>
+</html>
