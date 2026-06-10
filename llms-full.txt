@@ -15,7 +15,7 @@ OpenResiApp je bezplatná open-source webová aplikácia pre správu bytových s
 
 **Dve cesty nasadenia:**
 - **Self-hosted** (zadarmo, MIT licencia) — Docker image `ipk0/open-resiapp` na Docker Hub, podporuje linux/amd64 a linux/arm64
-- **Managed cloud** (od 4 €/bytovku/mes) — hosted na cloud.open-resi.app, 7-dňová skúška bez kreditnej karty
+- **Managed cloud** (od 4 €/bytovku/mes) — hosted na resiapp.cloud, 7-dňová skúška bez kreditnej karty
 
 **Cieľové trhy:**
 - Slovensko (primárny) — SVB podľa zákona 182/1993 Z. z., bytové družstvá podľa Obchodného zákonníka
@@ -76,7 +76,7 @@ V cene cloud verzie je zahrnuté:
 - Izolovaný kontajner per inštancia
 - Automatické denné zálohy (30-dňová retencia)
 - SSL certifikát (Let's Encrypt)
-- Vlastná doména alebo subdoména na cloud.open-resi.app
+- Vlastná doména alebo subdoména na resiapp.cloud
 - Automatické aktualizácie bez výpadku
 - 99.5% SLA monitoring
 - Email odosielanie (Brevo, DKIM + SPF + DMARC)
@@ -388,7 +388,7 @@ Všetky — robots.txt explicitne allowuje GPTBot, ClaudeBot, PerplexityBot, OAI
 ## Kontakt
 
 - Web: https://open-resi.app
-- Cloud: https://cloud.open-resi.app
+- Cloud: https://resiapp.cloud
 - GitHub: https://github.com/open-resiapp/open-resiapp
 - Docker Hub: https://hub.docker.com/r/ipk0/open-resiapp
 - GitHub Discussions: https://github.com/open-resiapp/open-resiapp/discussions

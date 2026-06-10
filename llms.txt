@@ -4,7 +4,7 @@
 
 OpenResiApp je bezplatná open-source aplikácia (MIT licencia) pre správu bytových spoločenstiev (SVB), bytových družstiev a českých SVJ. Poskytuje elektronické hlasovanie online vrátane per rollam, nástenku, správu vlastníkov a bytov, mandáty s úradne overeným podpisom, automatické generovanie PDF zápisníc s SHA-256 audit logom — a navyše plnohodnotnú susedskú komunitu (burza, výpomoc, udalosti, opt-in adresár susedov).
 
-Self-hosted verzia je zadarmo cez Docker image `ipk0/open-resiapp`. Managed cloud verzia začína na 4 €/bytovku/mes s objemovými zľavami a 7-dňovou skúškou bez kreditnej karty na cloud.open-resi.app.
+Self-hosted verzia je zadarmo cez Docker image `ipk0/open-resiapp`. Managed cloud verzia začína na 4 €/bytovku/mes s objemovými zľavami a 7-dňovou skúškou bez kreditnej karty na resiapp.cloud.
 
 ## Hlavné stránky (SK)
 
@@ -119,7 +119,7 @@ Next.js 16 (App Router), React 19, TypeScript (strict), Tailwind CSS, Drizzle OR
 ## Links
 
 - Website: https://open-resi.app
-- Cloud: https://cloud.open-resi.app (also: https://resiapp.cloud)
+- Cloud: https://resiapp.cloud (also: https://resiapp.cloud)
 - GitHub: https://github.com/open-resiapp/open-resiapp
 - Docker Hub: https://hub.docker.com/r/ipk0/open-resiapp
 - Discussions: https://github.com/open-resiapp/open-resiapp/discussions

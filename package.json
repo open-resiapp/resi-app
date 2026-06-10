@@ -1,7 +1,11 @@
 {
-  "name": "demo-repo",
-  "version": "0.2.0",
-  "description": "A sample package.json",
+  "name": "open-resi-app-website",
+  "version": "1.0.0",
+  "description": "Marketing and SEO site for open-resi.app — static HTML on Cloudflare Pages",
+  "private": true,
+  "scripts": {
+    "indexnow": "./scripts/indexnow-submit.sh"
+  },
   "dependencies": {
     "@primer/css": "17.0.1"
   },

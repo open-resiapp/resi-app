@@ -51,7 +51,7 @@
     "sameAs": [
       "https://github.com/open-resiapp/open-resiapp",
       "https://hub.docker.com/r/ipk0/open-resiapp",
-      "https://cloud.open-resi.app"
+      "https://resiapp.cloud"
     ],
     "areaServed": [
       { "@type": "Country", "name": "Slovakia" },
@@ -134,7 +134,7 @@
         "price": "4",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/InStock",
-        "url": "https://cloud.open-resi.app",
+        "url": "https://resiapp.cloud",
         "description": "Managed cloud hosting od 4 € za bytovku mesačne. Bez nastavovania servera, automatické zálohy, SSL v cene. 7 dní zadarmo bez kreditnej karty."
       }
     ]
@@ -210,7 +210,7 @@
         "name": "Je OpenResiApp zadarmo?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Áno, OpenResiApp je open-source pod MIT licenciou. Self-hosted verziu cez Docker si môžete nainštalovať na vlastný server bezplatne s plnou funkcionalitou. Ak nechcete spravovať server, managed cloud verzia začína na 4 € za bytovku mesačne s 7-dňovou skúšobnou dobou bez kreditnej karty na cloud.open-resi.app."
+          "text": "Áno, OpenResiApp je open-source pod MIT licenciou. Self-hosted verziu cez Docker si môžete nainštalovať na vlastný server bezplatne s plnou funkcionalitou. Ak nechcete spravovať server, managed cloud verzia začína na 4 € za bytovku mesačne s 7-dňovou skúšobnou dobou bez kreditnej karty na resiapp.cloud."
         }
       },
       {
@@ -218,7 +218,7 @@
         "name": "Aký je rozdiel medzi self-hosted a cloud verziou?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Self-hosted verzia je zadarmo — nainštalujete ju na vlastný server cez Docker. Cloud verzia na cloud.open-resi.app je managed služba, kde sa o server, zálohy, SSL a aktualizácie staráme my. Obe verzie majú rovnakú funkcionalitu vrátane elektronického hlasovania, komunity a PDF zápisníc. Cloud začína 7-dňovou skúšobnou dobou bez kreditnej karty."
+          "text": "Self-hosted verzia je zadarmo — nainštalujete ju na vlastný server cez Docker. Cloud verzia na resiapp.cloud je managed služba, kde sa o server, zálohy, SSL a aktualizácie staráme my. Obe verzie majú rovnakú funkcionalitu vrátane elektronického hlasovania, komunity a PDF zápisníc. Cloud začína 7-dňovou skúšobnou dobou bez kreditnej karty."
         }
       },
       {
@@ -294,7 +294,7 @@
   <div>
     <div class="badge">
       <span class="badge-dot"></span>
-      Open Source &middot; Self-hosted &middot; <a href="https://cloud.open-resi.app" style="color: inherit; text-decoration: underline;">Cloud</a> &middot; <a href="https://hub.docker.com/r/ipk0/open-resiapp" style="color: inherit; text-decoration: underline;">Docker Hub</a> &middot; <span data-i18n="badge.law">&sect; 182/1993 Z.z.</span> &middot; SK &amp; CZ
+      Open Source &middot; Self-hosted &middot; <a href="https://resiapp.cloud" style="color: inherit; text-decoration: underline;">Cloud</a> &middot; <a href="https://hub.docker.com/r/ipk0/open-resiapp" style="color: inherit; text-decoration: underline;">Docker Hub</a> &middot; <span data-i18n="badge.law">&sect; 182/1993 Z.z.</span> &middot; SK &amp; CZ
     </div>
     <h1 data-i18n="hero.title">Elektronick&eacute; hlasovanie<br />a spr&aacute;va bytovky<br /><em>pre &#318;ud&iacute;,</em> nie pre pr&aacute;vnikov</h1>
     <p class="hero-desc" data-i18n="hero.desc">
@@ -303,7 +303,7 @@
       V s&uacute;lade so z&aacute;konom &ccaron;.&nbsp;182/1993 Z.&nbsp;z. a &ccaron;esk&yacute;m &sect;&nbsp;89/2012 Sb. Open-source, alebo cloud od 4&nbsp;&euro;/mes.
     </p>
     <div class="hero-actions">
-      <a href="https://cloud.open-resi.app" class="btn btn-primary" data-i18n="hero.cloud">
+      <a href="https://resiapp.cloud" class="btn btn-primary" data-i18n="hero.cloud">
         &#9729; Vysk&uacute;&scaron;a&#357; cloud zadarmo
       </a>
       <a href="#docs" class="btn btn-ghost" data-i18n="hero.cta">
@@ -913,7 +913,7 @@
     </div>
 
     <div style="margin-top: 2.5rem;">
-      <a href="https://cloud.open-resi.app" class="btn btn-primary" style="font-size: 1.05rem; padding: 14px 32px;" data-i18n="cloud.cta">
+      <a href="https://resiapp.cloud" class="btn btn-primary" style="font-size: 1.05rem; padding: 14px 32px;" data-i18n="cloud.cta">
         Vysk&uacute;&scaron;ajte 7 dn&iacute; zadarmo &rarr;
       </a>
       <p class="cloud-trial-note" data-i18n="cloud.note">Bez kreditnej karty. Pln&eacute; funkcie po&ccaron;as sk&uacute;&scaron;obn&eacute;ho obdobia.</p>
@@ -1210,14 +1210,14 @@ docker compose up -d</code></pre>
       <details style="border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 0.75rem; background: var(--bg);">
         <summary style="cursor: pointer; font-weight: 600; color: var(--text); list-style: none;">Je OpenResiApp zadarmo?</summary>
         <div style="margin-top: 0.75rem; color: var(--muted); line-height: 1.7;">
-          <p>Áno, OpenResiApp je open-source pod MIT licenciou. Self-hosted verziu cez Docker si môžete nainštalovať na vlastný server bezplatne s plnou funkcionalitou. Ak nechcete spravovať server, managed cloud verzia začína na 4 € za bytovku mesačne s 7-dňovou skúšobnou dobou bez kreditnej karty na <a href="https://cloud.open-resi.app" style="color: var(--accent);">cloud.open-resi.app</a>.</p>
+          <p>Áno, OpenResiApp je open-source pod MIT licenciou. Self-hosted verziu cez Docker si môžete nainštalovať na vlastný server bezplatne s plnou funkcionalitou. Ak nechcete spravovať server, managed cloud verzia začína na 4 € za bytovku mesačne s 7-dňovou skúšobnou dobou bez kreditnej karty na <a href="https://resiapp.cloud" style="color: var(--accent);">resiapp.cloud</a>.</p>
         </div>
       </details>
 
       <details style="border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 0.75rem; background: var(--bg);">
         <summary style="cursor: pointer; font-weight: 600; color: var(--text); list-style: none;">Aký je rozdiel medzi self-hosted a cloud verziou?</summary>
         <div style="margin-top: 0.75rem; color: var(--muted); line-height: 1.7;">
-          <p>Self-hosted verzia je zadarmo — nainštalujete ju na vlastný server cez Docker. Cloud verzia na <a href="https://cloud.open-resi.app" style="color: var(--accent);">cloud.open-resi.app</a> je managed služba, kde sa o server, zálohy, SSL a aktualizácie staráme my. Obe verzie majú rovnakú funkcionalitu vrátane elektronického hlasovania, komunity a PDF zápisníc. Cloud začína 7-dňovou skúšobnou dobou bez kreditnej karty.</p>
+          <p>Self-hosted verzia je zadarmo — nainštalujete ju na vlastný server cez Docker. Cloud verzia na <a href="https://resiapp.cloud" style="color: var(--accent);">resiapp.cloud</a> je managed služba, kde sa o server, zálohy, SSL a aktualizácie staráme my. Obe verzie majú rovnakú funkcionalitu vrátane elektronického hlasovania, komunity a PDF zápisníc. Cloud začína 7-dňovou skúšobnou dobou bez kreditnej karty.</p>
         </div>
       </details>
 
@@ -1285,7 +1285,7 @@ docker compose up -d</code></pre>
   <p>
     <strong>OpenResiApp</strong> &ndash; open source <span data-i18n="footer.license">pod licenciou</span> MIT &middot;
     <a href="https://github.com/open-resiapp/open-resiapp">GitHub</a> &middot;
-    <a href="https://cloud.open-resi.app" data-i18n="footer.cloud">Cloud</a> &middot;
+    <a href="https://resiapp.cloud" data-i18n="footer.cloud">Cloud</a> &middot;
     <a href="https://github.com/open-resiapp/open-resiapp/discussions" data-i18n="footer.discussions">Diskusie</a> &middot;
     <span data-i18n="footer.made">Vytvoren&eacute; pre slovensk&eacute; bytov&eacute; spolo&ccaron;enstv&aacute;</span>
   </p>
